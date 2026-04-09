@@ -1,0 +1,609 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MLB Predictions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 24px;
+      background: #f4f4f4;
+      color: #222;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .tab, .action-btn {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px 14px;
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .tab.active {
+      background: #1d4ed8;
+      color: white;
+      border-color: #1d4ed8;
+    }
+
+    .action-btn {
+      background: #111827;
+      color: white;
+      border-color: #111827;
+    }
+
+    .game {
+      background: white;
+      padding: 18px;
+      margin-bottom: 18px;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    .matchup {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .team-box {
+      flex: 1;
+      min-width: 220px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 10px;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+    }
+
+    .team-box.winner {
+      transform: scale(1.04);
+      border: 2px solid #16a34a;
+      background: #f0fdf4;
+      font-weight: bold;
+    }
+
+    .team-box.loser {
+      opacity: 0.82;
+    }
+
+    .team-box.actual-winner {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+    }
+
+    .team-logo {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      background: white;
+      border-radius: 50%;
+      padding: 4px;
+      border: 1px solid #ddd;
+    }
+
+    .winner .team-logo {
+      width: 68px;
+      height: 68px;
+    }
+
+    .team-name {
+      font-size: 1.05rem;
+    }
+
+    .winner .team-name {
+      font-size: 1.2rem;
+    }
+
+    .center-info {
+      min-width: 180px;
+      text-align: center;
+    }
+
+    .actual-result {
+      margin-top: 8px;
+      margin-bottom: 12px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: #f8fafc;
+      border: 1px solid #dbe2ea;
+      line-height: 1.5;
+    }
+
+    .prediction-correct {
+      color: #15803d;
+      font-weight: bold;
+    }
+
+    .prediction-wrong {
+      color: #b91c1c;
+      font-weight: bold;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 14px;
+      margin-bottom: 8px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .toggle-btn {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .collapsible-content {
+      display: block;
+    }
+
+    .collapsible-content.collapsed {
+      display: none;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      background: white;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background: #eee;
+    }
+
+    .muted {
+      color: #666;
+      font-style: italic;
+      margin-top: 8px;
+    }
+
+    .status {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    .chart-card {
+      background: white;
+      padding: 18px;
+      margin-bottom: 18px;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    .chart-card img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: white;
+    }
+
+    .nav-link {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: #1d4ed8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <a class="nav-link" href="../index.html">← Back to Home</a>
+
+  <div class="topbar">
+    <h1 id="page-title">MLB Predictions</h1>
+    <div class="tabs">
+      <button class="tab active" data-view="everything">Everything</button>
+      <button class="tab" data-view="hr">Home Run</button>
+      <button class="tab" data-view="rbi">RBI</button>
+      <button class="tab" data-view="multi_hit">Multi-Hit</button>
+      <button class="action-btn" id="collapse-all-btn">Collapse All</button>
+      <button class="action-btn" id="expand-all-btn">Expand All</button>
+    </div>
+  </div>
+
+  <div class="status" id="status-text">Loading predictions...</div>
+
+  <div class="chart-card">
+    <h2>Accuracy Over Time</h2>
+    <img id="accuracy-chart" src="./accuracy_chart.png" alt="Accuracy chart">
+  </div>
+
+  <div id="games-container"></div>
+
+  <script>
+    const TEAM_LOGOS = {
+      "Arizona Diamondbacks": "logos/arizona_diamondbacks.png",
+      "Atlanta Braves": "logos/atlanta_braves.png",
+      "Baltimore Orioles": "logos/baltimore_orioles.png",
+      "Boston Red Sox": "logos/boston_red_sox.png",
+      "Chicago Cubs": "logos/chicago_cubs.png",
+      "Chicago White Sox": "logos/chicago_white_sox.png",
+      "Cincinnati Reds": "logos/cincinnati_reds.png",
+      "Cleveland Guardians": "logos/cleveland_guardians.png",
+      "Colorado Rockies": "logos/colorado_rockies.png",
+      "Detroit Tigers": "logos/detroit_tigers.png",
+      "Houston Astros": "logos/houston_astros.png",
+      "Kansas City Royals": "logos/kansas_city_royals.png",
+      "Los Angeles Angels": "logos/los_angeles_angels.png",
+      "Los Angeles Dodgers": "logos/los_angeles_dodgers.png",
+      "Miami Marlins": "logos/miami_marlins.png",
+      "Milwaukee Brewers": "logos/milwaukee_brewers.png",
+      "Minnesota Twins": "logos/minnesota_twins.png",
+      "New York Mets": "logos/new_york_mets.png",
+      "New York Yankees": "logos/new_york_yankees.png",
+      "Athletics": "logos/athletics.png",
+      "Philadelphia Phillies": "logos/philadelphia_phillies.png",
+      "Pittsburgh Pirates": "logos/pittsburgh_pirates.png",
+      "San Diego Padres": "logos/san_diego_padres.png",
+      "San Francisco Giants": "logos/san_francisco_giants.png",
+      "Seattle Mariners": "logos/seattle_mariners.png",
+      "St. Louis Cardinals": "logos/st_louis_cardinals.png",
+      "Tampa Bay Rays": "logos/tampa_bay_rays.png",
+      "Texas Rangers": "logos/texas_rangers.png",
+      "Toronto Blue Jays": "logos/toronto_blue_jays.png",
+      "Washington Nationals": "logos/washington_nationals.png"
+    };
+
+    let currentView = "everything";
+    let latestPayload = { date: "N/A", games: [] };
+    let collapsedSections = new Set();
+
+    function logoPath(teamName) {
+      return TEAM_LOGOS[teamName] || null;
+    }
+
+    function pct(x) {
+      return ((x || 0) * 100).toFixed(1);
+    }
+
+    function escapeHtml(text) {
+      if (text === null || text === undefined) return "";
+      return String(text)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function sortedHitters(hitters, view) {
+      if (!hitters) return [];
+      const cloned = [...hitters];
+
+      if (view === "hr") {
+        return cloned.sort((a, b) => {
+          const diff = (b.hr_prob || 0) - (a.hr_prob || 0);
+          if (diff !== 0) return diff;
+          return (a.batting_order_slot || 99) - (b.batting_order_slot || 99);
+        });
+      }
+
+      if (view === "rbi") {
+        return cloned.sort((a, b) => {
+          const diff = (b.rbi_prob || 0) - (a.rbi_prob || 0);
+          if (diff !== 0) return diff;
+          return (a.batting_order_slot || 99) - (b.batting_order_slot || 99);
+        });
+      }
+
+      if (view === "multi_hit") {
+        return cloned.sort((a, b) => {
+          const diff = (b.multi_hit_prob || 0) - (a.multi_hit_prob || 0);
+          if (diff !== 0) return diff;
+          return (a.batting_order_slot || 99) - (b.batting_order_slot || 99);
+        });
+      }
+
+      return cloned.sort((a, b) => {
+        const av = (a.hr_prob || 0) + (a.rbi_prob || 0) + (a.multi_hit_prob || 0);
+        const bv = (b.hr_prob || 0) + (b.rbi_prob || 0) + (b.multi_hit_prob || 0);
+        if (bv !== av) return bv - av;
+        return (a.batting_order_slot || 99) - (b.batting_order_slot || 99);
+      });
+    }
+
+    function toggleSection(id, btn) {
+      const section = document.getElementById(id);
+      if (!section) return;
+
+      if (section.classList.contains("collapsed")) {
+        section.classList.remove("collapsed");
+        collapsedSections.delete(id);
+        btn.textContent = "Collapse";
+      } else {
+        section.classList.add("collapsed");
+        collapsedSections.add(id);
+        btn.textContent = "Expand";
+      }
+    }
+
+    function setAllSections(collapse) {
+      const sections = document.querySelectorAll(".collapsible-content");
+      const buttons = document.querySelectorAll(".toggle-btn");
+
+      sections.forEach(section => {
+        if (collapse) {
+          section.classList.add("collapsed");
+          collapsedSections.add(section.id);
+        } else {
+          section.classList.remove("collapsed");
+          collapsedSections.delete(section.id);
+        }
+      });
+
+      buttons.forEach(btn => {
+        btn.textContent = collapse ? "Expand" : "Collapse";
+      });
+    }
+
+    function renderActualResult(game) {
+      const hasScore = game.actual_home_score !== null && game.actual_home_score !== undefined
+                    && game.actual_away_score !== null && game.actual_away_score !== undefined;
+
+      const isFinal = !!game.is_final;
+      const statusText = game.game_status || "Not started";
+
+      if (!hasScore) {
+        return `
+          <div class="actual-result">
+            <div><strong>Status:</strong> ${escapeHtml(statusText)}</div>
+          </div>
+        `;
+      }
+
+      return `
+        <div class="actual-result">
+          <div><strong>Score:</strong> ${escapeHtml(game.away_team)} ${game.actual_away_score} - ${game.actual_home_score} ${escapeHtml(game.home_team)}</div>
+          ${
+            isFinal
+              ? `<div><strong>Actual winner:</strong> ${escapeHtml(game.actual_winner || "Tie / Unknown")}</div>`
+              : `<div><strong>Current leader:</strong> ${escapeHtml(game.current_leader || "Tied")}</div>`
+          }
+          <div><strong>Status:</strong> ${escapeHtml(statusText)}</div>
+          ${
+            isFinal && game.actual_winner
+              ? `<div><strong>Prediction result:</strong> <span class="${game.actual_winner === game.predicted_winner ? 'prediction-correct' : 'prediction-wrong'}">${game.actual_winner === game.predicted_winner ? 'Correct' : 'Incorrect'}</span></div>`
+              : ""
+          }
+        </div>
+      `;
+    }
+
+    function renderEverythingTable(hitters) {
+      if (!hitters || hitters.length === 0) {
+        return '<p class="muted">No hitter predictions available yet.</p>';
+      }
+
+      const rows = hitters.map(hitter => `
+        <tr>
+          <td>${escapeHtml(hitter.player_name)}</td>
+          <td>${escapeHtml(hitter.team)}</td>
+          <td>${escapeHtml(hitter.position)}</td>
+          <td>${hitter.batting_order_slot ?? ""}</td>
+          <td>${pct(hitter.hr_prob)}</td>
+          <td>${pct(hitter.rbi_prob)}</td>
+          <td>${pct(hitter.multi_hit_prob)}</td>
+        </tr>
+      `).join("");
+
+      return `
+        <table>
+          <thead>
+            <tr>
+              <th>Player</th>
+              <th>Team</th>
+              <th>Pos</th>
+              <th>Order</th>
+              <th>HR %</th>
+              <th>RBI %</th>
+              <th>Multi-hit %</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      `;
+    }
+
+    function renderFilteredTable(hitters, view) {
+      if (!hitters || hitters.length === 0) {
+        return '<p class="muted">No hitter predictions available yet.</p>';
+      }
+
+      let label = "Probability";
+      if (view === "hr") label = "HR %";
+      if (view === "rbi") label = "RBI %";
+      if (view === "multi_hit") label = "Multi-hit %";
+
+      const rows = hitters.map(hitter => {
+        let value = 0;
+        if (view === "hr") value = hitter.hr_prob;
+        if (view === "rbi") value = hitter.rbi_prob;
+        if (view === "multi_hit") value = hitter.multi_hit_prob;
+
+        return `
+          <tr>
+            <td>${escapeHtml(hitter.player_name)}</td>
+            <td>${escapeHtml(hitter.team)}</td>
+            <td>${escapeHtml(hitter.position)}</td>
+            <td>${hitter.batting_order_slot ?? ""}</td>
+            <td>${pct(value)}</td>
+          </tr>
+        `;
+      }).join("");
+
+      return `
+        <table>
+          <thead>
+            <tr>
+              <th>Player</th>
+              <th>Team</th>
+              <th>Pos</th>
+              <th>Order</th>
+              <th>${label}</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      `;
+    }
+
+    function renderGames(payload) {
+      document.getElementById("page-title").textContent = `MLB Predictions for ${payload.date}`;
+      const container = document.getElementById("games-container");
+      const games = payload.games || [];
+
+      if (games.length === 0) {
+        container.innerHTML = '<p class="muted">No games available.</p>';
+        return;
+      }
+
+      container.innerHTML = games.map((game, index) => {
+        const sectionId = `players_${index + 1}`;
+        const hitters = sortedHitters(game.hitters || [], currentView);
+        const homeLogo = logoPath(game.home_team);
+        const awayLogo = logoPath(game.away_team);
+
+        let sectionTitle = "Player Predictions";
+        if (currentView === "hr") sectionTitle = "Home Run Leaders";
+        if (currentView === "rbi") sectionTitle = "RBI Leaders";
+        if (currentView === "multi_hit") sectionTitle = "Multi-Hit Leaders";
+
+        const tableHtml = currentView === "everything"
+          ? renderEverythingTable(hitters)
+          : renderFilteredTable(hitters, currentView);
+
+        const awayWinnerClass = game.predicted_winner === game.away_team ? "winner" : "loser";
+        const homeWinnerClass = game.predicted_winner === game.home_team ? "winner" : "loser";
+        const awayActualClass = game.actual_winner === game.away_team ? " actual-winner" : "";
+        const homeActualClass = game.actual_winner === game.home_team ? " actual-winner" : "";
+        const collapsedClass = collapsedSections.has(sectionId) ? "collapsed" : "";
+        const buttonLabel = collapsedSections.has(sectionId) ? "Expand" : "Collapse";
+
+        return `
+          <div class="game">
+            <div class="matchup">
+              <div class="team-box ${awayWinnerClass}${awayActualClass}">
+                ${awayLogo ? `<img class="team-logo" src="${awayLogo}" alt="${escapeHtml(game.away_team)} logo">` : ""}
+                <div>
+                  <div class="team-name">${escapeHtml(game.away_team)}</div>
+                  <div>${pct(game.away_win_probability)}%</div>
+                </div>
+              </div>
+
+              <div class="center-info">
+                <div><strong>Predicted winner</strong></div>
+                <div>${escapeHtml(game.predicted_winner)}</div>
+              </div>
+
+              <div class="team-box ${homeWinnerClass}${homeActualClass}">
+                ${homeLogo ? `<img class="team-logo" src="${homeLogo}" alt="${escapeHtml(game.home_team)} logo">` : ""}
+                <div>
+                  <div class="team-name">${escapeHtml(game.home_team)}</div>
+                  <div>${pct(game.home_win_probability)}%</div>
+                </div>
+              </div>
+            </div>
+
+            ${renderActualResult(game)}
+
+            <div class="section-header">
+              <div class="section-title">${sectionTitle}</div>
+              <button class="toggle-btn" onclick="toggleSection('${sectionId}', this)">${buttonLabel}</button>
+            </div>
+
+            <div id="${sectionId}" class="collapsible-content ${collapsedClass}">
+              ${tableHtml}
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    async function fetchPredictions() {
+      try {
+        const response = await fetch("./today_predictions.json?_=" + Date.now());
+        if (!response.ok) {
+          throw new Error("Could not load today_predictions.json");
+        }
+        const payload = await response.json();
+        latestPayload = payload;
+        renderGames(payload);
+
+        const chart = document.getElementById("accuracy-chart");
+        chart.src = "./accuracy_chart.png?_=" + Date.now();
+
+        document.getElementById("status-text").textContent =
+          "Last checked: " + new Date().toLocaleTimeString();
+      } catch (err) {
+        document.getElementById("status-text").textContent =
+          "Update failed: " + err.message;
+      }
+    }
+
+    function setActiveTab() {
+      document.querySelectorAll(".tab").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.view === currentView);
+      });
+    }
+
+    document.querySelectorAll(".tab").forEach(btn => {
+      btn.addEventListener("click", () => {
+        currentView = btn.dataset.view;
+        setActiveTab();
+        renderGames(latestPayload);
+      });
+    });
+
+    document.getElementById("collapse-all-btn").addEventListener("click", () => setAllSections(true));
+    document.getElementById("expand-all-btn").addEventListener("click", () => setAllSections(false));
+
+    setActiveTab();
+    fetchPredictions();
+    setInterval(fetchPredictions, 30000);
+  </script>
+</body>
+</html>
