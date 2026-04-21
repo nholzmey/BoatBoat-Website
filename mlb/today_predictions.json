@@ -1607,14 +1607,14 @@
       "game_pk": 822914,
       "home_team": "Texas Rangers",
       "away_team": "Pittsburgh Pirates",
-      "home_win_probability": 0.5506,
-      "away_win_probability": 0.4494,
+      "home_win_probability": 0.5371,
+      "away_win_probability": 0.4629,
       "predicted_winner": "Texas Rangers",
       "actual_home_score": null,
       "actual_away_score": null,
       "actual_winner": null,
       "current_leader": null,
-      "game_status": "Scheduled",
+      "game_status": "Pre-Game",
       "is_final": false,
       "hitters": [
         {
@@ -1625,6 +1625,15 @@
           "hr_prob": 0.1968405147119838,
           "rbi_prob": 0.39928804128162837,
           "multi_hit_prob": 0.2640379040088671
+        },
+        {
+          "player_name": "Marcell Ozuna",
+          "team": "Pittsburgh Pirates",
+          "position": "DH",
+          "batting_order_slot": 4,
+          "hr_prob": 0.17119611554372124,
+          "rbi_prob": 0.39050252041980155,
+          "multi_hit_prob": 0.2743811303028151
         },
         {
           "player_name": "Joc Pederson",
@@ -1645,13 +1654,31 @@
           "multi_hit_prob": 0.2774445655665538
         },
         {
-          "player_name": "Marcell Ozuna",
+          "player_name": "Brandon Lowe",
           "team": "Pittsburgh Pirates",
-          "position": "DH",
-          "batting_order_slot": 4,
-          "hr_prob": 0.15789961186213933,
-          "rbi_prob": 0.38875234342366255,
-          "multi_hit_prob": 0.273682263850036
+          "position": "2B",
+          "batting_order_slot": 2,
+          "hr_prob": 0.15749649469026022,
+          "rbi_prob": 0.3326344142952761,
+          "multi_hit_prob": 0.2731829932580031
+        },
+        {
+          "player_name": "Oneil Cruz",
+          "team": "Pittsburgh Pirates",
+          "position": "CF",
+          "batting_order_slot": 5,
+          "hr_prob": 0.15632560273572557,
+          "rbi_prob": 0.35368894617474994,
+          "multi_hit_prob": 0.2561911044114556
+        },
+        {
+          "player_name": "Bryan Reynolds",
+          "team": "Pittsburgh Pirates",
+          "position": "RF",
+          "batting_order_slot": 3,
+          "hr_prob": 0.1551484443791523,
+          "rbi_prob": 0.38179490290756446,
+          "multi_hit_prob": 0.30069752385180143
         },
         {
           "player_name": "Corey Seager",
@@ -1672,15 +1699,6 @@
           "multi_hit_prob": 0.2516275048960569
         },
         {
-          "player_name": "Bryan Reynolds",
-          "team": "Pittsburgh Pirates",
-          "position": "RF",
-          "batting_order_slot": 3,
-          "hr_prob": 0.14477714576003456,
-          "rbi_prob": 0.3777979648367143,
-          "multi_hit_prob": 0.29925084055794393
-        },
-        {
           "player_name": "Brandon Nimmo",
           "team": "Texas Rangers",
           "position": "RF",
@@ -1690,24 +1708,6 @@
           "multi_hit_prob": 0.2832524732209884
         },
         {
-          "player_name": "Oneil Cruz",
-          "team": "Pittsburgh Pirates",
-          "position": "CF",
-          "batting_order_slot": 5,
-          "hr_prob": 0.14383312048677047,
-          "rbi_prob": 0.35012123166240516,
-          "multi_hit_prob": 0.2558454145215527
-        },
-        {
-          "player_name": "Brandon Lowe",
-          "team": "Pittsburgh Pirates",
-          "position": "2B",
-          "batting_order_slot": 2,
-          "hr_prob": 0.14219426617663955,
-          "rbi_prob": 0.329418654361019,
-          "multi_hit_prob": 0.27356200837774974
-        },
-        {
           "player_name": "Danny Jansen",
           "team": "Texas Rangers",
           "position": "C",
@@ -1715,6 +1715,15 @@
           "hr_prob": 0.12342858472968064,
           "rbi_prob": 0.24710181667039657,
           "multi_hit_prob": 0.12011369381160142
+        },
+        {
+          "player_name": "Spencer Horwitz",
+          "team": "Pittsburgh Pirates",
+          "position": "1B",
+          "batting_order_slot": 7,
+          "hr_prob": 0.12246951511831437,
+          "rbi_prob": 0.315957630335524,
+          "multi_hit_prob": 0.23343296361222873
         },
         {
           "player_name": "Evan Carter",
@@ -1730,36 +1739,27 @@
           "team": "Pittsburgh Pirates",
           "position": "3B",
           "batting_order_slot": 6,
-          "hr_prob": 0.11399615447631599,
-          "rbi_prob": 0.3034128829727563,
-          "multi_hit_prob": 0.2446290783285198
-        },
-        {
-          "player_name": "Spencer Horwitz",
-          "team": "Pittsburgh Pirates",
-          "position": "1B",
-          "batting_order_slot": 7,
-          "hr_prob": 0.11285105866196177,
-          "rbi_prob": 0.30839868404715404,
-          "multi_hit_prob": 0.23101025866049474
+          "hr_prob": 0.11741794247741257,
+          "rbi_prob": 0.3095317684771662,
+          "multi_hit_prob": 0.24662862299328916
         },
         {
           "player_name": "Joey Bart",
           "team": "Pittsburgh Pirates",
           "position": "C",
           "batting_order_slot": 8,
-          "hr_prob": 0.08882818426451111,
-          "rbi_prob": 0.2799599983846376,
-          "multi_hit_prob": 0.20456557811642528
+          "hr_prob": 0.10036724404077214,
+          "rbi_prob": 0.2913711038585719,
+          "multi_hit_prob": 0.2091480210752008
         },
         {
           "player_name": "Billy Cook",
           "team": "Pittsburgh Pirates",
           "position": "1B",
           "batting_order_slot": 9,
-          "hr_prob": 0.08358987183982115,
-          "rbi_prob": 0.2381991699231861,
-          "multi_hit_prob": 0.15334669496928513
+          "hr_prob": 0.09452126798191911,
+          "rbi_prob": 0.24497208635136758,
+          "multi_hit_prob": 0.15443738148263486
         },
         {
           "player_name": "Ezequiel Duran",
@@ -1775,9 +1775,9 @@
           "team": "Pittsburgh Pirates",
           "position": "LF",
           "batting_order_slot": 1,
-          "hr_prob": 0.04853530398715733,
-          "rbi_prob": 0.25224808142617244,
-          "multi_hit_prob": 0.3094482306454915
+          "hr_prob": 0.0498513870263341,
+          "rbi_prob": 0.25656715664012475,
+          "multi_hit_prob": 0.3115573970035697
         }
       ]
     },
