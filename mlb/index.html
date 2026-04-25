@@ -51,6 +51,12 @@
         border-color: #374151;
     }
 
+    .model-link {
+        background: #166534;
+        border-color: #22c55e;
+        color: white;
+    }
+
     .game {
         background: #1e293b;
         padding: 18px;
@@ -242,6 +248,7 @@
   <div class="topbar">
     <h1 id="page-title">MLB Predictions</h1>
     <div class="tabs">
+      <a class="action-btn model-link" href="./2021-plus.html">2021+ Model Page</a>
       <button class="tab active" data-view="everything">Everything</button>
       <button class="tab" data-view="hr">Home Run</button>
       <button class="tab" data-view="rbi">RBI</button>
@@ -577,6 +584,7 @@
         if (!response.ok) {
           throw new Error("Could not load today_predictions.json");
         }
+
         const payload = await response.json();
         latestPayload = payload;
         renderGames(payload);
