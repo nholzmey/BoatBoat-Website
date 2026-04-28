@@ -103,6 +103,18 @@
         font-weight: bold;
     }
 
+    .team-box.strong-pick {
+        transform: scale(1.05);
+        border: 2px solid #ef4444 !important;
+        background: #450a0a !important;
+        box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.35);
+        font-weight: bold;
+    }
+
+    .strong-text {
+        color: #ef4444 !important;
+    }
+
     .team-box.loser {
         opacity: 0.7;
     }
@@ -122,7 +134,8 @@
         border: 1px solid #374151;
     }
 
-    .winner .team-logo {
+    .winner .team-logo,
+    .strong-pick .team-logo {
         width: 68px;
         height: 68px;
     }
@@ -131,7 +144,8 @@
         font-size: 1.05rem;
     }
 
-    .winner .team-name {
+    .winner .team-name,
+    .strong-pick .team-name {
         font-size: 1.2rem;
     }
 
@@ -269,11 +283,13 @@
   </div>
 
   <div class="model-note">
-    <strong>Confidence system:</strong><br>
-    Strong Pick = model probability ≥ 58%<br>
-    Normal Pick = lower confidence prediction<br>
     This page uses the separate MLB model trained only on games from 2021 and later.
     It does not replace the original all-years model.
+  </div>
+
+  <div class="model-note">
+    <strong>Confidence system:</strong><br>
+    Strong Pick = model probability ≥ 58% or ≤ 42%. Strong picks are highlighted red.
   </div>
 
   <div class="status" id="status-text">Loading 2021+ model predictions...</div>
@@ -549,8 +565,14 @@
           ? renderEverythingTable(hitters)
           : renderFilteredTable(hitters, currentView);
 
+        const isStrong = !!game.is_confident_pick;
+
         const awayWinnerClass = game.predicted_winner === game.away_team ? "winner" : "loser";
         const homeWinnerClass = game.predicted_winner === game.home_team ? "winner" : "loser";
+
+        const awayStrongClass = isStrong && game.predicted_winner === game.away_team ? " strong-pick" : "";
+        const homeStrongClass = isStrong && game.predicted_winner === game.home_team ? " strong-pick" : "";
+
         const awayActualClass = game.actual_winner === game.away_team ? " actual-winner" : "";
         const homeActualClass = game.actual_winner === game.home_team ? " actual-winner" : "";
         const collapsedClass = collapsedSections.has(sectionId) ? "collapsed" : "";
@@ -559,7 +581,7 @@
         return `
           <div class="game">
             <div class="matchup">
-              <div class="team-box ${awayWinnerClass}${awayActualClass}">
+              <div class="team-box ${awayWinnerClass}${awayActualClass}${awayStrongClass}">
                 ${awayLogo ? `<img class="team-logo" src="${awayLogo}" alt="${escapeHtml(game.away_team)} logo">` : ""}
                 <div>
                   <div class="team-name">${escapeHtml(game.away_team)}</div>
@@ -570,12 +592,12 @@
               <div class="center-info">
                 <div><strong>2021+ Model Pick</strong></div>
                 <div>${escapeHtml(game.predicted_winner)}</div>
-                <div style="margin-top:6px; font-weight:bold; color:${game.is_confident_pick ? '#22c55e' : '#9ca3af'}">
-                  ${game.confidence_tier || "Normal Pick"}
+                <div class="${isStrong ? 'strong-text' : ''}" style="margin-top:6px; font-weight:bold;">
+                  ${escapeHtml(game.confidence_tier || "Normal Pick")}
                 </div>
               </div>
 
-              <div class="team-box ${homeWinnerClass}${homeActualClass}">
+              <div class="team-box ${homeWinnerClass}${homeActualClass}${homeStrongClass}">
                 ${homeLogo ? `<img class="team-logo" src="${homeLogo}" alt="${escapeHtml(game.home_team)} logo">` : ""}
                 <div>
                   <div class="team-name">${escapeHtml(game.home_team)}</div>
