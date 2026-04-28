@@ -567,6 +567,9 @@
               <div class="center-info">
                 <div><strong>2021+ Model Pick</strong></div>
                 <div>${escapeHtml(game.predicted_winner)}</div>
+                <div style="margin-top:6px; font-weight:bold; color:${game.is_confident_pick ? '#22c55e' : '#9ca3af'}">
+                  ${game.confidence_tier || "Normal Pick"}
+                </div>
               </div>
 
               <div class="team-box ${homeWinnerClass}${homeActualClass}">
