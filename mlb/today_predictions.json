@@ -11,12 +11,12 @@
       "confidence_tier": "Strong Pick",
       "is_confident_pick": true,
       "confidence_threshold": 0.58,
-      "actual_home_score": 0,
-      "actual_away_score": 0,
-      "actual_winner": null,
-      "current_leader": null,
-      "game_status": "Pre-Game",
-      "is_final": false,
+      "actual_home_score": 6,
+      "actual_away_score": 5,
+      "actual_winner": "Chicago Cubs",
+      "current_leader": "Chicago Cubs",
+      "game_status": "Final",
+      "is_final": true,
       "is_postponed": false,
       "hitters": [
         {
@@ -193,11 +193,11 @@
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": null,
-      "actual_away_score": null,
+      "actual_home_score": 0,
+      "actual_away_score": 1,
       "actual_winner": null,
-      "current_leader": null,
-      "game_status": "Scheduled",
+      "current_leader": "Texas Rangers",
+      "game_status": "Top 2",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -375,13 +375,13 @@
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": null,
-      "actual_away_score": null,
+      "actual_home_score": 0,
+      "actual_away_score": 0,
       "actual_winner": null,
       "current_leader": null,
-      "game_status": "Scheduled",
+      "game_status": "Delayed Start",
       "is_final": false,
-      "is_postponed": false,
+      "is_postponed": true,
       "hitters": [
         {
           "player_name": "Sal Stewart",
@@ -557,11 +557,11 @@
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": null,
-      "actual_away_score": null,
+      "actual_home_score": 0,
+      "actual_away_score": 1,
       "actual_winner": null,
-      "current_leader": null,
-      "game_status": "Scheduled",
+      "current_leader": "Milwaukee Brewers",
+      "game_status": "Top 2",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -733,17 +733,17 @@
       "game_pk": 823557,
       "home_team": "New York Yankees",
       "away_team": "Baltimore Orioles",
-      "home_win_probability": 0.5863,
-      "away_win_probability": 0.4137,
+      "home_win_probability": 0.6115,
+      "away_win_probability": 0.3885,
       "predicted_winner": "New York Yankees",
       "confidence_tier": "Strong Pick",
       "is_confident_pick": true,
       "confidence_threshold": 0.58,
-      "actual_home_score": null,
-      "actual_away_score": null,
+      "actual_home_score": 0,
+      "actual_away_score": 0,
       "actual_winner": null,
       "current_leader": null,
-      "game_status": "Scheduled",
+      "game_status": "Top 1",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -752,9 +752,9 @@
           "team": "New York Yankees",
           "position": "RF",
           "batting_order_slot": 3,
-          "hr_prob": 0.16436948518600056,
-          "rbi_prob": 0.3940832648017714,
-          "multi_hit_prob": 0.2711435569796712
+          "hr_prob": 0.16376402985315988,
+          "rbi_prob": 0.3954732386172591,
+          "multi_hit_prob": 0.2740980040938554
         },
         {
           "player_name": "Pete Alonso",
@@ -770,27 +770,27 @@
           "team": "New York Yankees",
           "position": "DH",
           "batting_order_slot": 5,
-          "hr_prob": 0.15470460546156356,
-          "rbi_prob": 0.3526526082709074,
-          "multi_hit_prob": 0.23975264433169952
-        },
-        {
-          "player_name": "Cody Bellinger",
-          "team": "New York Yankees",
-          "position": "LF",
-          "batting_order_slot": 4,
-          "hr_prob": 0.14646929193824612,
-          "rbi_prob": 0.38296467116353033,
-          "multi_hit_prob": 0.2617609591545678
+          "hr_prob": 0.15464397146724762,
+          "rbi_prob": 0.3537074682540058,
+          "multi_hit_prob": 0.2436372870606955
         },
         {
           "player_name": "Ben Rice",
           "team": "New York Yankees",
           "position": "1B",
           "batting_order_slot": 2,
-          "hr_prob": 0.14576256721501582,
-          "rbi_prob": 0.33964410624451924,
-          "multi_hit_prob": 0.24565002643481448
+          "hr_prob": 0.15045540793108697,
+          "rbi_prob": 0.3412015148275201,
+          "multi_hit_prob": 0.2516836853345486
+        },
+        {
+          "player_name": "Cody Bellinger",
+          "team": "New York Yankees",
+          "position": "LF",
+          "batting_order_slot": 4,
+          "hr_prob": 0.14860161796058768,
+          "rbi_prob": 0.38574124904420204,
+          "multi_hit_prob": 0.26810589525706424
         },
         {
           "player_name": "Tyler O'Neill",
@@ -811,6 +811,24 @@
           "multi_hit_prob": 0.28267804136398245
         },
         {
+          "player_name": "Trent Grisham",
+          "team": "New York Yankees",
+          "position": "CF",
+          "batting_order_slot": 1,
+          "hr_prob": 0.13774515734013174,
+          "rbi_prob": 0.3019248362810686,
+          "multi_hit_prob": 0.25830252928407976
+        },
+        {
+          "player_name": "Austin Wells",
+          "team": "New York Yankees",
+          "position": "C",
+          "batting_order_slot": 7,
+          "hr_prob": 0.13673685559383175,
+          "rbi_prob": 0.32247121038131504,
+          "multi_hit_prob": 0.22628180992667804
+        },
+        {
           "player_name": "Taylor Ward",
           "team": "Baltimore Orioles",
           "position": "LF",
@@ -820,22 +838,13 @@
           "multi_hit_prob": 0.2680815487526394
         },
         {
-          "player_name": "Austin Wells",
+          "player_name": "Ryan McMahon",
           "team": "New York Yankees",
-          "position": "C",
-          "batting_order_slot": 7,
-          "hr_prob": 0.12967447394506237,
-          "rbi_prob": 0.3164049044926265,
-          "multi_hit_prob": 0.2194002821871721
-        },
-        {
-          "player_name": "Trent Grisham",
-          "team": "New York Yankees",
-          "position": "CF",
-          "batting_order_slot": 1,
-          "hr_prob": 0.12813788278071117,
-          "rbi_prob": 0.2961546860646327,
-          "multi_hit_prob": 0.25028141232810275
+          "position": "3B",
+          "batting_order_slot": 8,
+          "hr_prob": 0.12868329589226704,
+          "rbi_prob": 0.3129185488653862,
+          "multi_hit_prob": 0.21599885525757526
         },
         {
           "player_name": "Adley Rutschman",
@@ -847,6 +856,15 @@
           "multi_hit_prob": 0.27401534085298845
         },
         {
+          "player_name": "Jasson Dom\u00ednguez",
+          "team": "New York Yankees",
+          "position": "DH",
+          "batting_order_slot": 6,
+          "hr_prob": 0.12260623383063819,
+          "rbi_prob": 0.3181378254916723,
+          "multi_hit_prob": 0.23434594949114082
+        },
+        {
           "player_name": "Colton Cowser",
           "team": "Baltimore Orioles",
           "position": "LF",
@@ -856,15 +874,6 @@
           "multi_hit_prob": 0.21161471157584333
         },
         {
-          "player_name": "Ryan McMahon",
-          "team": "New York Yankees",
-          "position": "3B",
-          "batting_order_slot": 8,
-          "hr_prob": 0.11983903895217092,
-          "rbi_prob": 0.30634770088437774,
-          "multi_hit_prob": 0.2080861048858
-        },
-        {
           "player_name": "Dylan Beavers",
           "team": "Baltimore Orioles",
           "position": "RF",
@@ -872,15 +881,6 @@
           "hr_prob": 0.11849562467520641,
           "rbi_prob": 0.2938514473894251,
           "multi_hit_prob": 0.2185495905571655
-        },
-        {
-          "player_name": "Jasson Dom\u00ednguez",
-          "team": "New York Yankees",
-          "position": "DH",
-          "batting_order_slot": 6,
-          "hr_prob": 0.11349303133364275,
-          "rbi_prob": 0.3140057215501741,
-          "multi_hit_prob": 0.2256171023756932
         },
         {
           "player_name": "Jeremiah Jackson",
@@ -905,9 +905,9 @@
           "team": "New York Yankees",
           "position": "SS",
           "batting_order_slot": 9,
-          "hr_prob": 0.07752987951885719,
-          "rbi_prob": 0.2640708984818849,
-          "multi_hit_prob": 0.19092284694693007
+          "hr_prob": 0.08332602753113592,
+          "rbi_prob": 0.26854727454016514,
+          "multi_hit_prob": 0.19926569023109986
         }
       ]
     },
@@ -921,11 +921,11 @@
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": null,
-      "actual_away_score": null,
+      "actual_home_score": 0,
+      "actual_away_score": 0,
       "actual_winner": null,
       "current_leader": null,
-      "game_status": "Scheduled",
+      "game_status": "Top 1",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -1103,11 +1103,11 @@
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": null,
-      "actual_away_score": null,
+      "actual_home_score": 0,
+      "actual_away_score": 0,
       "actual_winner": null,
       "current_leader": null,
-      "game_status": "Scheduled",
+      "game_status": "Top 1",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -1285,11 +1285,11 @@
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": null,
-      "actual_away_score": null,
+      "actual_home_score": 0,
+      "actual_away_score": 0,
       "actual_winner": null,
       "current_leader": null,
-      "game_status": "Scheduled",
+      "game_status": "Top 1",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -1467,11 +1467,11 @@
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": null,
-      "actual_away_score": null,
+      "actual_home_score": 0,
+      "actual_away_score": 0,
       "actual_winner": null,
       "current_leader": null,
-      "game_status": "Scheduled",
+      "game_status": "Pre-Game",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -1649,11 +1649,11 @@
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": null,
-      "actual_away_score": null,
+      "actual_home_score": 0,
+      "actual_away_score": 0,
       "actual_winner": null,
       "current_leader": null,
-      "game_status": "Scheduled",
+      "game_status": "Pre-Game",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -1831,11 +1831,11 @@
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": null,
-      "actual_away_score": null,
+      "actual_home_score": 0,
+      "actual_away_score": 0,
       "actual_winner": null,
       "current_leader": null,
-      "game_status": "Scheduled",
+      "game_status": "Pre-Game",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -2013,11 +2013,11 @@
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": null,
-      "actual_away_score": null,
+      "actual_home_score": 0,
+      "actual_away_score": 0,
       "actual_winner": null,
       "current_leader": null,
-      "game_status": "Scheduled",
+      "game_status": "Pre-Game",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -2195,11 +2195,11 @@
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": null,
-      "actual_away_score": null,
+      "actual_home_score": 0,
+      "actual_away_score": 0,
       "actual_winner": null,
       "current_leader": null,
-      "game_status": "Scheduled",
+      "game_status": "Pre-Game",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -2377,11 +2377,11 @@
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": null,
-      "actual_away_score": null,
+      "actual_home_score": 0,
+      "actual_away_score": 0,
       "actual_winner": null,
       "current_leader": null,
-      "game_status": "Scheduled",
+      "game_status": "Pre-Game",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -2559,11 +2559,11 @@
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": null,
-      "actual_away_score": null,
+      "actual_home_score": 0,
+      "actual_away_score": 0,
       "actual_winner": null,
       "current_leader": null,
-      "game_status": "Scheduled",
+      "game_status": "Pre-Game",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
