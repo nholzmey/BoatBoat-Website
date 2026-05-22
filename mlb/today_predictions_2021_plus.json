@@ -1,386 +1,1114 @@
 {
-  "date": "2026-05-21",
+  "date": "2026-05-22",
   "games": [
     {
-      "game_pk": 824274,
-      "home_team": "Detroit Tigers",
-      "away_team": "Cleveland Guardians",
-      "home_win_probability": 0.4689535010441464,
-      "away_win_probability": 0.5310464989558542,
-      "predicted_winner": "Cleveland Guardians",
+      "game_pk": 824679,
+      "home_team": "Chicago Cubs",
+      "away_team": "Houston Astros",
+      "home_win_probability": 0.48961820030721004,
+      "away_win_probability": 0.5103817996927908,
+      "predicted_winner": "Houston Astros",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": 1,
-      "actual_away_score": 3,
-      "actual_winner": "Cleveland Guardians",
-      "current_leader": "Cleveland Guardians",
-      "game_status": "Final",
-      "is_final": true,
+      "actual_home_score": null,
+      "actual_away_score": null,
+      "actual_winner": null,
+      "current_leader": null,
+      "game_status": "Scheduled",
+      "is_final": false,
       "is_postponed": false,
       "hitters": [
         {
-          "player_name": "Rhys Hoskins",
-          "team": "Cleveland Guardians",
-          "position": "1B",
+          "player_name": "Yordan Alvarez",
+          "team": "Houston Astros",
+          "position": "DH",
+          "batting_order_slot": 3,
+          "hr_prob": 0.16075938244457214,
+          "rbi_prob": 0.3659119526566896,
+          "multi_hit_prob": 0.273361350347106
+        },
+        {
+          "player_name": "Zach Cole",
+          "team": "Houston Astros",
+          "position": "CF",
           "batting_order_slot": 4,
-          "hr_prob": 0.14646876203267742,
-          "rbi_prob": 0.3516724003308201,
-          "multi_hit_prob": 0.2370576016062533
+          "hr_prob": 0.15878397628185806,
+          "rbi_prob": 0.3503339436699617,
+          "multi_hit_prob": 0.23633550844310705
         },
         {
-          "player_name": "Kerry Carpenter",
-          "team": "Detroit Tigers",
-          "position": "RF",
+          "player_name": "Ian Happ",
+          "team": "Chicago Cubs",
+          "position": "LF",
+          "batting_order_slot": 3,
+          "hr_prob": 0.14189317193212495,
+          "rbi_prob": 0.3529707043120543,
+          "multi_hit_prob": 0.24578048565894958
+        },
+        {
+          "player_name": "Michael Busch",
+          "team": "Chicago Cubs",
+          "position": "1B",
           "batting_order_slot": 6,
-          "hr_prob": 0.1376878136173753,
-          "rbi_prob": 0.31917485926980493,
-          "multi_hit_prob": 0.23048198389848498
+          "hr_prob": 0.1403794210178401,
+          "rbi_prob": 0.323087121763115,
+          "multi_hit_prob": 0.22724350074873853
         },
         {
-          "player_name": "Jos\u00e9 Ram\u00edrez",
-          "team": "Cleveland Guardians",
+          "player_name": "Seiya Suzuki",
+          "team": "Chicago Cubs",
+          "position": "RF",
+          "batting_order_slot": 4,
+          "hr_prob": 0.13962353395199995,
+          "rbi_prob": 0.3577509068955065,
+          "multi_hit_prob": 0.2697604889829783
+        },
+        {
+          "player_name": "Isaac Paredes",
+          "team": "Houston Astros",
           "position": "3B",
           "batting_order_slot": 2,
-          "hr_prob": 0.13451872138044285,
-          "rbi_prob": 0.3261610773844345,
-          "multi_hit_prob": 0.29181920927153643
+          "hr_prob": 0.13909703597691364,
+          "rbi_prob": 0.32631772178262985,
+          "multi_hit_prob": 0.251195454559416
         },
         {
-          "player_name": "Spencer Torkelson",
-          "team": "Detroit Tigers",
-          "position": "1B",
+          "player_name": "Alex Bregman",
+          "team": "Chicago Cubs",
+          "position": "3B",
+          "batting_order_slot": 2,
+          "hr_prob": 0.13790164394907098,
+          "rbi_prob": 0.3359102203778011,
+          "multi_hit_prob": 0.2826194244318841
+        },
+        {
+          "player_name": "Carson Kelly",
+          "team": "Chicago Cubs",
+          "position": "C",
           "batting_order_slot": 5,
-          "hr_prob": 0.13372705193457524,
-          "rbi_prob": 0.3299100794138578,
-          "multi_hit_prob": 0.23500182659915456
+          "hr_prob": 0.12724640939439194,
+          "rbi_prob": 0.3192334031645539,
+          "multi_hit_prob": 0.23050826683413725
         },
         {
-          "player_name": "Chase DeLauter",
-          "team": "Cleveland Guardians",
+          "player_name": "Brice Matthews",
+          "team": "Houston Astros",
+          "position": "2B",
+          "batting_order_slot": 7,
+          "hr_prob": 0.12661140056415504,
+          "rbi_prob": 0.30233575461893025,
+          "multi_hit_prob": 0.2216845483936928
+        },
+        {
+          "player_name": "Yainer Diaz",
+          "team": "Houston Astros",
+          "position": "C",
+          "batting_order_slot": 6,
+          "hr_prob": 0.1254314862162743,
+          "rbi_prob": 0.32024536117642577,
+          "multi_hit_prob": 0.26919834127688763
+        },
+        {
+          "player_name": "Dansby Swanson",
+          "team": "Chicago Cubs",
+          "position": "SS",
+          "batting_order_slot": 7,
+          "hr_prob": 0.12148871710019614,
+          "rbi_prob": 0.3116528661967644,
+          "multi_hit_prob": 0.23377071629859691
+        },
+        {
+          "player_name": "Miguel Amaya",
+          "team": "Chicago Cubs",
           "position": "DH",
-          "batting_order_slot": 3,
-          "hr_prob": 0.1314664327848306,
-          "rbi_prob": 0.35827791116311225,
-          "multi_hit_prob": 0.2810139768756504
+          "batting_order_slot": 8,
+          "hr_prob": 0.11589760858669472,
+          "rbi_prob": 0.30046254252264315,
+          "multi_hit_prob": 0.20237094692759686
         },
         {
-          "player_name": "Riley Greene",
-          "team": "Detroit Tigers",
+          "player_name": "Jose Altuve",
+          "team": "Houston Astros",
+          "position": "2B",
+          "batting_order_slot": 1,
+          "hr_prob": 0.11496967703406032,
+          "rbi_prob": 0.3062810599669889,
+          "multi_hit_prob": 0.3174176507950596
+        },
+        {
+          "player_name": "Joey Loperfido",
+          "team": "Houston Astros",
           "position": "LF",
-          "batting_order_slot": 4,
-          "hr_prob": 0.13001464615345837,
-          "rbi_prob": 0.34687334159968114,
-          "multi_hit_prob": 0.26510385573928213
-        },
-        {
-          "player_name": "David Fry",
-          "team": "Cleveland Guardians",
-          "position": "DH",
           "batting_order_slot": 5,
-          "hr_prob": 0.12276682158691705,
-          "rbi_prob": 0.30881426053460453,
-          "multi_hit_prob": 0.2152076713065154
+          "hr_prob": 0.10669920490612843,
+          "rbi_prob": 0.3063079485183847,
+          "multi_hit_prob": 0.24400168842501324
         },
         {
-          "player_name": "Dillon Dingler",
-          "team": "Detroit Tigers",
-          "position": "DH",
-          "batting_order_slot": 3,
-          "hr_prob": 0.11924090194064986,
-          "rbi_prob": 0.340426119069897,
-          "multi_hit_prob": 0.2546748648899045
+          "player_name": "Pete Crow-Armstrong",
+          "team": "Chicago Cubs",
+          "position": "CF",
+          "batting_order_slot": 9,
+          "hr_prob": 0.10510568420889377,
+          "rbi_prob": 0.2718944133960722,
+          "multi_hit_prob": 0.17857332352551059
         },
         {
-          "player_name": "Jake Rogers",
-          "team": "Detroit Tigers",
+          "player_name": "Cam Smith",
+          "team": "Houston Astros",
+          "position": "RF",
+          "batting_order_slot": 8,
+          "hr_prob": 0.10322117747395926,
+          "rbi_prob": 0.2854835973327711,
+          "multi_hit_prob": 0.2121070605299844
+        },
+        {
+          "player_name": "Christian V\u00e1zquez",
+          "team": "Houston Astros",
           "position": "C",
           "batting_order_slot": 9,
-          "hr_prob": 0.1125913690341764,
-          "rbi_prob": 0.27858508853306146,
-          "multi_hit_prob": 0.18029979700557694
+          "hr_prob": 0.09238482639144352,
+          "rbi_prob": 0.2376122535470172,
+          "multi_hit_prob": 0.20715168519956273
         },
         {
-          "player_name": "Angel Mart\u00ednez",
-          "team": "Cleveland Guardians",
-          "position": "RF",
-          "batting_order_slot": 1,
-          "hr_prob": 0.10991930324623123,
-          "rbi_prob": 0.2807278454853927,
-          "multi_hit_prob": 0.26688442032314336
-        },
-        {
-          "player_name": "Colt Keith",
-          "team": "Detroit Tigers",
-          "position": "1B",
-          "batting_order_slot": 1,
-          "hr_prob": 0.10533560066905141,
-          "rbi_prob": 0.29314320993880255,
-          "multi_hit_prob": 0.27104827719715013
-        },
-        {
-          "player_name": "Javier B\u00e1ez",
-          "team": "Detroit Tigers",
-          "position": "CF",
-          "batting_order_slot": 8,
-          "hr_prob": 0.10278650897586468,
-          "rbi_prob": 0.28919329260617443,
-          "multi_hit_prob": 0.22006880600888643
-        },
-        {
-          "player_name": "Gabriel Arias",
-          "team": "Cleveland Guardians",
-          "position": "SS",
-          "batting_order_slot": 8,
-          "hr_prob": 0.098536455302786,
-          "rbi_prob": 0.2882217777550555,
-          "multi_hit_prob": 0.21839418676490432
-        },
-        {
-          "player_name": "Zach McKinstry",
-          "team": "Detroit Tigers",
+          "player_name": "Nico Hoerner",
+          "team": "Chicago Cubs",
           "position": "2B",
-          "batting_order_slot": 7,
-          "hr_prob": 0.09616700540889699,
-          "rbi_prob": 0.28536256658271003,
-          "multi_hit_prob": 0.21476952383282574
-        },
-        {
-          "player_name": "Steven Kwan",
-          "team": "Cleveland Guardians",
-          "position": "LF",
-          "batting_order_slot": 7,
-          "hr_prob": 0.08277425136227226,
-          "rbi_prob": 0.2890432775175397,
-          "multi_hit_prob": 0.2550593627471443
-        },
-        {
-          "player_name": "Kevin McGonigle",
-          "team": "Detroit Tigers",
-          "position": "SS",
-          "batting_order_slot": 2,
-          "hr_prob": 0.08150488697791283,
-          "rbi_prob": 0.2986603302142235,
-          "multi_hit_prob": 0.2907656975297006
-        },
-        {
-          "player_name": "Travis Bazzana",
-          "team": "Cleveland Guardians",
-          "position": "2B",
-          "batting_order_slot": 6,
-          "hr_prob": 0.0792416839883921,
-          "rbi_prob": 0.2927954264999954,
-          "multi_hit_prob": 0.2476245579608772
-        },
-        {
-          "player_name": "Brayan Rocchio",
-          "team": "Cleveland Guardians",
-          "position": "SS",
-          "batting_order_slot": 9,
-          "hr_prob": 0.07463385962531281,
-          "rbi_prob": 0.26158777121491245,
-          "multi_hit_prob": 0.2017525232674243
+          "batting_order_slot": 1,
+          "hr_prob": 0.09094828241443163,
+          "rbi_prob": 0.2916960598092176,
+          "multi_hit_prob": 0.304553436039759
         }
       ]
     },
     {
-      "game_pk": 823056,
-      "home_team": "St. Louis Cardinals",
-      "away_team": "Pittsburgh Pirates",
-      "home_win_probability": 0.4823817003548051,
-      "away_win_probability": 0.517618299645195,
-      "predicted_winner": "Pittsburgh Pirates",
+      "game_pk": 824518,
+      "home_team": "Cincinnati Reds",
+      "away_team": "St. Louis Cardinals",
+      "home_win_probability": 0.4668301814654662,
+      "away_win_probability": 0.533169818534535,
+      "predicted_winner": "St. Louis Cardinals",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": 2,
-      "actual_away_score": 6,
-      "actual_winner": "Pittsburgh Pirates",
-      "current_leader": "Pittsburgh Pirates",
-      "game_status": "Final",
-      "is_final": true,
+      "actual_home_score": null,
+      "actual_away_score": null,
+      "actual_winner": null,
+      "current_leader": null,
+      "game_status": "Scheduled",
+      "is_final": false,
       "is_postponed": false,
       "hitters": [
         {
-          "player_name": "Brandon Lowe",
-          "team": "Pittsburgh Pirates",
-          "position": "2B",
-          "batting_order_slot": 2,
-          "hr_prob": 0.14146961640760766,
-          "rbi_prob": 0.31801531629656304,
-          "multi_hit_prob": 0.2624092888898899
+          "player_name": "Sal Stewart",
+          "team": "Cincinnati Reds",
+          "position": "1B",
+          "batting_order_slot": 4,
+          "hr_prob": 0.16047305322640928,
+          "rbi_prob": 0.3642421560745115,
+          "multi_hit_prob": 0.2500564253322672
         },
         {
-          "player_name": "Marcell Ozuna",
-          "team": "Pittsburgh Pirates",
-          "position": "DH",
+          "player_name": "Eugenio Su\u00e1rez",
+          "team": "Cincinnati Reds",
+          "position": "3B",
           "batting_order_slot": 5,
-          "hr_prob": 0.13253954429909062,
-          "rbi_prob": 0.3339120113466998,
-          "multi_hit_prob": 0.2623220931212547
+          "hr_prob": 0.15629302447822432,
+          "rbi_prob": 0.34622707157017274,
+          "multi_hit_prob": 0.24474501469756113
         },
         {
           "player_name": "Nolan Gorman",
           "team": "St. Louis Cardinals",
           "position": "DH",
           "batting_order_slot": 5,
-          "hr_prob": 0.13223084015978534,
-          "rbi_prob": 0.3242891912083788,
-          "multi_hit_prob": 0.23090855239273914
-        },
-        {
-          "player_name": "Oneil Cruz",
-          "team": "Pittsburgh Pirates",
-          "position": "DH",
-          "batting_order_slot": 4,
-          "hr_prob": 0.1309953954296382,
-          "rbi_prob": 0.34292906153961056,
-          "multi_hit_prob": 0.2507352592901067
-        },
-        {
-          "player_name": "Bryan Reynolds",
-          "team": "Pittsburgh Pirates",
-          "position": "LF",
-          "batting_order_slot": 3,
-          "hr_prob": 0.12545387264625316,
-          "rbi_prob": 0.3434086523947523,
-          "multi_hit_prob": 0.29114130835369645
+          "hr_prob": 0.15570601410773488,
+          "rbi_prob": 0.3423361523323412,
+          "multi_hit_prob": 0.2431522398655992
         },
         {
           "player_name": "JJ Wetherholt",
           "team": "St. Louis Cardinals",
           "position": "2B",
           "batting_order_slot": 1,
-          "hr_prob": 0.122724609962038,
-          "rbi_prob": 0.2958498205378611,
-          "multi_hit_prob": 0.26235231511571916
+          "hr_prob": 0.14536514997007208,
+          "rbi_prob": 0.31409478703415655,
+          "multi_hit_prob": 0.2788501731328998
         },
         {
           "player_name": "Jordan Walker",
           "team": "St. Louis Cardinals",
           "position": "RF",
           "batting_order_slot": 4,
-          "hr_prob": 0.12015198193934569,
-          "rbi_prob": 0.3317158768672219,
-          "multi_hit_prob": 0.24968107631513536
+          "hr_prob": 0.1392399689033155,
+          "rbi_prob": 0.3494184025560858,
+          "multi_hit_prob": 0.2664841988931453
         },
         {
           "player_name": "Alec Burleson",
           "team": "St. Louis Cardinals",
           "position": "1B",
           "batting_order_slot": 3,
-          "hr_prob": 0.11905516794337943,
-          "rbi_prob": 0.3360261279898806,
-          "multi_hit_prob": 0.2817575173584244
+          "hr_prob": 0.13695845657071448,
+          "rbi_prob": 0.35389432105287805,
+          "multi_hit_prob": 0.2942294922544913
         },
         {
           "player_name": "Iv\u00e1n Herrera",
           "team": "St. Louis Cardinals",
           "position": "C",
           "batting_order_slot": 2,
-          "hr_prob": 0.11524844142059092,
-          "rbi_prob": 0.31607291066467913,
-          "multi_hit_prob": 0.28688899179503957
+          "hr_prob": 0.13491908030322233,
+          "rbi_prob": 0.33078343897064694,
+          "multi_hit_prob": 0.2987891405861625
+        },
+        {
+          "player_name": "JJ Bleday",
+          "team": "Cincinnati Reds",
+          "position": "LF",
+          "batting_order_slot": 3,
+          "hr_prob": 0.13156964786638073,
+          "rbi_prob": 0.3223043450783609,
+          "multi_hit_prob": 0.24757779007972838
+        },
+        {
+          "player_name": "Elly De La Cruz",
+          "team": "Cincinnati Reds",
+          "position": "DH",
+          "batting_order_slot": 2,
+          "hr_prob": 0.12978888089073212,
+          "rbi_prob": 0.3310382443208095,
+          "multi_hit_prob": 0.28249932744412387
+        },
+        {
+          "player_name": "Nathaniel Lowe",
+          "team": "Cincinnati Reds",
+          "position": "DH",
+          "batting_order_slot": 6,
+          "hr_prob": 0.12447448296992174,
+          "rbi_prob": 0.3209310396586676,
+          "multi_hit_prob": 0.24576347054080394
+        },
+        {
+          "player_name": "TJ Friedl",
+          "team": "Cincinnati Reds",
+          "position": "CF",
+          "batting_order_slot": 1,
+          "hr_prob": 0.12007502718568601,
+          "rbi_prob": 0.3023439001316541,
+          "multi_hit_prob": 0.2780053550825423
+        },
+        {
+          "player_name": "Tyler Stephenson",
+          "team": "Cincinnati Reds",
+          "position": "C",
+          "batting_order_slot": 7,
+          "hr_prob": 0.11852552257633236,
+          "rbi_prob": 0.31194823974949465,
+          "multi_hit_prob": 0.2257188275971486
+        },
+        {
+          "player_name": "Noelvi Marte",
+          "team": "Cincinnati Reds",
+          "position": "RF",
+          "batting_order_slot": 8,
+          "hr_prob": 0.11801876342541334,
+          "rbi_prob": 0.3112674135563617,
+          "multi_hit_prob": 0.23198320195730296
         },
         {
           "player_name": "Pedro Pag\u00e9s",
           "team": "St. Louis Cardinals",
           "position": "C",
           "batting_order_slot": 8,
-          "hr_prob": 0.10243165266741679,
-          "rbi_prob": 0.28734696629491147,
-          "multi_hit_prob": 0.21552431105721062
-        },
-        {
-          "player_name": "Konnor Griffin",
-          "team": "Pittsburgh Pirates",
-          "position": "SS",
-          "batting_order_slot": 6,
-          "hr_prob": 0.10164189084058006,
-          "rbi_prob": 0.3035514338088809,
-          "multi_hit_prob": 0.2522768362819748
+          "hr_prob": 0.1159573234848184,
+          "rbi_prob": 0.30428664294734914,
+          "multi_hit_prob": 0.2257799129982843
         },
         {
           "player_name": "Yohel Pozo",
           "team": "St. Louis Cardinals",
           "position": "DH",
           "batting_order_slot": 7,
-          "hr_prob": 0.10159046050024483,
-          "rbi_prob": 0.28811342737243995,
-          "multi_hit_prob": 0.21437156383818526
+          "hr_prob": 0.11580344982070052,
+          "rbi_prob": 0.3016527395778346,
+          "multi_hit_prob": 0.22816518777659875
         },
         {
           "player_name": "Masyn Winn",
           "team": "St. Louis Cardinals",
           "position": "SS",
           "batting_order_slot": 6,
-          "hr_prob": 0.09145163797806606,
-          "rbi_prob": 0.29398475287187975,
-          "multi_hit_prob": 0.25565962683231963
+          "hr_prob": 0.10398236089987502,
+          "rbi_prob": 0.30913715454891993,
+          "multi_hit_prob": 0.2733826798546584
         },
         {
-          "player_name": "Endy Rodr\u00edguez",
-          "team": "Pittsburgh Pirates",
+          "player_name": "P.J. Higgins",
+          "team": "Cincinnati Reds",
           "position": "C",
-          "batting_order_slot": 7,
-          "hr_prob": 0.08901779114661114,
-          "rbi_prob": 0.2774231510801907,
-          "multi_hit_prob": 0.21994999480911723
+          "batting_order_slot": 9,
+          "hr_prob": 0.09798041167412165,
+          "rbi_prob": 0.2655405997405708,
+          "multi_hit_prob": 0.1508545863519066
         },
         {
           "player_name": "Ram\u00f3n Ur\u00edas",
           "team": "St. Louis Cardinals",
           "position": "3B",
           "batting_order_slot": 9,
-          "hr_prob": 0.08822653633867018,
-          "rbi_prob": 0.26056169222218145,
-          "multi_hit_prob": 0.134485741212354
+          "hr_prob": 0.0864682586623416,
+          "rbi_prob": 0.2536930695052875,
+          "multi_hit_prob": 0.19361625328403684
+        }
+      ]
+    },
+    {
+      "game_pk": 823461,
+      "home_team": "Philadelphia Phillies",
+      "away_team": "Cleveland Guardians",
+      "home_win_probability": 0.5305709316987808,
+      "away_win_probability": 0.4694290683012194,
+      "predicted_winner": "Philadelphia Phillies",
+      "confidence_tier": "Normal Pick",
+      "is_confident_pick": false,
+      "confidence_threshold": 0.58,
+      "actual_home_score": null,
+      "actual_away_score": null,
+      "actual_winner": null,
+      "current_leader": null,
+      "game_status": "Scheduled",
+      "is_final": false,
+      "is_postponed": false,
+      "hitters": [
+        {
+          "player_name": "Kyle Schwarber",
+          "team": "Philadelphia Phillies",
+          "position": "DH",
+          "batting_order_slot": 2,
+          "hr_prob": 0.15295565425684135,
+          "rbi_prob": 0.3264570068088046,
+          "multi_hit_prob": 0.23639596932276494
+        },
+        {
+          "player_name": "Rhys Hoskins",
+          "team": "Cleveland Guardians",
+          "position": "1B",
+          "batting_order_slot": 4,
+          "hr_prob": 0.15194484794769816,
+          "rbi_prob": 0.3418571738087066,
+          "multi_hit_prob": 0.22573559231036242
+        },
+        {
+          "player_name": "Bryce Harper",
+          "team": "Philadelphia Phillies",
+          "position": "DH",
+          "batting_order_slot": 3,
+          "hr_prob": 0.14211743952855457,
+          "rbi_prob": 0.3509054796160007,
+          "multi_hit_prob": 0.2529396542623143
+        },
+        {
+          "player_name": "Jos\u00e9 Ram\u00edrez",
+          "team": "Cleveland Guardians",
+          "position": "3B",
+          "batting_order_slot": 2,
+          "hr_prob": 0.13854291258184526,
+          "rbi_prob": 0.3175281278409975,
+          "multi_hit_prob": 0.2768132238749801
+        },
+        {
+          "player_name": "Chase DeLauter",
+          "team": "Cleveland Guardians",
+          "position": "DH",
+          "batting_order_slot": 3,
+          "hr_prob": 0.13533247180999045,
+          "rbi_prob": 0.34654378300971,
+          "multi_hit_prob": 0.2664472442926286
+        },
+        {
+          "player_name": "David Fry",
+          "team": "Cleveland Guardians",
+          "position": "DH",
+          "batting_order_slot": 5,
+          "hr_prob": 0.1260140124493396,
+          "rbi_prob": 0.30349281470662537,
+          "multi_hit_prob": 0.20443430628191975
+        },
+        {
+          "player_name": "J.T. Realmuto",
+          "team": "Philadelphia Phillies",
+          "position": "C",
+          "batting_order_slot": 5,
+          "hr_prob": 0.12197711951894942,
+          "rbi_prob": 0.33172427597665216,
+          "multi_hit_prob": 0.2614171417874301
+        },
+        {
+          "player_name": "Bo Naylor",
+          "team": "Cleveland Guardians",
+          "position": "C",
+          "batting_order_slot": 8,
+          "hr_prob": 0.11410173827433291,
+          "rbi_prob": 0.2787559539264888,
+          "multi_hit_prob": 0.19364160391953453
+        },
+        {
+          "player_name": "Alec Bohm",
+          "team": "Philadelphia Phillies",
+          "position": "1B",
+          "batting_order_slot": 4,
+          "hr_prob": 0.11379012422353844,
+          "rbi_prob": 0.3399611772051934,
+          "multi_hit_prob": 0.28181772243513864
+        },
+        {
+          "player_name": "Trea Turner",
+          "team": "Philadelphia Phillies",
+          "position": "SS",
+          "batting_order_slot": 1,
+          "hr_prob": 0.11374829572695726,
+          "rbi_prob": 0.31182350480079435,
+          "multi_hit_prob": 0.30895798063912006
+        },
+        {
+          "player_name": "Brandon Marsh",
+          "team": "Philadelphia Phillies",
+          "position": "LF",
+          "batting_order_slot": 6,
+          "hr_prob": 0.10982182126742755,
+          "rbi_prob": 0.30790180387170124,
+          "multi_hit_prob": 0.23959330355143746
+        },
+        {
+          "player_name": "Angel Mart\u00ednez",
+          "team": "Cleveland Guardians",
+          "position": "RF",
+          "batting_order_slot": 1,
+          "hr_prob": 0.1073052412536805,
+          "rbi_prob": 0.276744817069727,
+          "multi_hit_prob": 0.25801090579306635
+        },
+        {
+          "player_name": "Edmundo Sosa",
+          "team": "Philadelphia Phillies",
+          "position": "3B",
+          "batting_order_slot": 7,
+          "hr_prob": 0.10652417282366045,
+          "rbi_prob": 0.30022189076387,
+          "multi_hit_prob": 0.22232415986206278
+        },
+        {
+          "player_name": "Bryson Stott",
+          "team": "Philadelphia Phillies",
+          "position": "2B",
+          "batting_order_slot": 8,
+          "hr_prob": 0.0967049216734056,
+          "rbi_prob": 0.28426061977561035,
+          "multi_hit_prob": 0.22455424292218926
+        },
+        {
+          "player_name": "Steven Kwan",
+          "team": "Cleveland Guardians",
+          "position": "LF",
+          "batting_order_slot": 7,
+          "hr_prob": 0.08508417495155579,
+          "rbi_prob": 0.2820628122950782,
+          "multi_hit_prob": 0.24464096971425678
+        },
+        {
+          "player_name": "Travis Bazzana",
+          "team": "Cleveland Guardians",
+          "position": "2B",
+          "batting_order_slot": 6,
+          "hr_prob": 0.08201305178303149,
+          "rbi_prob": 0.28317901089438474,
+          "multi_hit_prob": 0.22937054186369976
+        },
+        {
+          "player_name": "Brayan Rocchio",
+          "team": "Cleveland Guardians",
+          "position": "SS",
+          "batting_order_slot": 9,
+          "hr_prob": 0.07312480052276356,
+          "rbi_prob": 0.2515107521333885,
+          "multi_hit_prob": 0.16724250084682335
+        },
+        {
+          "player_name": "Justin Crawford",
+          "team": "Philadelphia Phillies",
+          "position": "CF",
+          "batting_order_slot": 9,
+          "hr_prob": 0.07075424703989042,
+          "rbi_prob": 0.2523903493802005,
+          "multi_hit_prob": 0.18205464962630483
+        }
+      ]
+    },
+    {
+      "game_pk": 823546,
+      "home_team": "New York Yankees",
+      "away_team": "Tampa Bay Rays",
+      "home_win_probability": 0.5328181000450986,
+      "away_win_probability": 0.4671818999549019,
+      "predicted_winner": "New York Yankees",
+      "confidence_tier": "Normal Pick",
+      "is_confident_pick": false,
+      "confidence_threshold": 0.58,
+      "actual_home_score": null,
+      "actual_away_score": null,
+      "actual_winner": null,
+      "current_leader": null,
+      "game_status": "Scheduled",
+      "is_final": false,
+      "is_postponed": false,
+      "hitters": [
+        {
+          "player_name": "Junior Caminero",
+          "team": "Tampa Bay Rays",
+          "position": "3B",
+          "batting_order_slot": 2,
+          "hr_prob": 0.1534133760407076,
+          "rbi_prob": 0.3311841625098164,
+          "multi_hit_prob": 0.266847074062812
+        },
+        {
+          "player_name": "Giancarlo Stanton",
+          "team": "New York Yankees",
+          "position": "DH",
+          "batting_order_slot": 5,
+          "hr_prob": 0.15291259295477969,
+          "rbi_prob": 0.32123978825018995,
+          "multi_hit_prob": 0.21885543810808825
+        },
+        {
+          "player_name": "Aaron Judge",
+          "team": "New York Yankees",
+          "position": "RF",
+          "batting_order_slot": 2,
+          "hr_prob": 0.15171716429236062,
+          "rbi_prob": 0.3398075613170232,
+          "multi_hit_prob": 0.255704085648324
+        },
+        {
+          "player_name": "Ben Rice",
+          "team": "New York Yankees",
+          "position": "DH",
+          "batting_order_slot": 1,
+          "hr_prob": 0.1437264474317084,
+          "rbi_prob": 0.29142759858881295,
+          "multi_hit_prob": 0.21976823163486695
+        },
+        {
+          "player_name": "Cody Bellinger",
+          "team": "New York Yankees",
+          "position": "CF",
+          "batting_order_slot": 3,
+          "hr_prob": 0.14246508875913758,
+          "rbi_prob": 0.33759623820944756,
+          "multi_hit_prob": 0.2468654646316637
+        },
+        {
+          "player_name": "Jazz Chisholm Jr.",
+          "team": "New York Yankees",
+          "position": "2B",
+          "batting_order_slot": 4,
+          "hr_prob": 0.1352987677479689,
+          "rbi_prob": 0.3236800240599751,
+          "multi_hit_prob": 0.22933058306666942
+        },
+        {
+          "player_name": "Jonathan Aranda",
+          "team": "Tampa Bay Rays",
+          "position": "DH",
+          "batting_order_slot": 3,
+          "hr_prob": 0.12486329282518009,
+          "rbi_prob": 0.3276412394850103,
+          "multi_hit_prob": 0.2507940087992086
+        },
+        {
+          "player_name": "Ryan McMahon",
+          "team": "New York Yankees",
+          "position": "3B",
+          "batting_order_slot": 7,
+          "hr_prob": 0.1220369082999344,
+          "rbi_prob": 0.2856468138824231,
+          "multi_hit_prob": 0.19571221142986006
+        },
+        {
+          "player_name": "Jake Fraley",
+          "team": "Tampa Bay Rays",
+          "position": "RF",
+          "batting_order_slot": 5,
+          "hr_prob": 0.11831935749416918,
+          "rbi_prob": 0.3037685843423794,
+          "multi_hit_prob": 0.22659295331293186
+        },
+        {
+          "player_name": "Cedric Mullins",
+          "team": "Tampa Bay Rays",
+          "position": "CF",
+          "batting_order_slot": 7,
+          "hr_prob": 0.11795139509136811,
+          "rbi_prob": 0.29165305893958876,
+          "multi_hit_prob": 0.22359266361057786
+        },
+        {
+          "player_name": "Austin Wells",
+          "team": "New York Yankees",
+          "position": "C",
+          "batting_order_slot": 9,
+          "hr_prob": 0.11726616627473929,
+          "rbi_prob": 0.2599647668496261,
+          "multi_hit_prob": 0.17764224797664305
+        },
+        {
+          "player_name": "Yandy D\u00edaz",
+          "team": "Tampa Bay Rays",
+          "position": "DH",
+          "batting_order_slot": 1,
+          "hr_prob": 0.1129464568647946,
+          "rbi_prob": 0.30291629180252433,
+          "multi_hit_prob": 0.2769279595807846
+        },
+        {
+          "player_name": "Ryan Vilade",
+          "team": "Tampa Bay Rays",
+          "position": "1B",
+          "batting_order_slot": 4,
+          "hr_prob": 0.10757128627687679,
+          "rbi_prob": 0.299206554928493,
+          "multi_hit_prob": 0.2178190004893392
+        },
+        {
+          "player_name": "Anthony Volpe",
+          "team": "New York Yankees",
+          "position": "SS",
+          "batting_order_slot": 8,
+          "hr_prob": 0.10291535028337108,
+          "rbi_prob": 0.270325542550659,
+          "multi_hit_prob": 0.2061138708204874
+        },
+        {
+          "player_name": "Jonny DeLuca",
+          "team": "Tampa Bay Rays",
+          "position": "RF",
+          "batting_order_slot": 6,
+          "hr_prob": 0.09672939083477221,
+          "rbi_prob": 0.28652770219694634,
+          "multi_hit_prob": 0.2252316436228481
+        },
+        {
+          "player_name": "Amed Rosario",
+          "team": "New York Yankees",
+          "position": "LF",
+          "batting_order_slot": 6,
+          "hr_prob": 0.09525604748932799,
+          "rbi_prob": 0.28663523622866083,
+          "multi_hit_prob": 0.23788287331710656
+        },
+        {
+          "player_name": "Taylor Walls",
+          "team": "Tampa Bay Rays",
+          "position": "SS",
+          "batting_order_slot": 9,
+          "hr_prob": 0.08381932663996865,
+          "rbi_prob": 0.2514994601537714,
+          "multi_hit_prob": 0.19030552952427712
+        },
+        {
+          "player_name": "Hunter Feduccia",
+          "team": "Tampa Bay Rays",
+          "position": "C",
+          "batting_order_slot": 8,
+          "hr_prob": 0.0798364884804654,
+          "rbi_prob": 0.25758207603549466,
+          "multi_hit_prob": 0.19431264942261875
+        }
+      ]
+    },
+    {
+      "game_pk": 822816,
+      "home_team": "Toronto Blue Jays",
+      "away_team": "Pittsburgh Pirates",
+      "home_win_probability": 0.5451616255864034,
+      "away_win_probability": 0.45483837441359715,
+      "predicted_winner": "Toronto Blue Jays",
+      "confidence_tier": "Normal Pick",
+      "is_confident_pick": false,
+      "confidence_threshold": 0.58,
+      "actual_home_score": null,
+      "actual_away_score": null,
+      "actual_winner": null,
+      "current_leader": null,
+      "game_status": "Scheduled",
+      "is_final": false,
+      "is_postponed": false,
+      "hitters": [
+        {
+          "player_name": "Kazuma Okamoto",
+          "team": "Toronto Blue Jays",
+          "position": "3B",
+          "batting_order_slot": 4,
+          "hr_prob": 0.15152377923492352,
+          "rbi_prob": 0.3686564433360142,
+          "multi_hit_prob": 0.24742747708666105
+        },
+        {
+          "player_name": "Brandon Lowe",
+          "team": "Pittsburgh Pirates",
+          "position": "2B",
+          "batting_order_slot": 2,
+          "hr_prob": 0.14295747370262082,
+          "rbi_prob": 0.3178384330665749,
+          "multi_hit_prob": 0.2548192008688765
+        },
+        {
+          "player_name": "George Springer",
+          "team": "Toronto Blue Jays",
+          "position": "DH",
+          "batting_order_slot": 1,
+          "hr_prob": 0.1414148321853651,
+          "rbi_prob": 0.32588243280302187,
+          "multi_hit_prob": 0.2842708093352038
+        },
+        {
+          "player_name": "Vladimir Guerrero Jr.",
+          "team": "Toronto Blue Jays",
+          "position": "1B",
+          "batting_order_slot": 2,
+          "hr_prob": 0.13613209510737562,
+          "rbi_prob": 0.34380448369604616,
+          "multi_hit_prob": 0.30208786497567736
+        },
+        {
+          "player_name": "Marcell Ozuna",
+          "team": "Pittsburgh Pirates",
+          "position": "DH",
+          "batting_order_slot": 5,
+          "hr_prob": 0.13526236081996731,
+          "rbi_prob": 0.3303542881244718,
+          "multi_hit_prob": 0.25396595662002386
+        },
+        {
+          "player_name": "Eloy Jim\u00e9nez",
+          "team": "Toronto Blue Jays",
+          "position": "DH",
+          "batting_order_slot": 6,
+          "hr_prob": 0.1351869370982939,
+          "rbi_prob": 0.32991360151428345,
+          "multi_hit_prob": 0.2632675909995659
+        },
+        {
+          "player_name": "Oneil Cruz",
+          "team": "Pittsburgh Pirates",
+          "position": "DH",
+          "batting_order_slot": 4,
+          "hr_prob": 0.1336911848767355,
+          "rbi_prob": 0.33573927878885956,
+          "multi_hit_prob": 0.24044029334761807
+        },
+        {
+          "player_name": "Daulton Varsho",
+          "team": "Toronto Blue Jays",
+          "position": "CF",
+          "batting_order_slot": 3,
+          "hr_prob": 0.13208523953269297,
+          "rbi_prob": 0.34416225353806223,
+          "multi_hit_prob": 0.2547947855201474
+        },
+        {
+          "player_name": "Bryan Reynolds",
+          "team": "Pittsburgh Pirates",
+          "position": "LF",
+          "batting_order_slot": 3,
+          "hr_prob": 0.1262467083924828,
+          "rbi_prob": 0.33769273052887633,
+          "multi_hit_prob": 0.28159191503300535
+        },
+        {
+          "player_name": "Brandon Valenzuela",
+          "team": "Toronto Blue Jays",
+          "position": "C",
+          "batting_order_slot": 8,
+          "hr_prob": 0.12396173083469693,
+          "rbi_prob": 0.2981016920655155,
+          "multi_hit_prob": 0.20488793346114983
+        },
+        {
+          "player_name": "Konnor Griffin",
+          "team": "Pittsburgh Pirates",
+          "position": "SS",
+          "batting_order_slot": 6,
+          "hr_prob": 0.10342871733638274,
+          "rbi_prob": 0.30625333920454023,
+          "multi_hit_prob": 0.24143040183117004
         },
         {
           "player_name": "Jared Triolo",
           "team": "Pittsburgh Pirates",
           "position": "RF",
           "batting_order_slot": 8,
-          "hr_prob": 0.08821516001349361,
-          "rbi_prob": 0.28198367495164745,
-          "multi_hit_prob": 0.21672719802772986
+          "hr_prob": 0.09160339427528869,
+          "rbi_prob": 0.28232949938603785,
+          "multi_hit_prob": 0.20880193076677353
         },
         {
           "player_name": "Nick Gonzales",
           "team": "Pittsburgh Pirates",
           "position": "3B",
           "batting_order_slot": 1,
-          "hr_prob": 0.08811283773465445,
-          "rbi_prob": 0.28882816948053924,
-          "multi_hit_prob": 0.3053558345523705
+          "hr_prob": 0.08927450907541047,
+          "rbi_prob": 0.28691194704054995,
+          "multi_hit_prob": 0.2993823430559754
+        },
+        {
+          "player_name": "Andr\u00e9s Gim\u00e9nez",
+          "team": "Toronto Blue Jays",
+          "position": "SS",
+          "batting_order_slot": 9,
+          "hr_prob": 0.08910159256418541,
+          "rbi_prob": 0.2814887510158521,
+          "multi_hit_prob": 0.20403119435482261
+        },
+        {
+          "player_name": "Endy Rodr\u00edguez",
+          "team": "Pittsburgh Pirates",
+          "position": "C",
+          "batting_order_slot": 7,
+          "hr_prob": 0.08904337089908916,
+          "rbi_prob": 0.2744681876657979,
+          "multi_hit_prob": 0.21108653688624904
+        },
+        {
+          "player_name": "Yohendrick Pi\u00f1ango",
+          "team": "Toronto Blue Jays",
+          "position": "RF",
+          "batting_order_slot": 5,
+          "hr_prob": 0.07641640528604741,
+          "rbi_prob": 0.3059247018334527,
+          "multi_hit_prob": 0.2531253820475611
+        },
+        {
+          "player_name": "Yohendrick Pinango",
+          "team": "Toronto Blue Jays",
+          "position": "LF",
+          "batting_order_slot": 7,
+          "hr_prob": 0.07061833983028697,
+          "rbi_prob": 0.27275415526726715,
+          "multi_hit_prob": 0.2083247995854488
         },
         {
           "player_name": "Jake Mangum",
           "team": "Pittsburgh Pirates",
           "position": "RF",
           "batting_order_slot": 9,
-          "hr_prob": 0.057038477921614684,
-          "rbi_prob": 0.24874458750441805,
-          "multi_hit_prob": 0.1681439488546875
+          "hr_prob": 0.05975106813663148,
+          "rbi_prob": 0.2516494707567237,
+          "multi_hit_prob": 0.1782976548661571
         }
       ]
     },
     {
-      "game_pk": 822733,
-      "home_team": "Washington Nationals",
+      "game_pk": 824761,
+      "home_team": "Boston Red Sox",
+      "away_team": "Minnesota Twins",
+      "home_win_probability": 0.49700104187771177,
+      "away_win_probability": 0.5029989581222887,
+      "predicted_winner": "Minnesota Twins",
+      "confidence_tier": "Normal Pick",
+      "is_confident_pick": false,
+      "confidence_threshold": 0.58,
+      "actual_home_score": null,
+      "actual_away_score": null,
+      "actual_winner": null,
+      "current_leader": null,
+      "game_status": "Scheduled",
+      "is_final": false,
+      "is_postponed": false,
+      "hitters": [
+        {
+          "player_name": "Willson Contreras",
+          "team": "Boston Red Sox",
+          "position": "1B",
+          "batting_order_slot": 4,
+          "hr_prob": 0.14168391279855366,
+          "rbi_prob": 0.34473844932256487,
+          "multi_hit_prob": 0.25773776708231805
+        },
+        {
+          "player_name": "Byron Buxton",
+          "team": "Minnesota Twins",
+          "position": "DH",
+          "batting_order_slot": 1,
+          "hr_prob": 0.13735542748144905,
+          "rbi_prob": 0.316442972586601,
+          "multi_hit_prob": 0.2567354782376918
+        },
+        {
+          "player_name": "Trevor Story",
+          "team": "Boston Red Sox",
+          "position": "SS",
+          "batting_order_slot": 6,
+          "hr_prob": 0.13612647466806177,
+          "rbi_prob": 0.3221199033318136,
+          "multi_hit_prob": 0.2639714671729681
+        },
+        {
+          "player_name": "Josh Bell",
+          "team": "Minnesota Twins",
+          "position": "1B",
+          "batting_order_slot": 3,
+          "hr_prob": 0.126162450398243,
+          "rbi_prob": 0.3487917871327646,
+          "multi_hit_prob": 0.2645434574453074
+        },
+        {
+          "player_name": "Royce Lewis",
+          "team": "Minnesota Twins",
+          "position": "3B",
+          "batting_order_slot": 7,
+          "hr_prob": 0.12371752779781077,
+          "rbi_prob": 0.31462711439538227,
+          "multi_hit_prob": 0.2328085787025004
+        },
+        {
+          "player_name": "Matt Wallner",
+          "team": "Minnesota Twins",
+          "position": "RF",
+          "batting_order_slot": 8,
+          "hr_prob": 0.12321738742385165,
+          "rbi_prob": 0.30016760766061407,
+          "multi_hit_prob": 0.1971746851679128
+        },
+        {
+          "player_name": "Kody Clemens",
+          "team": "Minnesota Twins",
+          "position": "1B",
+          "batting_order_slot": 4,
+          "hr_prob": 0.12140910419070938,
+          "rbi_prob": 0.32187081255460953,
+          "multi_hit_prob": 0.2329030968566275
+        },
+        {
+          "player_name": "Ceddanne Rafaela",
+          "team": "Boston Red Sox",
+          "position": "CF",
+          "batting_order_slot": 5,
+          "hr_prob": 0.11887727163226293,
+          "rbi_prob": 0.3209982758705074,
+          "multi_hit_prob": 0.26241675528744607
+        },
+        {
+          "player_name": "Jarren Duran",
+          "team": "Boston Red Sox",
+          "position": "LF",
+          "batting_order_slot": 1,
+          "hr_prob": 0.1170168362623829,
+          "rbi_prob": 0.31283844105502995,
+          "multi_hit_prob": 0.3081849951279287
+        },
+        {
+          "player_name": "Carlos Narv\u00e1ez",
+          "team": "Boston Red Sox",
+          "position": "C",
+          "batting_order_slot": 8,
+          "hr_prob": 0.11379514771381621,
+          "rbi_prob": 0.29075472600037094,
+          "multi_hit_prob": 0.22339001628576174
+        },
+        {
+          "player_name": "Trevor Larnach",
+          "team": "Minnesota Twins",
+          "position": "LF",
+          "batting_order_slot": 2,
+          "hr_prob": 0.11212199921089805,
+          "rbi_prob": 0.3186734373446109,
+          "multi_hit_prob": 0.2638250421362059
+        },
+        {
+          "player_name": "Masataka Yoshida",
+          "team": "Boston Red Sox",
+          "position": "DH",
+          "batting_order_slot": 2,
+          "hr_prob": 0.11154184462410006,
+          "rbi_prob": 0.3185350423769611,
+          "multi_hit_prob": 0.30507385390749114
+        },
+        {
+          "player_name": "Roman Anthony",
+          "team": "Boston Red Sox",
+          "position": "DH",
+          "batting_order_slot": 3,
+          "hr_prob": 0.1080939192348851,
+          "rbi_prob": 0.3145936882930343,
+          "multi_hit_prob": 0.28641636649367946
+        },
+        {
+          "player_name": "Victor Caratini",
+          "team": "Minnesota Twins",
+          "position": "C",
+          "batting_order_slot": 6,
+          "hr_prob": 0.10374362362409245,
+          "rbi_prob": 0.2993825955624574,
+          "multi_hit_prob": 0.22510582847472946
+        },
+        {
+          "player_name": "James Outman",
+          "team": "Minnesota Twins",
+          "position": "CF",
+          "batting_order_slot": 9,
+          "hr_prob": 0.09655991779116062,
+          "rbi_prob": 0.26187857379365465,
+          "multi_hit_prob": 0.18167851932221088
+        },
+        {
+          "player_name": "Marcelo Mayer",
+          "team": "Boston Red Sox",
+          "position": "2B",
+          "batting_order_slot": 7,
+          "hr_prob": 0.09593880659458948,
+          "rbi_prob": 0.2788060462226957,
+          "multi_hit_prob": 0.23290457314387666
+        },
+        {
+          "player_name": "Caleb Durbin",
+          "team": "Boston Red Sox",
+          "position": "3B",
+          "batting_order_slot": 9,
+          "hr_prob": 0.088669914363666,
+          "rbi_prob": 0.2775750421923892,
+          "multi_hit_prob": 0.21589619708229937
+        },
+        {
+          "player_name": "Luke Keaschall",
+          "team": "Minnesota Twins",
+          "position": "2B",
+          "batting_order_slot": 5,
+          "hr_prob": 0.0832555779074637,
+          "rbi_prob": 0.31819160989104645,
+          "multi_hit_prob": 0.2635028903028142
+        }
+      ]
+    },
+    {
+      "game_pk": 823863,
+      "home_team": "Miami Marlins",
       "away_team": "New York Mets",
-      "home_win_probability": 0.48627103884080003,
-      "away_win_probability": 0.5137289611592013,
+      "home_win_probability": 0.48576364501871333,
+      "away_win_probability": 0.5142363549812876,
       "predicted_winner": "New York Mets",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": 1,
-      "actual_away_score": 2,
-      "actual_winner": "New York Mets",
-      "current_leader": "New York Mets",
-      "game_status": "Final",
-      "is_final": true,
+      "actual_home_score": null,
+      "actual_away_score": null,
+      "actual_winner": null,
+      "current_leader": null,
+      "game_status": "Scheduled",
+      "is_final": false,
       "is_postponed": false,
       "hitters": [
         {
@@ -388,181 +1116,363 @@
           "team": "New York Mets",
           "position": "LF",
           "batting_order_slot": 3,
-          "hr_prob": 0.1548564246114642,
-          "rbi_prob": 0.36708351502222625,
-          "multi_hit_prob": 0.26662553485357826
-        },
-        {
-          "player_name": "James Wood",
-          "team": "Washington Nationals",
-          "position": "DH",
-          "batting_order_slot": 1,
-          "hr_prob": 0.14078874628323643,
-          "rbi_prob": 0.3265272050463999,
-          "multi_hit_prob": 0.2545046325336487
+          "hr_prob": 0.15445477895211976,
+          "rbi_prob": 0.3587662642219172,
+          "multi_hit_prob": 0.26725101272668056
         },
         {
           "player_name": "Mark Vientos",
           "team": "New York Mets",
           "position": "1B",
           "batting_order_slot": 4,
-          "hr_prob": 0.13947994437659558,
-          "rbi_prob": 0.3535702121780037,
-          "multi_hit_prob": 0.26106057225977036
+          "hr_prob": 0.14054687925817821,
+          "rbi_prob": 0.34423933120098144,
+          "multi_hit_prob": 0.251576202668365
         },
         {
-          "player_name": "CJ Abrams",
-          "team": "Washington Nationals",
-          "position": "SS",
+          "player_name": "Kyle Stowers",
+          "team": "Miami Marlins",
+          "position": "RF",
           "batting_order_slot": 4,
-          "hr_prob": 0.12553018632859217,
-          "rbi_prob": 0.3434147065199853,
-          "multi_hit_prob": 0.2799046944237711
+          "hr_prob": 0.13429701625139714,
+          "rbi_prob": 0.3378864691761582,
+          "multi_hit_prob": 0.24110979060879403
+        },
+        {
+          "player_name": "Heriberto Hern\u00e1ndez",
+          "team": "Miami Marlins",
+          "position": "LF",
+          "batting_order_slot": 3,
+          "hr_prob": 0.1256365781838373,
+          "rbi_prob": 0.33669479181158746,
+          "multi_hit_prob": 0.24358215862227173
         },
         {
           "player_name": "MJ Melendez",
           "team": "New York Mets",
           "position": "DH",
           "batting_order_slot": 5,
-          "hr_prob": 0.12407610556734368,
-          "rbi_prob": 0.3171872336849326,
-          "multi_hit_prob": 0.2510474094774156
+          "hr_prob": 0.1231027308064766,
+          "rbi_prob": 0.31542201023091837,
+          "multi_hit_prob": 0.24082486783686505
         },
         {
-          "player_name": "Dylan Crews",
-          "team": "Washington Nationals",
-          "position": "RF",
-          "batting_order_slot": 5,
-          "hr_prob": 0.12403324981015741,
-          "rbi_prob": 0.30709842310596297,
-          "multi_hit_prob": 0.24060736368174154
-        },
-        {
-          "player_name": "Luis Garc\u00eda Jr.",
-          "team": "Washington Nationals",
-          "position": "1B",
-          "batting_order_slot": 2,
-          "hr_prob": 0.12028289889214445,
-          "rbi_prob": 0.32334480522463727,
-          "multi_hit_prob": 0.2952551177891026
-        },
-        {
-          "player_name": "Daylen Lile",
-          "team": "Washington Nationals",
+          "player_name": "Griffin Conine",
+          "team": "Miami Marlins",
           "position": "LF",
-          "batting_order_slot": 6,
-          "hr_prob": 0.11876360549382686,
-          "rbi_prob": 0.32069793552938636,
-          "multi_hit_prob": 0.26757858512409416
-        },
-        {
-          "player_name": "Bo Bichette",
-          "team": "New York Mets",
-          "position": "SS",
-          "batting_order_slot": 2,
-          "hr_prob": 0.11712627980854344,
-          "rbi_prob": 0.33508467827231875,
-          "multi_hit_prob": 0.3125844031744087
+          "batting_order_slot": 7,
+          "hr_prob": 0.12084840963757293,
+          "rbi_prob": 0.3032810566502043,
+          "multi_hit_prob": 0.22087089694560894
         },
         {
           "player_name": "Brett Baty",
           "team": "New York Mets",
           "position": "3B",
           "batting_order_slot": 6,
-          "hr_prob": 0.11677199489353424,
-          "rbi_prob": 0.3073890683128384,
-          "multi_hit_prob": 0.2529071534699117
+          "hr_prob": 0.11698864739373843,
+          "rbi_prob": 0.30480058248011804,
+          "multi_hit_prob": 0.24040719159988896
         },
         {
           "player_name": "Marcus Semien",
           "team": "New York Mets",
           "position": "2B",
           "batting_order_slot": 7,
-          "hr_prob": 0.11642072925383433,
-          "rbi_prob": 0.31571400852226417,
-          "multi_hit_prob": 0.2609713271681242
+          "hr_prob": 0.1154792980713855,
+          "rbi_prob": 0.30965298168866234,
+          "multi_hit_prob": 0.2470434888286918
         },
         {
-          "player_name": "Brady House",
-          "team": "Washington Nationals",
-          "position": "3B",
-          "batting_order_slot": 3,
-          "hr_prob": 0.11430927491723465,
-          "rbi_prob": 0.3374586338502525,
-          "multi_hit_prob": 0.2571648609925182
+          "player_name": "Bo Bichette",
+          "team": "New York Mets",
+          "position": "SS",
+          "batting_order_slot": 2,
+          "hr_prob": 0.1136473444038511,
+          "rbi_prob": 0.32358716692017314,
+          "multi_hit_prob": 0.3093649045366586
+        },
+        {
+          "player_name": "Jakob Marsee",
+          "team": "Miami Marlins",
+          "position": "CF",
+          "batting_order_slot": 6,
+          "hr_prob": 0.11340033046962783,
+          "rbi_prob": 0.3010317639239078,
+          "multi_hit_prob": 0.24119107841670565
+        },
+        {
+          "player_name": "Otto Lopez",
+          "team": "Miami Marlins",
+          "position": "SS",
+          "batting_order_slot": 2,
+          "hr_prob": 0.1111570262914009,
+          "rbi_prob": 0.3075306401553965,
+          "multi_hit_prob": 0.29141231650989324
+        },
+        {
+          "player_name": "Liam Hicks",
+          "team": "Miami Marlins",
+          "position": "C",
+          "batting_order_slot": 8,
+          "hr_prob": 0.11015110068776801,
+          "rbi_prob": 0.2949233408715169,
+          "multi_hit_prob": 0.1974796948842843
         },
         {
           "player_name": "Carson Benge",
           "team": "New York Mets",
           "position": "RF",
           "batting_order_slot": 1,
-          "hr_prob": 0.1051088700864618,
-          "rbi_prob": 0.27045378305694723,
-          "multi_hit_prob": 0.28042805310897667
+          "hr_prob": 0.10685163629750527,
+          "rbi_prob": 0.2917350895629296,
+          "multi_hit_prob": 0.2731132571496587
         },
         {
-          "player_name": "Keibert Ruiz",
-          "team": "Washington Nationals",
-          "position": "C",
-          "batting_order_slot": 9,
-          "hr_prob": 0.10368500963457068,
-          "rbi_prob": 0.289065058142276,
-          "multi_hit_prob": 0.20935360810850545
+          "player_name": "Esteury Ruiz",
+          "team": "Miami Marlins",
+          "position": "CF",
+          "batting_order_slot": 5,
+          "hr_prob": 0.09660474469383794,
+          "rbi_prob": 0.27572626818574103,
+          "multi_hit_prob": 0.2208979881458876
         },
         {
           "player_name": "Luis Torrens",
           "team": "New York Mets",
           "position": "C",
           "batting_order_slot": 9,
-          "hr_prob": 0.09253970458736076,
-          "rbi_prob": 0.27346742821452724,
-          "multi_hit_prob": 0.18116208899213712
+          "hr_prob": 0.0898806168589783,
+          "rbi_prob": 0.2669600473070958,
+          "multi_hit_prob": 0.17342355162768644
         },
         {
           "player_name": "A.J. Ewing",
           "team": "New York Mets",
           "position": "CF",
           "batting_order_slot": 8,
-          "hr_prob": 0.08542738108019127,
-          "rbi_prob": 0.2771930043114738,
-          "multi_hit_prob": 0.20743532227033834
+          "hr_prob": 0.08533513657779318,
+          "rbi_prob": 0.2751185700177783,
+          "multi_hit_prob": 0.20193359501801744
         },
         {
-          "player_name": "Jos\u00e9 Tena",
-          "team": "Washington Nationals",
-          "position": "DH",
-          "batting_order_slot": 7,
-          "hr_prob": 0.08255581370399279,
-          "rbi_prob": 0.29368256217928607,
-          "multi_hit_prob": 0.227643504279347
+          "player_name": "Javier Sanoja",
+          "team": "Miami Marlins",
+          "position": "3B",
+          "batting_order_slot": 9,
+          "hr_prob": 0.0741020970643521,
+          "rbi_prob": 0.2619954599787938,
+          "multi_hit_prob": 0.19022979743799043
         },
         {
-          "player_name": "Nasim Nu\u00f1ez",
-          "team": "Washington Nationals",
+          "player_name": "Xavier Edwards",
+          "team": "Miami Marlins",
           "position": "2B",
-          "batting_order_slot": 8,
-          "hr_prob": 0.07861794849816325,
-          "rbi_prob": 0.2720108358224775,
-          "multi_hit_prob": 0.1965900480145836
+          "batting_order_slot": 1,
+          "hr_prob": 0.07307417050110793,
+          "rbi_prob": 0.27280550457332214,
+          "multi_hit_prob": 0.31411885135522705
         }
       ]
     },
     {
-      "game_pk": 823864,
-      "home_team": "Miami Marlins",
-      "away_team": "Atlanta Braves",
-      "home_win_probability": 0.46913342443303785,
-      "away_win_probability": 0.5308665755669634,
+      "game_pk": 824842,
+      "home_team": "Baltimore Orioles",
+      "away_team": "Detroit Tigers",
+      "home_win_probability": 0.5125173318899876,
+      "away_win_probability": 0.48748266811001256,
+      "predicted_winner": "Detroit Tigers",
+      "confidence_tier": "Normal Pick",
+      "is_confident_pick": false,
+      "confidence_threshold": 0.58,
+      "actual_home_score": null,
+      "actual_away_score": null,
+      "actual_winner": null,
+      "current_leader": null,
+      "game_status": "Scheduled",
+      "is_final": false,
+      "is_postponed": false,
+      "hitters": [
+        {
+          "player_name": "Pete Alonso",
+          "team": "Baltimore Orioles",
+          "position": "1B",
+          "batting_order_slot": 4,
+          "hr_prob": 0.16448471546750962,
+          "rbi_prob": 0.3701225777801782,
+          "multi_hit_prob": 0.25092024298221355
+        },
+        {
+          "player_name": "Tyler O'Neill",
+          "team": "Baltimore Orioles",
+          "position": "RF",
+          "batting_order_slot": 5,
+          "hr_prob": 0.14515504280439895,
+          "rbi_prob": 0.33284005761568863,
+          "multi_hit_prob": 0.23234363444669448
+        },
+        {
+          "player_name": "Kerry Carpenter",
+          "team": "Detroit Tigers",
+          "position": "RF",
+          "batting_order_slot": 6,
+          "hr_prob": 0.14127700071149732,
+          "rbi_prob": 0.31861093469436824,
+          "multi_hit_prob": 0.23614002829795447
+        },
+        {
+          "player_name": "Gunnar Henderson",
+          "team": "Baltimore Orioles",
+          "position": "SS",
+          "batting_order_slot": 2,
+          "hr_prob": 0.13902884769588184,
+          "rbi_prob": 0.3319307113713033,
+          "multi_hit_prob": 0.277168321644047
+        },
+        {
+          "player_name": "Taylor Ward",
+          "team": "Baltimore Orioles",
+          "position": "LF",
+          "batting_order_slot": 1,
+          "hr_prob": 0.13875982311622817,
+          "rbi_prob": 0.3205111513941023,
+          "multi_hit_prob": 0.2712584961222752
+        },
+        {
+          "player_name": "Spencer Torkelson",
+          "team": "Detroit Tigers",
+          "position": "1B",
+          "batting_order_slot": 5,
+          "hr_prob": 0.13829191387801418,
+          "rbi_prob": 0.32368786010844697,
+          "multi_hit_prob": 0.23923816540262988
+        },
+        {
+          "player_name": "Riley Greene",
+          "team": "Detroit Tigers",
+          "position": "LF",
+          "batting_order_slot": 4,
+          "hr_prob": 0.13501042225708906,
+          "rbi_prob": 0.3426299279500437,
+          "multi_hit_prob": 0.27280964741198815
+        },
+        {
+          "player_name": "Samuel Basallo",
+          "team": "Baltimore Orioles",
+          "position": "DH",
+          "batting_order_slot": 6,
+          "hr_prob": 0.13102917717524096,
+          "rbi_prob": 0.3186751803223051,
+          "multi_hit_prob": 0.23654727286687025
+        },
+        {
+          "player_name": "Adley Rutschman",
+          "team": "Baltimore Orioles",
+          "position": "C",
+          "batting_order_slot": 3,
+          "hr_prob": 0.1263916468357138,
+          "rbi_prob": 0.3456901997952393,
+          "multi_hit_prob": 0.2740611903406424
+        },
+        {
+          "player_name": "Dillon Dingler",
+          "team": "Detroit Tigers",
+          "position": "DH",
+          "batting_order_slot": 3,
+          "hr_prob": 0.12265713130386362,
+          "rbi_prob": 0.33517482886666744,
+          "multi_hit_prob": 0.2571787295814992
+        },
+        {
+          "player_name": "Jeremiah Jackson",
+          "team": "Baltimore Orioles",
+          "position": "2B",
+          "batting_order_slot": 7,
+          "hr_prob": 0.11824861697629645,
+          "rbi_prob": 0.3142751878341256,
+          "multi_hit_prob": 0.24269108200440961
+        },
+        {
+          "player_name": "Jake Rogers",
+          "team": "Detroit Tigers",
+          "position": "C",
+          "batting_order_slot": 9,
+          "hr_prob": 0.11601332607222618,
+          "rbi_prob": 0.27435078135908325,
+          "multi_hit_prob": 0.1843192639012278
+        },
+        {
+          "player_name": "Weston Wilson",
+          "team": "Baltimore Orioles",
+          "position": "3B",
+          "batting_order_slot": 8,
+          "hr_prob": 0.11420802788823266,
+          "rbi_prob": 0.2938734308780982,
+          "multi_hit_prob": 0.19351567067554706
+        },
+        {
+          "player_name": "Colt Keith",
+          "team": "Detroit Tigers",
+          "position": "1B",
+          "batting_order_slot": 1,
+          "hr_prob": 0.1080484069723316,
+          "rbi_prob": 0.28936360426162044,
+          "multi_hit_prob": 0.25833697606531775
+        },
+        {
+          "player_name": "Javier B\u00e1ez",
+          "team": "Detroit Tigers",
+          "position": "CF",
+          "batting_order_slot": 8,
+          "hr_prob": 0.10544701273848038,
+          "rbi_prob": 0.28580762897005263,
+          "multi_hit_prob": 0.2254629704660143
+        },
+        {
+          "player_name": "Zach McKinstry",
+          "team": "Detroit Tigers",
+          "position": "2B",
+          "batting_order_slot": 7,
+          "hr_prob": 0.09918544957450515,
+          "rbi_prob": 0.2816665933986093,
+          "multi_hit_prob": 0.21909552162505685
+        },
+        {
+          "player_name": "Kevin McGonigle",
+          "team": "Detroit Tigers",
+          "position": "SS",
+          "batting_order_slot": 2,
+          "hr_prob": 0.08314143020861944,
+          "rbi_prob": 0.2927775397635335,
+          "multi_hit_prob": 0.298454210339802
+        },
+        {
+          "player_name": "Blaze Alexander",
+          "team": "Baltimore Orioles",
+          "position": "2B",
+          "batting_order_slot": 9,
+          "hr_prob": 0.08244114653283177,
+          "rbi_prob": 0.26882905794392736,
+          "multi_hit_prob": 0.19120814274552522
+        }
+      ]
+    },
+    {
+      "game_pk": 824922,
+      "home_team": "Atlanta Braves",
+      "away_team": "Washington Nationals",
+      "home_win_probability": 0.5249540066072368,
+      "away_win_probability": 0.47504599339276343,
       "predicted_winner": "Atlanta Braves",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": 3,
-      "actual_away_score": 9,
-      "actual_winner": "Atlanta Braves",
-      "current_leader": "Atlanta Braves",
-      "game_status": "Final",
-      "is_final": true,
+      "actual_home_score": null,
+      "actual_away_score": null,
+      "actual_winner": null,
+      "current_leader": null,
+      "game_status": "Scheduled",
+      "is_final": false,
       "is_postponed": false,
       "hitters": [
         {
@@ -570,362 +1480,908 @@
           "team": "Atlanta Braves",
           "position": "1B",
           "batting_order_slot": 3,
-          "hr_prob": 0.15389551193794296,
-          "rbi_prob": 0.36168761176000536,
-          "multi_hit_prob": 0.2629374207859766
+          "hr_prob": 0.15135705489479162,
+          "rbi_prob": 0.36479701669488374,
+          "multi_hit_prob": 0.2701698575090303
         },
         {
           "player_name": "Ronald Acu\u00f1a Jr.",
           "team": "Atlanta Braves",
           "position": "RF",
           "batting_order_slot": 1,
-          "hr_prob": 0.1396070269014513,
-          "rbi_prob": 0.3173675328868877,
-          "multi_hit_prob": 0.29694204238016236
+          "hr_prob": 0.14242973300872225,
+          "rbi_prob": 0.3050412498106517,
+          "multi_hit_prob": 0.2984747130975925
         },
         {
-          "player_name": "Kyle Stowers",
-          "team": "Miami Marlins",
-          "position": "RF",
-          "batting_order_slot": 4,
-          "hr_prob": 0.12866158892374518,
-          "rbi_prob": 0.32961727065117263,
-          "multi_hit_prob": 0.24060934347087296
+          "player_name": "James Wood",
+          "team": "Washington Nationals",
+          "position": "DH",
+          "batting_order_slot": 1,
+          "hr_prob": 0.13522445190836663,
+          "rbi_prob": 0.3135312295589761,
+          "multi_hit_prob": 0.2545150691157333
         },
         {
           "player_name": "Austin Riley",
           "team": "Atlanta Braves",
           "position": "3B",
           "batting_order_slot": 7,
-          "hr_prob": 0.12653645385339843,
-          "rbi_prob": 0.3113209396010261,
-          "multi_hit_prob": 0.24767281485834947
+          "hr_prob": 0.1318366413977873,
+          "rbi_prob": 0.3162991594052471,
+          "multi_hit_prob": 0.2515087504973837
         },
         {
           "player_name": "Ozzie Albies",
           "team": "Atlanta Braves",
           "position": "2B",
           "batting_order_slot": 4,
-          "hr_prob": 0.12318954047751417,
-          "rbi_prob": 0.3381073277726483,
-          "multi_hit_prob": 0.28537853904481286
+          "hr_prob": 0.1265991924162353,
+          "rbi_prob": 0.3431793121782371,
+          "multi_hit_prob": 0.2892434277331339
         },
         {
           "player_name": "Michael Harris II",
           "team": "Atlanta Braves",
           "position": "CF",
           "batting_order_slot": 2,
-          "hr_prob": 0.11951806022572259,
-          "rbi_prob": 0.3217730395791756,
-          "multi_hit_prob": 0.2974731246983707
+          "hr_prob": 0.12633635451153194,
+          "rbi_prob": 0.32037989205847933,
+          "multi_hit_prob": 0.3044940195495003
         },
         {
           "player_name": "Mike Yastrzemski",
           "team": "Atlanta Braves",
           "position": "LF",
           "batting_order_slot": 8,
-          "hr_prob": 0.11839228520402494,
-          "rbi_prob": 0.2972183281836771,
-          "multi_hit_prob": 0.21074748144751052
+          "hr_prob": 0.12274936085919941,
+          "rbi_prob": 0.2927152681711185,
+          "multi_hit_prob": 0.20783290601194696
         },
         {
-          "player_name": "Heriberto Hern\u00e1ndez",
-          "team": "Miami Marlins",
-          "position": "LF",
-          "batting_order_slot": 3,
-          "hr_prob": 0.11784430137433878,
-          "rbi_prob": 0.3308096251554382,
-          "multi_hit_prob": 0.24416616665822433
-        },
-        {
-          "player_name": "Griffin Conine",
-          "team": "Miami Marlins",
-          "position": "LF",
-          "batting_order_slot": 7,
-          "hr_prob": 0.11633522470758406,
-          "rbi_prob": 0.29493963588182837,
-          "multi_hit_prob": 0.22182863554471302
+          "player_name": "CJ Abrams",
+          "team": "Washington Nationals",
+          "position": "SS",
+          "batting_order_slot": 4,
+          "hr_prob": 0.11522756849970482,
+          "rbi_prob": 0.330202357240074,
+          "multi_hit_prob": 0.2802087803353516
         },
         {
           "player_name": "Dominic Smith",
           "team": "Atlanta Braves",
           "position": "DH",
           "batting_order_slot": 5,
-          "hr_prob": 0.1124466587844584,
-          "rbi_prob": 0.31250064201067734,
-          "multi_hit_prob": 0.23858628008566538
+          "hr_prob": 0.11474762381132708,
+          "rbi_prob": 0.31693201476038124,
+          "multi_hit_prob": 0.24134955608743117
         },
         {
-          "player_name": "Jakob Marsee",
-          "team": "Miami Marlins",
-          "position": "CF",
-          "batting_order_slot": 6,
-          "hr_prob": 0.10583503104145196,
-          "rbi_prob": 0.29658725201934316,
-          "multi_hit_prob": 0.24330223827518946
-        },
-        {
-          "player_name": "Otto Lopez",
-          "team": "Miami Marlins",
-          "position": "SS",
-          "batting_order_slot": 2,
-          "hr_prob": 0.1036874495426693,
-          "rbi_prob": 0.3012120337233122,
-          "multi_hit_prob": 0.2894821086910609
-        },
-        {
-          "player_name": "Liam Hicks",
-          "team": "Miami Marlins",
-          "position": "C",
-          "batting_order_slot": 8,
-          "hr_prob": 0.1030609152725564,
-          "rbi_prob": 0.2892446895979069,
-          "multi_hit_prob": 0.19722934168278738
-        },
-        {
-          "player_name": "Esteury Ruiz",
-          "team": "Miami Marlins",
-          "position": "CF",
+          "player_name": "Dylan Crews",
+          "team": "Washington Nationals",
+          "position": "RF",
           "batting_order_slot": 5,
-          "hr_prob": 0.0893407760082543,
-          "rbi_prob": 0.2700760087554674,
-          "multi_hit_prob": 0.22215245808738748
+          "hr_prob": 0.11206861628196617,
+          "rbi_prob": 0.291443747407949,
+          "multi_hit_prob": 0.24065437015567026
+        },
+        {
+          "player_name": "Daylen Lile",
+          "team": "Washington Nationals",
+          "position": "LF",
+          "batting_order_slot": 6,
+          "hr_prob": 0.1102179382309093,
+          "rbi_prob": 0.3075522052819683,
+          "multi_hit_prob": 0.2726083493391521
+        },
+        {
+          "player_name": "Luis Garc\u00eda Jr.",
+          "team": "Washington Nationals",
+          "position": "1B",
+          "batting_order_slot": 2,
+          "hr_prob": 0.10991911279668094,
+          "rbi_prob": 0.3121704155793827,
+          "multi_hit_prob": 0.29791327073041857
+        },
+        {
+          "player_name": "Brady House",
+          "team": "Washington Nationals",
+          "position": "3B",
+          "batting_order_slot": 3,
+          "hr_prob": 0.10166570949472238,
+          "rbi_prob": 0.32288698032805274,
+          "multi_hit_prob": 0.2586001949374747
         },
         {
           "player_name": "Mauricio Dub\u00f3n",
           "team": "Atlanta Braves",
           "position": "SS",
           "batting_order_slot": 6,
-          "hr_prob": 0.08933114623150162,
-          "rbi_prob": 0.28828391714167184,
-          "multi_hit_prob": 0.24332361289515725
+          "hr_prob": 0.08850016409657885,
+          "rbi_prob": 0.276964335620528,
+          "multi_hit_prob": 0.24549995301139835
+        },
+        {
+          "player_name": "Keibert Ruiz",
+          "team": "Washington Nationals",
+          "position": "C",
+          "batting_order_slot": 9,
+          "hr_prob": 0.08733848720421249,
+          "rbi_prob": 0.25556245142645556,
+          "multi_hit_prob": 0.21164131677334028
         },
         {
           "player_name": "Sandy Le\u00f3n",
           "team": "Atlanta Braves",
           "position": "C",
           "batting_order_slot": 9,
-          "hr_prob": 0.08305182049951855,
-          "rbi_prob": 0.2623501861369619,
-          "multi_hit_prob": 0.17274106791022084
+          "hr_prob": 0.08617400892468774,
+          "rbi_prob": 0.2591295091642792,
+          "multi_hit_prob": 0.17158013446005263
         },
         {
-          "player_name": "Xavier Edwards",
-          "team": "Miami Marlins",
+          "player_name": "Jos\u00e9 Tena",
+          "team": "Washington Nationals",
+          "position": "DH",
+          "batting_order_slot": 7,
+          "hr_prob": 0.07579353515072272,
+          "rbi_prob": 0.27840105579821744,
+          "multi_hit_prob": 0.23020119605274356
+        },
+        {
+          "player_name": "Nasim Nu\u00f1ez",
+          "team": "Washington Nationals",
           "position": "2B",
-          "batting_order_slot": 1,
-          "hr_prob": 0.06727107323353965,
-          "rbi_prob": 0.26809688734608206,
-          "multi_hit_prob": 0.3090652147420318
-        },
-        {
-          "player_name": "Javier Sanoja",
-          "team": "Miami Marlins",
-          "position": "3B",
-          "batting_order_slot": 9,
-          "hr_prob": 0.05996039267309547,
-          "rbi_prob": 0.24579333092498198,
-          "multi_hit_prob": 0.19451022065117204
+          "batting_order_slot": 8,
+          "hr_prob": 0.07182483871491403,
+          "rbi_prob": 0.25332738171484565,
+          "multi_hit_prob": 0.1994422243828565
         }
       ]
     },
     {
-      "game_pk": 823545,
-      "home_team": "New York Yankees",
-      "away_team": "Toronto Blue Jays",
-      "home_win_probability": 0.5011146375193285,
-      "away_win_probability": 0.4988853624806718,
-      "predicted_winner": "Toronto Blue Jays",
+      "game_pk": 824110,
+      "home_team": "Kansas City Royals",
+      "away_team": "Seattle Mariners",
+      "home_win_probability": 0.4828810098454017,
+      "away_win_probability": 0.5171189901545994,
+      "predicted_winner": "Seattle Mariners",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": 0,
-      "actual_away_score": 2,
-      "actual_winner": "Toronto Blue Jays",
-      "current_leader": "Toronto Blue Jays",
-      "game_status": "Final",
-      "is_final": true,
+      "actual_home_score": null,
+      "actual_away_score": null,
+      "actual_winner": null,
+      "current_leader": null,
+      "game_status": "Scheduled",
+      "is_final": false,
       "is_postponed": false,
       "hitters": [
         {
-          "player_name": "Giancarlo Stanton",
-          "team": "New York Yankees",
-          "position": "DH",
-          "batting_order_slot": 5,
-          "hr_prob": 0.14980037839920948,
-          "rbi_prob": 0.34133158483666803,
-          "multi_hit_prob": 0.232610679006229
-        },
-        {
-          "player_name": "Kazuma Okamoto",
-          "team": "Toronto Blue Jays",
-          "position": "3B",
+          "player_name": "Cal Raleigh",
+          "team": "Seattle Mariners",
+          "position": "C",
           "batting_order_slot": 4,
-          "hr_prob": 0.1489827215785969,
-          "rbi_prob": 0.3490185717780911,
-          "multi_hit_prob": 0.23893285006425283
+          "hr_prob": 0.1473254195211702,
+          "rbi_prob": 0.34250860704446257,
+          "multi_hit_prob": 0.23442006082559055
         },
         {
-          "player_name": "Aaron Judge",
-          "team": "New York Yankees",
-          "position": "RF",
-          "batting_order_slot": 2,
-          "hr_prob": 0.1486370381575798,
-          "rbi_prob": 0.34151640107950115,
-          "multi_hit_prob": 0.24626579783152827
-        },
-        {
-          "player_name": "Ben Rice",
-          "team": "New York Yankees",
-          "position": "DH",
-          "batting_order_slot": 1,
-          "hr_prob": 0.14057271480795475,
-          "rbi_prob": 0.308859722518341,
-          "multi_hit_prob": 0.24014383523601887
-        },
-        {
-          "player_name": "George Springer",
-          "team": "Toronto Blue Jays",
-          "position": "DH",
-          "batting_order_slot": 1,
-          "hr_prob": 0.13890482902005705,
-          "rbi_prob": 0.3130881843614696,
-          "multi_hit_prob": 0.27244262640083666
-        },
-        {
-          "player_name": "Cody Bellinger",
-          "team": "New York Yankees",
-          "position": "CF",
-          "batting_order_slot": 3,
-          "hr_prob": 0.13762372295682887,
-          "rbi_prob": 0.3511340075695341,
-          "multi_hit_prob": 0.25935962515585426
-        },
-        {
-          "player_name": "Vladimir Guerrero Jr.",
-          "team": "Toronto Blue Jays",
+          "player_name": "Vinnie Pasquantino",
+          "team": "Kansas City Royals",
           "position": "1B",
-          "batting_order_slot": 2,
-          "hr_prob": 0.13357370137201355,
-          "rbi_prob": 0.3251448806192025,
-          "multi_hit_prob": 0.29426338293482796
-        },
-        {
-          "player_name": "Eloy Jim\u00e9nez",
-          "team": "Toronto Blue Jays",
-          "position": "DH",
-          "batting_order_slot": 6,
-          "hr_prob": 0.13261550682627052,
-          "rbi_prob": 0.31565479702573446,
-          "multi_hit_prob": 0.25368884999064073
-        },
-        {
-          "player_name": "Daulton Varsho",
-          "team": "Toronto Blue Jays",
-          "position": "CF",
           "batting_order_slot": 3,
-          "hr_prob": 0.12836718148861345,
-          "rbi_prob": 0.324200973854294,
-          "multi_hit_prob": 0.2436692799664492
+          "hr_prob": 0.1327743687320649,
+          "rbi_prob": 0.3549504930852665,
+          "multi_hit_prob": 0.26903118291913386
         },
         {
-          "player_name": "Jazz Chisholm Jr.",
-          "team": "New York Yankees",
-          "position": "2B",
-          "batting_order_slot": 4,
-          "hr_prob": 0.12562833709970808,
-          "rbi_prob": 0.3310073532671045,
-          "multi_hit_prob": 0.238298805869958
+          "player_name": "Julio Rodr\u00edguez",
+          "team": "Seattle Mariners",
+          "position": "CF",
+          "batting_order_slot": 2,
+          "hr_prob": 0.1316187561231343,
+          "rbi_prob": 0.3181951119591831,
+          "multi_hit_prob": 0.2964462198240379
         },
         {
-          "player_name": "Brandon Valenzuela",
-          "team": "Toronto Blue Jays",
-          "position": "C",
-          "batting_order_slot": 8,
-          "hr_prob": 0.11917628855387728,
-          "rbi_prob": 0.28400071818505895,
-          "multi_hit_prob": 0.197353431644804
+          "player_name": "Carter Jensen",
+          "team": "Kansas City Royals",
+          "position": "DH",
+          "batting_order_slot": 5,
+          "hr_prob": 0.1312816230719618,
+          "rbi_prob": 0.3298885576545621,
+          "multi_hit_prob": 0.22144578166351625
         },
         {
-          "player_name": "Ryan McMahon",
-          "team": "New York Yankees",
+          "player_name": "Patrick Wisdom",
+          "team": "Seattle Mariners",
           "position": "3B",
           "batting_order_slot": 7,
-          "hr_prob": 0.11685146368410552,
-          "rbi_prob": 0.2996578442739775,
-          "multi_hit_prob": 0.20664678868267475
+          "hr_prob": 0.1304995455662761,
+          "rbi_prob": 0.306391821975654,
+          "multi_hit_prob": 0.21479802434382234
         },
         {
-          "player_name": "Austin Wells",
-          "team": "New York Yankees",
-          "position": "C",
-          "batting_order_slot": 9,
-          "hr_prob": 0.11219029293333994,
-          "rbi_prob": 0.27947246372883294,
-          "multi_hit_prob": 0.1842929553501861
+          "player_name": "Josh Naylor",
+          "team": "Seattle Mariners",
+          "position": "1B",
+          "batting_order_slot": 3,
+          "hr_prob": 0.12740515688794793,
+          "rbi_prob": 0.3396590820199026,
+          "multi_hit_prob": 0.2808661420694294
         },
         {
-          "player_name": "Anthony Volpe",
-          "team": "New York Yankees",
-          "position": "SS",
-          "batting_order_slot": 8,
-          "hr_prob": 0.09867427182286598,
-          "rbi_prob": 0.28529065211717886,
-          "multi_hit_prob": 0.21002725836765126
-        },
-        {
-          "player_name": "Amed Rosario",
-          "team": "New York Yankees",
-          "position": "LF",
-          "batting_order_slot": 6,
-          "hr_prob": 0.09195948076460662,
-          "rbi_prob": 0.2961156829919141,
-          "multi_hit_prob": 0.2516506143445812
-        },
-        {
-          "player_name": "Andr\u00e9s Gim\u00e9nez",
-          "team": "Toronto Blue Jays",
-          "position": "SS",
-          "batting_order_slot": 9,
-          "hr_prob": 0.08666038068401039,
-          "rbi_prob": 0.2745760627415395,
-          "multi_hit_prob": 0.21618480757535075
-        },
-        {
-          "player_name": "Yohendrick Pi\u00f1ango",
-          "team": "Toronto Blue Jays",
+          "player_name": "Luke Raley",
+          "team": "Seattle Mariners",
           "position": "RF",
           "batting_order_slot": 5,
-          "hr_prob": 0.07530682334419277,
-          "rbi_prob": 0.29190495959242474,
-          "multi_hit_prob": 0.2451047616960171
+          "hr_prob": 0.12720638050223576,
+          "rbi_prob": 0.31330248509208153,
+          "multi_hit_prob": 0.22502618753589387
         },
         {
-          "player_name": "Yohendrick Pinango",
-          "team": "Toronto Blue Jays",
+          "player_name": "Bobby Witt Jr.",
+          "team": "Kansas City Royals",
+          "position": "SS",
+          "batting_order_slot": 2,
+          "hr_prob": 0.12431428283040863,
+          "rbi_prob": 0.324590205922939,
+          "multi_hit_prob": 0.29537164437275076
+        },
+        {
+          "player_name": "Dominic Canzone",
+          "team": "Seattle Mariners",
+          "position": "DH",
+          "batting_order_slot": 6,
+          "hr_prob": 0.11995547123127527,
+          "rbi_prob": 0.30400692005497354,
+          "multi_hit_prob": 0.22274181937278228
+        },
+        {
+          "player_name": "Jac Caglianone",
+          "team": "Kansas City Royals",
+          "position": "RF",
+          "batting_order_slot": 6,
+          "hr_prob": 0.11354214514997833,
+          "rbi_prob": 0.2888132167517871,
+          "multi_hit_prob": 0.21465976606412693
+        },
+        {
+          "player_name": "Isaac Collins",
+          "team": "Kansas City Royals",
           "position": "LF",
+          "batting_order_slot": 4,
+          "hr_prob": 0.10680127551234432,
+          "rbi_prob": 0.30894300209086495,
+          "multi_hit_prob": 0.22333198446058922
+        },
+        {
+          "player_name": "Starling Marte",
+          "team": "Kansas City Royals",
+          "position": "DH",
           "batting_order_slot": 7,
-          "hr_prob": 0.06842248250239287,
-          "rbi_prob": 0.2645604574941733,
-          "multi_hit_prob": 0.20681260040598218
+          "hr_prob": 0.1045110416110422,
+          "rbi_prob": 0.30209164452295895,
+          "multi_hit_prob": 0.23997901358907173
+        },
+        {
+          "player_name": "Brendan Donovan",
+          "team": "Seattle Mariners",
+          "position": "3B",
+          "batting_order_slot": 1,
+          "hr_prob": 0.10430935679767284,
+          "rbi_prob": 0.2977010679610834,
+          "multi_hit_prob": 0.2935021972964563
+        },
+        {
+          "player_name": "Elias D\u00edaz",
+          "team": "Kansas City Royals",
+          "position": "C",
+          "batting_order_slot": 8,
+          "hr_prob": 0.10227460149747582,
+          "rbi_prob": 0.2924302161038293,
+          "multi_hit_prob": 0.20520646592935352
+        },
+        {
+          "player_name": "Maikel Garcia",
+          "team": "Kansas City Royals",
+          "position": "3B",
+          "batting_order_slot": 1,
+          "hr_prob": 0.09461928043644273,
+          "rbi_prob": 0.2951478659930945,
+          "multi_hit_prob": 0.28765149829442893
+        },
+        {
+          "player_name": "Colt Emerson",
+          "team": "Seattle Mariners",
+          "position": "SS",
+          "batting_order_slot": 8,
+          "hr_prob": 0.09334172901114408,
+          "rbi_prob": 0.2787719606708631,
+          "multi_hit_prob": 0.219494939388489
+        },
+        {
+          "player_name": "Kyle Isbel",
+          "team": "Kansas City Royals",
+          "position": "CF",
+          "batting_order_slot": 9,
+          "hr_prob": 0.07362572869167332,
+          "rbi_prob": 0.257223901152202,
+          "multi_hit_prob": 0.1871423654431118
+        },
+        {
+          "player_name": "Jhonny Pereda",
+          "team": "Seattle Mariners",
+          "position": "C",
+          "batting_order_slot": 9,
+          "hr_prob": 0.06276452945132349,
+          "rbi_prob": 0.25690469514975833,
+          "multi_hit_prob": 0.18122095328254936
         }
       ]
     },
     {
-      "game_pk": 824031,
-      "home_team": "Los Angeles Angels",
-      "away_team": "Athletics",
-      "home_win_probability": 0.5084461017895631,
-      "away_win_probability": 0.4915538982104375,
-      "predicted_winner": "Athletics",
+      "game_pk": 823788,
+      "home_team": "Milwaukee Brewers",
+      "away_team": "Los Angeles Dodgers",
+      "home_win_probability": 0.5009757346052971,
+      "away_win_probability": 0.4990242653947032,
+      "predicted_winner": "Los Angeles Dodgers",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": 2,
-      "actual_away_score": 2,
+      "actual_home_score": null,
+      "actual_away_score": null,
       "actual_winner": null,
       "current_leader": null,
-      "game_status": "Top 9",
+      "game_status": "Scheduled",
+      "is_final": false,
+      "is_postponed": false,
+      "hitters": [
+        {
+          "player_name": "Max Muncy",
+          "team": "Los Angeles Dodgers",
+          "position": "3B",
+          "batting_order_slot": 6,
+          "hr_prob": 0.14797740674997176,
+          "rbi_prob": 0.30599145959604623,
+          "multi_hit_prob": 0.21123348535080635
+        },
+        {
+          "player_name": "Kyle Tucker",
+          "team": "Los Angeles Dodgers",
+          "position": "RF",
+          "batting_order_slot": 4,
+          "hr_prob": 0.14656733555716436,
+          "rbi_prob": 0.3462864347502063,
+          "multi_hit_prob": 0.26089392813160556
+        },
+        {
+          "player_name": "Shohei Ohtani",
+          "team": "Los Angeles Dodgers",
+          "position": "DH",
+          "batting_order_slot": 1,
+          "hr_prob": 0.145526187596304,
+          "rbi_prob": 0.3147492463376709,
+          "multi_hit_prob": 0.25215903403159207
+        },
+        {
+          "player_name": "Freddie Freeman",
+          "team": "Los Angeles Dodgers",
+          "position": "1B",
+          "batting_order_slot": 3,
+          "hr_prob": 0.13426949389040327,
+          "rbi_prob": 0.3465643586433544,
+          "multi_hit_prob": 0.2846532547090667
+        },
+        {
+          "player_name": "Andy Pages",
+          "team": "Los Angeles Dodgers",
+          "position": "CF",
+          "batting_order_slot": 5,
+          "hr_prob": 0.13309204514498363,
+          "rbi_prob": 0.3183500512230384,
+          "multi_hit_prob": 0.25975537954979083
+        },
+        {
+          "player_name": "Mookie Betts",
+          "team": "Los Angeles Dodgers",
+          "position": "SS",
+          "batting_order_slot": 2,
+          "hr_prob": 0.13242997784221924,
+          "rbi_prob": 0.31785448640036956,
+          "multi_hit_prob": 0.29013035804992376
+        },
+        {
+          "player_name": "Teoscar Hern\u00e1ndez",
+          "team": "Los Angeles Dodgers",
+          "position": "LF",
+          "batting_order_slot": 8,
+          "hr_prob": 0.1287335456902703,
+          "rbi_prob": 0.297342586893184,
+          "multi_hit_prob": 0.2219568784738952
+        },
+        {
+          "player_name": "William Contreras",
+          "team": "Milwaukee Brewers",
+          "position": "C",
+          "batting_order_slot": 3,
+          "hr_prob": 0.1276027883113802,
+          "rbi_prob": 0.34556174843797915,
+          "multi_hit_prob": 0.26943900864300413
+        },
+        {
+          "player_name": "Will Smith",
+          "team": "Los Angeles Dodgers",
+          "position": "C",
+          "batting_order_slot": 7,
+          "hr_prob": 0.1273062098525549,
+          "rbi_prob": 0.30025387614171095,
+          "multi_hit_prob": 0.22093374082776865
+        },
+        {
+          "player_name": "Jackson Chourio",
+          "team": "Milwaukee Brewers",
+          "position": "LF",
+          "batting_order_slot": 1,
+          "hr_prob": 0.12640678598324903,
+          "rbi_prob": 0.30975078472676026,
+          "multi_hit_prob": 0.28793581140297864
+        },
+        {
+          "player_name": "Christian Yelich",
+          "team": "Milwaukee Brewers",
+          "position": "DH",
+          "batting_order_slot": 4,
+          "hr_prob": 0.12588042042355455,
+          "rbi_prob": 0.34461368110258,
+          "multi_hit_prob": 0.26569728616074534
+        },
+        {
+          "player_name": "Jake Bauers",
+          "team": "Milwaukee Brewers",
+          "position": "1B",
+          "batting_order_slot": 6,
+          "hr_prob": 0.1245255575273474,
+          "rbi_prob": 0.3034705285888004,
+          "multi_hit_prob": 0.21072115211059894
+        },
+        {
+          "player_name": "Andrew Vaughn",
+          "team": "Milwaukee Brewers",
+          "position": "1B",
+          "batting_order_slot": 5,
+          "hr_prob": 0.12321439117760295,
+          "rbi_prob": 0.33145845155194203,
+          "multi_hit_prob": 0.24375797566132976
+        },
+        {
+          "player_name": "Brice Turang",
+          "team": "Milwaukee Brewers",
+          "position": "2B",
+          "batting_order_slot": 2,
+          "hr_prob": 0.10177450830337416,
+          "rbi_prob": 0.30062275073106587,
+          "multi_hit_prob": 0.26161922633882945
+        },
+        {
+          "player_name": "Sal Frelick",
+          "team": "Milwaukee Brewers",
+          "position": "RF",
+          "batting_order_slot": 7,
+          "hr_prob": 0.08949696173049722,
+          "rbi_prob": 0.2910316342764366,
+          "multi_hit_prob": 0.22574353824011928
+        },
+        {
+          "player_name": "Joey Ortiz",
+          "team": "Milwaukee Brewers",
+          "position": "SS",
+          "batting_order_slot": 8,
+          "hr_prob": 0.08791976837217137,
+          "rbi_prob": 0.27566489074958517,
+          "multi_hit_prob": 0.19774207075681127
+        },
+        {
+          "player_name": "David Hamilton",
+          "team": "Milwaukee Brewers",
+          "position": "3B",
+          "batting_order_slot": 9,
+          "hr_prob": 0.08622137244912635,
+          "rbi_prob": 0.2272599301454832,
+          "multi_hit_prob": 0.16179610538359476
+        },
+        {
+          "player_name": "Hyeseong Kim",
+          "team": "Los Angeles Dodgers",
+          "position": "2B",
+          "batting_order_slot": 9,
+          "hr_prob": 0.06455236612203422,
+          "rbi_prob": 0.24444916052203536,
+          "multi_hit_prob": 0.17604810102311438
+        }
+      ]
+    },
+    {
+      "game_pk": 824029,
+      "home_team": "Los Angeles Angels",
+      "away_team": "Texas Rangers",
+      "home_win_probability": 0.48077892304385794,
+      "away_win_probability": 0.5192210769561432,
+      "predicted_winner": "Texas Rangers",
+      "confidence_tier": "Normal Pick",
+      "is_confident_pick": false,
+      "confidence_threshold": 0.58,
+      "actual_home_score": null,
+      "actual_away_score": null,
+      "actual_winner": null,
+      "current_leader": null,
+      "game_status": "Scheduled",
+      "is_final": false,
+      "is_postponed": false,
+      "hitters": [
+        {
+          "player_name": "Jake Burger",
+          "team": "Texas Rangers",
+          "position": "1B",
+          "batting_order_slot": 6,
+          "hr_prob": 0.17327565314343732,
+          "rbi_prob": 0.2937594213686689,
+          "multi_hit_prob": 0.23146760046451098
+        },
+        {
+          "player_name": "Mike Trout",
+          "team": "Los Angeles Angels",
+          "position": "CF",
+          "batting_order_slot": 2,
+          "hr_prob": 0.17076147356829782,
+          "rbi_prob": 0.3289592911883558,
+          "multi_hit_prob": 0.26335667230070636
+        },
+        {
+          "player_name": "Wyatt Langford",
+          "team": "Texas Rangers",
+          "position": "LF",
+          "batting_order_slot": 2,
+          "hr_prob": 0.16647174654337038,
+          "rbi_prob": 0.29584312811044305,
+          "multi_hit_prob": 0.2650226106977682
+        },
+        {
+          "player_name": "Corey Seager",
+          "team": "Texas Rangers",
+          "position": "SS",
+          "batting_order_slot": 3,
+          "hr_prob": 0.1655313332186574,
+          "rbi_prob": 0.322929475956983,
+          "multi_hit_prob": 0.2873213707474899
+        },
+        {
+          "player_name": "Danny Jansen",
+          "team": "Texas Rangers",
+          "position": "C",
+          "batting_order_slot": 5,
+          "hr_prob": 0.1639626543639592,
+          "rbi_prob": 0.30159323459869064,
+          "multi_hit_prob": 0.2161935439321162
+        },
+        {
+          "player_name": "Josh Jung",
+          "team": "Texas Rangers",
+          "position": "3B",
+          "batting_order_slot": 4,
+          "hr_prob": 0.16273989349846307,
+          "rbi_prob": 0.31887110957743964,
+          "multi_hit_prob": 0.271116326553865
+        },
+        {
+          "player_name": "Andrew McCutchen",
+          "team": "Texas Rangers",
+          "position": "DH",
+          "batting_order_slot": 1,
+          "hr_prob": 0.16250551426261917,
+          "rbi_prob": 0.2931892872212292,
+          "multi_hit_prob": 0.27390837634003745
+        },
+        {
+          "player_name": "Jorge Soler",
+          "team": "Los Angeles Angels",
+          "position": "DH",
+          "batting_order_slot": 4,
+          "hr_prob": 0.15863163774409852,
+          "rbi_prob": 0.34027379057238033,
+          "multi_hit_prob": 0.22155677134846374
+        },
+        {
+          "player_name": "Jo Adell",
+          "team": "Los Angeles Angels",
+          "position": "RF",
+          "batting_order_slot": 6,
+          "hr_prob": 0.15537754372288382,
+          "rbi_prob": 0.3080676821615231,
+          "multi_hit_prob": 0.22428901990018843
+        },
+        {
+          "player_name": "Brandon Nimmo",
+          "team": "Texas Rangers",
+          "position": "RF",
+          "batting_order_slot": 2,
+          "hr_prob": 0.15527042277970302,
+          "rbi_prob": 0.29699613390731855,
+          "multi_hit_prob": 0.26778140458424904
+        },
+        {
+          "player_name": "Michael Helman",
+          "team": "Texas Rangers",
+          "position": "CF",
+          "batting_order_slot": 7,
+          "hr_prob": 0.14789693271320145,
+          "rbi_prob": 0.28080178384113674,
+          "multi_hit_prob": 0.2098492533923213
+        },
+        {
+          "player_name": "Kyle Higashioka",
+          "team": "Texas Rangers",
+          "position": "C",
+          "batting_order_slot": 8,
+          "hr_prob": 0.14516353356136966,
+          "rbi_prob": 0.28047073212686335,
+          "multi_hit_prob": 0.20182225437933002
+        },
+        {
+          "player_name": "Zach Neto",
+          "team": "Los Angeles Angels",
+          "position": "SS",
+          "batting_order_slot": 1,
+          "hr_prob": 0.14281410801893765,
+          "rbi_prob": 0.30910580425654005,
+          "multi_hit_prob": 0.26652858347097336
+        },
+        {
+          "player_name": "Travis d'Arnaud",
+          "team": "Los Angeles Angels",
+          "position": "C",
+          "batting_order_slot": 8,
+          "hr_prob": 0.13765992788969064,
+          "rbi_prob": 0.29966558715240305,
+          "multi_hit_prob": 0.21024088989410103
+        },
+        {
+          "player_name": "Yo\u00e1n Moncada",
+          "team": "Los Angeles Angels",
+          "position": "3B",
+          "batting_order_slot": 5,
+          "hr_prob": 0.13605244021451635,
+          "rbi_prob": 0.32308441672919236,
+          "multi_hit_prob": 0.23354754456073043
+        },
+        {
+          "player_name": "Nolan Schanuel",
+          "team": "Los Angeles Angels",
+          "position": "1B",
+          "batting_order_slot": 3,
+          "hr_prob": 0.12849106137423325,
+          "rbi_prob": 0.31198636381058037,
+          "multi_hit_prob": 0.2642255861669418
+        },
+        {
+          "player_name": "Josh Lowe",
+          "team": "Los Angeles Angels",
+          "position": "LF",
+          "batting_order_slot": 9,
+          "hr_prob": 0.12069528751629964,
+          "rbi_prob": 0.2753499601660186,
+          "multi_hit_prob": 0.19649735023799453
+        },
+        {
+          "player_name": "Adam Frazier",
+          "team": "Los Angeles Angels",
+          "position": "2B",
+          "batting_order_slot": 5,
+          "hr_prob": 0.1019925847652882,
+          "rbi_prob": 0.2908720268998165,
+          "multi_hit_prob": 0.23537248169581573
+        }
+      ]
+    },
+    {
+      "game_pk": 825082,
+      "home_team": "Arizona Diamondbacks",
+      "away_team": "Colorado Rockies",
+      "home_win_probability": 0.5462460276982,
+      "away_win_probability": 0.45375397230179987,
+      "predicted_winner": "Arizona Diamondbacks",
+      "confidence_tier": "Normal Pick",
+      "is_confident_pick": false,
+      "confidence_threshold": 0.58,
+      "actual_home_score": null,
+      "actual_away_score": null,
+      "actual_winner": null,
+      "current_leader": null,
+      "game_status": "Scheduled",
+      "is_final": false,
+      "is_postponed": false,
+      "hitters": [
+        {
+          "player_name": "Corbin Carroll",
+          "team": "Arizona Diamondbacks",
+          "position": "RF",
+          "batting_order_slot": 2,
+          "hr_prob": 0.17836104673816536,
+          "rbi_prob": 0.3437807316685671,
+          "multi_hit_prob": 0.28626591743825197
+        },
+        {
+          "player_name": "Nolan Arenado",
+          "team": "Arizona Diamondbacks",
+          "position": "3B",
+          "batting_order_slot": 4,
+          "hr_prob": 0.1781383270012673,
+          "rbi_prob": 0.38218175976476604,
+          "multi_hit_prob": 0.28725366294312077
+        },
+        {
+          "player_name": "Lourdes Gurriel Jr.",
+          "team": "Arizona Diamondbacks",
+          "position": "DH",
+          "batting_order_slot": 5,
+          "hr_prob": 0.1658848895483816,
+          "rbi_prob": 0.3552435469274367,
+          "multi_hit_prob": 0.2760375965405937
+        },
+        {
+          "player_name": "Ketel Marte",
+          "team": "Arizona Diamondbacks",
+          "position": "2B",
+          "batting_order_slot": 1,
+          "hr_prob": 0.15855374232465944,
+          "rbi_prob": 0.3236425637264692,
+          "multi_hit_prob": 0.30666574780949346
+        },
+        {
+          "player_name": "Mickey Moniak",
+          "team": "Colorado Rockies",
+          "position": "DH",
+          "batting_order_slot": 2,
+          "hr_prob": 0.14385182475333197,
+          "rbi_prob": 0.3125974818701809,
+          "multi_hit_prob": 0.26724365787667304
+        },
+        {
+          "player_name": "TJ Rumfield",
+          "team": "Colorado Rockies",
+          "position": "1B",
+          "batting_order_slot": 4,
+          "hr_prob": 0.13929289996445432,
+          "rbi_prob": 0.33638634561145636,
+          "multi_hit_prob": 0.28991259983962253
+        },
+        {
+          "player_name": "Tim Tawa",
+          "team": "Arizona Diamondbacks",
+          "position": "LF",
+          "batting_order_slot": 8,
+          "hr_prob": 0.13497955232134715,
+          "rbi_prob": 0.306631212375073,
+          "multi_hit_prob": 0.2113656673228602
+        },
+        {
+          "player_name": "Gabriel Moreno",
+          "team": "Arizona Diamondbacks",
+          "position": "C",
+          "batting_order_slot": 6,
+          "hr_prob": 0.1273681215360916,
+          "rbi_prob": 0.32704142998438424,
+          "multi_hit_prob": 0.2567347393357809
+        },
+        {
+          "player_name": "Ezequiel Tovar",
+          "team": "Colorado Rockies",
+          "position": "SS",
+          "batting_order_slot": 6,
+          "hr_prob": 0.12180011127790509,
+          "rbi_prob": 0.30249889443132694,
+          "multi_hit_prob": 0.2607558810661457
+        },
+        {
+          "player_name": "Jorge Barrosa",
+          "team": "Arizona Diamondbacks",
+          "position": "RF",
+          "batting_order_slot": 7,
+          "hr_prob": 0.1127708396638659,
+          "rbi_prob": 0.2909064912951809,
+          "multi_hit_prob": 0.21755318377059626
+        },
+        {
+          "player_name": "Edouard Julien",
+          "team": "Colorado Rockies",
+          "position": "2B",
+          "batting_order_slot": 7,
+          "hr_prob": 0.11218223347540568,
+          "rbi_prob": 0.27748537717243127,
+          "multi_hit_prob": 0.2210511264416836
+        },
+        {
+          "player_name": "Geraldo Perdomo",
+          "team": "Arizona Diamondbacks",
+          "position": "SS",
+          "batting_order_slot": 3,
+          "hr_prob": 0.11197337301557109,
+          "rbi_prob": 0.3277533108440062,
+          "multi_hit_prob": 0.26168062733857694
+        },
+        {
+          "player_name": "Troy Johnston",
+          "team": "Colorado Rockies",
+          "position": "LF",
+          "batting_order_slot": 5,
+          "hr_prob": 0.10624609649028993,
+          "rbi_prob": 0.2979612734989386,
+          "multi_hit_prob": 0.258129720564182
+        },
+        {
+          "player_name": "Jake McCarthy",
+          "team": "Colorado Rockies",
+          "position": "CF",
+          "batting_order_slot": 1,
+          "hr_prob": 0.10206213270769443,
+          "rbi_prob": 0.28106973329196777,
+          "multi_hit_prob": 0.29248890783704923
+        },
+        {
+          "player_name": "Tyler Freeman",
+          "team": "Colorado Rockies",
+          "position": "RF",
+          "batting_order_slot": 3,
+          "hr_prob": 0.09852028929954297,
+          "rbi_prob": 0.2803209541106891,
+          "multi_hit_prob": 0.24509802202046296
+        },
+        {
+          "player_name": "Ryan Waldschmidt",
+          "team": "Arizona Diamondbacks",
+          "position": "CF",
+          "batting_order_slot": 9,
+          "hr_prob": 0.09182478683347291,
+          "rbi_prob": 0.28050785832158903,
+          "multi_hit_prob": 0.2005304001716713
+        },
+        {
+          "player_name": "Braxton Fulford",
+          "team": "Colorado Rockies",
+          "position": "DH",
+          "batting_order_slot": 9,
+          "hr_prob": 0.08877081110814473,
+          "rbi_prob": 0.26905633859451056,
+          "multi_hit_prob": 0.19164669401266402
+        },
+        {
+          "player_name": "Kyle Karros",
+          "team": "Colorado Rockies",
+          "position": "3B",
+          "batting_order_slot": 8,
+          "hr_prob": 0.07420095332936377,
+          "rbi_prob": 0.2608973054763571,
+          "multi_hit_prob": 0.21112554720674148
+        }
+      ]
+    },
+    {
+      "game_pk": 823298,
+      "home_team": "San Diego Padres",
+      "away_team": "Athletics",
+      "home_win_probability": 0.527023574233945,
+      "away_win_probability": 0.4729764257660554,
+      "predicted_winner": "San Diego Padres",
+      "confidence_tier": "Normal Pick",
+      "is_confident_pick": false,
+      "confidence_threshold": 0.58,
+      "actual_home_score": null,
+      "actual_away_score": null,
+      "actual_winner": null,
+      "current_leader": null,
+      "game_status": "Scheduled",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -934,344 +2390,344 @@
           "team": "Athletics",
           "position": "1B",
           "batting_order_slot": 3,
-          "hr_prob": 0.1928134154443196,
-          "rbi_prob": 0.3361270332084878,
-          "multi_hit_prob": 0.25930231401507847
-        },
-        {
-          "player_name": "Mike Trout",
-          "team": "Los Angeles Angels",
-          "position": "CF",
-          "batting_order_slot": 2,
-          "hr_prob": 0.17250800881926773,
-          "rbi_prob": 0.33789580866016333,
-          "multi_hit_prob": 0.2713505886476871
+          "hr_prob": 0.1638051306839909,
+          "rbi_prob": 0.36694100070810437,
+          "multi_hit_prob": 0.2656551666879347
         },
         {
           "player_name": "Brent Rooker",
           "team": "Athletics",
           "position": "DH",
           "batting_order_slot": 4,
-          "hr_prob": 0.17052710561016612,
-          "rbi_prob": 0.31126066790566065,
-          "multi_hit_prob": 0.23347497111615925
+          "hr_prob": 0.14541613106071824,
+          "rbi_prob": 0.3458850403760505,
+          "multi_hit_prob": 0.24328140263690282
+        },
+        {
+          "player_name": "Fernando Tatis Jr.",
+          "team": "San Diego Padres",
+          "position": "2B",
+          "batting_order_slot": 1,
+          "hr_prob": 0.14414973720075283,
+          "rbi_prob": 0.30850367145084995,
+          "multi_hit_prob": 0.2794230166846672
         },
         {
           "player_name": "Shea Langeliers",
           "team": "Athletics",
           "position": "C",
           "batting_order_slot": 2,
-          "hr_prob": 0.16727318693135762,
-          "rbi_prob": 0.29431017068241994,
-          "multi_hit_prob": 0.24892026664359135
+          "hr_prob": 0.1430866000189167,
+          "rbi_prob": 0.325357482461946,
+          "multi_hit_prob": 0.2582116584408655
         },
         {
-          "player_name": "Jorge Soler",
-          "team": "Los Angeles Angels",
-          "position": "DH",
+          "player_name": "Manny Machado",
+          "team": "San Diego Padres",
+          "position": "3B",
           "batting_order_slot": 4,
-          "hr_prob": 0.16106630103644237,
-          "rbi_prob": 0.3506921475502833,
-          "multi_hit_prob": 0.22929113261222092
+          "hr_prob": 0.14289229405663886,
+          "rbi_prob": 0.3531218770911926,
+          "multi_hit_prob": 0.27153166757375075
         },
         {
-          "player_name": "Jo Adell",
-          "team": "Los Angeles Angels",
-          "position": "RF",
+          "player_name": "Gavin Sheets",
+          "team": "San Diego Padres",
+          "position": "1B",
+          "batting_order_slot": 3,
+          "hr_prob": 0.13202317446370196,
+          "rbi_prob": 0.33301854814303866,
+          "multi_hit_prob": 0.246521454954887
+        },
+        {
+          "player_name": "Jackson Merrill",
+          "team": "San Diego Padres",
+          "position": "CF",
           "batting_order_slot": 6,
-          "hr_prob": 0.15710388303066594,
-          "rbi_prob": 0.3207717820008568,
-          "multi_hit_prob": 0.23192415288945778
+          "hr_prob": 0.12909869276383076,
+          "rbi_prob": 0.313598496274041,
+          "multi_hit_prob": 0.24963112603732107
         },
         {
-          "player_name": "Zach Neto",
-          "team": "Los Angeles Angels",
-          "position": "SS",
-          "batting_order_slot": 1,
-          "hr_prob": 0.14349069512907695,
-          "rbi_prob": 0.316230026365216,
-          "multi_hit_prob": 0.2737518382759513
-        },
-        {
-          "player_name": "Travis d'Arnaud",
-          "team": "Los Angeles Angels",
-          "position": "C",
-          "batting_order_slot": 8,
-          "hr_prob": 0.13954712865234517,
-          "rbi_prob": 0.30927232727138665,
-          "multi_hit_prob": 0.21421260764124417
-        },
-        {
-          "player_name": "Josh Lowe",
-          "team": "Los Angeles Angels",
+          "player_name": "Ram\u00f3n Laureano",
+          "team": "San Diego Padres",
           "position": "LF",
+          "batting_order_slot": 8,
+          "hr_prob": 0.12679848667316687,
+          "rbi_prob": 0.29614333801144377,
+          "multi_hit_prob": 0.2097841434803065
+        },
+        {
+          "player_name": "Zack Gelof",
+          "team": "Athletics",
+          "position": "3B",
+          "batting_order_slot": 6,
+          "hr_prob": 0.12542066191982001,
+          "rbi_prob": 0.30798417724917987,
+          "multi_hit_prob": 0.23757272047765066
+        },
+        {
+          "player_name": "Nick Castellanos",
+          "team": "San Diego Padres",
+          "position": "RF",
           "batting_order_slot": 7,
-          "hr_prob": 0.1391817642141611,
-          "rbi_prob": 0.3096351118988109,
-          "multi_hit_prob": 0.22858292277816394
+          "hr_prob": 0.12359031961358462,
+          "rbi_prob": 0.31110954538314234,
+          "multi_hit_prob": 0.24622657984982435
+        },
+        {
+          "player_name": "Miguel Andujar",
+          "team": "San Diego Padres",
+          "position": "DH",
+          "batting_order_slot": 2,
+          "hr_prob": 0.12352614306894216,
+          "rbi_prob": 0.3129201221261663,
+          "multi_hit_prob": 0.28087000337094586
+        },
+        {
+          "player_name": "Xander Bogaerts",
+          "team": "San Diego Padres",
+          "position": "SS",
+          "batting_order_slot": 5,
+          "hr_prob": 0.11690774254687113,
+          "rbi_prob": 0.32512581168872917,
+          "multi_hit_prob": 0.2657956977093232
         },
         {
           "player_name": "Carlos Cortes",
           "team": "Athletics",
           "position": "RF",
           "batting_order_slot": 1,
-          "hr_prob": 0.13849270544811518,
-          "rbi_prob": 0.2692788872390112,
-          "multi_hit_prob": 0.27874187439010367
-        },
-        {
-          "player_name": "Zack Gelof",
-          "team": "Athletics",
-          "position": "3B",
-          "batting_order_slot": 8,
-          "hr_prob": 0.1376210527842438,
-          "rbi_prob": 0.2689006492957715,
-          "multi_hit_prob": 0.21362383968949775
-        },
-        {
-          "player_name": "Yo\u00e1n Moncada",
-          "team": "Los Angeles Angels",
-          "position": "3B",
-          "batting_order_slot": 5,
-          "hr_prob": 0.13715935871975365,
-          "rbi_prob": 0.32994813627020253,
-          "multi_hit_prob": 0.2408509455746419
-        },
-        {
-          "player_name": "Nolan Schanuel",
-          "team": "Los Angeles Angels",
-          "position": "1B",
-          "batting_order_slot": 3,
-          "hr_prob": 0.13034807303257667,
-          "rbi_prob": 0.3201469567239874,
-          "multi_hit_prob": 0.27228681300495755
+          "hr_prob": 0.11477155217610426,
+          "rbi_prob": 0.2979643503618224,
+          "multi_hit_prob": 0.2881742502788505
         },
         {
           "player_name": "Jacob Wilson",
           "team": "Athletics",
           "position": "SS",
           "batting_order_slot": 5,
-          "hr_prob": 0.1273806617598433,
-          "rbi_prob": 0.2823720852233383,
-          "multi_hit_prob": 0.27685375220046526
+          "hr_prob": 0.09990699441259587,
+          "rbi_prob": 0.31628443153611013,
+          "multi_hit_prob": 0.28721519608811935
+        },
+        {
+          "player_name": "Jake Cronenworth",
+          "team": "San Diego Padres",
+          "position": "2B",
+          "batting_order_slot": 9,
+          "hr_prob": 0.09793840525788916,
+          "rbi_prob": 0.27188181837036723,
+          "multi_hit_prob": 0.18404911420446135
         },
         {
           "player_name": "Jeff McNeil",
           "team": "Athletics",
           "position": "2B",
           "batting_order_slot": 7,
-          "hr_prob": 0.11534422341519031,
-          "rbi_prob": 0.2659785400265434,
-          "multi_hit_prob": 0.23328492860458347
+          "hr_prob": 0.09667825269093687,
+          "rbi_prob": 0.2963497204400531,
+          "multi_hit_prob": 0.24323725973351884
         },
         {
           "player_name": "Henry Bolte",
           "team": "Athletics",
           "position": "CF",
-          "batting_order_slot": 6,
-          "hr_prob": 0.11410126692636467,
-          "rbi_prob": 0.2615430519460678,
-          "multi_hit_prob": 0.24443777020097993
-        },
-        {
-          "player_name": "Adam Frazier",
-          "team": "Los Angeles Angels",
-          "position": "2B",
-          "batting_order_slot": 9,
-          "hr_prob": 0.08464327593246868,
-          "rbi_prob": 0.27456268730516126,
-          "multi_hit_prob": 0.20401390994295165
+          "batting_order_slot": 8,
+          "hr_prob": 0.07748667574803972,
+          "rbi_prob": 0.2771732556179309,
+          "multi_hit_prob": 0.22045873949652986
         },
         {
           "player_name": "Michael Stefanic",
           "team": "Athletics",
           "position": "2B",
           "batting_order_slot": 9,
-          "hr_prob": 0.05904546418373452,
-          "rbi_prob": 0.2243367133961572,
-          "multi_hit_prob": 0.18224280672125623
+          "hr_prob": 0.05194293529871047,
+          "rbi_prob": 0.24532130966694768,
+          "multi_hit_prob": 0.17896164477217336
         }
       ]
     },
     {
-      "game_pk": 825083,
-      "home_team": "Arizona Diamondbacks",
-      "away_team": "Colorado Rockies",
-      "home_win_probability": 0.5179293503006928,
-      "away_win_probability": 0.4820706496993075,
-      "predicted_winner": "Colorado Rockies",
+      "game_pk": 823223,
+      "home_team": "San Francisco Giants",
+      "away_team": "Chicago White Sox",
+      "home_win_probability": 0.49755521268315134,
+      "away_win_probability": 0.5024447873168492,
+      "predicted_winner": "Chicago White Sox",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": 1,
-      "actual_away_score": 1,
+      "actual_home_score": null,
+      "actual_away_score": null,
       "actual_winner": null,
       "current_leader": null,
-      "game_status": "Bottom 8",
+      "game_status": "Scheduled",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
         {
-          "player_name": "Nolan Arenado",
-          "team": "Arizona Diamondbacks",
-          "position": "3B",
+          "player_name": "Colson Montgomery",
+          "team": "Chicago White Sox",
+          "position": "SS",
           "batting_order_slot": 4,
-          "hr_prob": 0.1631433374321044,
-          "rbi_prob": 0.38034930671962647,
-          "multi_hit_prob": 0.2860585844463212
+          "hr_prob": 0.15752753029098363,
+          "rbi_prob": 0.3708947106104697,
+          "multi_hit_prob": 0.22957122433950292
         },
         {
-          "player_name": "Corbin Carroll",
-          "team": "Arizona Diamondbacks",
-          "position": "RF",
+          "player_name": "Munetaka Murakami",
+          "team": "Chicago White Sox",
+          "position": "1B",
           "batting_order_slot": 2,
-          "hr_prob": 0.1570087582502546,
-          "rbi_prob": 0.33988937176389733,
-          "multi_hit_prob": 0.2836863897990554
+          "hr_prob": 0.14881739841096567,
+          "rbi_prob": 0.35003385713042157,
+          "multi_hit_prob": 0.22929297428121817
         },
         {
-          "player_name": "Lourdes Gurriel Jr.",
-          "team": "Arizona Diamondbacks",
-          "position": "DH",
-          "batting_order_slot": 5,
-          "hr_prob": 0.1449993873389872,
-          "rbi_prob": 0.3527349787061282,
-          "multi_hit_prob": 0.2740080130172459
-        },
-        {
-          "player_name": "Mickey Moniak",
-          "team": "Colorado Rockies",
-          "position": "DH",
-          "batting_order_slot": 2,
-          "hr_prob": 0.14293435072330393,
-          "rbi_prob": 0.31862854720117095,
-          "multi_hit_prob": 0.2671481427297763
-        },
-        {
-          "player_name": "TJ Rumfield",
-          "team": "Colorado Rockies",
+          "player_name": "Rafael Devers",
+          "team": "San Francisco Giants",
           "position": "1B",
           "batting_order_slot": 4,
-          "hr_prob": 0.14027595994565314,
-          "rbi_prob": 0.34505825917493427,
-          "multi_hit_prob": 0.2937655115911635
+          "hr_prob": 0.1426382537200348,
+          "rbi_prob": 0.36449706728398695,
+          "multi_hit_prob": 0.26946515717550557
         },
         {
-          "player_name": "Ketel Marte",
-          "team": "Arizona Diamondbacks",
-          "position": "2B",
+          "player_name": "Randal Grichuk",
+          "team": "Chicago White Sox",
+          "position": "LF",
           "batting_order_slot": 1,
-          "hr_prob": 0.13881240519240742,
-          "rbi_prob": 0.32127691364144534,
-          "multi_hit_prob": 0.3038256565853152
+          "hr_prob": 0.13095124543482786,
+          "rbi_prob": 0.3279622660054329,
+          "multi_hit_prob": 0.2608867977303226
         },
         {
-          "player_name": "Ezequiel Tovar",
-          "team": "Colorado Rockies",
+          "player_name": "Matt Chapman",
+          "team": "San Francisco Giants",
+          "position": "3B",
+          "batting_order_slot": 6,
+          "hr_prob": 0.13014639051477003,
+          "rbi_prob": 0.3193691285818646,
+          "multi_hit_prob": 0.2237154207114259
+        },
+        {
+          "player_name": "Willy Adames",
+          "team": "San Francisco Giants",
           "position": "SS",
-          "batting_order_slot": 6,
-          "hr_prob": 0.12227641662460803,
-          "rbi_prob": 0.3080070283092091,
-          "multi_hit_prob": 0.26365447285628035
-        },
-        {
-          "player_name": "Tim Tawa",
-          "team": "Arizona Diamondbacks",
-          "position": "LF",
-          "batting_order_slot": 8,
-          "hr_prob": 0.1176624548962012,
-          "rbi_prob": 0.30021306675968745,
-          "multi_hit_prob": 0.2091839911650808
-        },
-        {
-          "player_name": "Gabriel Moreno",
-          "team": "Arizona Diamondbacks",
-          "position": "C",
-          "batting_order_slot": 6,
-          "hr_prob": 0.11662310516698256,
-          "rbi_prob": 0.3221950136334817,
-          "multi_hit_prob": 0.2533639266485293
-        },
-        {
-          "player_name": "Edouard Julien",
-          "team": "Colorado Rockies",
-          "position": "2B",
-          "batting_order_slot": 7,
-          "hr_prob": 0.11220320452255088,
-          "rbi_prob": 0.28333707669601765,
-          "multi_hit_prob": 0.22168423272299864
-        },
-        {
-          "player_name": "Troy Johnston",
-          "team": "Colorado Rockies",
-          "position": "LF",
           "batting_order_slot": 5,
-          "hr_prob": 0.10467374715486165,
-          "rbi_prob": 0.3050425655149978,
-          "multi_hit_prob": 0.25963333533682037
+          "hr_prob": 0.12840601068918017,
+          "rbi_prob": 0.3312271220503766,
+          "multi_hit_prob": 0.23403493680456045
         },
         {
-          "player_name": "Jake McCarthy",
-          "team": "Colorado Rockies",
-          "position": "CF",
-          "batting_order_slot": 1,
-          "hr_prob": 0.1016700542867452,
-          "rbi_prob": 0.282957152863565,
-          "multi_hit_prob": 0.2918048237355137
-        },
-        {
-          "player_name": "Geraldo Perdomo",
-          "team": "Arizona Diamondbacks",
-          "position": "SS",
+          "player_name": "Casey Schmitt",
+          "team": "San Francisco Giants",
+          "position": "LF",
           "batting_order_slot": 3,
-          "hr_prob": 0.1016066561054441,
-          "rbi_prob": 0.3248433608238848,
-          "multi_hit_prob": 0.258675861799811
+          "hr_prob": 0.12482022459432168,
+          "rbi_prob": 0.3195564824086597,
+          "multi_hit_prob": 0.24154465365134284
         },
         {
-          "player_name": "Tyler Freeman",
-          "team": "Colorado Rockies",
+          "player_name": "Jarred Kelenic",
+          "team": "Chicago White Sox",
           "position": "RF",
-          "batting_order_slot": 3,
-          "hr_prob": 0.0982110950464923,
-          "rbi_prob": 0.2828010265204195,
-          "multi_hit_prob": 0.24698924462377383
+          "batting_order_slot": 6,
+          "hr_prob": 0.1221432532859027,
+          "rbi_prob": 0.31854938343931244,
+          "multi_hit_prob": 0.22566773851162894
         },
         {
-          "player_name": "Jorge Barrosa",
-          "team": "Arizona Diamondbacks",
+          "player_name": "Austin Hays",
+          "team": "Chicago White Sox",
           "position": "RF",
           "batting_order_slot": 7,
-          "hr_prob": 0.09738418133383231,
-          "rbi_prob": 0.2850722702794945,
-          "multi_hit_prob": 0.21627147477690165
+          "hr_prob": 0.11280722782476586,
+          "rbi_prob": 0.3260191876857812,
+          "multi_hit_prob": 0.23505351811899397
         },
         {
-          "player_name": "Braxton Fulford",
-          "team": "Colorado Rockies",
+          "player_name": "Andrew Benintendi",
+          "team": "Chicago White Sox",
           "position": "DH",
-          "batting_order_slot": 9,
-          "hr_prob": 0.08934502324295807,
-          "rbi_prob": 0.2711623434400023,
-          "multi_hit_prob": 0.19303098364470606
+          "batting_order_slot": 3,
+          "hr_prob": 0.11218469600279259,
+          "rbi_prob": 0.34868984041385875,
+          "multi_hit_prob": 0.26183558133698775
         },
         {
-          "player_name": "Ryan Waldschmidt",
-          "team": "Arizona Diamondbacks",
-          "position": "CF",
-          "batting_order_slot": 9,
-          "hr_prob": 0.08499018276223023,
-          "rbi_prob": 0.27747418477369146,
-          "multi_hit_prob": 0.197011687718704
-        },
-        {
-          "player_name": "Kyle Karros",
-          "team": "Colorado Rockies",
+          "player_name": "Miguel Vargas",
+          "team": "Chicago White Sox",
           "position": "3B",
           "batting_order_slot": 8,
-          "hr_prob": 0.07583901576153786,
-          "rbi_prob": 0.261783714929632,
-          "multi_hit_prob": 0.2140926099926518
+          "hr_prob": 0.11050907376922403,
+          "rbi_prob": 0.31155721777991513,
+          "multi_hit_prob": 0.2024327746471173
+        },
+        {
+          "player_name": "Jesus Rodriguez",
+          "team": "San Francisco Giants",
+          "position": "C",
+          "batting_order_slot": 9,
+          "hr_prob": 0.10934550742421045,
+          "rbi_prob": 0.27286823394139165,
+          "multi_hit_prob": 0.15650599855038522
+        },
+        {
+          "player_name": "Reese McGuire",
+          "team": "Chicago White Sox",
+          "position": "C",
+          "batting_order_slot": 9,
+          "hr_prob": 0.10659372899604169,
+          "rbi_prob": 0.2949089406420617,
+          "multi_hit_prob": 0.1669145073812313
+        },
+        {
+          "player_name": "Bryce Eldridge",
+          "team": "San Francisco Giants",
+          "position": "DH",
+          "batting_order_slot": 7,
+          "hr_prob": 0.1040401452570087,
+          "rbi_prob": 0.2937215224456671,
+          "multi_hit_prob": 0.20018710776126206
+        },
+        {
+          "player_name": "Jung Hoo Lee",
+          "team": "San Francisco Giants",
+          "position": "RF",
+          "batting_order_slot": 1,
+          "hr_prob": 0.08603696042684839,
+          "rbi_prob": 0.28285200415082384,
+          "multi_hit_prob": 0.29044175152699037
+        },
+        {
+          "player_name": "Daniel Susac",
+          "team": "San Francisco Giants",
+          "position": "C",
+          "batting_order_slot": 8,
+          "hr_prob": 0.08021677042484977,
+          "rbi_prob": 0.2744906232693945,
+          "multi_hit_prob": 0.2021454628925415
+        },
+        {
+          "player_name": "Chase Meidroth",
+          "team": "Chicago White Sox",
+          "position": "2B",
+          "batting_order_slot": 5,
+          "hr_prob": 0.0755477935257808,
+          "rbi_prob": 0.2840155324170288,
+          "multi_hit_prob": 0.2293567465026881
+        },
+        {
+          "player_name": "Luis Arraez",
+          "team": "San Francisco Giants",
+          "position": "2B",
+          "batting_order_slot": 2,
+          "hr_prob": 0.07438947200550518,
+          "rbi_prob": 0.29602253154430325,
+          "multi_hit_prob": 0.3135356636758151
         }
       ]
     }
