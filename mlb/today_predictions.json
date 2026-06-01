@@ -369,20 +369,29 @@
       "game_pk": 824510,
       "home_team": "Cincinnati Reds",
       "away_team": "Kansas City Royals",
-      "home_win_probability": 0.541,
-      "away_win_probability": 0.459,
+      "home_win_probability": 0.5431,
+      "away_win_probability": 0.4569,
       "predicted_winner": "Cincinnati Reds",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
-      "actual_home_score": null,
-      "actual_away_score": null,
+      "actual_home_score": 0,
+      "actual_away_score": 0,
       "actual_winner": null,
       "current_leader": null,
       "game_status": "Pre-Game",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
+        {
+          "player_name": "Salvador Perez",
+          "team": "Kansas City Royals",
+          "position": "C",
+          "batting_order_slot": 4,
+          "hr_prob": 0.16187724074691465,
+          "rbi_prob": 0.37194390875497,
+          "multi_hit_prob": 0.2906692124648573
+        },
         {
           "player_name": "Sal Stewart",
           "team": "Cincinnati Reds",
@@ -393,13 +402,31 @@
           "multi_hit_prob": 0.24926193551282694
         },
         {
-          "player_name": "Salvador Perez",
+          "player_name": "Vinnie Pasquantino",
+          "team": "Kansas City Royals",
+          "position": "1B",
+          "batting_order_slot": 6,
+          "hr_prob": 0.15109400844593132,
+          "rbi_prob": 0.33973092098962177,
+          "multi_hit_prob": 0.2733996987948278
+        },
+        {
+          "player_name": "Bobby Witt Jr.",
+          "team": "Kansas City Royals",
+          "position": "SS",
+          "batting_order_slot": 2,
+          "hr_prob": 0.1489227762417373,
+          "rbi_prob": 0.3415516355127237,
+          "multi_hit_prob": 0.3149475422356763
+        },
+        {
+          "player_name": "Carter Jensen",
           "team": "Kansas City Royals",
           "position": "C",
-          "batting_order_slot": 4,
-          "hr_prob": 0.15004775745178456,
-          "rbi_prob": 0.3445241482917685,
-          "multi_hit_prob": 0.2684015927099393
+          "batting_order_slot": 1,
+          "hr_prob": 0.1455445459620522,
+          "rbi_prob": 0.3003466217587129,
+          "multi_hit_prob": 0.20186459362459228
         },
         {
           "player_name": "Eugenio Su\u00e1rez",
@@ -411,31 +438,13 @@
           "multi_hit_prob": 0.2301546693879167
         },
         {
-          "player_name": "Vinnie Pasquantino",
+          "player_name": "Starling Marte",
           "team": "Kansas City Royals",
-          "position": "1B",
-          "batting_order_slot": 6,
-          "hr_prob": 0.14053659957593306,
-          "rbi_prob": 0.31965434778274365,
-          "multi_hit_prob": 0.24841467270899997
-        },
-        {
-          "player_name": "Bobby Witt Jr.",
-          "team": "Kansas City Royals",
-          "position": "SS",
-          "batting_order_slot": 2,
-          "hr_prob": 0.13697938190284814,
-          "rbi_prob": 0.31565269565974524,
-          "multi_hit_prob": 0.30055280038486104
-        },
-        {
-          "player_name": "Carter Jensen",
-          "team": "Kansas City Royals",
-          "position": "C",
-          "batting_order_slot": 1,
-          "hr_prob": 0.13345079335569038,
-          "rbi_prob": 0.2861386928320009,
-          "multi_hit_prob": 0.18817367178572764
+          "position": "DH",
+          "batting_order_slot": 5,
+          "hr_prob": 0.12843253898689264,
+          "rbi_prob": 0.33944323238924684,
+          "multi_hit_prob": 0.2822814829569557
         },
         {
           "player_name": "Spencer Steer",
@@ -456,15 +465,6 @@
           "multi_hit_prob": 0.2738977329970802
         },
         {
-          "player_name": "Starling Marte",
-          "team": "Kansas City Royals",
-          "position": "DH",
-          "batting_order_slot": 5,
-          "hr_prob": 0.12181757701509462,
-          "rbi_prob": 0.3164754306761144,
-          "multi_hit_prob": 0.27284261792333886
-        },
-        {
           "player_name": "Nathaniel Lowe",
           "team": "Cincinnati Reds",
           "position": "1B",
@@ -472,6 +472,15 @@
           "hr_prob": 0.12041699949486216,
           "rbi_prob": 0.3152541843659024,
           "multi_hit_prob": 0.2380413529808311
+        },
+        {
+          "player_name": "Isaac Collins",
+          "team": "Kansas City Royals",
+          "position": "LF",
+          "batting_order_slot": 7,
+          "hr_prob": 0.11877451825322444,
+          "rbi_prob": 0.31373285659617856,
+          "multi_hit_prob": 0.23171527231773725
         },
         {
           "player_name": "Will Benson",
@@ -483,6 +492,15 @@
           "multi_hit_prob": 0.2399405218051177
         },
         {
+          "player_name": "Elias D\u00edaz",
+          "team": "Kansas City Royals",
+          "position": "C",
+          "batting_order_slot": 8,
+          "hr_prob": 0.11559936691511734,
+          "rbi_prob": 0.3086356032331558,
+          "multi_hit_prob": 0.22697003247904998
+        },
+        {
           "player_name": "Tyler Stephenson",
           "team": "Cincinnati Reds",
           "position": "C",
@@ -492,22 +510,13 @@
           "multi_hit_prob": 0.2154457015293787
         },
         {
-          "player_name": "Isaac Collins",
+          "player_name": "Maikel Garcia",
           "team": "Kansas City Royals",
-          "position": "LF",
-          "batting_order_slot": 7,
-          "hr_prob": 0.11050934199598994,
-          "rbi_prob": 0.290496573848975,
-          "multi_hit_prob": 0.21306003812961974
-        },
-        {
-          "player_name": "Elias D\u00edaz",
-          "team": "Kansas City Royals",
-          "position": "C",
-          "batting_order_slot": 8,
-          "hr_prob": 0.10720977103608342,
-          "rbi_prob": 0.2886239264163209,
-          "multi_hit_prob": 0.21327980548212244
+          "position": "3B",
+          "batting_order_slot": 3,
+          "hr_prob": 0.11045664484165356,
+          "rbi_prob": 0.3394548700421846,
+          "multi_hit_prob": 0.30363814037107834
         },
         {
           "player_name": "Matt McLain",
@@ -517,15 +526,6 @@
           "hr_prob": 0.1066735231111303,
           "rbi_prob": 0.30164181505182197,
           "multi_hit_prob": 0.2119493445880354
-        },
-        {
-          "player_name": "Maikel Garcia",
-          "team": "Kansas City Royals",
-          "position": "3B",
-          "batting_order_slot": 3,
-          "hr_prob": 0.10389414877700764,
-          "rbi_prob": 0.31176704914694947,
-          "multi_hit_prob": 0.27884199169657925
         },
         {
           "player_name": "TJ Friedl",
@@ -541,9 +541,9 @@
           "team": "Kansas City Royals",
           "position": "CF",
           "batting_order_slot": 9,
-          "hr_prob": 0.07326557468976884,
-          "rbi_prob": 0.23107469686389956,
-          "multi_hit_prob": 0.18907420641007922
+          "hr_prob": 0.08450287550496027,
+          "rbi_prob": 0.2490014465706727,
+          "multi_hit_prob": 0.2047857691199186
         }
       ]
     },
