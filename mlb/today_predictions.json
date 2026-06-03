@@ -15,7 +15,7 @@
       "actual_away_score": 7,
       "actual_winner": null,
       "current_leader": "Detroit Tigers",
-      "game_status": "Bottom 6",
+      "game_status": "End 6",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -197,7 +197,7 @@
       "actual_away_score": 2,
       "actual_winner": null,
       "current_leader": "Philadelphia Phillies",
-      "game_status": "End 6",
+      "game_status": "Top 7",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -379,7 +379,7 @@
       "actual_away_score": 4,
       "actual_winner": null,
       "current_leader": "Baltimore Orioles",
-      "game_status": "End 6",
+      "game_status": "Top 7",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -1107,7 +1107,7 @@
       "actual_away_score": 2,
       "actual_winner": null,
       "current_leader": "Atlanta Braves",
-      "game_status": "End 5",
+      "game_status": "Top 6",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -2014,9 +2014,9 @@
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
       "actual_home_score": 2,
-      "actual_away_score": 1,
+      "actual_away_score": 2,
       "actual_winner": null,
-      "current_leader": "Houston Astros",
+      "current_leader": null,
       "game_status": "Top 2",
       "is_final": false,
       "is_postponed": false,
@@ -2553,8 +2553,8 @@
       "game_pk": 823129,
       "home_team": "Seattle Mariners",
       "away_team": "New York Mets",
-      "home_win_probability": 0.5392,
-      "away_win_probability": 0.4608,
+      "home_win_probability": 0.535,
+      "away_win_probability": 0.465,
       "predicted_winner": "Seattle Mariners",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
@@ -2568,15 +2568,6 @@
       "is_postponed": false,
       "hitters": [
         {
-          "player_name": "Cal Raleigh",
-          "team": "Seattle Mariners",
-          "position": "C",
-          "batting_order_slot": 4,
-          "hr_prob": 0.15531648351347563,
-          "rbi_prob": 0.36039353123039536,
-          "multi_hit_prob": 0.2360359344491244
-        },
-        {
           "player_name": "Juan Soto",
           "team": "New York Mets",
           "position": "LF",
@@ -2586,22 +2577,31 @@
           "multi_hit_prob": 0.23392018311527588
         },
         {
+          "player_name": "Cal Raleigh",
+          "team": "Seattle Mariners",
+          "position": "C",
+          "batting_order_slot": 4,
+          "hr_prob": 0.1539803372431605,
+          "rbi_prob": 0.3394820266934148,
+          "multi_hit_prob": 0.22812767181631696
+        },
+        {
           "player_name": "Patrick Wisdom",
           "team": "Seattle Mariners",
           "position": "1B",
           "batting_order_slot": 5,
-          "hr_prob": 0.14635126547609476,
-          "rbi_prob": 0.33671610736390717,
-          "multi_hit_prob": 0.2273241725546845
+          "hr_prob": 0.14604495684673816,
+          "rbi_prob": 0.32262794320659743,
+          "multi_hit_prob": 0.21905125704942888
         },
         {
           "player_name": "Julio Rodr\u00edguez",
           "team": "Seattle Mariners",
           "position": "CF",
           "batting_order_slot": 2,
-          "hr_prob": 0.1388185338912983,
-          "rbi_prob": 0.32956578227687977,
-          "multi_hit_prob": 0.30098300982505627
+          "hr_prob": 0.13590777757427067,
+          "rbi_prob": 0.3132461341210045,
+          "multi_hit_prob": 0.2877237380059938
         },
         {
           "player_name": "Mark Vientos",
@@ -2617,18 +2617,18 @@
           "team": "Seattle Mariners",
           "position": "1B",
           "batting_order_slot": 3,
-          "hr_prob": 0.1278098768071886,
-          "rbi_prob": 0.3595070218514367,
-          "multi_hit_prob": 0.2861896348573812
+          "hr_prob": 0.12913345668514714,
+          "rbi_prob": 0.339903603254293,
+          "multi_hit_prob": 0.27228591223491166
         },
         {
           "player_name": "Mitch Garver",
           "team": "Seattle Mariners",
           "position": "C",
           "batting_order_slot": 8,
-          "hr_prob": 0.12547653047405352,
-          "rbi_prob": 0.3034824523065405,
-          "multi_hit_prob": 0.1987599522246375
+          "hr_prob": 0.12312762946789817,
+          "rbi_prob": 0.291604781976721,
+          "multi_hit_prob": 0.19029646683112955
         },
         {
           "player_name": "Francisco Alvarez",
@@ -2653,9 +2653,9 @@
           "team": "Seattle Mariners",
           "position": "DH",
           "batting_order_slot": 7,
-          "hr_prob": 0.11860872923177308,
-          "rbi_prob": 0.30698130258682244,
-          "multi_hit_prob": 0.21482854822366984
+          "hr_prob": 0.11784614108050488,
+          "rbi_prob": 0.29189385892161585,
+          "multi_hit_prob": 0.20447338617207297
         },
         {
           "player_name": "Bo Bichette",
@@ -2680,9 +2680,18 @@
           "team": "Seattle Mariners",
           "position": "3B",
           "batting_order_slot": 1,
-          "hr_prob": 0.10513534645258228,
-          "rbi_prob": 0.29947119048516213,
-          "multi_hit_prob": 0.2963395731975201
+          "hr_prob": 0.10587924115572915,
+          "rbi_prob": 0.28890065717242114,
+          "multi_hit_prob": 0.28501356868970107
+        },
+        {
+          "player_name": "Connor Joe",
+          "team": "Seattle Mariners",
+          "position": "RF",
+          "batting_order_slot": 6,
+          "hr_prob": 0.10282911035864685,
+          "rbi_prob": 0.27874911487839743,
+          "multi_hit_prob": 0.21878540414545247
         },
         {
           "player_name": "Carson Benge",
@@ -2698,18 +2707,9 @@
           "team": "Seattle Mariners",
           "position": "3B",
           "batting_order_slot": 9,
-          "hr_prob": 0.10171424230322969,
-          "rbi_prob": 0.2884864254585993,
-          "multi_hit_prob": 0.19077439689215345
-        },
-        {
-          "player_name": "Connor Joe",
-          "team": "Seattle Mariners",
-          "position": "RF",
-          "batting_order_slot": 6,
-          "hr_prob": 0.10100794282771534,
-          "rbi_prob": 0.29254536113424523,
-          "multi_hit_prob": 0.2262467243023363
+          "hr_prob": 0.1005945493660222,
+          "rbi_prob": 0.2800114830212253,
+          "multi_hit_prob": 0.18382846364719319
         },
         {
           "player_name": "Luis Torrens",
