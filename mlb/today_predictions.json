@@ -561,7 +561,7 @@
       "actual_away_score": 3,
       "actual_winner": null,
       "current_leader": "San Francisco Giants",
-      "game_status": "Middle 1",
+      "game_status": "Bottom 1",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -733,8 +733,8 @@
       "game_pk": 824919,
       "home_team": "Atlanta Braves",
       "away_team": "Toronto Blue Jays",
-      "home_win_probability": 0.549,
-      "away_win_probability": 0.451,
+      "home_win_probability": 0.5708,
+      "away_win_probability": 0.4292,
       "predicted_winner": "Atlanta Braves",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
@@ -752,9 +752,18 @@
           "team": "Atlanta Braves",
           "position": "1B",
           "batting_order_slot": 3,
-          "hr_prob": 0.15690398538701708,
-          "rbi_prob": 0.37281274720366103,
-          "multi_hit_prob": 0.2607382651018703
+          "hr_prob": 0.15891851408167362,
+          "rbi_prob": 0.3727889547288887,
+          "multi_hit_prob": 0.2627054506494186
+        },
+        {
+          "player_name": "Ronald Acu\u00f1a Jr.",
+          "team": "Atlanta Braves",
+          "position": "RF",
+          "batting_order_slot": 1,
+          "hr_prob": 0.14625364161426865,
+          "rbi_prob": 0.3227723685751598,
+          "multi_hit_prob": 0.293012128371704
         },
         {
           "player_name": "Kazuma Okamoto",
@@ -766,22 +775,13 @@
           "multi_hit_prob": 0.22816233977407294
         },
         {
-          "player_name": "Ronald Acu\u00f1a Jr.",
-          "team": "Atlanta Braves",
-          "position": "RF",
-          "batting_order_slot": 1,
-          "hr_prob": 0.14235780207544718,
-          "rbi_prob": 0.32017118081341117,
-          "multi_hit_prob": 0.29249951622972925
-        },
-        {
           "player_name": "Austin Riley",
           "team": "Atlanta Braves",
           "position": "3B",
           "batting_order_slot": 6,
-          "hr_prob": 0.13813372271609137,
-          "rbi_prob": 0.327341513635409,
-          "multi_hit_prob": 0.24995988603152922
+          "hr_prob": 0.14119624115557947,
+          "rbi_prob": 0.32833505128392154,
+          "multi_hit_prob": 0.25279697445325394
         },
         {
           "player_name": "George Springer",
@@ -802,6 +802,15 @@
           "multi_hit_prob": 0.2826247341925647
         },
         {
+          "player_name": "Ozzie Albies",
+          "team": "Atlanta Braves",
+          "position": "2B",
+          "batting_order_slot": 4,
+          "hr_prob": 0.13171201820877362,
+          "rbi_prob": 0.35565759013560555,
+          "multi_hit_prob": 0.27937893735275293
+        },
+        {
           "player_name": "Eloy Jim\u00e9nez",
           "team": "Toronto Blue Jays",
           "position": "DH",
@@ -809,6 +818,24 @@
           "hr_prob": 0.1303639468885497,
           "rbi_prob": 0.303797182040284,
           "multi_hit_prob": 0.24249329704918812
+        },
+        {
+          "player_name": "Michael Harris II",
+          "team": "Atlanta Braves",
+          "position": "CF",
+          "batting_order_slot": 2,
+          "hr_prob": 0.12879226869663887,
+          "rbi_prob": 0.33265188086726866,
+          "multi_hit_prob": 0.29589838416287106
+        },
+        {
+          "player_name": "Mike Yastrzemski",
+          "team": "Atlanta Braves",
+          "position": "LF",
+          "batting_order_slot": 7,
+          "hr_prob": 0.1285710031750967,
+          "rbi_prob": 0.31362860608304505,
+          "multi_hit_prob": 0.2189138980225673
         },
         {
           "player_name": "Daulton Varsho",
@@ -820,24 +847,6 @@
           "multi_hit_prob": 0.2337361939082038
         },
         {
-          "player_name": "Ozzie Albies",
-          "team": "Atlanta Braves",
-          "position": "2B",
-          "batting_order_slot": 4,
-          "hr_prob": 0.1230303148695242,
-          "rbi_prob": 0.35395567494175406,
-          "multi_hit_prob": 0.2777048789283975
-        },
-        {
-          "player_name": "Mike Yastrzemski",
-          "team": "Atlanta Braves",
-          "position": "LF",
-          "batting_order_slot": 7,
-          "hr_prob": 0.12301554247701413,
-          "rbi_prob": 0.3111818609811736,
-          "multi_hit_prob": 0.21214855664175736
-        },
-        {
           "player_name": "Addison Barger",
           "team": "Toronto Blue Jays",
           "position": "RF",
@@ -847,40 +856,31 @@
           "multi_hit_prob": 0.2555215740516796
         },
         {
-          "player_name": "Michael Harris II",
-          "team": "Atlanta Braves",
-          "position": "CF",
-          "batting_order_slot": 2,
-          "hr_prob": 0.12038647482507688,
-          "rbi_prob": 0.3297793520853374,
-          "multi_hit_prob": 0.2938933288924825
-        },
-        {
           "player_name": "Dominic Smith",
           "team": "Atlanta Braves",
           "position": "DH",
           "batting_order_slot": 5,
-          "hr_prob": 0.11196215330266972,
-          "rbi_prob": 0.31857194073278916,
-          "multi_hit_prob": 0.2298253770361541
+          "hr_prob": 0.11707178618956511,
+          "rbi_prob": 0.32156222560586495,
+          "multi_hit_prob": 0.23643234962948823
         },
         {
           "player_name": "Chadwick Tromp",
           "team": "Atlanta Braves",
           "position": "C",
           "batting_order_slot": 9,
-          "hr_prob": 0.09562527445362062,
-          "rbi_prob": 0.26974534949093026,
-          "multi_hit_prob": 0.16819120108958682
+          "hr_prob": 0.10192494624642656,
+          "rbi_prob": 0.27669754587425005,
+          "multi_hit_prob": 0.17047193154583784
         },
         {
           "player_name": "Ha-Seong Kim",
           "team": "Atlanta Braves",
           "position": "SS",
           "batting_order_slot": 8,
-          "hr_prob": 0.09365748683410247,
-          "rbi_prob": 0.28330362741903653,
-          "multi_hit_prob": 0.2035128123536247
+          "hr_prob": 0.09796579629047081,
+          "rbi_prob": 0.288489140350255,
+          "multi_hit_prob": 0.20932523188516047
         },
         {
           "player_name": "Andr\u00e9s Gim\u00e9nez",
