@@ -15,7 +15,7 @@
       "actual_away_score": 0,
       "actual_winner": null,
       "current_leader": null,
-      "game_status": "Pre-Game",
+      "game_status": "Top 1",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -187,7 +187,7 @@
       "game_pk": 822972,
       "home_team": "Tampa Bay Rays",
       "away_team": "Boston Red Sox",
-      "home_win_probability": 0.4783987108311148,
+      "home_win_probability": 0.4783987108311147,
       "away_win_probability": 0.5216012891688859,
       "predicted_winner": "Boston Red Sox",
       "confidence_tier": "Normal Pick",
@@ -552,7 +552,7 @@
       "home_team": "Toronto Blue Jays",
       "away_team": "Philadelphia Phillies",
       "home_win_probability": 0.49341493088962696,
-      "away_win_probability": 0.5065850691103736,
+      "away_win_probability": 0.5065850691103737,
       "predicted_winner": "Philadelphia Phillies",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
@@ -734,7 +734,7 @@
       "home_team": "Los Angeles Angels",
       "away_team": "Houston Astros",
       "home_win_probability": 0.48996816140537275,
-      "away_win_probability": 0.5100318385946284,
+      "away_win_probability": 0.5100318385946285,
       "predicted_winner": "Houston Astros",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
@@ -915,7 +915,7 @@
       "game_pk": 823289,
       "home_team": "San Diego Padres",
       "away_team": "Cincinnati Reds",
-      "home_win_probability": 0.5038774819857216,
+      "home_win_probability": 0.5038774819857214,
       "away_win_probability": 0.4961225180142794,
       "predicted_winner": "Cincinnati Reds",
       "confidence_tier": "Normal Pick",
@@ -1097,8 +1097,8 @@
       "game_pk": 823218,
       "home_team": "San Francisco Giants",
       "away_team": "Washington Nationals",
-      "home_win_probability": 0.5147767177669578,
-      "away_win_probability": 0.4852232822330426,
+      "home_win_probability": 0.5071172484156613,
+      "away_win_probability": 0.492882751584339,
       "predicted_winner": "Washington Nationals",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
@@ -1116,9 +1116,18 @@
           "team": "San Francisco Giants",
           "position": "1B",
           "batting_order_slot": 2,
-          "hr_prob": 0.14196328904481503,
-          "rbi_prob": 0.3347928362129202,
-          "multi_hit_prob": 0.2933778156433217
+          "hr_prob": 0.1447602630113267,
+          "rbi_prob": 0.35133690974716886,
+          "multi_hit_prob": 0.2949329640181336
+        },
+        {
+          "player_name": "Willy Adames",
+          "team": "San Francisco Giants",
+          "position": "SS",
+          "batting_order_slot": 4,
+          "hr_prob": 0.13813363992831637,
+          "rbi_prob": 0.3530327955079267,
+          "multi_hit_prob": 0.2592343257186648
         },
         {
           "player_name": "James Wood",
@@ -1130,40 +1139,40 @@
           "multi_hit_prob": 0.249989263728408
         },
         {
-          "player_name": "Willy Adames",
-          "team": "San Francisco Giants",
-          "position": "SS",
-          "batting_order_slot": 4,
-          "hr_prob": 0.13304142906514674,
-          "rbi_prob": 0.33833751816910645,
-          "multi_hit_prob": 0.2567483805596203
-        },
-        {
           "player_name": "Matt Chapman",
           "team": "San Francisco Giants",
           "position": "3B",
           "batting_order_slot": 7,
-          "hr_prob": 0.1306699746809061,
-          "rbi_prob": 0.3084517605032451,
-          "multi_hit_prob": 0.2239226867579508
-        },
-        {
-          "player_name": "Heliot Ramos",
-          "team": "San Francisco Giants",
-          "position": "LF",
-          "batting_order_slot": 5,
-          "hr_prob": 0.12630950789086856,
-          "rbi_prob": 0.32987949743916745,
-          "multi_hit_prob": 0.2655581319185443
+          "hr_prob": 0.13360376590991477,
+          "rbi_prob": 0.32560549114792453,
+          "multi_hit_prob": 0.22744425423549264
         },
         {
           "player_name": "Casey Schmitt",
           "team": "San Francisco Giants",
           "position": "LF",
           "batting_order_slot": 1,
-          "hr_prob": 0.1260615295125137,
-          "rbi_prob": 0.2633189759273545,
-          "multi_hit_prob": 0.2749711376250745
+          "hr_prob": 0.13196798077096816,
+          "rbi_prob": 0.2772682028041166,
+          "multi_hit_prob": 0.2808374392068676
+        },
+        {
+          "player_name": "Heliot Ramos",
+          "team": "San Francisco Giants",
+          "position": "LF",
+          "batting_order_slot": 5,
+          "hr_prob": 0.12978799614799355,
+          "rbi_prob": 0.349871407205626,
+          "multi_hit_prob": 0.2696975217518122
+        },
+        {
+          "player_name": "Eric Haase",
+          "team": "San Francisco Giants",
+          "position": "C",
+          "batting_order_slot": 8,
+          "hr_prob": 0.12393437261673597,
+          "rbi_prob": 0.31050928811999406,
+          "multi_hit_prob": 0.21423411463177625
         },
         {
           "player_name": "CJ Abrams",
@@ -1173,15 +1182,6 @@
           "hr_prob": 0.12236129470646424,
           "rbi_prob": 0.327454242982162,
           "multi_hit_prob": 0.2719153343397633
-        },
-        {
-          "player_name": "Eric Haase",
-          "team": "San Francisco Giants",
-          "position": "C",
-          "batting_order_slot": 8,
-          "hr_prob": 0.120207106981499,
-          "rbi_prob": 0.2915216022636737,
-          "multi_hit_prob": 0.2099877537395282
         },
         {
           "player_name": "Dylan Crews",
@@ -1229,6 +1229,15 @@
           "multi_hit_prob": 0.2649374111447603
         },
         {
+          "player_name": "Harrison Bader",
+          "team": "San Francisco Giants",
+          "position": "CF",
+          "batting_order_slot": 9,
+          "hr_prob": 0.10171237869863681,
+          "rbi_prob": 0.25847943315170285,
+          "multi_hit_prob": 0.1855900751581231
+        },
+        {
           "player_name": "Keibert Ruiz",
           "team": "Washington Nationals",
           "position": "C",
@@ -1238,22 +1247,13 @@
           "multi_hit_prob": 0.20483397687489555
         },
         {
-          "player_name": "Harrison Bader",
-          "team": "San Francisco Giants",
-          "position": "CF",
-          "batting_order_slot": 9,
-          "hr_prob": 0.09632744028849964,
-          "rbi_prob": 0.24072375464942852,
-          "multi_hit_prob": 0.1797532693555396
-        },
-        {
           "player_name": "Bryce Eldridge",
           "team": "San Francisco Giants",
           "position": "DH",
           "batting_order_slot": 6,
-          "hr_prob": 0.08888001571654418,
-          "rbi_prob": 0.2761955139842008,
-          "multi_hit_prob": 0.2116610463268258
+          "hr_prob": 0.09044880620643954,
+          "rbi_prob": 0.29171317676376846,
+          "multi_hit_prob": 0.21603304673857127
         },
         {
           "player_name": "Jos\u00e9 Tena",
@@ -1269,9 +1269,9 @@
           "team": "San Francisco Giants",
           "position": "2B",
           "batting_order_slot": 3,
-          "hr_prob": 0.07466294011620293,
-          "rbi_prob": 0.2907176824508828,
-          "multi_hit_prob": 0.31938587141893054
+          "hr_prob": 0.07679891138401557,
+          "rbi_prob": 0.3136132860977678,
+          "multi_hit_prob": 0.3217236976232557
         }
       ]
     },
@@ -1279,7 +1279,7 @@
       "game_pk": 824998,
       "home_team": "Athletics",
       "away_team": "Milwaukee Brewers",
-      "home_win_probability": 0.47399820511933105,
+      "home_win_probability": 0.4739982051193309,
       "away_win_probability": 0.5260017948806697,
       "predicted_winner": "Milwaukee Brewers",
       "confidence_tier": "Normal Pick",
