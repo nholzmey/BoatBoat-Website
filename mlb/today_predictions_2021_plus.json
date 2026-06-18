@@ -6,7 +6,7 @@
       "home_team": "Boston Red Sox",
       "away_team": "Toronto Blue Jays",
       "home_win_probability": 0.48174151276214694,
-      "away_win_probability": 0.5182584872378536,
+      "away_win_probability": 0.5182584872378537,
       "predicted_winner": "Toronto Blue Jays",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
@@ -379,7 +379,7 @@
       "actual_away_score": 4,
       "actual_winner": null,
       "current_leader": "Minnesota Twins",
-      "game_status": "Middle 3",
+      "game_status": "Bottom 3",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
@@ -915,9 +915,9 @@
       "game_pk": 823533,
       "home_team": "New York Yankees",
       "away_team": "Chicago White Sox",
-      "home_win_probability": 0.525811124885961,
-      "away_win_probability": 0.47418887511403907,
-      "predicted_winner": "New York Yankees",
+      "home_win_probability": 0.5137803560177943,
+      "away_win_probability": 0.48621964398220596,
+      "predicted_winner": "Chicago White Sox",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
@@ -930,15 +930,6 @@
       "is_postponed": false,
       "hitters": [
         {
-          "player_name": "Aaron Judge",
-          "team": "New York Yankees",
-          "position": "RF",
-          "batting_order_slot": 3,
-          "hr_prob": 0.16281379309250735,
-          "rbi_prob": 0.3751771352226883,
-          "multi_hit_prob": 0.27012435695200276
-        },
-        {
           "player_name": "Colson Montgomery",
           "team": "Chicago White Sox",
           "position": "SS",
@@ -946,6 +937,15 @@
           "hr_prob": 0.15992639777299367,
           "rbi_prob": 0.3804915623864132,
           "multi_hit_prob": 0.24789683565475693
+        },
+        {
+          "player_name": "Aaron Judge",
+          "team": "New York Yankees",
+          "position": "RF",
+          "batting_order_slot": 3,
+          "hr_prob": 0.1590190765794217,
+          "rbi_prob": 0.3691996536391497,
+          "multi_hit_prob": 0.2579841658390729
         },
         {
           "player_name": "Munetaka Murakami",
@@ -961,45 +961,36 @@
           "team": "New York Yankees",
           "position": "DH",
           "batting_order_slot": 2,
-          "hr_prob": 0.14359052604636244,
-          "rbi_prob": 0.33015102544134467,
-          "multi_hit_prob": 0.24964443869475858
+          "hr_prob": 0.138510820827022,
+          "rbi_prob": 0.32455411794750505,
+          "multi_hit_prob": 0.24457122990222277
         },
         {
           "player_name": "Cody Bellinger",
           "team": "New York Yankees",
           "position": "CF",
           "batting_order_slot": 4,
-          "hr_prob": 0.1433261226002768,
-          "rbi_prob": 0.36257394512214436,
-          "multi_hit_prob": 0.26511176788780805
+          "hr_prob": 0.1377484755564955,
+          "rbi_prob": 0.35530578079161573,
+          "multi_hit_prob": 0.25480876099340105
         },
         {
           "player_name": "Paul Goldschmidt",
           "team": "New York Yankees",
           "position": "1B",
           "batting_order_slot": 1,
-          "hr_prob": 0.1366449620242567,
-          "rbi_prob": 0.33246081982936615,
-          "multi_hit_prob": 0.23615000625197577
+          "hr_prob": 0.13097012053818355,
+          "rbi_prob": 0.32505663871273177,
+          "multi_hit_prob": 0.26201365534608717
         },
         {
           "player_name": "Jazz Chisholm Jr.",
           "team": "New York Yankees",
           "position": "2B",
           "batting_order_slot": 6,
-          "hr_prob": 0.13020331656883735,
-          "rbi_prob": 0.31799770070284983,
-          "multi_hit_prob": 0.23071553214917098
-        },
-        {
-          "player_name": "Austin Wells",
-          "team": "New York Yankees",
-          "position": "C",
-          "batting_order_slot": 8,
-          "hr_prob": 0.12597777782293576,
-          "rbi_prob": 0.29939158993735515,
-          "multi_hit_prob": 0.2018469994508477
+          "hr_prob": 0.11971687229863026,
+          "rbi_prob": 0.30840376618594584,
+          "multi_hit_prob": 0.22053853148504696
         },
         {
           "player_name": "Andrew Benintendi",
@@ -1011,13 +1002,22 @@
           "multi_hit_prob": 0.2770936782730292
         },
         {
+          "player_name": "Austin Wells",
+          "team": "New York Yankees",
+          "position": "C",
+          "batting_order_slot": 8,
+          "hr_prob": 0.11803234563098845,
+          "rbi_prob": 0.2942113672651856,
+          "multi_hit_prob": 0.19770865963473513
+        },
+        {
           "player_name": "Jasson Dom\u00ednguez",
           "team": "New York Yankees",
           "position": "RF",
           "batting_order_slot": 5,
-          "hr_prob": 0.11846917605837998,
-          "rbi_prob": 0.31743816672879466,
-          "multi_hit_prob": 0.2304894832577349
+          "hr_prob": 0.11511482498606657,
+          "rbi_prob": 0.31412881068680076,
+          "multi_hit_prob": 0.22451046223875296
         },
         {
           "player_name": "Everson Pereira",
@@ -1033,9 +1033,9 @@
           "team": "New York Yankees",
           "position": "LF",
           "batting_order_slot": 7,
-          "hr_prob": 0.10199050414045303,
-          "rbi_prob": 0.286909333950874,
-          "multi_hit_prob": 0.21007618834337483
+          "hr_prob": 0.09786127668767412,
+          "rbi_prob": 0.284404221569751,
+          "multi_hit_prob": 0.20443245352238626
         },
         {
           "player_name": "Edgar Quero",
@@ -1074,15 +1074,6 @@
           "multi_hit_prob": 0.223500439716713
         },
         {
-          "player_name": "Spencer Jones",
-          "team": "New York Yankees",
-          "position": "CF",
-          "batting_order_slot": 9,
-          "hr_prob": 0.07351849475764406,
-          "rbi_prob": 0.2542358030435809,
-          "multi_hit_prob": 0.1720962451330829
-        },
-        {
           "player_name": "Sam Antonacci",
           "team": "Chicago White Sox",
           "position": "LF",
@@ -1090,6 +1081,15 @@
           "hr_prob": 0.07272828872738961,
           "rbi_prob": 0.28707300258427265,
           "multi_hit_prob": 0.1959264611396467
+        },
+        {
+          "player_name": "Spencer Jones",
+          "team": "New York Yankees",
+          "position": "CF",
+          "batting_order_slot": 9,
+          "hr_prob": 0.07083406311948116,
+          "rbi_prob": 0.25332266436167117,
+          "multi_hit_prob": 0.16739550314545779
         }
       ]
     },
