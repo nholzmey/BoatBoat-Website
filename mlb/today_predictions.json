@@ -551,8 +551,8 @@
       "game_pk": 822885,
       "home_team": "Texas Rangers",
       "away_team": "San Diego Padres",
-      "home_win_probability": 0.5264,
-      "away_win_probability": 0.4736,
+      "home_win_probability": 0.5246,
+      "away_win_probability": 0.4754,
       "predicted_winner": "Texas Rangers",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
@@ -561,10 +561,28 @@
       "actual_away_score": null,
       "actual_winner": null,
       "current_leader": null,
-      "game_status": "Scheduled",
+      "game_status": "Pre-Game",
       "is_final": false,
       "is_postponed": false,
       "hitters": [
+        {
+          "player_name": "Fernando Tatis Jr.",
+          "team": "San Diego Padres",
+          "position": "RF",
+          "batting_order_slot": 1,
+          "hr_prob": 0.14604706882563964,
+          "rbi_prob": 0.3160816027158088,
+          "multi_hit_prob": 0.2986587049258916
+        },
+        {
+          "player_name": "Manny Machado",
+          "team": "San Diego Padres",
+          "position": "3B",
+          "batting_order_slot": 4,
+          "hr_prob": 0.14442714423871852,
+          "rbi_prob": 0.36179831024065795,
+          "multi_hit_prob": 0.29035847267679676
+        },
         {
           "player_name": "Jake Burger",
           "team": "Texas Rangers",
@@ -573,24 +591,6 @@
           "hr_prob": 0.1415664012382005,
           "rbi_prob": 0.33511886987950334,
           "multi_hit_prob": 0.23732693428774684
-        },
-        {
-          "player_name": "Fernando Tatis Jr.",
-          "team": "San Diego Padres",
-          "position": "RF",
-          "batting_order_slot": 1,
-          "hr_prob": 0.14086300664223664,
-          "rbi_prob": 0.31470385809896584,
-          "multi_hit_prob": 0.2932127341806004
-        },
-        {
-          "player_name": "Manny Machado",
-          "team": "San Diego Padres",
-          "position": "3B",
-          "batting_order_slot": 4,
-          "hr_prob": 0.1386272366703918,
-          "rbi_prob": 0.35632322274029377,
-          "multi_hit_prob": 0.28675090207239307
         },
         {
           "player_name": "Joc Pederson",
@@ -602,6 +602,15 @@
           "multi_hit_prob": 0.24445034173062472
         },
         {
+          "player_name": "Jackson Merrill",
+          "team": "San Diego Padres",
+          "position": "CF",
+          "batting_order_slot": 3,
+          "hr_prob": 0.1333219500334744,
+          "rbi_prob": 0.3508197209489626,
+          "multi_hit_prob": 0.2903227098077495
+        },
+        {
           "player_name": "Corey Seager",
           "team": "Texas Rangers",
           "position": "SS",
@@ -611,13 +620,13 @@
           "multi_hit_prob": 0.28947356797880563
         },
         {
-          "player_name": "Jackson Merrill",
+          "player_name": "Gavin Sheets",
           "team": "San Diego Padres",
-          "position": "CF",
-          "batting_order_slot": 3,
-          "hr_prob": 0.12822036762789243,
-          "rbi_prob": 0.3423509472884028,
-          "multi_hit_prob": 0.2820121291750986
+          "position": "DH",
+          "batting_order_slot": 5,
+          "hr_prob": 0.12928515481370995,
+          "rbi_prob": 0.32975525735809547,
+          "multi_hit_prob": 0.242610007103533
         },
         {
           "player_name": "Wyatt Langford",
@@ -627,15 +636,6 @@
           "hr_prob": 0.1275518725500994,
           "rbi_prob": 0.3439064911335683,
           "multi_hit_prob": 0.2589221287221029
-        },
-        {
-          "player_name": "Gavin Sheets",
-          "team": "San Diego Padres",
-          "position": "DH",
-          "batting_order_slot": 5,
-          "hr_prob": 0.12446239908895618,
-          "rbi_prob": 0.32216372413733,
-          "multi_hit_prob": 0.23579303651796416
         },
         {
           "player_name": "Brandon Nimmo",
@@ -669,27 +669,27 @@
           "team": "San Diego Padres",
           "position": "RF",
           "batting_order_slot": 8,
-          "hr_prob": 0.11349681729248662,
-          "rbi_prob": 0.3068672997817792,
-          "multi_hit_prob": 0.23167935731001862
+          "hr_prob": 0.11733690644690908,
+          "rbi_prob": 0.30916631638012154,
+          "multi_hit_prob": 0.23884889623477346
         },
         {
           "player_name": "Miguel Andujar",
           "team": "San Diego Padres",
           "position": "DH",
           "batting_order_slot": 7,
-          "hr_prob": 0.11121207137610149,
-          "rbi_prob": 0.30903120421044084,
-          "multi_hit_prob": 0.24963673188926375
+          "hr_prob": 0.11427836658163541,
+          "rbi_prob": 0.31247988357483625,
+          "multi_hit_prob": 0.2549362654551912
         },
         {
           "player_name": "Xander Bogaerts",
           "team": "San Diego Padres",
           "position": "SS",
           "batting_order_slot": 6,
-          "hr_prob": 0.10958366539151827,
-          "rbi_prob": 0.31207159234308907,
-          "multi_hit_prob": 0.26360853913476046
+          "hr_prob": 0.1120708283397267,
+          "rbi_prob": 0.31468173388533144,
+          "multi_hit_prob": 0.26641976620635094
         },
         {
           "player_name": "Elias D\u00edaz",
@@ -705,18 +705,18 @@
           "team": "San Diego Padres",
           "position": "C",
           "batting_order_slot": 9,
-          "hr_prob": 0.08291555504100466,
-          "rbi_prob": 0.26973603136045354,
-          "multi_hit_prob": 0.1985810753160134
+          "hr_prob": 0.08751593915110696,
+          "rbi_prob": 0.2728042355342944,
+          "multi_hit_prob": 0.20470905412501597
         },
         {
           "player_name": "Samad Taylor",
           "team": "San Diego Padres",
           "position": "LF",
           "batting_order_slot": 2,
-          "hr_prob": 0.07176618216823871,
-          "rbi_prob": 0.26094703796909324,
-          "multi_hit_prob": 0.23662768988915595
+          "hr_prob": 0.0759124531016616,
+          "rbi_prob": 0.2575482743232848,
+          "multi_hit_prob": 0.24081198798491474
         },
         {
           "player_name": "Alejandro Osuna",
