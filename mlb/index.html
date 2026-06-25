@@ -542,19 +542,16 @@
       if (view === "hr") {
         label = "HR %";
         actualLabel = "Actual HR";
-        completedLabel = "HR?";
       }
 
       if (view === "rbi") {
         label = "RBI %";
         actualLabel = "Actual RBI";
-        completedLabel = "RBI?";
       }
 
       if (view === "multi_hit") {
         label = "Multi-hit %";
         actualLabel = "Actual Hits";
-        completedLabel = "Multi-hit?";
       }
 
       const rows = hitters.map(hitter => {
@@ -585,7 +582,6 @@
               <th>Order</th>
               <th>${label}</th>
               <th>${actualLabel}</th>
-              <th>${completedLabel}</th>
             </tr>
           </thead>
           <tbody>${rows}</tbody>
