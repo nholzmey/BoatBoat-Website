@@ -523,13 +523,10 @@
           <td>${hitter.batting_order_slot ?? ""}</td>
           <td>${pct(hitter.hr_prob)}</td>
           <td>${actualValue(hitter, "hr")}</td>
-          <td>${completedValue(hitter, "hr")}</td>
           <td>${pct(hitter.rbi_prob)}</td>
           <td>${actualValue(hitter, "rbi")}</td>
-          <td>${completedValue(hitter, "rbi")}</td>
           <td>${pct(hitter.multi_hit_prob)}</td>
           <td>${actualValue(hitter, "multi_hit")}</td>
-          <td>${completedValue(hitter, "multi_hit")}</td>
         </tr>
       `).join("");
 
