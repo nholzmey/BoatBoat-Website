@@ -486,6 +486,253 @@
     .footer-space {
         height: 8px;
     }
+  
+    .games-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        align-items: start;
+    }
+
+    .game {
+        padding: 12px;
+        margin-bottom: 0;
+        cursor: pointer;
+        transition: transform 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+        border: 1px solid #334155;
+    }
+
+    .game:hover {
+        transform: translateY(-2px);
+        border-color: #60a5fa;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    }
+
+    .game.expanded {
+        grid-column: span 3;
+        cursor: default;
+        border-color: #60a5fa;
+    }
+
+    .compact-game-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+        color: #facc15;
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .compact-expand-hint {
+        color: #60a5fa;
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+
+    .matchup {
+        gap: 8px;
+        margin-bottom: 8px;
+        flex-wrap: nowrap;
+    }
+
+    .team-box {
+        min-width: 0;
+        min-height: 72px;
+        padding: 8px;
+        gap: 8px;
+        flex: 1;
+    }
+
+    .team-logo {
+        width: 38px;
+        height: 38px;
+        flex: 0 0 auto;
+    }
+
+    .winner .team-logo,
+    .strong-pick .team-logo {
+        width: 44px;
+        height: 44px;
+    }
+
+    .team-name {
+        font-size: 0.85rem;
+        line-height: 1.15;
+    }
+
+    .winner .team-name,
+    .strong-pick .team-name {
+        font-size: 0.9rem;
+    }
+
+    .team-probability {
+        margin-top: 4px;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .scoreboard-center {
+        min-width: 92px;
+        max-width: 100px;
+    }
+
+    .game-time-status {
+        display: none;
+    }
+
+    .score-large {
+        font-size: 1.35rem;
+        margin-bottom: 4px;
+    }
+
+    .mini-live-stack {
+        gap: 3px;
+    }
+
+    .compact-base-diamond {
+        width: 38px;
+        height: 30px;
+    }
+
+    .compact-base {
+        width: 11px;
+        height: 11px;
+        border-width: 1.5px;
+    }
+
+    .compact-base-second {
+        top: 0;
+        left: 14px;
+    }
+
+    .compact-base-third {
+        top: 14px;
+        left: 1px;
+    }
+
+    .compact-base-first {
+        top: 14px;
+        right: 1px;
+    }
+
+    .count-outs {
+        font-size: 0.9rem;
+    }
+
+    .outs-dots {
+        gap: 4px;
+    }
+
+    .out-dot {
+        width: 8px;
+        height: 8px;
+        border-width: 1.5px;
+    }
+
+    .compact-summary {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px 10px;
+        padding: 8px;
+        border-radius: 8px;
+        background: #020617;
+        border: 1px solid #334155;
+        font-size: 0.86rem;
+        line-height: 1.35;
+    }
+
+    .compact-summary-full {
+        grid-column: 1 / -1;
+    }
+
+    .summary-label {
+        color: #9ca3af;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        display: block;
+        margin-bottom: 1px;
+    }
+
+    .summary-value {
+        font-weight: bold;
+        color: #e5e7eb;
+    }
+
+    .expanded-content {
+        display: none;
+        margin-top: 12px;
+        cursor: default;
+    }
+
+    .game.expanded .expanded-content {
+        display: block;
+    }
+
+    .expanded-content .actual-result,
+    .expanded-content .live-game-state {
+        margin-top: 8px;
+    }
+
+    .section-header {
+        margin-top: 12px;
+    }
+
+    .toggle-btn {
+        display: none;
+    }
+
+    .click-note {
+        color: #9ca3af;
+        font-size: 0.82rem;
+        margin-top: 8px;
+        font-style: italic;
+    }
+
+    @media (max-width: 1200px) {
+        .games-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .game.expanded {
+            grid-column: span 2;
+        }
+    }
+
+    @media (max-width: 760px) {
+        body {
+            margin: 12px;
+        }
+
+        .games-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .game.expanded {
+            grid-column: span 1;
+        }
+
+        .matchup {
+            flex-wrap: wrap;
+        }
+
+        .scoreboard-center {
+            order: 3;
+            width: 100%;
+            max-width: none;
+        }
+
+        .compact-summary {
+            grid-template-columns: 1fr;
+        }
+
+        .live-game-state {
+            grid-template-columns: 1fr;
+        }
+    }
+
   </style>
 </head>
 <body>
@@ -905,6 +1152,77 @@
       `;
     }
 
+
+    function predictionResultMarkup(game) {
+      if (!game.is_final || !game.actual_winner) {
+        return '<span class="stat-pending">Pending</span>';
+      }
+
+      const correct = game.actual_winner === game.predicted_winner;
+      return `<span class="${correct ? "prediction-correct" : "prediction-wrong"}">${correct ? "Correct" : "Incorrect"}</span>`;
+    }
+
+    function compactLiveText(game) {
+      if (game.is_final) return "Final";
+      const batter = game.current_batter || "Not available";
+      const balls = game.balls ?? "-";
+      const strikes = game.strikes ?? "-";
+      const outs = game.outs ?? "-";
+      const runners = game.runners_on_base ?? 0;
+
+      return `${escapeHtml(batter)} · ${balls}-${strikes}, ${outs} out${String(outs) === "1" ? "" : "s"} · ${runners} on`;
+    }
+
+    function renderCompactSummary(game) {
+      const hasScore = game.actual_home_score !== null && game.actual_home_score !== undefined
+                    && game.actual_away_score !== null && game.actual_away_score !== undefined;
+
+      const scoreText = hasScore
+        ? `${escapeHtml(game.away_team)} ${game.actual_away_score} - ${game.actual_home_score} ${escapeHtml(game.home_team)}`
+        : "No score yet";
+
+      return `
+        <div class="compact-summary">
+          <div>
+            <span class="summary-label">Pick</span>
+            <span class="summary-value">${escapeHtml(game.predicted_winner || "Unknown")}</span>
+          </div>
+          <div>
+            <span class="summary-label">Result</span>
+            <span class="summary-value">${predictionResultMarkup(game)}</span>
+          </div>
+          <div class="compact-summary-full">
+            <span class="summary-label">Score / Status</span>
+            <span class="summary-value">${scoreText} · ${escapeHtml(game.game_status || "Scheduled")}</span>
+          </div>
+          <div class="compact-summary-full">
+            <span class="summary-label">Live</span>
+            <span class="summary-value">${compactLiveText(game)}</span>
+          </div>
+        </div>
+      `;
+    }
+
+    function toggleGameCard(index) {
+      const card = document.getElementById(`game_card_${index}`);
+      if (!card) return;
+
+      const isExpanded = card.classList.contains("expanded");
+
+      document.querySelectorAll(".game.expanded").forEach(gameCard => {
+        gameCard.classList.remove("expanded");
+        const hint = gameCard.querySelector(".compact-expand-hint");
+        if (hint) hint.textContent = "Click to expand";
+      });
+
+      if (!isExpanded) {
+        card.classList.add("expanded");
+        const hint = card.querySelector(".compact-expand-hint");
+        if (hint) hint.textContent = "Click to collapse";
+      }
+    }
+
+
     function renderGames(payload) {
       document.getElementById("page-title").textContent = `MLB Predictions for ${payload.date}`;
       const container = document.getElementById("games-container");
@@ -915,8 +1233,11 @@
         return;
       }
 
+      container.className = "games-grid";
+
       container.innerHTML = games.map((game, index) => {
         const sectionId = `players_${index + 1}`;
+        const cardId = `game_card_${index}`;
         const hitters = sortedHitters(game.hitters || [], currentView);
         const homeLogo = logoPath(game.home_team);
         const awayLogo = logoPath(game.away_team);
@@ -940,11 +1261,14 @@
 
         const awayActualClass = game.actual_winner === game.away_team ? " actual-winner" : "";
         const homeActualClass = game.actual_winner === game.home_team ? " actual-winner" : "";
-        const collapsedClass = collapsedSections.has(sectionId) ? "collapsed" : "";
-        const buttonLabel = collapsedSections.has(sectionId) ? "Expand" : "Collapse";
 
         return `
-          <div class="game">
+          <div id="${cardId}" class="game" onclick="toggleGameCard(${index})">
+            <div class="compact-game-header">
+              <span>${escapeHtml(game.game_status || "Scheduled")}</span>
+              <span class="compact-expand-hint">Click to expand</span>
+            </div>
+
             <div class="matchup">
               <div class="team-box ${awayWinnerClass}${awayActualClass}${awayStrongClass}">
                 ${awayLogo ? `<img class="team-logo" src="${awayLogo}" alt="${escapeHtml(game.away_team)} logo">` : ""}
@@ -954,13 +1278,7 @@
                 </div>
               </div>
 
-              <div class="center-info">
-                <div><strong>Predicted winner</strong></div>
-                <div>${escapeHtml(game.predicted_winner)}</div>
-                <div class="${isStrong ? 'strong-text' : ''}" style="margin-top:6px; font-weight:bold;">
-                  ${escapeHtml(game.confidence_tier || "Normal Pick")}
-                </div>
-              </div>
+              ${renderScoreboardCenter(game)}
 
               <div class="team-box ${homeWinnerClass}${homeActualClass}${homeStrongClass}">
                 ${homeLogo ? `<img class="team-logo" src="${homeLogo}" alt="${escapeHtml(game.home_team)} logo">` : ""}
@@ -971,17 +1289,27 @@
               </div>
             </div>
 
-            ${renderActualResult(game)}
+            ${renderCompactSummary(game)}
 
-            ${renderLiveGameState(game)}
+            <div class="expanded-content" onclick="event.stopPropagation()">
+              <div class="actual-result">
+                <div><strong>Predicted winner:</strong> ${escapeHtml(game.predicted_winner || "Unknown")}</div>
+                <div><strong>Confidence:</strong> <span class="${isStrong ? 'strong-text' : ''}">${escapeHtml(game.confidence_tier || "Normal Pick")}</span></div>
+              </div>
 
-            <div class="section-header">
-              <div class="section-title">${sectionTitle}</div>
-              <button class="toggle-btn" onclick="toggleSection('${sectionId}', this)">${buttonLabel}</button>
-            </div>
+              ${renderActualResult(game)}
 
-            <div id="${sectionId}" class="collapsible-content ${collapsedClass}">
-              ${tableHtml}
+              ${renderLiveGameState(game)}
+
+              <div class="section-header">
+                <div class="section-title">${sectionTitle}</div>
+              </div>
+
+              <div id="${sectionId}" class="collapsible-content">
+                ${tableHtml}
+              </div>
+
+              <div class="click-note">Click another game card to collapse this one.</div>
             </div>
           </div>
         `;
