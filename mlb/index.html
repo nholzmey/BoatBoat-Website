@@ -357,26 +357,6 @@
       return "";
     }
 
-    function completedValue(hitter, stat) {
-      if (!hitter || hitter.stat_result_status === "PENDING" || hitter.stat_result_status === undefined) {
-        return '<span class="stat-pending">Pending</span>';
-      }
-
-      if (hitter.stat_result_status === "PLAYER_NOT_FOUND") {
-        return '<span class="stat-pending">Player Did Not Play</span>';
-      }
-
-      let completed = false;
-
-      if (stat === "hr") completed = !!hitter.hr_completed;
-      if (stat === "rbi") completed = !!hitter.rbi_completed;
-      if (stat === "multi_hit") completed = !!hitter.multi_hit_completed;
-
-      return completed
-        ? '<span class="stat-hit">Yes</span>'
-        : '<span class="stat-miss">No</span>';
-    }
-
     function escapeHtml(text) {
       if (text === null || text === undefined) return "";
       return String(text)
@@ -503,10 +483,8 @@
           <td>${hitter.batting_order_slot ?? ""}</td>
           <td>${pct(hitter.hr_prob)}</td>
           <td>${actualValue(hitter, "hr")}</td>
-          <td>${completedValue(hitter, "hr")}</td>
           <td>${pct(hitter.rbi_prob)}</td>
           <td>${actualValue(hitter, "rbi")}</td>
-          <td>${completedValue(hitter, "rbi")}</td>
           <td>${pct(hitter.multi_hit_prob)}</td>
           <td>${actualValue(hitter, "multi_hit")}</td>
           <td>${completedValue(hitter, "multi_hit")}</td>
