@@ -214,6 +214,22 @@
         background: #1f2937;
     }
 
+
+    .stat-hit {
+        color: #22c55e;
+        font-weight: bold;
+    }
+
+    .stat-miss {
+        color: #ef4444;
+        font-weight: bold;
+    }
+
+    .stat-pending {
+        color: #9ca3af;
+        font-style: italic;
+    }
+
     .muted {
         color: #9ca3af;
         font-style: italic;
@@ -327,6 +343,38 @@
 
     function pct(x) {
       return ((x || 0) * 100).toFixed(1);
+    }
+
+
+    function actualValue(hitter, stat) {
+      if (!hitter || hitter.stat_result_status === "PENDING" || hitter.stat_result_status === undefined) return "Pending";
+      if (hitter.stat_result_status === "PLAYER_NOT_FOUND") return "Not found";
+
+      if (stat === "hr") return hitter.actual_hr ?? 0;
+      if (stat === "rbi") return hitter.actual_rbi ?? 0;
+      if (stat === "multi_hit") return hitter.actual_hits ?? 0;
+
+      return "";
+    }
+
+    function completedValue(hitter, stat) {
+      if (!hitter || hitter.stat_result_status === "PENDING" || hitter.stat_result_status === undefined) {
+        return '<span class="stat-pending">Pending</span>';
+      }
+
+      if (hitter.stat_result_status === "PLAYER_NOT_FOUND") {
+        return '<span class="stat-pending">Not found</span>';
+      }
+
+      let completed = false;
+
+      if (stat === "hr") completed = !!hitter.hr_completed;
+      if (stat === "rbi") completed = !!hitter.rbi_completed;
+      if (stat === "multi_hit") completed = !!hitter.multi_hit_completed;
+
+      return completed
+        ? '<span class="stat-hit">Yes</span>'
+        : '<span class="stat-miss">No</span>';
     }
 
     function escapeHtml(text) {
@@ -454,8 +502,14 @@
           <td>${escapeHtml(hitter.position)}</td>
           <td>${hitter.batting_order_slot ?? ""}</td>
           <td>${pct(hitter.hr_prob)}</td>
+          <td>${actualValue(hitter, "hr")}</td>
+          <td>${completedValue(hitter, "hr")}</td>
           <td>${pct(hitter.rbi_prob)}</td>
+          <td>${actualValue(hitter, "rbi")}</td>
+          <td>${completedValue(hitter, "rbi")}</td>
           <td>${pct(hitter.multi_hit_prob)}</td>
+          <td>${actualValue(hitter, "multi_hit")}</td>
+          <td>${completedValue(hitter, "multi_hit")}</td>
         </tr>
       `).join("");
 
@@ -468,8 +522,14 @@
               <th>Pos</th>
               <th>Order</th>
               <th>HR %</th>
+              <th>Actual HR</th>
+              <th>HR?</th>
               <th>RBI %</th>
+              <th>Actual RBI</th>
+              <th>RBI?</th>
               <th>Multi-hit %</th>
+              <th>Actual Hits</th>
+              <th>Multi-hit?</th>
             </tr>
           </thead>
           <tbody>${rows}</tbody>
@@ -483,9 +543,26 @@
       }
 
       let label = "Probability";
-      if (view === "hr") label = "HR %";
-      if (view === "rbi") label = "RBI %";
-      if (view === "multi_hit") label = "Multi-hit %";
+      let actualLabel = "Actual";
+      let completedLabel = "Completed?";
+
+      if (view === "hr") {
+        label = "HR %";
+        actualLabel = "Actual HR";
+        completedLabel = "HR?";
+      }
+
+      if (view === "rbi") {
+        label = "RBI %";
+        actualLabel = "Actual RBI";
+        completedLabel = "RBI?";
+      }
+
+      if (view === "multi_hit") {
+        label = "Multi-hit %";
+        actualLabel = "Actual Hits";
+        completedLabel = "Multi-hit?";
+      }
 
       const rows = hitters.map(hitter => {
         let value = 0;
@@ -500,6 +577,8 @@
             <td>${escapeHtml(hitter.position)}</td>
             <td>${hitter.batting_order_slot ?? ""}</td>
             <td>${pct(value)}</td>
+            <td>${actualValue(hitter, view)}</td>
+            <td>${completedValue(hitter, view)}</td>
           </tr>
         `;
       }).join("");
@@ -513,6 +592,8 @@
               <th>Pos</th>
               <th>Order</th>
               <th>${label}</th>
+              <th>${actualLabel}</th>
+              <th>${completedLabel}</th>
             </tr>
           </thead>
           <tbody>${rows}</tbody>
