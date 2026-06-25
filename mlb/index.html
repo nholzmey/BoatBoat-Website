@@ -347,15 +347,35 @@
 
 
     function actualValue(hitter, stat) {
-      if (!hitter || hitter.stat_result_status === "PENDING" || hitter.stat_result_status === undefined) return "Pending";
-      if (hitter.stat_result_status === "PLAYER_NOT_FOUND") return "Not found";
 
-      if (stat === "hr") return hitter.actual_hr ?? 0;
-      if (stat === "rbi") return hitter.actual_rbi ?? 0;
-      if (stat === "multi_hit") return hitter.actual_hits ?? 0;
+      if (!hitter || hitter.stat_result_status === "PENDING") {
+          return '<span class="stat-pending">Pending</span>';
+      }
 
-      return "";
-    }
+      if (hitter.stat_result_status === "PLAYER_NOT_FOUND") {
+          return '<span class="stat-pending">Player Did Not Play</span>';
+      }
+
+      let value = 0;
+      let success = false;
+
+      if (stat === "hr") {
+          value = hitter.actual_hr ?? 0;
+          success = hitter.hr_completed;
+      }
+
+      if (stat === "rbi") {
+          value = hitter.actual_rbi ?? 0;
+          success = hitter.rbi_completed;
+      }
+
+      if (stat === "multi_hit") {
+          value = hitter.actual_hits ?? 0;
+          success = hitter.multi_hit_completed;
+      }
+
+      return `<span class="${success ? "stat-hit" : "stat-miss"}">${value}</span>`;
+  }
 
     function escapeHtml(text) {
       if (text === null || text === undefined) return "";
@@ -487,7 +507,6 @@
           <td>${actualValue(hitter, "rbi")}</td>
           <td>${pct(hitter.multi_hit_prob)}</td>
           <td>${actualValue(hitter, "multi_hit")}</td>
-          <td>${completedValue(hitter, "multi_hit")}</td>
         </tr>
       `).join("");
 
@@ -556,7 +575,6 @@
             <td>${hitter.batting_order_slot ?? ""}</td>
             <td>${pct(value)}</td>
             <td>${actualValue(hitter, view)}</td>
-            <td>${completedValue(hitter, view)}</td>
           </tr>
         `;
       }).join("");
