@@ -782,6 +782,75 @@
         grid-template-columns: 1fr;
     }
 
+  
+    .top-choices-btn.active {
+        background: #7c3aed;
+        border-color: #a78bfa;
+        color: white;
+    }
+
+    .top-choices-panel {
+        display: none;
+        background: #1e293b;
+        padding: 16px;
+        margin-bottom: 18px;
+        border-radius: 10px;
+        border: 1px solid #334155;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+    }
+
+    .top-choices-panel.active {
+        display: block;
+    }
+
+    .top-choices-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .top-choice-card {
+        background: #020617;
+        border: 1px solid #334155;
+        border-radius: 10px;
+        padding: 12px;
+    }
+
+    .top-choice-title {
+        font-weight: bold;
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+        color: #facc15;
+    }
+
+    .top-choice-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #111827;
+        font-size: 0.88rem;
+    }
+
+    .top-choice-table th,
+    .top-choice-table td {
+        border: 1px solid #374151;
+        padding: 7px;
+        text-align: left;
+    }
+
+    .top-choice-table th {
+        background: #1f2937;
+    }
+
+    .top-choice-result {
+        font-weight: bold;
+    }
+
+    @media (max-width: 1100px) {
+        .top-choices-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
   </style>
 </head>
 <body>
@@ -791,10 +860,13 @@
     <h1 id="page-title">MLB Predictions</h1>
     <div class="tabs">
       <a class="action-btn model-link" href="./2021-plus.html">2021+ Model Page</a>
+      <button class="action-btn top-choices-btn" id="top-choices-btn">Top Choices</button>
     </div>
   </div>
 
   <div class="status" id="status-text">Loading predictions...</div>
+
+  <div id="top-choices-panel" class="top-choices-panel"></div>
 
   <div id="games-container"></div>
 
@@ -1364,6 +1436,139 @@
     }
 
 
+
+    let showingTopChoices = false;
+
+    function topChoiceActualValue(hitter, stat) {
+      if (!hitter || hitter.stat_result_status === "PENDING") {
+        return '<span class="stat-pending">Pending</span>';
+      }
+
+      if (hitter.stat_result_status === "PLAYER_NOT_FOUND") {
+        return '<span class="stat-pending">Player Did Not Play</span>';
+      }
+
+      let value = 0;
+      let success = false;
+
+      if (stat === "hr") {
+        value = hitter.actual_hr ?? 0;
+        success = !!hitter.hr_completed;
+      }
+
+      if (stat === "rbi") {
+        value = hitter.actual_rbi ?? 0;
+        success = !!hitter.rbi_completed;
+      }
+
+      if (stat === "multi_hit") {
+        value = hitter.actual_hits ?? 0;
+        success = !!hitter.multi_hit_completed;
+      }
+
+      return `<span class="${success ? "stat-hit" : "stat-miss"}">${value}</span>`;
+    }
+
+    function collectTopChoices(payload, stat) {
+      const games = payload.games || [];
+      const allHitters = [];
+
+      games.forEach(game => {
+        (game.hitters || []).forEach(hitter => {
+          const probKey = stat === "hr" ? "hr_prob" : stat === "rbi" ? "rbi_prob" : "multi_hit_prob";
+          const probability = hitter[probKey] || 0;
+
+          allHitters.push({
+            ...hitter,
+            game_status: game.game_status,
+            matchup: `${game.away_team} @ ${game.home_team}`,
+            probability
+          });
+        });
+      });
+
+      return allHitters
+        .sort((a, b) => (b.probability || 0) - (a.probability || 0))
+        .slice(0, 5);
+    }
+
+    function renderTopChoiceTable(title, stat, hitters) {
+      if (!hitters || hitters.length === 0) {
+        return `
+          <div class="top-choice-card">
+            <div class="top-choice-title">${title}</div>
+            <p class="muted">No players available.</p>
+          </div>
+        `;
+      }
+
+      const rows = hitters.map((hitter, index) => `
+        <tr>
+          <td>${index + 1}</td>
+          <td>${escapeHtml(hitter.player_name)}</td>
+          <td>${escapeHtml(hitter.team)}</td>
+          <td>${pct(hitter.probability)}%</td>
+          <td class="top-choice-result">${topChoiceActualValue(hitter, stat)}</td>
+        </tr>
+      `).join("");
+
+      return `
+        <div class="top-choice-card">
+          <div class="top-choice-title">${title}</div>
+          <table class="top-choice-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Player</th>
+                <th>Team</th>
+                <th>%</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    function renderTopChoices(payload) {
+      const panel = document.getElementById("top-choices-panel");
+      if (!panel) return;
+
+      const hrTop = collectTopChoices(payload, "hr");
+      const rbiTop = collectTopChoices(payload, "rbi");
+      const multiHitTop = collectTopChoices(payload, "multi_hit");
+
+      panel.innerHTML = `
+        <h2 style="margin-top:0;">Top Choices</h2>
+        <div class="top-choices-grid">
+          ${renderTopChoiceTable("Top 5 Home Run", "hr", hrTop)}
+          ${renderTopChoiceTable("Top 5 RBI", "rbi", rbiTop)}
+          ${renderTopChoiceTable("Top 5 Multi-Hit", "multi_hit", multiHitTop)}
+        </div>
+      `;
+    }
+
+    function setTopChoicesMode(enabled) {
+      showingTopChoices = enabled;
+
+      const btn = document.getElementById("top-choices-btn");
+      const panel = document.getElementById("top-choices-panel");
+      const gamesContainer = document.getElementById("games-container");
+
+      if (btn) btn.classList.toggle("active", enabled);
+
+      if (panel) {
+        panel.classList.toggle("active", enabled);
+        if (enabled) renderTopChoices(latestPayload);
+      }
+
+      if (gamesContainer) {
+        gamesContainer.style.display = enabled ? "none" : "";
+      }
+    }
+
+
     function renderGames(payload) {
       document.getElementById("page-title").textContent = `MLB Predictions for ${payload.date}`;
       const container = document.getElementById("games-container");
@@ -1470,6 +1675,7 @@
         const payload = await response.json();
         latestPayload = payload;
         renderGames(payload);
+        if (showingTopChoices) renderTopChoices(payload);
 
         const chart = document.getElementById("accuracy-chart");
         chart.src = "./accuracy_chart.png?_=" + Date.now();
@@ -1480,6 +1686,14 @@
         document.getElementById("status-text").textContent =
           "Update failed: " + err.message;
       }
+    }
+
+
+    const topChoicesBtn = document.getElementById("top-choices-btn");
+    if (topChoicesBtn) {
+      topChoicesBtn.addEventListener("click", () => {
+        setTopChoicesMode(!showingTopChoices);
+      });
     }
 
     fetchPredictions();
