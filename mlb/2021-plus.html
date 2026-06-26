@@ -763,6 +763,35 @@
         }
     }
 
+  
+    .expanded-tabs {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+        margin-bottom: 10px;
+    }
+
+    .expanded-tab {
+        background: #1f2937;
+        border: 1px solid #374151;
+        border-radius: 8px;
+        padding: 8px 12px;
+        color: #e5e7eb;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .expanded-tab.active {
+        background: #2563eb;
+        color: white;
+        border-color: #60a5fa;
+    }
+
+    .compact-summary.only-pick {
+        grid-template-columns: 1fr;
+    }
+
   </style>
 </head>
 <body>
@@ -772,12 +801,6 @@
     <h1 id="page-title">MLB Predictions — 2021+ Model</h1>
     <div class="tabs">
       <a class="action-btn model-link" href="./index.html">All-Years Model Page</a>
-      <button class="tab active" data-view="everything">Everything</button>
-      <button class="tab" data-view="hr">Home Run</button>
-      <button class="tab" data-view="rbi">RBI</button>
-      <button class="tab" data-view="multi_hit">Multi-Hit</button>
-      <button class="action-btn" id="collapse-all-btn">Collapse All</button>
-      <button class="action-btn" id="expand-all-btn">Expand All</button>
     </div>
   </div>
 
@@ -1227,7 +1250,7 @@
       const runners = game.runners_on_base ?? 0;
 
       if (game.current_batter) {
-        return `Up to bat: ${escapeHtml(game.current_batter)}`;
+        return escapeHtml(game.current_batter);
       }
 
       return escapeHtml(game.game_status || "Scheduled");
@@ -1268,6 +1291,13 @@
         </div>
       `;
 
+      const batterBlock = `
+        <div>
+          <span class="summary-label">Batter</span>
+          <span class="summary-value">${compactLiveText(game)}</span>
+        </div>
+      `;
+
       if (isGameFinalForSummary(game)) {
         return `
           <div class="compact-summary">
@@ -1277,21 +1307,18 @@
         `;
       }
 
-      if (!isGameActiveForSummary(game)) {
+      if (isGameActiveForSummary(game)) {
         return `
           <div class="compact-summary">
             ${pickBlock}
+            ${batterBlock}
           </div>
         `;
       }
 
       return `
-        <div class="compact-summary">
+        <div class="compact-summary only-pick">
           ${pickBlock}
-          <div class="compact-summary-full">
-            <span class="summary-label">Batter / Status</span>
-            <span class="summary-value">${compactLiveText(game)}</span>
-          </div>
         </div>
       `;
     }
@@ -1316,6 +1343,47 @@
     }
 
 
+
+    function getGameView(index) {
+      if (!window.gameViews) window.gameViews = {};
+      return window.gameViews[index] || "everything";
+    }
+
+    function setGameView(index, view, event) {
+      if (event) event.stopPropagation();
+      if (!window.gameViews) window.gameViews = {};
+      window.gameViews[index] = view;
+      renderGames(latestPayload);
+
+      const card = document.getElementById(`game_card_${index}`);
+      if (card) {
+        card.classList.add("expanded");
+        const hint = card.querySelector(".compact-expand-hint");
+        if (hint) hint.textContent = "Click to collapse";
+      }
+    }
+
+    function renderExpandedTabs(index, activeView) {
+      const tabs = [
+        ["everything", "Everything"],
+        ["hr", "Home Run"],
+        ["rbi", "RBI"],
+        ["multi_hit", "Multi-Hit"]
+      ];
+
+      return `
+        <div class="expanded-tabs">
+          ${tabs.map(([view, label]) => `
+            <button
+              class="expanded-tab ${activeView === view ? "active" : ""}"
+              onclick="setGameView(${index}, '${view}', event)"
+            >${label}</button>
+          `).join("")}
+        </div>
+      `;
+    }
+
+
     function renderGames(payload) {
       document.getElementById("page-title").textContent = `MLB Predictions — 2021+ Model for ${payload.date}`;
       const container = document.getElementById("games-container");
@@ -1331,18 +1399,19 @@
       container.innerHTML = games.map((game, index) => {
         const sectionId = `players_${index + 1}`;
         const cardId = `game_card_${index}`;
-        const hitters = sortedHitters(game.hitters || [], currentView);
+        const gameView = getGameView(index);
+        const hitters = sortedHitters(game.hitters || [], gameView);
         const homeLogo = logoPath(game.home_team);
         const awayLogo = logoPath(game.away_team);
 
         let sectionTitle = "Player Predictions";
-        if (currentView === "hr") sectionTitle = "Home Run Leaders";
-        if (currentView === "rbi") sectionTitle = "RBI Leaders";
-        if (currentView === "multi_hit") sectionTitle = "Multi-Hit Leaders";
+        if (gameView === "hr") sectionTitle = "Home Run Leaders";
+        if (gameView === "rbi") sectionTitle = "RBI Leaders";
+        if (gameView === "multi_hit") sectionTitle = "Multi-Hit Leaders";
 
-        const tableHtml = currentView === "everything"
+        const tableHtml = gameView === "everything"
           ? renderEverythingTable(hitters)
-          : renderFilteredTable(hitters, currentView);
+          : renderFilteredTable(hitters, gameView);
 
         const isStrong = !!game.is_confident_pick;
 
@@ -1394,6 +1463,8 @@
 
               ${renderLiveGameState(game)}
 
+              ${renderExpandedTabs(index, gameView)}
+
               <div class="section-header">
                 <div class="section-title">${sectionTitle}</div>
               </div>
@@ -1431,24 +1502,6 @@
       }
     }
 
-    function setActiveTab() {
-      document.querySelectorAll(".tab").forEach(btn => {
-        btn.classList.toggle("active", btn.dataset.view === currentView);
-      });
-    }
-
-    document.querySelectorAll(".tab").forEach(btn => {
-      btn.addEventListener("click", () => {
-        currentView = btn.dataset.view;
-        setActiveTab();
-        renderGames(latestPayload);
-      });
-    });
-
-    document.getElementById("collapse-all-btn").addEventListener("click", () => setAllSections(true));
-    document.getElementById("expand-all-btn").addEventListener("click", () => setAllSections(false));
-
-    setActiveTab();
     fetchPredictions();
     setInterval(fetchPredictions, 30000);
   </script>
