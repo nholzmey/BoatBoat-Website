@@ -1177,9 +1177,7 @@
       const hasScore = game.actual_home_score !== null && game.actual_home_score !== undefined
                     && game.actual_away_score !== null && game.actual_away_score !== undefined;
 
-      const scoreText = hasScore
-        ? `${escapeHtml(game.away_team)} ${game.actual_away_score} - ${game.actual_home_score} ${escapeHtml(game.home_team)}`
-        : "No score yet";
+      const statusOnly = escapeHtml(game.game_status || "Scheduled");
 
       return `
         <div class="compact-summary">
@@ -1193,7 +1191,7 @@
           </div>
           <div class="compact-summary-full">
             <span class="summary-label">Score / Status</span>
-            <span class="summary-value">${scoreText} · ${escapeHtml(game.game_status || "Scheduled")}</span>
+            <span class="summary-value">${statusOnly}</span>
           </div>
           <div class="compact-summary-full">
             <span class="summary-label">Live</span>
