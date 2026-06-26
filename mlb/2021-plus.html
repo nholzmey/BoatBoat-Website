@@ -308,6 +308,16 @@
         right: 2px;
     }
 
+
+    .compact-inning-status {
+        font-size: 0.78rem;
+        font-weight: bold;
+        color: #facc15;
+        line-height: 1;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+
     .count-outs {
         font-size: 1.05rem;
         font-weight: bold;
@@ -625,6 +635,16 @@
     .compact-base-first {
         top: 14px;
         right: 1px;
+    }
+
+
+    .compact-inning-status {
+        font-size: 0.78rem;
+        font-weight: bold;
+        color: #facc15;
+        line-height: 1;
+        margin-top: 1px;
+        margin-bottom: 1px;
     }
 
     .count-outs {
@@ -1000,6 +1020,22 @@
       `;
     }
 
+
+    function inningSymbolStatus(game) {
+      const rawStatus = String(game.game_status || "Scheduled");
+      const lowerStatus = rawStatus.toLowerCase();
+
+      if (lowerStatus.includes("top")) {
+        return rawStatus.replace(/top/i, "▲");
+      }
+
+      if (lowerStatus.includes("bottom")) {
+        return rawStatus.replace(/bottom/i, "▼");
+      }
+
+      return rawStatus;
+    }
+
     function renderScoreboardCenter(game) {
       const bases = game.bases_occupied || { first: false, second: false, third: false };
       const balls = game.balls ?? "-";
@@ -1013,14 +1049,14 @@
         ? `${game.actual_away_score} - ${game.actual_home_score}`
         : "vs";
 
-      const statusText = game.game_status || "Scheduled";
+      const statusText = inningSymbolStatus(game);
 
       return `
         <div class="scoreboard-center">
-          <div class="game-time-status">${escapeHtml(statusText)}</div>
           <div class="score-large">${escapeHtml(scoreText)}</div>
           <div class="mini-live-stack">
             ${baseDiamondMarkup(bases, "compact")}
+            <div class="compact-inning-status">${escapeHtml(statusText)}</div>
             <div class="count-outs">${balls} - ${strikes}</div>
             ${outsDotsMarkup(outs)}
           </div>
@@ -1201,8 +1237,6 @@
       const hasScore = game.actual_home_score !== null && game.actual_home_score !== undefined
                     && game.actual_away_score !== null && game.actual_away_score !== undefined;
 
-      const statusOnly = escapeHtml(game.game_status || "Scheduled");
-
       return `
         <div class="compact-summary">
           <div>
@@ -1212,10 +1246,6 @@
           <div>
             <span class="summary-label">Result</span>
             <span class="summary-value">${predictionResultMarkup(game)}</span>
-          </div>
-          <div class="compact-summary-full">
-            <span class="summary-label">Score / Status</span>
-            <span class="summary-value">${statusOnly}</span>
           </div>
           <div class="compact-summary-full">
             <span class="summary-label">Batter / Status</span>
