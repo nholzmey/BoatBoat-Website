@@ -1213,20 +1213,61 @@
       return escapeHtml(game.game_status || "Scheduled");
     }
 
+
+    function isGameFinalForSummary(game) {
+      return !!game.is_final || String(game.game_status || "").toLowerCase().includes("final");
+    }
+
+    function isGameActiveForSummary(game) {
+      const status = String(game.game_status || "").toLowerCase();
+
+      if (isGameFinalForSummary(game)) return false;
+
+      return (
+        status.includes("top") ||
+        status.includes("bottom") ||
+        status.includes("middle") ||
+        status.includes("end") ||
+        status.includes("live") ||
+        game.current_batter
+      );
+    }
+
     function renderCompactSummary(game) {
-      const hasScore = game.actual_home_score !== null && game.actual_home_score !== undefined
-                    && game.actual_away_score !== null && game.actual_away_score !== undefined;
+      const pickBlock = `
+        <div>
+          <span class="summary-label">Pick</span>
+          <span class="summary-value">${escapeHtml(game.predicted_winner || "Unknown")}</span>
+        </div>
+      `;
+
+      const resultBlock = `
+        <div>
+          <span class="summary-label">Result</span>
+          <span class="summary-value">${predictionResultMarkup(game)}</span>
+        </div>
+      `;
+
+      if (isGameFinalForSummary(game)) {
+        return `
+          <div class="compact-summary">
+            ${pickBlock}
+            ${resultBlock}
+          </div>
+        `;
+      }
+
+      if (!isGameActiveForSummary(game)) {
+        return `
+          <div class="compact-summary">
+            ${pickBlock}
+          </div>
+        `;
+      }
 
       return `
         <div class="compact-summary">
-          <div>
-            <span class="summary-label">Pick</span>
-            <span class="summary-value">${escapeHtml(game.predicted_winner || "Unknown")}</span>
-          </div>
-          <div>
-            <span class="summary-label">Result</span>
-            <span class="summary-value">${predictionResultMarkup(game)}</span>
-          </div>
+          ${pickBlock}
           <div class="compact-summary-full">
             <span class="summary-label">Batter / Status</span>
             <span class="summary-value">${compactLiveText(game)}</span>
@@ -1297,7 +1338,7 @@
         return `
           <div id="${cardId}" class="game" onclick="toggleGameCard(${index})">
             <div class="compact-game-header">
-              <span>${escapeHtml(game.game_status || "Scheduled")}</span>
+              <span></span>
               <span class="compact-expand-hint">Click to expand</span>
             </div>
 
