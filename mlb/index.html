@@ -1170,7 +1170,11 @@
       const outs = game.outs ?? "-";
       const runners = game.runners_on_base ?? 0;
 
-      return `${escapeHtml(batter)} · ${balls}-${strikes}, ${outs} out${String(outs) === "1" ? "" : "s"} · ${runners} on`;
+      if (game.current_batter) {
+        return `Up to bat: ${escapeHtml(game.current_batter)}`;
+      }
+
+      return escapeHtml(game.game_status || "Scheduled");
     }
 
     function renderCompactSummary(game) {
@@ -1194,7 +1198,7 @@
             <span class="summary-value">${statusOnly}</span>
           </div>
           <div class="compact-summary-full">
-            <span class="summary-label">Live</span>
+            <span class="summary-label">Batter / Status</span>
             <span class="summary-value">${compactLiveText(game)}</span>
           </div>
         </div>
