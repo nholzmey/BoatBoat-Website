@@ -356,7 +356,7 @@
       "is_postponed": false,
       "current_batter": "Edmundo Sosa",
       "balls": 0,
-      "strikes": 0,
+      "strikes": 2,
       "outs": 0,
       "bases_occupied": {
         "first": true,
@@ -677,8 +677,8 @@
       "game_pk": 823519,
       "home_team": "New York Yankees",
       "away_team": "Pittsburgh Pirates",
-      "home_win_probability": 0.5440564823537841,
-      "away_win_probability": 0.45594351764621566,
+      "home_win_probability": 0.544056482353784,
+      "away_win_probability": 0.45594351764621555,
       "predicted_winner": "New York Yankees",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
@@ -1350,7 +1350,7 @@
       "home_team": "Boston Red Sox",
       "away_team": "Baltimore Orioles",
       "home_win_probability": 0.6225354767315417,
-      "away_win_probability": 0.37746452326845803,
+      "away_win_probability": 0.3774645232684581,
       "predicted_winner": "Boston Red Sox",
       "confidence_tier": "Strong Pick",
       "is_confident_pick": true,
@@ -2029,12 +2029,12 @@
       "confidence_threshold": 0.58,
       "actual_home_score": 3,
       "actual_away_score": 2,
-      "actual_winner": null,
+      "actual_winner": "Kansas City Royals",
       "current_leader": "Kansas City Royals",
-      "game_status": "Middle 9",
-      "is_final": false,
+      "game_status": "Final",
+      "is_final": true,
       "is_postponed": false,
-      "current_batter": "Carter Jensen",
+      "current_batter": "Drew Gilbert",
       "balls": 0,
       "strikes": 0,
       "outs": 3,
@@ -2053,14 +2053,14 @@
           "hr_prob": 0.1399658443663249,
           "rbi_prob": 0.367633165539954,
           "multi_hit_prob": 0.2742719749819517,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 0,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Carter Jensen",
@@ -2070,14 +2070,14 @@
           "hr_prob": 0.13788242418322863,
           "rbi_prob": 0.3141123811190794,
           "multi_hit_prob": 0.23154279136070785,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
-          "hr_completed": false,
-          "rbi_completed": false,
+          "actual_hr": 1,
+          "actual_rbi": 1,
+          "actual_hits": 1,
+          "hr_completed": true,
+          "rbi_completed": true,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Salvador Perez",
@@ -2087,14 +2087,14 @@
           "hr_prob": 0.13697890181156677,
           "rbi_prob": 0.33163433881719456,
           "multi_hit_prob": 0.2417882897835938,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 0,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Vinnie Pasquantino",
@@ -2104,14 +2104,14 @@
           "hr_prob": 0.1349794935131736,
           "rbi_prob": 0.347704165643495,
           "multi_hit_prob": 0.25570796624036274,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 1,
+          "actual_hits": 2,
           "hr_completed": false,
-          "rbi_completed": false,
-          "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "rbi_completed": true,
+          "multi_hit_completed": true,
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Bryce Eldridge",
@@ -2121,14 +2121,14 @@
           "hr_prob": 0.13102553885694368,
           "rbi_prob": 0.33067329970631365,
           "multi_hit_prob": 0.2546147437825654,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 1,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Bobby Witt Jr.",
@@ -2145,7 +2145,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Casey Schmitt",
@@ -2155,14 +2155,14 @@
           "hr_prob": 0.1261736654507888,
           "rbi_prob": 0.3376711074166255,
           "multi_hit_prob": 0.25956295572297555,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 0,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Heliot Ramos",
@@ -2172,14 +2172,14 @@
           "hr_prob": 0.12599786150143902,
           "rbi_prob": 0.33659736046266736,
           "multi_hit_prob": 0.2745941632185001,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 1,
+          "actual_hits": 0,
           "hr_completed": false,
-          "rbi_completed": false,
+          "rbi_completed": true,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Willy Adames",
@@ -2189,14 +2189,14 @@
           "hr_prob": 0.12235499920354093,
           "rbi_prob": 0.31931733126290857,
           "multi_hit_prob": 0.23928875368314315,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 0,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Jac Caglianone",
@@ -2206,14 +2206,14 @@
           "hr_prob": 0.12168191624931605,
           "rbi_prob": 0.3189081248931432,
           "multi_hit_prob": 0.2409321713814043,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 0,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Starling Marte",
@@ -2223,14 +2223,14 @@
           "hr_prob": 0.1120849724873109,
           "rbi_prob": 0.34610459113167197,
           "multi_hit_prob": 0.27570307468987304,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 1,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Victor Bericoto",
@@ -2247,7 +2247,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Michael Massey",
@@ -2257,14 +2257,14 @@
           "hr_prob": 0.10853917900134429,
           "rbi_prob": 0.30959694750144445,
           "multi_hit_prob": 0.2220355080067035,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 1,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Jung Hoo Lee",
@@ -2274,14 +2274,14 @@
           "hr_prob": 0.0849965174748873,
           "rbi_prob": 0.302098348680214,
           "multi_hit_prob": 0.2780982747607925,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 1,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Josh Rojas",
@@ -2298,7 +2298,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Isaac Collins",
@@ -2308,14 +2308,14 @@
           "hr_prob": 0.08257254601061702,
           "rbi_prob": 0.27220617556147964,
           "multi_hit_prob": 0.16812875157968088,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 1,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Luis Arraez",
@@ -2332,7 +2332,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Drew Cavanaugh",
@@ -2349,7 +2349,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         }
       ]
     },
@@ -2357,7 +2357,7 @@
       "game_pk": 823760,
       "home_team": "Milwaukee Brewers",
       "away_team": "New York Mets",
-      "home_win_probability": 0.548290663582459,
+      "home_win_probability": 0.5482906635824589,
       "away_win_probability": 0.45170933641754135,
       "predicted_winner": "Milwaukee Brewers",
       "confidence_tier": "Normal Pick",
@@ -2370,10 +2370,10 @@
       "game_status": "Top 9",
       "is_final": false,
       "is_postponed": false,
-      "current_batter": "Carson Benge",
+      "current_batter": "Luis Robert Jr.",
       "balls": 2,
-      "strikes": 2,
-      "outs": 1,
+      "strikes": 0,
+      "outs": 2,
       "bases_occupied": {
         "first": true,
         "second": true,
@@ -2694,7 +2694,7 @@
       "home_team": "Chicago Cubs",
       "away_team": "Detroit Tigers",
       "home_win_probability": 0.45364419047116644,
-      "away_win_probability": 0.5463558095288339,
+      "away_win_probability": 0.546355809528834,
       "predicted_winner": "Detroit Tigers",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
@@ -3029,7 +3029,7 @@
       "game_pk": 822871,
       "home_team": "Texas Rangers",
       "away_team": "Chicago White Sox",
-      "home_win_probability": 0.5623859988823245,
+      "home_win_probability": 0.5623859988823247,
       "away_win_probability": 0.4376140011176754,
       "predicted_winner": "Texas Rangers",
       "confidence_tier": "Normal Pick",
@@ -3043,7 +3043,7 @@
       "is_final": false,
       "is_postponed": false,
       "current_batter": "Chase Meidroth",
-      "balls": 2,
+      "balls": 3,
       "strikes": 2,
       "outs": 2,
       "bases_occupied": {
@@ -3375,13 +3375,13 @@
       "actual_away_score": 3,
       "actual_winner": null,
       "current_leader": "Houston Astros",
-      "game_status": "End 7",
+      "game_status": "Top 8",
       "is_final": false,
       "is_postponed": false,
       "current_batter": "Liam Hicks",
-      "balls": 3,
-      "strikes": 2,
-      "outs": 3,
+      "balls": 1,
+      "strikes": 0,
+      "outs": 0,
       "bases_occupied": {
         "first": false,
         "second": false,
@@ -3701,7 +3701,7 @@
       "game_pk": 824329,
       "home_team": "Colorado Rockies",
       "away_team": "Washington Nationals",
-      "home_win_probability": 0.5517812599464027,
+      "home_win_probability": 0.5517812599464026,
       "away_win_probability": 0.4482187400535976,
       "predicted_winner": "Colorado Rockies",
       "confidence_tier": "Normal Pick",
@@ -4037,7 +4037,7 @@
       "game_pk": 824005,
       "home_team": "Los Angeles Angels",
       "away_team": "St. Louis Cardinals",
-      "home_win_probability": 0.4890403215712141,
+      "home_win_probability": 0.48904032157121424,
       "away_win_probability": 0.5109596784287866,
       "predicted_winner": "St. Louis Cardinals",
       "confidence_tier": "Normal Pick",
@@ -4386,8 +4386,8 @@
       "game_status": "Top 3",
       "is_final": false,
       "is_postponed": false,
-      "current_batter": "Jacob Wilson",
-      "balls": 4,
+      "current_batter": "Tyler Soderstrom",
+      "balls": 0,
       "strikes": 0,
       "outs": 0,
       "bases_occupied": {
@@ -4709,7 +4709,7 @@
       "game_pk": 823114,
       "home_team": "Seattle Mariners",
       "away_team": "Cincinnati Reds",
-      "home_win_probability": 0.4989327894059063,
+      "home_win_probability": 0.4989327894059064,
       "away_win_probability": 0.5010672105940943,
       "predicted_winner": "Cincinnati Reds",
       "confidence_tier": "Normal Pick",
