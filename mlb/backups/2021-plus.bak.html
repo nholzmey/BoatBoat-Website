@@ -1,0 +1,1723 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MLB Predictions — 2021+ Model</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 24px;
+        background: #0f172a;
+        color: #e5e7eb;
+    }
+
+    .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .tabs {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .tab, .action-btn {
+        background: #1f2937;
+        border: 1px solid #374151;
+        border-radius: 8px;
+        padding: 10px 14px;
+        text-decoration: none;
+        color: #e5e7eb;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .tab.active {
+        background: #16a34a;
+        color: white;
+        border-color: #16a34a;
+    }
+
+    .action-btn {
+        background: #111827;
+        color: white;
+        border-color: #374151;
+    }
+
+    .model-link {
+        background: #1d4ed8;
+        border-color: #60a5fa;
+        color: white;
+    }
+
+    .model-note {
+        background: #052e1b;
+        border: 1px solid #22c55e;
+        border-radius: 10px;
+        padding: 12px 14px;
+        margin-bottom: 18px;
+        color: #dcfce7;
+        line-height: 1.5;
+    }
+
+    .game {
+        background: #1e293b;
+        padding: 18px;
+        margin-bottom: 18px;
+        border-radius: 10px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+    }
+
+    .matchup {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 12px;
+        flex-wrap: wrap;
+    }
+
+    .team-box {
+        flex: 1;
+        min-width: 220px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px;
+        border-radius: 10px;
+        background: #111827;
+        border: 1px solid #374151;
+    }
+
+    .team-box.winner {
+        transform: scale(1.04);
+        border: 2px solid #22c55e;
+        background: #052e1b;
+        font-weight: bold;
+    }
+
+    .team-box.strong-pick {
+        transform: scale(1.05);
+        border: 2px solid #ef4444 !important;
+        background: #450a0a !important;
+        box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.35);
+        font-weight: bold;
+    }
+
+    .strong-text {
+        color: #ef4444 !important;
+    }
+
+    .team-box.loser {
+        opacity: 0.7;
+    }
+
+    .team-box.actual-winner {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+    }
+
+    .team-logo {
+        width: 54px;
+        height: 54px;
+        object-fit: contain;
+        background: #1f2937;
+        border-radius: 50%;
+        padding: 4px;
+        border: 1px solid #374151;
+    }
+
+    .winner .team-logo,
+    .strong-pick .team-logo {
+        width: 68px;
+        height: 68px;
+    }
+
+    .team-name {
+        font-size: 1.05rem;
+    }
+
+    .winner .team-name,
+    .strong-pick .team-name {
+        font-size: 1.2rem;
+    }
+
+    .center-info {
+        min-width: 180px;
+        text-align: center;
+    }
+
+    .actual-result {
+        margin-top: 8px;
+        margin-bottom: 12px;
+        padding: 10px 12px;
+        border-radius: 8px;
+        background: #020617;
+        border: 1px solid #334155;
+        line-height: 1.5;
+    }
+
+    .prediction-correct {
+        color: #22c55e;
+        font-weight: bold;
+    }
+
+    .prediction-wrong {
+        color: #ef4444;
+        font-weight: bold;
+    }
+
+    .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 14px;
+        margin-bottom: 8px;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .section-title {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .toggle-btn {
+        background: #1f2937;
+        border: 1px solid #374151;
+        border-radius: 8px;
+        padding: 10px 14px;
+        font-weight: bold;
+        cursor: pointer;
+        color: #e5e7eb;
+    }
+
+    .collapsible-content {
+        display: block;
+    }
+
+    .collapsible-content.collapsed {
+        display: none;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 8px;
+        background: #111827;
+    }
+
+    th, td {
+        border: 1px solid #374151;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background: #1f2937;
+    }
+
+
+    .stat-hit {
+        color: #22c55e;
+        font-weight: bold;
+    }
+
+    .stat-miss {
+        color: #ef4444;
+        font-weight: bold;
+    }
+
+    .stat-pending {
+        color: #9ca3af;
+        font-style: italic;
+    }
+
+
+    .scoreboard-center {
+        min-width: 190px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .game-time-status {
+        font-size: 0.95rem;
+        color: #facc15;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .score-large {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #f8fafc;
+        margin-bottom: 8px;
+        letter-spacing: 0.04em;
+    }
+
+    .mini-live-stack {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .compact-base-diamond {
+        position: relative;
+        width: 54px;
+        height: 42px;
+        margin-bottom: 2px;
+    }
+
+    .compact-base {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border: 2px solid #f8fafc;
+        background: transparent;
+        transform: rotate(45deg);
+        box-sizing: border-box;
+    }
+
+    .compact-base.occupied {
+        background: #f8fafc;
+    }
+
+    .compact-base-second {
+        top: 0;
+        left: 20px;
+    }
+
+    .compact-base-third {
+        top: 20px;
+        left: 2px;
+    }
+
+    .compact-base-first {
+        top: 20px;
+        right: 2px;
+    }
+
+
+    .compact-inning-status {
+        font-size: 0.78rem;
+        font-weight: bold;
+        color: #facc15;
+        line-height: 1;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+
+    .count-outs {
+        font-size: 1.05rem;
+        font-weight: bold;
+        color: #f8fafc;
+        line-height: 1;
+    }
+
+    .outs-dots {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .out-dot {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        border: 2px solid #f8fafc;
+        background: transparent;
+        box-sizing: border-box;
+    }
+
+    .out-dot.filled {
+        background: #f8fafc;
+    }
+
+    .live-game-state {
+        margin-top: 8px;
+        margin-bottom: 12px;
+        padding: 12px 14px;
+        border-radius: 8px;
+        background: #020617;
+        border: 1px solid #334155;
+        display: grid;
+        grid-template-columns: minmax(180px, 1fr) repeat(3, minmax(90px, auto)) auto;
+        align-items: center;
+        gap: 14px;
+        line-height: 1.5;
+    }
+
+    .live-label {
+        color: #9ca3af;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    .live-value {
+        font-weight: bold;
+        color: #e5e7eb;
+    }
+
+    .base-diamond {
+        position: relative;
+        width: 54px;
+        height: 42px;
+        margin-left: 4px;
+    }
+
+    .base {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border: 2px solid #f8fafc;
+        background: transparent;
+        transform: rotate(45deg);
+        box-sizing: border-box;
+    }
+
+    .base.occupied {
+        background: #f8fafc;
+    }
+
+    .base-second {
+        top: 0;
+        left: 20px;
+    }
+
+    .base-third {
+        top: 20px;
+        left: 2px;
+    }
+
+    .base-first {
+        top: 20px;
+        right: 2px;
+    }
+
+    .team-box {
+        min-height: 112px;
+    }
+
+    .team-logo {
+        width: 78px;
+        height: 78px;
+    }
+
+    .winner .team-logo,
+    .strong-pick .team-logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .team-name {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .team-probability {
+        margin-top: 6px;
+        font-size: 1.45rem;
+        font-weight: bold;
+    }
+
+    .winner .team-probability,
+    .strong-pick .team-probability {
+        color: #22c55e;
+    }
+
+    .loser .team-probability {
+        color: #ef4444;
+    }
+
+    .actual-result {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 18px;
+    }
+
+    @media (max-width: 900px) {
+        .actual-result {
+            grid-template-columns: 1fr;
+        }
+
+        .live-game-state {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .scoreboard-center {
+            order: 3;
+            width: 100%;
+        }
+    }
+
+
+    .muted {
+        color: #9ca3af;
+        font-style: italic;
+        margin-top: 8px;
+    }
+
+    .status {
+        font-size: 0.9rem;
+        color: #9ca3af;
+        margin-bottom: 12px;
+    }
+
+    .chart-card {
+        background: #1e293b;
+        padding: 18px;
+        margin-top: 28px;
+        margin-bottom: 18px;
+        border-radius: 10px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+    }
+
+    .chart-card img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #374151;
+        border-radius: 8px;
+        background: #020617;
+    }
+
+    .nav-link {
+        display: inline-block;
+        margin-bottom: 14px;
+        color: #60a5fa;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .footer-space {
+        height: 8px;
+    }
+  
+    .games-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        align-items: start;
+    }
+
+    .game {
+        padding: 12px;
+        margin-bottom: 0;
+        cursor: pointer;
+        transition: transform 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+        border: 1px solid #334155;
+    }
+
+    .game:hover {
+        transform: translateY(-2px);
+        border-color: #60a5fa;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    }
+
+    .game.expanded {
+        grid-column: span 3;
+        cursor: default;
+        border-color: #60a5fa;
+    }
+
+    .compact-game-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+        color: #facc15;
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .compact-expand-hint {
+        color: #60a5fa;
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+
+    .matchup {
+        gap: 8px;
+        margin-bottom: 8px;
+        flex-wrap: nowrap;
+    }
+
+    .team-box {
+        min-width: 0;
+        min-height: 72px;
+        padding: 8px;
+        gap: 8px;
+        flex: 1;
+    }
+
+    .team-logo {
+        width: 38px;
+        height: 38px;
+        flex: 0 0 auto;
+    }
+
+    .winner .team-logo,
+    .strong-pick .team-logo {
+        width: 44px;
+        height: 44px;
+    }
+
+    .team-name {
+        font-size: 0.85rem;
+        line-height: 1.15;
+    }
+
+    .winner .team-name,
+    .strong-pick .team-name {
+        font-size: 0.9rem;
+    }
+
+    .team-probability {
+        margin-top: 4px;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .scoreboard-center {
+        min-width: 92px;
+        max-width: 100px;
+    }
+
+    .game-time-status {
+        display: none;
+    }
+
+    .score-large {
+        font-size: 1.35rem;
+        margin-bottom: 4px;
+    }
+
+    .mini-live-stack {
+        gap: 3px;
+    }
+
+    .compact-base-diamond {
+        width: 38px;
+        height: 30px;
+    }
+
+    .compact-base {
+        width: 11px;
+        height: 11px;
+        border-width: 1.5px;
+    }
+
+    .compact-base-second {
+        top: 0;
+        left: 14px;
+    }
+
+    .compact-base-third {
+        top: 14px;
+        left: 1px;
+    }
+
+    .compact-base-first {
+        top: 14px;
+        right: 1px;
+    }
+
+
+    .compact-inning-status {
+        font-size: 0.78rem;
+        font-weight: bold;
+        color: #facc15;
+        line-height: 1;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+
+    .count-outs {
+        font-size: 0.9rem;
+    }
+
+    .outs-dots {
+        gap: 4px;
+    }
+
+    .out-dot {
+        width: 8px;
+        height: 8px;
+        border-width: 1.5px;
+    }
+
+    .compact-summary {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px 10px;
+        padding: 8px;
+        border-radius: 8px;
+        background: #020617;
+        border: 1px solid #334155;
+        font-size: 0.86rem;
+        line-height: 1.35;
+    }
+
+    .compact-summary-full {
+        grid-column: 1 / -1;
+    }
+
+    .summary-label {
+        color: #9ca3af;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        display: block;
+        margin-bottom: 1px;
+    }
+
+    .summary-value {
+        font-weight: bold;
+        color: #e5e7eb;
+    }
+
+    .expanded-content {
+        display: none;
+        margin-top: 12px;
+        cursor: default;
+    }
+
+    .game.expanded .expanded-content {
+        display: block;
+    }
+
+    .expanded-content .actual-result,
+    .expanded-content .live-game-state {
+        margin-top: 8px;
+    }
+
+    .section-header {
+        margin-top: 12px;
+    }
+
+    .toggle-btn {
+        display: none;
+    }
+
+    .click-note {
+        color: #9ca3af;
+        font-size: 0.82rem;
+        margin-top: 8px;
+        font-style: italic;
+    }
+
+    @media (max-width: 1200px) {
+        .games-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .game.expanded {
+            grid-column: span 2;
+        }
+    }
+
+    @media (max-width: 760px) {
+        body {
+            margin: 12px;
+        }
+
+        .games-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .game.expanded {
+            grid-column: span 1;
+        }
+
+        .matchup {
+            flex-wrap: wrap;
+        }
+
+        .scoreboard-center {
+            order: 3;
+            width: 100%;
+            max-width: none;
+        }
+
+        .compact-summary {
+            grid-template-columns: 1fr;
+        }
+
+        .live-game-state {
+            grid-template-columns: 1fr;
+        }
+    }
+
+  
+    .expanded-tabs {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+        margin-bottom: 10px;
+    }
+
+    .expanded-tab {
+        background: #1f2937;
+        border: 1px solid #374151;
+        border-radius: 8px;
+        padding: 8px 12px;
+        color: #e5e7eb;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .expanded-tab.active {
+        background: #2563eb;
+        color: white;
+        border-color: #60a5fa;
+    }
+
+    .compact-summary.only-pick {
+        grid-template-columns: 1fr;
+    }
+
+  
+    .top-choices-btn.active {
+        background: #7c3aed;
+        border-color: #a78bfa;
+        color: white;
+    }
+
+    .top-choices-panel {
+        display: none;
+        background: #1e293b;
+        padding: 16px;
+        margin-bottom: 18px;
+        border-radius: 10px;
+        border: 1px solid #334155;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+    }
+
+    .top-choices-panel.active {
+        display: block;
+    }
+
+    .top-choices-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .top-choice-card {
+        background: #020617;
+        border: 1px solid #334155;
+        border-radius: 10px;
+        padding: 12px;
+    }
+
+    .top-choice-title {
+        font-weight: bold;
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+        color: #facc15;
+    }
+
+    .top-choice-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #111827;
+        font-size: 0.88rem;
+    }
+
+    .top-choice-table th,
+    .top-choice-table td {
+        border: 1px solid #374151;
+        padding: 7px;
+        text-align: left;
+    }
+
+    .top-choice-table th {
+        background: #1f2937;
+    }
+
+    .top-choice-result {
+        font-weight: bold;
+    }
+
+    @media (max-width: 1100px) {
+        .top-choices-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+  </style>
+</head>
+<body>
+  <a class="nav-link" href="../index.html">← Back to Home</a>
+
+  <div class="topbar">
+    <h1 id="page-title">MLB Predictions — 2021+ Model</h1>
+    <div class="tabs">
+      <a class="action-btn model-link" href="./index.html">All-Years Model Page</a>
+      <button class="action-btn top-choices-btn" id="top-choices-btn">Top Choices</button>
+    </div>
+  </div>
+
+  <div class="model-note">
+    This page uses the separate MLB model trained only on games from 2021 and later.
+    It does not replace the original all-years model.
+  </div>
+
+  <div class="model-note">
+    <strong>Confidence system:</strong><br>
+    Strong Pick = model probability ≥ 58% or ≤ 42%. Strong picks are highlighted red.
+  </div>
+
+  <div class="status" id="status-text">Loading 2021+ model predictions...</div>
+
+  <div id="top-choices-panel" class="top-choices-panel"></div>
+
+  <div id="games-container"></div>
+
+  <div class="chart-card">
+    <h2>2021+ Model Accuracy Over Time</h2>
+    <img id="accuracy-chart" src="./accuracy_chart_2021_plus.png" alt="2021+ model accuracy chart">
+  </div>
+
+  <div class="footer-space"></div>
+
+  <script>
+    const TEAM_LOGOS = {
+      "Arizona Diamondbacks": "logos/arizona_diamondbacks.png",
+      "Atlanta Braves": "logos/atlanta_braves.png",
+      "Baltimore Orioles": "logos/baltimore_orioles.png",
+      "Boston Red Sox": "logos/boston_red_sox.png",
+      "Chicago Cubs": "logos/chicago_cubs.png",
+      "Chicago White Sox": "logos/chicago_white_sox.png",
+      "Cincinnati Reds": "logos/cincinnati_reds.png",
+      "Cleveland Guardians": "logos/cleveland_guardians.png",
+      "Colorado Rockies": "logos/colorado_rockies.png",
+      "Detroit Tigers": "logos/detroit_tigers.png",
+      "Houston Astros": "logos/houston_astros.png",
+      "Kansas City Royals": "logos/kansas_city_royals.png",
+      "Los Angeles Angels": "logos/los_angeles_angels.png",
+      "Los Angeles Dodgers": "logos/los_angeles_dodgers.png",
+      "Miami Marlins": "logos/miami_marlins.png",
+      "Milwaukee Brewers": "logos/milwaukee_brewers.png",
+      "Minnesota Twins": "logos/minnesota_twins.png",
+      "New York Mets": "logos/new_york_mets.png",
+      "New York Yankees": "logos/new_york_yankees.png",
+      "Athletics": "logos/athletics.png",
+      "Philadelphia Phillies": "logos/philadelphia_phillies.png",
+      "Pittsburgh Pirates": "logos/pittsburgh_pirates.png",
+      "San Diego Padres": "logos/san_diego_padres.png",
+      "San Francisco Giants": "logos/san_francisco_giants.png",
+      "Seattle Mariners": "logos/seattle_mariners.png",
+      "St. Louis Cardinals": "logos/st_louis_cardinals.png",
+      "Tampa Bay Rays": "logos/tampa_bay_rays.png",
+      "Texas Rangers": "logos/texas_rangers.png",
+      "Toronto Blue Jays": "logos/toronto_blue_jays.png",
+      "Washington Nationals": "logos/washington_nationals.png"
+    };
+
+    let currentView = "everything";
+    let latestPayload = { date: "N/A", games: [] };
+    let collapsedSections = new Set();
+
+    function logoPath(teamName) {
+      return TEAM_LOGOS[teamName] || null;
+    }
+
+    function pct(x) {
+      return ((x || 0) * 100).toFixed(1);
+    }
+
+
+    function actualValue(hitter, stat) {
+
+      if (!hitter || hitter.stat_result_status === "PENDING") {
+          return '<span class="stat-pending">Pending</span>';
+      }
+
+      if (hitter.stat_result_status === "PLAYER_NOT_FOUND") {
+          return '<span class="stat-pending">Player Did Not Play</span>';
+      }
+
+      let value = 0;
+      let success = false;
+
+      if (stat === "hr") {
+          value = hitter.actual_hr ?? 0;
+          success = hitter.hr_completed;
+      }
+
+      if (stat === "rbi") {
+          value = hitter.actual_rbi ?? 0;
+          success = hitter.rbi_completed;
+      }
+
+      if (stat === "multi_hit") {
+          value = hitter.actual_hits ?? 0;
+          success = hitter.multi_hit_completed;
+      }
+
+      return `<span class="${success ? "stat-hit" : "stat-miss"}">${value}</span>`;
+  }
+
+    function escapeHtml(text) {
+      if (text === null || text === undefined) return "";
+      return String(text)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function sortedHitters(hitters, view) {
+      if (!hitters) return [];
+      const cloned = [...hitters];
+
+      if (view === "hr") {
+        return cloned.sort((a, b) => {
+          const diff = (b.hr_prob || 0) - (a.hr_prob || 0);
+          if (diff !== 0) return diff;
+          return (a.batting_order_slot || 99) - (b.batting_order_slot || 99);
+        });
+      }
+
+      if (view === "rbi") {
+        return cloned.sort((a, b) => {
+          const diff = (b.rbi_prob || 0) - (a.rbi_prob || 0);
+          if (diff !== 0) return diff;
+          return (a.batting_order_slot || 99) - (b.batting_order_slot || 99);
+        });
+      }
+
+      if (view === "multi_hit") {
+        return cloned.sort((a, b) => {
+          const diff = (b.multi_hit_prob || 0) - (a.multi_hit_prob || 0);
+          if (diff !== 0) return diff;
+          return (a.batting_order_slot || 99) - (b.batting_order_slot || 99);
+        });
+      }
+
+      return cloned.sort((a, b) => {
+        const av = (a.hr_prob || 0) + (a.rbi_prob || 0) + (a.multi_hit_prob || 0);
+        const bv = (b.hr_prob || 0) + (b.rbi_prob || 0) + (b.multi_hit_prob || 0);
+        if (bv !== av) return bv - av;
+        return (a.batting_order_slot || 99) - (b.batting_order_slot || 99);
+      });
+    }
+
+    function toggleSection(id, btn) {
+      const section = document.getElementById(id);
+      if (!section) return;
+
+      if (section.classList.contains("collapsed")) {
+        section.classList.remove("collapsed");
+        collapsedSections.delete(id);
+        btn.textContent = "Collapse";
+      } else {
+        section.classList.add("collapsed");
+        collapsedSections.add(id);
+        btn.textContent = "Expand";
+      }
+    }
+
+    function setAllSections(collapse) {
+      const sections = document.querySelectorAll(".collapsible-content");
+      const buttons = document.querySelectorAll(".toggle-btn");
+
+      sections.forEach(section => {
+        if (collapse) {
+          section.classList.add("collapsed");
+          collapsedSections.add(section.id);
+        } else {
+          section.classList.remove("collapsed");
+          collapsedSections.delete(section.id);
+        }
+      });
+
+      buttons.forEach(btn => {
+        btn.textContent = collapse ? "Expand" : "Collapse";
+      });
+    }
+
+    function renderActualResult(game) {
+      const hasScore = game.actual_home_score !== null && game.actual_home_score !== undefined
+                    && game.actual_away_score !== null && game.actual_away_score !== undefined;
+
+      const isFinal = !!game.is_final;
+      const statusText = game.game_status || "Not started";
+
+      if (!hasScore) {
+        return `
+          <div class="actual-result">
+            <div><strong>Status:</strong> ${escapeHtml(statusText)}</div>
+          </div>
+        `;
+      }
+
+      return `
+        <div class="actual-result">
+          <div><strong>Score:</strong> ${escapeHtml(game.away_team)} ${game.actual_away_score} - ${game.actual_home_score} ${escapeHtml(game.home_team)}</div>
+          ${
+            isFinal
+              ? `<div><strong>Actual winner:</strong> ${escapeHtml(game.actual_winner || "Tie / Unknown")}</div>`
+              : `<div><strong>Current leader:</strong> ${escapeHtml(game.current_leader || "Tied")}</div>`
+          }
+          <div><strong>Status:</strong> ${escapeHtml(statusText)}</div>
+          ${
+            isFinal && game.actual_winner
+              ? `<div><strong>Prediction result:</strong> <span class="${game.actual_winner === game.predicted_winner ? 'prediction-correct' : 'prediction-wrong'}">${game.actual_winner === game.predicted_winner ? 'Correct' : 'Incorrect'}</span></div>`
+              : ""
+          }
+        </div>
+      `;
+    }
+
+
+    function baseDiamondMarkup(bases, classPrefix = "") {
+      const baseClass = classPrefix ? `${classPrefix}-base` : "base";
+      const secondClass = classPrefix ? `${classPrefix}-base-second` : "base-second";
+      const thirdClass = classPrefix ? `${classPrefix}-base-third` : "base-third";
+      const firstClass = classPrefix ? `${classPrefix}-base-first` : "base-first";
+
+      return `
+        <div class="${classPrefix ? classPrefix + '-base-diamond' : 'base-diamond'}" title="Bases occupied">
+          <div class="${baseClass} ${secondClass} ${bases.second ? "occupied" : ""}"></div>
+          <div class="${baseClass} ${thirdClass} ${bases.third ? "occupied" : ""}"></div>
+          <div class="${baseClass} ${firstClass} ${bases.first ? "occupied" : ""}"></div>
+        </div>
+      `;
+    }
+
+    function outsDotsMarkup(outs) {
+      const outCount = Number.isFinite(Number(outs)) ? Number(outs) : 0;
+      return `
+        <div class="outs-dots" title="${outCount} out${outCount === 1 ? "" : "s"}">
+          <span class="out-dot ${outCount >= 1 ? "filled" : ""}"></span>
+          <span class="out-dot ${outCount >= 2 ? "filled" : ""}"></span>
+          <span class="out-dot ${outCount >= 3 ? "filled" : ""}"></span>
+        </div>
+      `;
+    }
+
+
+    function inningSymbolStatus(game) {
+      const rawStatus = String(game.game_status || "Scheduled");
+      const lowerStatus = rawStatus.toLowerCase();
+
+      if (lowerStatus.includes("top")) {
+        return rawStatus.replace(/top/i, "▲");
+      }
+
+      if (lowerStatus.includes("bottom")) {
+        return rawStatus.replace(/bottom/i, "▼");
+      }
+
+      return rawStatus;
+    }
+
+    function renderScoreboardCenter(game) {
+      const bases = game.bases_occupied || { first: false, second: false, third: false };
+      const balls = game.balls ?? "-";
+      const strikes = game.strikes ?? "-";
+      const outs = game.outs ?? 0;
+
+      const hasScore = game.actual_home_score !== null && game.actual_home_score !== undefined
+                    && game.actual_away_score !== null && game.actual_away_score !== undefined;
+
+      const scoreText = hasScore
+        ? `${game.actual_away_score} - ${game.actual_home_score}`
+        : "vs";
+
+      const statusText = inningSymbolStatus(game);
+
+      return `
+        <div class="scoreboard-center">
+          <div class="score-large">${escapeHtml(scoreText)}</div>
+          <div class="mini-live-stack">
+            ${baseDiamondMarkup(bases, "compact")}
+            <div class="compact-inning-status">${escapeHtml(statusText)}</div>
+            <div class="count-outs">${balls} - ${strikes}</div>
+            ${outsDotsMarkup(outs)}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderLiveGameState(game) {
+      if (!game || game.is_final) return "";
+
+      const status = String(game.game_status || "").toLowerCase();
+      const hasLiveFields = game.current_batter || game.balls !== null || game.strikes !== null || game.outs !== null;
+      const isLive = status.includes("top") || status.includes("bottom") || status.includes("middle") || status.includes("end") || hasLiveFields;
+
+      if (!isLive) return "";
+
+      const bases = game.bases_occupied || {
+        first: false,
+        second: false,
+        third: false
+      };
+
+      const batter = game.current_batter || "Not available";
+      const balls = game.balls ?? "-";
+      const strikes = game.strikes ?? "-";
+      const outs = game.outs ?? "-";
+      const runners = game.runners_on_base ?? 0;
+
+      return `
+        <div class="live-game-state">
+          <div>
+            <span class="live-label">At Bat</span>
+            <span class="live-value">${escapeHtml(batter)}</span>
+          </div>
+          <div>
+            <span class="live-label">Count</span>
+            <span class="live-value">${balls}-${strikes}</span>
+          </div>
+          <div>
+            <span class="live-label">Outs</span>
+            <span class="live-value">${outs}</span>
+          </div>
+          <div>
+            <span class="live-label">Runners</span>
+            <span class="live-value">${runners}</span>
+          </div>
+          ${baseDiamondMarkup(bases)}
+        </div>
+      `;
+    }
+
+
+    function renderEverythingTable(hitters) {
+      if (!hitters || hitters.length === 0) {
+        return '<p class="muted">No hitter predictions available yet.</p>';
+      }
+
+      const rows = hitters.map(hitter => `
+        <tr>
+          <td>${escapeHtml(hitter.player_name)}</td>
+          <td>${escapeHtml(hitter.team)}</td>
+          <td>${escapeHtml(hitter.position)}</td>
+          <td>${hitter.batting_order_slot ?? ""}</td>
+          <td>${pct(hitter.hr_prob)}</td>
+          <td>${actualValue(hitter, "hr")}</td>
+          <td>${pct(hitter.rbi_prob)}</td>
+          <td>${actualValue(hitter, "rbi")}</td>
+          <td>${pct(hitter.multi_hit_prob)}</td>
+          <td>${actualValue(hitter, "multi_hit")}</td>
+        </tr>
+      `).join("");
+
+      return `
+        <table>
+          <thead>
+            <tr>
+              <th>Player</th>
+              <th>Team</th>
+              <th>Pos</th>
+              <th>Order</th>
+              <th>HR %</th>
+              <th>Actual HR</th>
+              <th>RBI %</th>
+              <th>Actual RBI</th>
+              <th>Multi-hit %</th>
+              <th>Actual Hits</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      `;
+    }
+
+    function renderFilteredTable(hitters, view) {
+      if (!hitters || hitters.length === 0) {
+        return '<p class="muted">No hitter predictions available yet.</p>';
+      }
+
+      let label = "Probability";
+      let actualLabel = "Actual";
+
+      if (view === "hr") {
+        label = "HR %";
+        actualLabel = "Actual HR";
+      }
+
+      if (view === "rbi") {
+        label = "RBI %";
+        actualLabel = "Actual RBI";
+      }
+
+      if (view === "multi_hit") {
+        label = "Multi-hit %";
+        actualLabel = "Actual Hits";
+      }
+
+      const rows = hitters.map(hitter => {
+        let value = 0;
+        if (view === "hr") value = hitter.hr_prob;
+        if (view === "rbi") value = hitter.rbi_prob;
+        if (view === "multi_hit") value = hitter.multi_hit_prob;
+
+        return `
+          <tr>
+            <td>${escapeHtml(hitter.player_name)}</td>
+            <td>${escapeHtml(hitter.team)}</td>
+            <td>${escapeHtml(hitter.position)}</td>
+            <td>${hitter.batting_order_slot ?? ""}</td>
+            <td>${pct(value)}</td>
+            <td>${actualValue(hitter, view)}</td>
+          </tr>
+        `;
+      }).join("");
+
+      return `
+        <table>
+          <thead>
+            <tr>
+              <th>Player</th>
+              <th>Team</th>
+              <th>Pos</th>
+              <th>Order</th>
+              <th>${label}</th>
+              <th>${actualLabel}</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      `;
+    }
+
+
+    function predictionResultMarkup(game) {
+      if (!game.is_final || !game.actual_winner) {
+        return '<span class="stat-pending">Pending</span>';
+      }
+
+      const correct = game.actual_winner === game.predicted_winner;
+      return `<span class="${correct ? "prediction-correct" : "prediction-wrong"}">${correct ? "Correct" : "Incorrect"}</span>`;
+    }
+
+    function compactLiveText(game) {
+      if (game.is_final) return "Final";
+      const batter = game.current_batter || "Not available";
+      const balls = game.balls ?? "-";
+      const strikes = game.strikes ?? "-";
+      const outs = game.outs ?? "-";
+      const runners = game.runners_on_base ?? 0;
+
+      if (game.current_batter) {
+        return escapeHtml(game.current_batter);
+      }
+
+      return escapeHtml(game.game_status || "Scheduled");
+    }
+
+
+    function isGameFinalForSummary(game) {
+      return !!game.is_final || String(game.game_status || "").toLowerCase().includes("final");
+    }
+
+    function isGameActiveForSummary(game) {
+      const status = String(game.game_status || "").toLowerCase();
+
+      if (isGameFinalForSummary(game)) return false;
+
+      return (
+        status.includes("top") ||
+        status.includes("bottom") ||
+        status.includes("middle") ||
+        status.includes("end") ||
+        status.includes("live") ||
+        game.current_batter
+      );
+    }
+
+    function renderCompactSummary(game) {
+      const pickBlock = `
+        <div>
+          <span class="summary-label">Pick</span>
+          <span class="summary-value">${escapeHtml(game.predicted_winner || "Unknown")}</span>
+        </div>
+      `;
+
+      const resultBlock = `
+        <div>
+          <span class="summary-label">Result</span>
+          <span class="summary-value">${predictionResultMarkup(game)}</span>
+        </div>
+      `;
+
+      const batterBlock = `
+        <div>
+          <span class="summary-label">Batter</span>
+          <span class="summary-value">${compactLiveText(game)}</span>
+        </div>
+      `;
+
+      if (isGameFinalForSummary(game)) {
+        return `
+          <div class="compact-summary">
+            ${pickBlock}
+            ${resultBlock}
+          </div>
+        `;
+      }
+
+      if (isGameActiveForSummary(game)) {
+        return `
+          <div class="compact-summary">
+            ${pickBlock}
+            ${batterBlock}
+          </div>
+        `;
+      }
+
+      return `
+        <div class="compact-summary only-pick">
+          ${pickBlock}
+        </div>
+      `;
+    }
+
+    function toggleGameCard(index) {
+      const card = document.getElementById(`game_card_${index}`);
+      if (!card) return;
+
+      const isExpanded = card.classList.contains("expanded");
+
+      document.querySelectorAll(".game.expanded").forEach(gameCard => {
+        gameCard.classList.remove("expanded");
+        const hint = gameCard.querySelector(".compact-expand-hint");
+        if (hint) hint.textContent = "Click to expand";
+      });
+
+      if (!isExpanded) {
+        card.classList.add("expanded");
+        const hint = card.querySelector(".compact-expand-hint");
+        if (hint) hint.textContent = "Click to collapse";
+      }
+    }
+
+
+
+    function getGameView(index) {
+      if (!window.gameViews) window.gameViews = {};
+      return window.gameViews[index] || "everything";
+    }
+
+    function setGameView(index, view, event) {
+      if (event) event.stopPropagation();
+      if (!window.gameViews) window.gameViews = {};
+      window.gameViews[index] = view;
+      renderGames(latestPayload);
+
+      const card = document.getElementById(`game_card_${index}`);
+      if (card) {
+        card.classList.add("expanded");
+        const hint = card.querySelector(".compact-expand-hint");
+        if (hint) hint.textContent = "Click to collapse";
+      }
+    }
+
+    function renderExpandedTabs(index, activeView) {
+      const tabs = [
+        ["everything", "Everything"],
+        ["hr", "Home Run"],
+        ["rbi", "RBI"],
+        ["multi_hit", "Multi-Hit"]
+      ];
+
+      return `
+        <div class="expanded-tabs">
+          ${tabs.map(([view, label]) => `
+            <button
+              class="expanded-tab ${activeView === view ? "active" : ""}"
+              onclick="setGameView(${index}, '${view}', event)"
+            >${label}</button>
+          `).join("")}
+        </div>
+      `;
+    }
+
+
+
+    let showingTopChoices = false;
+
+    function topChoiceActualValue(hitter, stat) {
+      if (!hitter || hitter.stat_result_status === "PENDING") {
+        return '<span class="stat-pending">Pending</span>';
+      }
+
+      if (hitter.stat_result_status === "PLAYER_NOT_FOUND") {
+        return '<span class="stat-pending">Player Did Not Play</span>';
+      }
+
+      let value = 0;
+      let success = false;
+
+      if (stat === "hr") {
+        value = hitter.actual_hr ?? 0;
+        success = !!hitter.hr_completed;
+      }
+
+      if (stat === "rbi") {
+        value = hitter.actual_rbi ?? 0;
+        success = !!hitter.rbi_completed;
+      }
+
+      if (stat === "multi_hit") {
+        value = hitter.actual_hits ?? 0;
+        success = !!hitter.multi_hit_completed;
+      }
+
+      return `<span class="${success ? "stat-hit" : "stat-miss"}">${value}</span>`;
+    }
+
+    function collectTopChoices(payload, stat) {
+      const games = payload.games || [];
+      const allHitters = [];
+
+      games.forEach(game => {
+        (game.hitters || []).forEach(hitter => {
+          const probKey = stat === "hr" ? "hr_prob" : stat === "rbi" ? "rbi_prob" : "multi_hit_prob";
+          const probability = hitter[probKey] || 0;
+
+          allHitters.push({
+            ...hitter,
+            game_status: game.game_status,
+            matchup: `${game.away_team} @ ${game.home_team}`,
+            probability
+          });
+        });
+      });
+
+      return allHitters
+        .sort((a, b) => (b.probability || 0) - (a.probability || 0))
+        .slice(0, 5);
+    }
+
+    function renderTopChoiceTable(title, stat, hitters) {
+      if (!hitters || hitters.length === 0) {
+        return `
+          <div class="top-choice-card">
+            <div class="top-choice-title">${title}</div>
+            <p class="muted">No players available.</p>
+          </div>
+        `;
+      }
+
+      const rows = hitters.map((hitter, index) => `
+        <tr>
+          <td>${index + 1}</td>
+          <td>${escapeHtml(hitter.player_name)}</td>
+          <td>${escapeHtml(hitter.team)}</td>
+          <td>${pct(hitter.probability)}%</td>
+          <td class="top-choice-result">${topChoiceActualValue(hitter, stat)}</td>
+        </tr>
+      `).join("");
+
+      return `
+        <div class="top-choice-card">
+          <div class="top-choice-title">${title}</div>
+          <table class="top-choice-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Player</th>
+                <th>Team</th>
+                <th>%</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    function renderTopChoices(payload) {
+      const panel = document.getElementById("top-choices-panel");
+      if (!panel) return;
+
+      const hrTop = collectTopChoices(payload, "hr");
+      const rbiTop = collectTopChoices(payload, "rbi");
+      const multiHitTop = collectTopChoices(payload, "multi_hit");
+
+      panel.innerHTML = `
+        <h2 style="margin-top:0;">Top Choices</h2>
+        <div class="top-choices-grid">
+          ${renderTopChoiceTable("Top 5 Home Run", "hr", hrTop)}
+          ${renderTopChoiceTable("Top 5 RBI", "rbi", rbiTop)}
+          ${renderTopChoiceTable("Top 5 Multi-Hit", "multi_hit", multiHitTop)}
+        </div>
+      `;
+    }
+
+    function setTopChoicesMode(enabled) {
+      showingTopChoices = enabled;
+
+      const btn = document.getElementById("top-choices-btn");
+      const panel = document.getElementById("top-choices-panel");
+      const gamesContainer = document.getElementById("games-container");
+
+      if (btn) btn.classList.toggle("active", enabled);
+
+      if (panel) {
+        panel.classList.toggle("active", enabled);
+        if (enabled) renderTopChoices(latestPayload);
+      }
+
+      if (gamesContainer) {
+        gamesContainer.style.display = enabled ? "none" : "";
+      }
+    }
+
+
+    function renderGames(payload) {
+      document.getElementById("page-title").textContent = `MLB Predictions — 2021+ Model for ${payload.date}`;
+      const container = document.getElementById("games-container");
+      const games = payload.games || [];
+
+      if (games.length === 0) {
+        container.innerHTML = '<p class="muted">No games available.</p>';
+        return;
+      }
+
+      container.className = "games-grid";
+
+      container.innerHTML = games.map((game, index) => {
+        const sectionId = `players_${index + 1}`;
+        const cardId = `game_card_${index}`;
+        const gameView = getGameView(index);
+        const hitters = sortedHitters(game.hitters || [], gameView);
+        const homeLogo = logoPath(game.home_team);
+        const awayLogo = logoPath(game.away_team);
+
+        let sectionTitle = "Player Predictions";
+        if (gameView === "hr") sectionTitle = "Home Run Leaders";
+        if (gameView === "rbi") sectionTitle = "RBI Leaders";
+        if (gameView === "multi_hit") sectionTitle = "Multi-Hit Leaders";
+
+        const tableHtml = gameView === "everything"
+          ? renderEverythingTable(hitters)
+          : renderFilteredTable(hitters, gameView);
+
+        const isStrong = !!game.is_confident_pick;
+
+        const awayWinnerClass = game.predicted_winner === game.away_team ? "winner" : "loser";
+        const homeWinnerClass = game.predicted_winner === game.home_team ? "winner" : "loser";
+
+        const awayStrongClass = isStrong && game.predicted_winner === game.away_team ? " strong-pick" : "";
+        const homeStrongClass = isStrong && game.predicted_winner === game.home_team ? " strong-pick" : "";
+
+        const awayActualClass = game.actual_winner === game.away_team ? " actual-winner" : "";
+        const homeActualClass = game.actual_winner === game.home_team ? " actual-winner" : "";
+
+        return `
+          <div id="${cardId}" class="game" onclick="toggleGameCard(${index})">
+            <div class="compact-game-header">
+              <span></span>
+              <span class="compact-expand-hint">Click to expand</span>
+            </div>
+
+            <div class="matchup">
+              <div class="team-box ${awayWinnerClass}${awayActualClass}${awayStrongClass}">
+                ${awayLogo ? `<img class="team-logo" src="${awayLogo}" alt="${escapeHtml(game.away_team)} logo">` : ""}
+                <div>
+                  <div class="team-name">${escapeHtml(game.away_team)}</div>
+                  <div class="team-probability">${pct(game.away_win_probability)}%</div>
+                </div>
+              </div>
+
+              ${renderScoreboardCenter(game)}
+
+              <div class="team-box ${homeWinnerClass}${homeActualClass}${homeStrongClass}">
+                ${homeLogo ? `<img class="team-logo" src="${homeLogo}" alt="${escapeHtml(game.home_team)} logo">` : ""}
+                <div>
+                  <div class="team-name">${escapeHtml(game.home_team)}</div>
+                  <div class="team-probability">${pct(game.home_win_probability)}%</div>
+                </div>
+              </div>
+            </div>
+
+            ${renderCompactSummary(game)}
+
+            <div class="expanded-content" onclick="event.stopPropagation()">
+              <div class="actual-result">
+                <div><strong>2021+ Model Pick:</strong> ${escapeHtml(game.predicted_winner || "Unknown")}</div>
+                <div><strong>Confidence:</strong> <span class="${isStrong ? 'strong-text' : ''}">${escapeHtml(game.confidence_tier || "Normal Pick")}</span></div>
+              </div>
+
+              ${renderActualResult(game)}
+
+              ${renderLiveGameState(game)}
+
+              ${renderExpandedTabs(index, gameView)}
+
+              <div class="section-header">
+                <div class="section-title">${sectionTitle}</div>
+              </div>
+
+              <div id="${sectionId}" class="collapsible-content">
+                ${tableHtml}
+              </div>
+
+              <div class="click-note">Click another game card to collapse this one.</div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    async function fetchPredictions() {
+      try {
+        const response = await fetch("./today_predictions_2021_plus.json?_=" + Date.now());
+        if (!response.ok) {
+          throw new Error("Could not load today_predictions_2021_plus.json");
+        }
+
+        const payload = await response.json();
+        latestPayload = payload;
+        renderGames(payload);
+        if (showingTopChoices) renderTopChoices(payload);
+
+        const chart = document.getElementById("accuracy-chart");
+        chart.src = "./accuracy_chart_2021_plus.png?_=" + Date.now();
+
+        document.getElementById("status-text").textContent =
+          "Last checked: " + new Date().toLocaleTimeString();
+      } catch (err) {
+        document.getElementById("status-text").textContent =
+          "Update failed: " + err.message;
+      }
+    }
+
+
+    const topChoicesBtn = document.getElementById("top-choices-btn");
+    if (topChoicesBtn) {
+      topChoicesBtn.addEventListener("click", () => {
+        setTopChoicesMode(!showingTopChoices);
+      });
+    }
+
+    fetchPredictions();
+    setInterval(fetchPredictions, 30000);
+  </script>
+</body>
+</html>

@@ -174,6 +174,49 @@
         font-weight: bold;
     }
 
+
+    .odds-panel {
+        margin-top: 10px;
+        margin-bottom: 12px;
+        padding: 12px;
+        border-radius: 8px;
+        background: #111827;
+        border: 1px solid #374151;
+        line-height: 1.55;
+    }
+
+    .odds-title {
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .odds-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 8px 16px;
+    }
+
+    .bet-line {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #374151;
+    }
+
+    .bet-won {
+        color: #22c55e;
+        font-weight: bold;
+    }
+
+    .bet-lost {
+        color: #ef4444;
+        font-weight: bold;
+    }
+
+    .bet-pending {
+        color: #fbbf24;
+        font-weight: bold;
+    }
+
     .section-header {
         display: flex;
         justify-content: space-between;
@@ -240,232 +283,6 @@
         font-style: italic;
     }
 
-
-    .scoreboard-center {
-        min-width: 190px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .game-time-status {
-        font-size: 0.95rem;
-        color: #facc15;
-        font-weight: bold;
-        margin-bottom: 8px;
-    }
-
-    .score-large {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #f8fafc;
-        margin-bottom: 8px;
-        letter-spacing: 0.04em;
-    }
-
-    .mini-live-stack {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 6px;
-    }
-
-    .compact-base-diamond {
-        position: relative;
-        width: 54px;
-        height: 42px;
-        margin-bottom: 2px;
-    }
-
-    .compact-base {
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        border: 2px solid #f8fafc;
-        background: transparent;
-        transform: rotate(45deg);
-        box-sizing: border-box;
-    }
-
-    .compact-base.occupied {
-        background: #f8fafc;
-    }
-
-    .compact-base-second {
-        top: 0;
-        left: 20px;
-    }
-
-    .compact-base-third {
-        top: 20px;
-        left: 2px;
-    }
-
-    .compact-base-first {
-        top: 20px;
-        right: 2px;
-    }
-
-
-    .compact-inning-status {
-        font-size: 0.78rem;
-        font-weight: bold;
-        color: #facc15;
-        line-height: 1;
-        margin-top: 1px;
-        margin-bottom: 1px;
-    }
-
-    .count-outs {
-        font-size: 1.05rem;
-        font-weight: bold;
-        color: #f8fafc;
-        line-height: 1;
-    }
-
-    .outs-dots {
-        display: flex;
-        gap: 5px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .out-dot {
-        width: 11px;
-        height: 11px;
-        border-radius: 50%;
-        border: 2px solid #f8fafc;
-        background: transparent;
-        box-sizing: border-box;
-    }
-
-    .out-dot.filled {
-        background: #f8fafc;
-    }
-
-    .live-game-state {
-        margin-top: 8px;
-        margin-bottom: 12px;
-        padding: 12px 14px;
-        border-radius: 8px;
-        background: #020617;
-        border: 1px solid #334155;
-        display: grid;
-        grid-template-columns: minmax(180px, 1fr) repeat(3, minmax(90px, auto)) auto;
-        align-items: center;
-        gap: 14px;
-        line-height: 1.5;
-    }
-
-    .live-label {
-        color: #9ca3af;
-        font-size: 0.78rem;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        display: block;
-        margin-bottom: 2px;
-    }
-
-    .live-value {
-        font-weight: bold;
-        color: #e5e7eb;
-    }
-
-    .base-diamond {
-        position: relative;
-        width: 54px;
-        height: 42px;
-        margin-left: 4px;
-    }
-
-    .base {
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        border: 2px solid #f8fafc;
-        background: transparent;
-        transform: rotate(45deg);
-        box-sizing: border-box;
-    }
-
-    .base.occupied {
-        background: #f8fafc;
-    }
-
-    .base-second {
-        top: 0;
-        left: 20px;
-    }
-
-    .base-third {
-        top: 20px;
-        left: 2px;
-    }
-
-    .base-first {
-        top: 20px;
-        right: 2px;
-    }
-
-    .team-box {
-        min-height: 112px;
-    }
-
-    .team-logo {
-        width: 78px;
-        height: 78px;
-    }
-
-    .winner .team-logo,
-    .strong-pick .team-logo {
-        width: 90px;
-        height: 90px;
-    }
-
-    .team-name {
-        font-size: 1.25rem;
-        font-weight: bold;
-    }
-
-    .team-probability {
-        margin-top: 6px;
-        font-size: 1.45rem;
-        font-weight: bold;
-    }
-
-    .winner .team-probability,
-    .strong-pick .team-probability {
-        color: #22c55e;
-    }
-
-    .loser .team-probability {
-        color: #ef4444;
-    }
-
-    .actual-result {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px 18px;
-    }
-
-    @media (max-width: 900px) {
-        .actual-result {
-            grid-template-columns: 1fr;
-        }
-
-        .live-game-state {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .scoreboard-center {
-            order: 3;
-            width: 100%;
-        }
-    }
-
-
     .muted {
         color: #9ca3af;
         font-style: italic;
@@ -506,361 +323,6 @@
     .footer-space {
         height: 8px;
     }
-  
-    .games-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 14px;
-        align-items: start;
-    }
-
-    .game {
-        padding: 12px;
-        margin-bottom: 0;
-        cursor: pointer;
-        transition: transform 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
-        border: 1px solid #334155;
-    }
-
-    .game:hover {
-        transform: translateY(-2px);
-        border-color: #60a5fa;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-    }
-
-    .game.expanded {
-        grid-column: span 3;
-        cursor: default;
-        border-color: #60a5fa;
-    }
-
-    .compact-game-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 8px;
-        color: #facc15;
-        font-weight: bold;
-        font-size: 0.9rem;
-    }
-
-    .compact-expand-hint {
-        color: #60a5fa;
-        font-size: 0.8rem;
-        white-space: nowrap;
-    }
-
-    .matchup {
-        gap: 8px;
-        margin-bottom: 8px;
-        flex-wrap: nowrap;
-    }
-
-    .team-box {
-        min-width: 0;
-        min-height: 72px;
-        padding: 8px;
-        gap: 8px;
-        flex: 1;
-    }
-
-    .team-logo {
-        width: 38px;
-        height: 38px;
-        flex: 0 0 auto;
-    }
-
-    .winner .team-logo,
-    .strong-pick .team-logo {
-        width: 44px;
-        height: 44px;
-    }
-
-    .team-name {
-        font-size: 0.85rem;
-        line-height: 1.15;
-    }
-
-    .winner .team-name,
-    .strong-pick .team-name {
-        font-size: 0.9rem;
-    }
-
-    .team-probability {
-        margin-top: 4px;
-        font-size: 1rem;
-        font-weight: bold;
-    }
-
-    .scoreboard-center {
-        min-width: 92px;
-        max-width: 100px;
-    }
-
-    .game-time-status {
-        display: none;
-    }
-
-    .score-large {
-        font-size: 1.35rem;
-        margin-bottom: 4px;
-    }
-
-    .mini-live-stack {
-        gap: 3px;
-    }
-
-    .compact-base-diamond {
-        width: 38px;
-        height: 30px;
-    }
-
-    .compact-base {
-        width: 11px;
-        height: 11px;
-        border-width: 1.5px;
-    }
-
-    .compact-base-second {
-        top: 0;
-        left: 14px;
-    }
-
-    .compact-base-third {
-        top: 14px;
-        left: 1px;
-    }
-
-    .compact-base-first {
-        top: 14px;
-        right: 1px;
-    }
-
-
-    .compact-inning-status {
-        font-size: 0.78rem;
-        font-weight: bold;
-        color: #facc15;
-        line-height: 1;
-        margin-top: 1px;
-        margin-bottom: 1px;
-    }
-
-    .count-outs {
-        font-size: 0.9rem;
-    }
-
-    .outs-dots {
-        gap: 4px;
-    }
-
-    .out-dot {
-        width: 8px;
-        height: 8px;
-        border-width: 1.5px;
-    }
-
-    .compact-summary {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 6px 10px;
-        padding: 8px;
-        border-radius: 8px;
-        background: #020617;
-        border: 1px solid #334155;
-        font-size: 0.86rem;
-        line-height: 1.35;
-    }
-
-    .compact-summary-full {
-        grid-column: 1 / -1;
-    }
-
-    .summary-label {
-        color: #9ca3af;
-        font-size: 0.72rem;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        display: block;
-        margin-bottom: 1px;
-    }
-
-    .summary-value {
-        font-weight: bold;
-        color: #e5e7eb;
-    }
-
-    .expanded-content {
-        display: none;
-        margin-top: 12px;
-        cursor: default;
-    }
-
-    .game.expanded .expanded-content {
-        display: block;
-    }
-
-    .expanded-content .actual-result,
-    .expanded-content .live-game-state {
-        margin-top: 8px;
-    }
-
-    .section-header {
-        margin-top: 12px;
-    }
-
-    .toggle-btn {
-        display: none;
-    }
-
-    .click-note {
-        color: #9ca3af;
-        font-size: 0.82rem;
-        margin-top: 8px;
-        font-style: italic;
-    }
-
-    @media (max-width: 1200px) {
-        .games-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .game.expanded {
-            grid-column: span 2;
-        }
-    }
-
-    @media (max-width: 760px) {
-        body {
-            margin: 12px;
-        }
-
-        .games-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .game.expanded {
-            grid-column: span 1;
-        }
-
-        .matchup {
-            flex-wrap: wrap;
-        }
-
-        .scoreboard-center {
-            order: 3;
-            width: 100%;
-            max-width: none;
-        }
-
-        .compact-summary {
-            grid-template-columns: 1fr;
-        }
-
-        .live-game-state {
-            grid-template-columns: 1fr;
-        }
-    }
-
-  
-    .expanded-tabs {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-        margin-top: 12px;
-        margin-bottom: 10px;
-    }
-
-    .expanded-tab {
-        background: #1f2937;
-        border: 1px solid #374151;
-        border-radius: 8px;
-        padding: 8px 12px;
-        color: #e5e7eb;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    .expanded-tab.active {
-        background: #2563eb;
-        color: white;
-        border-color: #60a5fa;
-    }
-
-    .compact-summary.only-pick {
-        grid-template-columns: 1fr;
-    }
-
-  
-    .top-choices-btn.active {
-        background: #7c3aed;
-        border-color: #a78bfa;
-        color: white;
-    }
-
-    .top-choices-panel {
-        display: none;
-        background: #1e293b;
-        padding: 16px;
-        margin-bottom: 18px;
-        border-radius: 10px;
-        border: 1px solid #334155;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.4);
-    }
-
-    .top-choices-panel.active {
-        display: block;
-    }
-
-    .top-choices-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 14px;
-    }
-
-    .top-choice-card {
-        background: #020617;
-        border: 1px solid #334155;
-        border-radius: 10px;
-        padding: 12px;
-    }
-
-    .top-choice-title {
-        font-weight: bold;
-        font-size: 1.05rem;
-        margin-bottom: 10px;
-        color: #facc15;
-    }
-
-    .top-choice-table {
-        width: 100%;
-        border-collapse: collapse;
-        background: #111827;
-        font-size: 0.88rem;
-    }
-
-    .top-choice-table th,
-    .top-choice-table td {
-        border: 1px solid #374151;
-        padding: 7px;
-        text-align: left;
-    }
-
-    .top-choice-table th {
-        background: #1f2937;
-    }
-
-    .top-choice-result {
-        font-weight: bold;
-    }
-
-    @media (max-width: 1100px) {
-        .top-choices-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-
   </style>
 </head>
 <body>
@@ -870,7 +332,12 @@
     <h1 id="page-title">MLB Predictions — 2021+ Model</h1>
     <div class="tabs">
       <a class="action-btn model-link" href="./index.html">All-Years Model Page</a>
-      <button class="action-btn top-choices-btn" id="top-choices-btn">Top Choices</button>
+      <button class="tab active" data-view="everything">Everything</button>
+      <button class="tab" data-view="hr">Home Run</button>
+      <button class="tab" data-view="rbi">RBI</button>
+      <button class="tab" data-view="multi_hit">Multi-Hit</button>
+      <button class="action-btn" id="collapse-all-btn">Collapse All</button>
+      <button class="action-btn" id="expand-all-btn">Expand All</button>
     </div>
   </div>
 
@@ -886,13 +353,17 @@
 
   <div class="status" id="status-text">Loading 2021+ model predictions...</div>
 
-  <div id="top-choices-panel" class="top-choices-panel"></div>
-
   <div id="games-container"></div>
 
   <div class="chart-card">
     <h2>2021+ Model Accuracy Over Time</h2>
     <img id="accuracy-chart" src="./accuracy_chart_2021_plus.png" alt="2021+ model accuracy chart">
+  </div>
+
+  <div class="chart-card">
+    <h2>2021+ Model Straight-Bet Profit/Loss</h2>
+    <div class="status" id="betting-summary">No settled simulated bets yet.</div>
+    <img id="betting-chart" src="./betting_profit_chart_2021_plus.png" alt="Simulated straight-bet profit/loss chart">
   </div>
 
   <div class="footer-space"></div>
@@ -974,6 +445,92 @@
 
       return `<span class="${success ? "stat-hit" : "stat-miss"}">${value}</span>`;
   }
+
+
+    function formatMoneyline(value) {
+      if (value === null || value === undefined || value === "") return "N/A";
+      const n = Number(value);
+      if (!Number.isFinite(n)) return "N/A";
+      return n > 0 ? `+${Math.trunc(n)}` : `${Math.trunc(n)}`;
+    }
+
+    function formatMoney(value) {
+      if (value === null || value === undefined || value === "") return "—";
+      const n = Number(value);
+      if (!Number.isFinite(n)) return "—";
+      const sign = n > 0 ? "+" : n < 0 ? "-" : "";
+      return `${sign}$${Math.abs(n).toFixed(2)}`;
+    }
+
+    function renderMoneylineAndBet(game) {
+      const bookmaker = escapeHtml(game.moneyline_bookmaker || "FanDuel");
+      const hasCurrent = game.current_home_moneyline !== null && game.current_home_moneyline !== undefined
+                      && game.current_away_moneyline !== null && game.current_away_moneyline !== undefined;
+      const hasPregame = game.pregame_home_moneyline !== null && game.pregame_home_moneyline !== undefined
+                      && game.pregame_away_moneyline !== null && game.pregame_away_moneyline !== undefined;
+
+      const awayCurrent = formatMoneyline(game.current_away_moneyline);
+      const homeCurrent = formatMoneyline(game.current_home_moneyline);
+      const awayPregame = formatMoneyline(game.pregame_away_moneyline);
+      const homePregame = formatMoneyline(game.pregame_home_moneyline);
+
+      const betTeam = game.simulated_bet_team;
+      const betStatus = game.simulated_bet_status || "not_placed";
+      let betClass = "bet-pending";
+      if (betStatus === "won") betClass = "bet-won";
+      if (betStatus === "lost") betClass = "bet-lost";
+
+      let betText = "Waiting for a FanDuel line before placing the $100 simulated straight bet.";
+      if (betTeam) {
+        const stake = Number(game.simulated_bet_stake || 100).toFixed(2);
+        const line = formatMoneyline(game.simulated_bet_moneyline);
+        const statusLabel = betStatus.replaceAll("_", " ");
+        const pnl = game.simulated_bet_profit_loss === null || game.simulated_bet_profit_loss === undefined
+          ? ""
+          : ` • P/L: ${formatMoney(game.simulated_bet_profit_loss)}`;
+        betText = `$${stake} on ${escapeHtml(betTeam)} at ${line} • ${escapeHtml(statusLabel)}${pnl}`;
+      }
+
+      return `
+        <div class="odds-panel">
+          <div class="odds-title">${bookmaker} Moneyline</div>
+          <div class="odds-grid">
+            <div>
+              <strong>${escapeHtml(game.away_team)}</strong><br>
+              Current: ${hasCurrent ? awayCurrent : "N/A"}<br>
+              Pregame: ${hasPregame ? awayPregame : "N/A"}
+            </div>
+            <div>
+              <strong>${escapeHtml(game.home_team)}</strong><br>
+              Current: ${hasCurrent ? homeCurrent : "N/A"}<br>
+              Pregame: ${hasPregame ? homePregame : "N/A"}
+            </div>
+          </div>
+          <div class="bet-line ${betClass}"><strong>Simulated straight bet:</strong> ${betText}</div>
+        </div>
+      `;
+    }
+
+    async function fetchBettingSummary() {
+      const summary = document.getElementById("betting-summary");
+      try {
+        const response = await fetch("./betting_by_day_2021_plus.csv?_=" + Date.now());
+        if (!response.ok) throw new Error("No betting history yet");
+        const text = (await response.text()).trim();
+        const lines = text.split(/\r?\n/).filter(Boolean);
+        if (lines.length < 2) throw new Error("No settled bets yet");
+
+        const headers = lines[0].split(",");
+        const values = lines[lines.length - 1].split(",");
+        const row = Object.fromEntries(headers.map((h, i) => [h, values[i]]));
+        const pnl = Number(row.cumulative_profit_loss || 0);
+        const roi = Number(row.cumulative_roi_pct || 0);
+        const bets = Number(row.cumulative_bets || 0);
+        summary.textContent = `Overall: ${formatMoney(pnl)} • ROI: ${roi.toFixed(2)}% • Settled bets: ${bets}`;
+      } catch (err) {
+        summary.textContent = "No settled simulated bets yet.";
+      }
+    }
 
     function escapeHtml(text) {
       if (text === null || text === undefined) return "";
@@ -1088,122 +645,6 @@
       `;
     }
 
-
-    function baseDiamondMarkup(bases, classPrefix = "") {
-      const baseClass = classPrefix ? `${classPrefix}-base` : "base";
-      const secondClass = classPrefix ? `${classPrefix}-base-second` : "base-second";
-      const thirdClass = classPrefix ? `${classPrefix}-base-third` : "base-third";
-      const firstClass = classPrefix ? `${classPrefix}-base-first` : "base-first";
-
-      return `
-        <div class="${classPrefix ? classPrefix + '-base-diamond' : 'base-diamond'}" title="Bases occupied">
-          <div class="${baseClass} ${secondClass} ${bases.second ? "occupied" : ""}"></div>
-          <div class="${baseClass} ${thirdClass} ${bases.third ? "occupied" : ""}"></div>
-          <div class="${baseClass} ${firstClass} ${bases.first ? "occupied" : ""}"></div>
-        </div>
-      `;
-    }
-
-    function outsDotsMarkup(outs) {
-      const outCount = Number.isFinite(Number(outs)) ? Number(outs) : 0;
-      return `
-        <div class="outs-dots" title="${outCount} out${outCount === 1 ? "" : "s"}">
-          <span class="out-dot ${outCount >= 1 ? "filled" : ""}"></span>
-          <span class="out-dot ${outCount >= 2 ? "filled" : ""}"></span>
-          <span class="out-dot ${outCount >= 3 ? "filled" : ""}"></span>
-        </div>
-      `;
-    }
-
-
-    function inningSymbolStatus(game) {
-      const rawStatus = String(game.game_status || "Scheduled");
-      const lowerStatus = rawStatus.toLowerCase();
-
-      if (lowerStatus.includes("top")) {
-        return rawStatus.replace(/top/i, "▲");
-      }
-
-      if (lowerStatus.includes("bottom")) {
-        return rawStatus.replace(/bottom/i, "▼");
-      }
-
-      return rawStatus;
-    }
-
-    function renderScoreboardCenter(game) {
-      const bases = game.bases_occupied || { first: false, second: false, third: false };
-      const balls = game.balls ?? "-";
-      const strikes = game.strikes ?? "-";
-      const outs = game.outs ?? 0;
-
-      const hasScore = game.actual_home_score !== null && game.actual_home_score !== undefined
-                    && game.actual_away_score !== null && game.actual_away_score !== undefined;
-
-      const scoreText = hasScore
-        ? `${game.actual_away_score} - ${game.actual_home_score}`
-        : "vs";
-
-      const statusText = inningSymbolStatus(game);
-
-      return `
-        <div class="scoreboard-center">
-          <div class="score-large">${escapeHtml(scoreText)}</div>
-          <div class="mini-live-stack">
-            ${baseDiamondMarkup(bases, "compact")}
-            <div class="compact-inning-status">${escapeHtml(statusText)}</div>
-            <div class="count-outs">${balls} - ${strikes}</div>
-            ${outsDotsMarkup(outs)}
-          </div>
-        </div>
-      `;
-    }
-
-    function renderLiveGameState(game) {
-      if (!game || game.is_final) return "";
-
-      const status = String(game.game_status || "").toLowerCase();
-      const hasLiveFields = game.current_batter || game.balls !== null || game.strikes !== null || game.outs !== null;
-      const isLive = status.includes("top") || status.includes("bottom") || status.includes("middle") || status.includes("end") || hasLiveFields;
-
-      if (!isLive) return "";
-
-      const bases = game.bases_occupied || {
-        first: false,
-        second: false,
-        third: false
-      };
-
-      const batter = game.current_batter || "Not available";
-      const balls = game.balls ?? "-";
-      const strikes = game.strikes ?? "-";
-      const outs = game.outs ?? "-";
-      const runners = game.runners_on_base ?? 0;
-
-      return `
-        <div class="live-game-state">
-          <div>
-            <span class="live-label">At Bat</span>
-            <span class="live-value">${escapeHtml(batter)}</span>
-          </div>
-          <div>
-            <span class="live-label">Count</span>
-            <span class="live-value">${balls}-${strikes}</span>
-          </div>
-          <div>
-            <span class="live-label">Outs</span>
-            <span class="live-value">${outs}</span>
-          </div>
-          <div>
-            <span class="live-label">Runners</span>
-            <span class="live-value">${runners}</span>
-          </div>
-          ${baseDiamondMarkup(bases)}
-        </div>
-      `;
-    }
-
-
     function renderEverythingTable(hitters) {
       if (!hitters || hitters.length === 0) {
         return '<p class="muted">No hitter predictions available yet.</p>';
@@ -1256,16 +697,19 @@
       if (view === "hr") {
         label = "HR %";
         actualLabel = "Actual HR";
+        completedLabel = "HR?";
       }
 
       if (view === "rbi") {
         label = "RBI %";
         actualLabel = "Actual RBI";
+        completedLabel = "RBI?";
       }
 
       if (view === "multi_hit") {
         label = "Multi-hit %";
         actualLabel = "Actual Hits";
+        completedLabel = "Multi-hit?";
       }
 
       const rows = hitters.map(hitter => {
@@ -1296,298 +740,13 @@
               <th>Order</th>
               <th>${label}</th>
               <th>${actualLabel}</th>
+              <th>${completedLabel}</th>
             </tr>
           </thead>
           <tbody>${rows}</tbody>
         </table>
       `;
     }
-
-
-    function predictionResultMarkup(game) {
-      if (!game.is_final || !game.actual_winner) {
-        return '<span class="stat-pending">Pending</span>';
-      }
-
-      const correct = game.actual_winner === game.predicted_winner;
-      return `<span class="${correct ? "prediction-correct" : "prediction-wrong"}">${correct ? "Correct" : "Incorrect"}</span>`;
-    }
-
-    function compactLiveText(game) {
-      if (game.is_final) return "Final";
-      const batter = game.current_batter || "Not available";
-      const balls = game.balls ?? "-";
-      const strikes = game.strikes ?? "-";
-      const outs = game.outs ?? "-";
-      const runners = game.runners_on_base ?? 0;
-
-      if (game.current_batter) {
-        return escapeHtml(game.current_batter);
-      }
-
-      return escapeHtml(game.game_status || "Scheduled");
-    }
-
-
-    function isGameFinalForSummary(game) {
-      return !!game.is_final || String(game.game_status || "").toLowerCase().includes("final");
-    }
-
-    function isGameActiveForSummary(game) {
-      const status = String(game.game_status || "").toLowerCase();
-
-      if (isGameFinalForSummary(game)) return false;
-
-      return (
-        status.includes("top") ||
-        status.includes("bottom") ||
-        status.includes("middle") ||
-        status.includes("end") ||
-        status.includes("live") ||
-        game.current_batter
-      );
-    }
-
-    function renderCompactSummary(game) {
-      const pickBlock = `
-        <div>
-          <span class="summary-label">Pick</span>
-          <span class="summary-value">${escapeHtml(game.predicted_winner || "Unknown")}</span>
-        </div>
-      `;
-
-      const resultBlock = `
-        <div>
-          <span class="summary-label">Result</span>
-          <span class="summary-value">${predictionResultMarkup(game)}</span>
-        </div>
-      `;
-
-      const batterBlock = `
-        <div>
-          <span class="summary-label">Batter</span>
-          <span class="summary-value">${compactLiveText(game)}</span>
-        </div>
-      `;
-
-      if (isGameFinalForSummary(game)) {
-        return `
-          <div class="compact-summary">
-            ${pickBlock}
-            ${resultBlock}
-          </div>
-        `;
-      }
-
-      if (isGameActiveForSummary(game)) {
-        return `
-          <div class="compact-summary">
-            ${pickBlock}
-            ${batterBlock}
-          </div>
-        `;
-      }
-
-      return `
-        <div class="compact-summary only-pick">
-          ${pickBlock}
-        </div>
-      `;
-    }
-
-    function toggleGameCard(index) {
-      const card = document.getElementById(`game_card_${index}`);
-      if (!card) return;
-
-      const isExpanded = card.classList.contains("expanded");
-
-      document.querySelectorAll(".game.expanded").forEach(gameCard => {
-        gameCard.classList.remove("expanded");
-        const hint = gameCard.querySelector(".compact-expand-hint");
-        if (hint) hint.textContent = "Click to expand";
-      });
-
-      if (!isExpanded) {
-        card.classList.add("expanded");
-        const hint = card.querySelector(".compact-expand-hint");
-        if (hint) hint.textContent = "Click to collapse";
-      }
-    }
-
-
-
-    function getGameView(index) {
-      if (!window.gameViews) window.gameViews = {};
-      return window.gameViews[index] || "everything";
-    }
-
-    function setGameView(index, view, event) {
-      if (event) event.stopPropagation();
-      if (!window.gameViews) window.gameViews = {};
-      window.gameViews[index] = view;
-      renderGames(latestPayload);
-
-      const card = document.getElementById(`game_card_${index}`);
-      if (card) {
-        card.classList.add("expanded");
-        const hint = card.querySelector(".compact-expand-hint");
-        if (hint) hint.textContent = "Click to collapse";
-      }
-    }
-
-    function renderExpandedTabs(index, activeView) {
-      const tabs = [
-        ["everything", "Everything"],
-        ["hr", "Home Run"],
-        ["rbi", "RBI"],
-        ["multi_hit", "Multi-Hit"]
-      ];
-
-      return `
-        <div class="expanded-tabs">
-          ${tabs.map(([view, label]) => `
-            <button
-              class="expanded-tab ${activeView === view ? "active" : ""}"
-              onclick="setGameView(${index}, '${view}', event)"
-            >${label}</button>
-          `).join("")}
-        </div>
-      `;
-    }
-
-
-
-    let showingTopChoices = false;
-
-    function topChoiceActualValue(hitter, stat) {
-      if (!hitter || hitter.stat_result_status === "PENDING") {
-        return '<span class="stat-pending">Pending</span>';
-      }
-
-      if (hitter.stat_result_status === "PLAYER_NOT_FOUND") {
-        return '<span class="stat-pending">Player Did Not Play</span>';
-      }
-
-      let value = 0;
-      let success = false;
-
-      if (stat === "hr") {
-        value = hitter.actual_hr ?? 0;
-        success = !!hitter.hr_completed;
-      }
-
-      if (stat === "rbi") {
-        value = hitter.actual_rbi ?? 0;
-        success = !!hitter.rbi_completed;
-      }
-
-      if (stat === "multi_hit") {
-        value = hitter.actual_hits ?? 0;
-        success = !!hitter.multi_hit_completed;
-      }
-
-      return `<span class="${success ? "stat-hit" : "stat-miss"}">${value}</span>`;
-    }
-
-    function collectTopChoices(payload, stat) {
-      const games = payload.games || [];
-      const allHitters = [];
-
-      games.forEach(game => {
-        (game.hitters || []).forEach(hitter => {
-          const probKey = stat === "hr" ? "hr_prob" : stat === "rbi" ? "rbi_prob" : "multi_hit_prob";
-          const probability = hitter[probKey] || 0;
-
-          allHitters.push({
-            ...hitter,
-            game_status: game.game_status,
-            matchup: `${game.away_team} @ ${game.home_team}`,
-            probability
-          });
-        });
-      });
-
-      return allHitters
-        .sort((a, b) => (b.probability || 0) - (a.probability || 0))
-        .slice(0, 5);
-    }
-
-    function renderTopChoiceTable(title, stat, hitters) {
-      if (!hitters || hitters.length === 0) {
-        return `
-          <div class="top-choice-card">
-            <div class="top-choice-title">${title}</div>
-            <p class="muted">No players available.</p>
-          </div>
-        `;
-      }
-
-      const rows = hitters.map((hitter, index) => `
-        <tr>
-          <td>${index + 1}</td>
-          <td>${escapeHtml(hitter.player_name)}</td>
-          <td>${escapeHtml(hitter.team)}</td>
-          <td>${pct(hitter.probability)}%</td>
-          <td class="top-choice-result">${topChoiceActualValue(hitter, stat)}</td>
-        </tr>
-      `).join("");
-
-      return `
-        <div class="top-choice-card">
-          <div class="top-choice-title">${title}</div>
-          <table class="top-choice-table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Player</th>
-                <th>Team</th>
-                <th>%</th>
-                <th>Result</th>
-              </tr>
-            </thead>
-            <tbody>${rows}</tbody>
-          </table>
-        </div>
-      `;
-    }
-
-    function renderTopChoices(payload) {
-      const panel = document.getElementById("top-choices-panel");
-      if (!panel) return;
-
-      const hrTop = collectTopChoices(payload, "hr");
-      const rbiTop = collectTopChoices(payload, "rbi");
-      const multiHitTop = collectTopChoices(payload, "multi_hit");
-
-      panel.innerHTML = `
-        <h2 style="margin-top:0;">Top Choices</h2>
-        <div class="top-choices-grid">
-          ${renderTopChoiceTable("Top 5 Home Run", "hr", hrTop)}
-          ${renderTopChoiceTable("Top 5 RBI", "rbi", rbiTop)}
-          ${renderTopChoiceTable("Top 5 Multi-Hit", "multi_hit", multiHitTop)}
-        </div>
-      `;
-    }
-
-    function setTopChoicesMode(enabled) {
-      showingTopChoices = enabled;
-
-      const btn = document.getElementById("top-choices-btn");
-      const panel = document.getElementById("top-choices-panel");
-      const gamesContainer = document.getElementById("games-container");
-
-      if (btn) btn.classList.toggle("active", enabled);
-
-      if (panel) {
-        panel.classList.toggle("active", enabled);
-        if (enabled) renderTopChoices(latestPayload);
-      }
-
-      if (gamesContainer) {
-        gamesContainer.style.display = enabled ? "none" : "";
-      }
-    }
-
 
     function renderGames(payload) {
       document.getElementById("page-title").textContent = `MLB Predictions — 2021+ Model for ${payload.date}`;
@@ -1599,24 +758,20 @@
         return;
       }
 
-      container.className = "games-grid";
-
       container.innerHTML = games.map((game, index) => {
         const sectionId = `players_${index + 1}`;
-        const cardId = `game_card_${index}`;
-        const gameView = getGameView(index);
-        const hitters = sortedHitters(game.hitters || [], gameView);
+        const hitters = sortedHitters(game.hitters || [], currentView);
         const homeLogo = logoPath(game.home_team);
         const awayLogo = logoPath(game.away_team);
 
         let sectionTitle = "Player Predictions";
-        if (gameView === "hr") sectionTitle = "Home Run Leaders";
-        if (gameView === "rbi") sectionTitle = "RBI Leaders";
-        if (gameView === "multi_hit") sectionTitle = "Multi-Hit Leaders";
+        if (currentView === "hr") sectionTitle = "Home Run Leaders";
+        if (currentView === "rbi") sectionTitle = "RBI Leaders";
+        if (currentView === "multi_hit") sectionTitle = "Multi-Hit Leaders";
 
-        const tableHtml = gameView === "everything"
+        const tableHtml = currentView === "everything"
           ? renderEverythingTable(hitters)
-          : renderFilteredTable(hitters, gameView);
+          : renderFilteredTable(hitters, currentView);
 
         const isStrong = !!game.is_confident_pick;
 
@@ -1628,57 +783,48 @@
 
         const awayActualClass = game.actual_winner === game.away_team ? " actual-winner" : "";
         const homeActualClass = game.actual_winner === game.home_team ? " actual-winner" : "";
+        const collapsedClass = collapsedSections.has(sectionId) ? "collapsed" : "";
+        const buttonLabel = collapsedSections.has(sectionId) ? "Expand" : "Collapse";
 
         return `
-          <div id="${cardId}" class="game" onclick="toggleGameCard(${index})">
-            <div class="compact-game-header">
-              <span></span>
-              <span class="compact-expand-hint">Click to expand</span>
-            </div>
-
+          <div class="game">
             <div class="matchup">
               <div class="team-box ${awayWinnerClass}${awayActualClass}${awayStrongClass}">
                 ${awayLogo ? `<img class="team-logo" src="${awayLogo}" alt="${escapeHtml(game.away_team)} logo">` : ""}
                 <div>
                   <div class="team-name">${escapeHtml(game.away_team)}</div>
-                  <div class="team-probability">${pct(game.away_win_probability)}%</div>
+                  <div>${pct(game.away_win_probability)}%</div>
                 </div>
               </div>
 
-              ${renderScoreboardCenter(game)}
+              <div class="center-info">
+                <div><strong>2021+ Model Pick</strong></div>
+                <div>${escapeHtml(game.predicted_winner)}</div>
+                <div class="${isStrong ? 'strong-text' : ''}" style="margin-top:6px; font-weight:bold;">
+                  ${escapeHtml(game.confidence_tier || "Normal Pick")}
+                </div>
+              </div>
 
               <div class="team-box ${homeWinnerClass}${homeActualClass}${homeStrongClass}">
                 ${homeLogo ? `<img class="team-logo" src="${homeLogo}" alt="${escapeHtml(game.home_team)} logo">` : ""}
                 <div>
                   <div class="team-name">${escapeHtml(game.home_team)}</div>
-                  <div class="team-probability">${pct(game.home_win_probability)}%</div>
+                  <div>${pct(game.home_win_probability)}%</div>
                 </div>
               </div>
             </div>
 
-            ${renderCompactSummary(game)}
+            ${renderMoneylineAndBet(game)}
 
-            <div class="expanded-content" onclick="event.stopPropagation()">
-              <div class="actual-result">
-                <div><strong>2021+ Model Pick:</strong> ${escapeHtml(game.predicted_winner || "Unknown")}</div>
-                <div><strong>Confidence:</strong> <span class="${isStrong ? 'strong-text' : ''}">${escapeHtml(game.confidence_tier || "Normal Pick")}</span></div>
-              </div>
+            ${renderActualResult(game)}
 
-              ${renderActualResult(game)}
+            <div class="section-header">
+              <div class="section-title">${sectionTitle}</div>
+              <button class="toggle-btn" onclick="toggleSection('${sectionId}', this)">${buttonLabel}</button>
+            </div>
 
-              ${renderLiveGameState(game)}
-
-              ${renderExpandedTabs(index, gameView)}
-
-              <div class="section-header">
-                <div class="section-title">${sectionTitle}</div>
-              </div>
-
-              <div id="${sectionId}" class="collapsible-content">
-                ${tableHtml}
-              </div>
-
-              <div class="click-note">Click another game card to collapse this one.</div>
+            <div id="${sectionId}" class="collapsible-content ${collapsedClass}">
+              ${tableHtml}
             </div>
           </div>
         `;
@@ -1695,10 +841,13 @@
         const payload = await response.json();
         latestPayload = payload;
         renderGames(payload);
-        if (showingTopChoices) renderTopChoices(payload);
 
         const chart = document.getElementById("accuracy-chart");
         chart.src = "./accuracy_chart_2021_plus.png?_=" + Date.now();
+
+        const bettingChart = document.getElementById("betting-chart");
+        bettingChart.src = "./betting_profit_chart_2021_plus.png?_=" + Date.now();
+        fetchBettingSummary();
 
         document.getElementById("status-text").textContent =
           "Last checked: " + new Date().toLocaleTimeString();
@@ -1708,14 +857,24 @@
       }
     }
 
-
-    const topChoicesBtn = document.getElementById("top-choices-btn");
-    if (topChoicesBtn) {
-      topChoicesBtn.addEventListener("click", () => {
-        setTopChoicesMode(!showingTopChoices);
+    function setActiveTab() {
+      document.querySelectorAll(".tab").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.view === currentView);
       });
     }
 
+    document.querySelectorAll(".tab").forEach(btn => {
+      btn.addEventListener("click", () => {
+        currentView = btn.dataset.view;
+        setActiveTab();
+        renderGames(latestPayload);
+      });
+    });
+
+    document.getElementById("collapse-all-btn").addEventListener("click", () => setAllSections(true));
+    document.getElementById("expand-all-btn").addEventListener("click", () => setAllSections(false));
+
+    setActiveTab();
     fetchPredictions();
     setInterval(fetchPredictions, 30000);
   </script>
