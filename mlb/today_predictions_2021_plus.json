@@ -8,7 +8,7 @@
       "schedule_detailed_state": "Final",
       "home_team": "Washington Nationals",
       "away_team": "Miami Marlins",
-      "home_win_probability": 0.48808007666963493,
+      "home_win_probability": 0.48808007666963504,
       "away_win_probability": 0.5119199233303663,
       "predicted_winner": "Miami Marlins",
       "confidence_tier": "Normal Pick",
@@ -366,7 +366,7 @@
       "schedule_detailed_state": "Final",
       "home_team": "Atlanta Braves",
       "away_team": "Colorado Rockies",
-      "home_win_probability": 0.5632615587647091,
+      "home_win_probability": 0.563261558764709,
       "away_win_probability": 0.436738441235291,
       "predicted_winner": "Atlanta Braves",
       "confidence_tier": "Strong Pick",
@@ -2514,8 +2514,8 @@
       "schedule_detailed_state": "Final",
       "home_team": "Minnesota Twins",
       "away_team": "Chicago White Sox",
-      "home_win_probability": 0.45649528340048523,
-      "away_win_probability": 0.5435047165995159,
+      "home_win_probability": 0.45649528340048506,
+      "away_win_probability": 0.543504716599516,
       "predicted_winner": "Chicago White Sox",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
@@ -3231,7 +3231,7 @@
       "home_team": "St. Louis Cardinals",
       "away_team": "Pittsburgh Pirates",
       "home_win_probability": 0.5201847172512074,
-      "away_win_probability": 0.4798152827487931,
+      "away_win_probability": 0.4798152827487932,
       "predicted_winner": "St. Louis Cardinals",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
@@ -3942,24 +3942,24 @@
     {
       "game_pk": 824959,
       "game_start_time": "2026-08-30T20:05:00Z",
-      "schedule_abstract_state": "Live",
-      "schedule_detailed_state": "In Progress",
+      "schedule_abstract_state": "Final",
+      "schedule_detailed_state": "Game Over",
       "home_team": "Athletics",
       "away_team": "Baltimore Orioles",
-      "home_win_probability": 0.48283063208901184,
-      "away_win_probability": 0.5171693679109891,
+      "home_win_probability": 0.48283063208901195,
+      "away_win_probability": 0.5171693679109892,
       "predicted_winner": "Baltimore Orioles",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
       "confidence_threshold": 0.58,
       "actual_home_score": 5,
       "actual_away_score": 8,
-      "actual_winner": null,
+      "actual_winner": "Baltimore Orioles",
       "current_leader": "Baltimore Orioles",
-      "game_status": "End 9",
-      "is_final": false,
+      "game_status": "Final",
+      "is_final": true,
       "is_postponed": false,
-      "current_batter": "Blaze Alexander",
+      "current_batter": "Jeff McNeil",
       "balls": 0,
       "strikes": 0,
       "outs": 3,
@@ -3978,14 +3978,14 @@
           "hr_prob": 0.15849536860731425,
           "rbi_prob": 0.3528539350842017,
           "multi_hit_prob": 0.2655681269869464,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 0,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Pete Alonso",
@@ -3995,14 +3995,14 @@
           "hr_prob": 0.15729063883204433,
           "rbi_prob": 0.3494138461495459,
           "multi_hit_prob": 0.2813177845295142,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 1,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Shea Langeliers",
@@ -4019,7 +4019,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Nick Kurtz",
@@ -4036,7 +4036,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Samuel Basallo",
@@ -4053,7 +4053,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Coby Mayo",
@@ -4063,14 +4063,14 @@
           "hr_prob": 0.14490613083291656,
           "rbi_prob": 0.32790125000944315,
           "multi_hit_prob": 0.23388976266192726,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
-          "hr_completed": false,
-          "rbi_completed": false,
+          "actual_hr": 1,
+          "actual_rbi": 3,
+          "actual_hits": 1,
+          "hr_completed": true,
+          "rbi_completed": true,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Zack Gelof",
@@ -4080,14 +4080,14 @@
           "hr_prob": 0.1432006907692889,
           "rbi_prob": 0.3328436204410625,
           "multi_hit_prob": 0.28522651858389597,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 0,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Jonah Heim",
@@ -4097,14 +4097,14 @@
           "hr_prob": 0.13540737988696372,
           "rbi_prob": 0.35367237729868334,
           "multi_hit_prob": 0.24689292932873208,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 0,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Brian Serven",
@@ -4114,14 +4114,14 @@
           "hr_prob": 0.13348936869370684,
           "rbi_prob": 0.31457497088277103,
           "multi_hit_prob": 0.23387688507977708,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
-          "hr_completed": false,
-          "rbi_completed": false,
-          "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "actual_hr": 1,
+          "actual_rbi": 2,
+          "actual_hits": 2,
+          "hr_completed": true,
+          "rbi_completed": true,
+          "multi_hit_completed": true,
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Gunnar Henderson",
@@ -4131,14 +4131,14 @@
           "hr_prob": 0.13209681288820427,
           "rbi_prob": 0.3339146218965239,
           "multi_hit_prob": 0.27673935146134454,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
-          "hr_completed": false,
-          "rbi_completed": false,
-          "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "actual_hr": 2,
+          "actual_rbi": 5,
+          "actual_hits": 4,
+          "hr_completed": true,
+          "rbi_completed": true,
+          "multi_hit_completed": true,
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Colton Cowser",
@@ -4148,14 +4148,14 @@
           "hr_prob": 0.12149162547079324,
           "rbi_prob": 0.2868305512827391,
           "multi_hit_prob": 0.2139328103038507,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 0,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Dylan Beavers",
@@ -4165,14 +4165,14 @@
           "hr_prob": 0.11889662807279595,
           "rbi_prob": 0.31911763055663994,
           "multi_hit_prob": 0.246345968697309,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 0,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Jackson Holliday",
@@ -4182,14 +4182,14 @@
           "hr_prob": 0.10866040734082798,
           "rbi_prob": 0.2920499970753966,
           "multi_hit_prob": 0.2808105786124991,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 0,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Carlos Cortes",
@@ -4199,14 +4199,14 @@
           "hr_prob": 0.10266783416072099,
           "rbi_prob": 0.2999692996867111,
           "multi_hit_prob": 0.21879301171321094,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 0,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Leody Taveras",
@@ -4216,14 +4216,14 @@
           "hr_prob": 0.1020719919236413,
           "rbi_prob": 0.293893185960606,
           "multi_hit_prob": 0.21655521150488624,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 0,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Donovan Walton",
@@ -4233,14 +4233,14 @@
           "hr_prob": 0.09498264671539507,
           "rbi_prob": 0.30102228445427964,
           "multi_hit_prob": 0.23826912995839153,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 0,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Joshua Kuroda-Grauer",
@@ -4257,7 +4257,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Darell Hernaiz",
@@ -4274,7 +4274,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         }
       ],
       "odds_event_id": "5421f226ba19cb1198c31f339c373ad2",
@@ -4294,8 +4294,8 @@
       "simulated_bet_moneyline": -154,
       "simulated_bet_bookmaker": "FanDuel",
       "simulated_bet_placed_at": "2026-08-30T05:00:32.127775Z",
-      "simulated_bet_status": "pending",
-      "simulated_bet_profit_loss": null
+      "simulated_bet_status": "won",
+      "simulated_bet_profit_loss": 64.94
     },
     {
       "game_pk": 823987,
@@ -4304,7 +4304,7 @@
       "schedule_detailed_state": "In Progress",
       "home_team": "Los Angeles Angels",
       "away_team": "Philadelphia Phillies",
-      "home_win_probability": 0.46200243896437115,
+      "home_win_probability": 0.46200243896437104,
       "away_win_probability": 0.5379975610356292,
       "predicted_winner": "Philadelphia Phillies",
       "confidence_tier": "Normal Pick",
@@ -4314,19 +4314,19 @@
       "actual_away_score": 5,
       "actual_winner": null,
       "current_leader": "Philadelphia Phillies",
-      "game_status": "Top 9",
+      "game_status": "Middle 9",
       "is_final": false,
       "is_postponed": false,
-      "current_batter": "Alec Bohm",
+      "current_batter": "Oswald Peraza",
       "balls": 0,
-      "strikes": 0,
-      "outs": 2,
+      "strikes": 3,
+      "outs": 3,
       "bases_occupied": {
         "first": false,
-        "second": true,
-        "third": true
+        "second": false,
+        "third": false
       },
-      "runners_on_base": 2,
+      "runners_on_base": 0,
       "hitters": [
         {
           "player_name": "Kyle Schwarber",
@@ -4663,7 +4663,7 @@
       "home_team": "Chicago Cubs",
       "away_team": "Cincinnati Reds",
       "home_win_probability": 0.5012849162033657,
-      "away_win_probability": 0.4987150837966355,
+      "away_win_probability": 0.4987150837966356,
       "predicted_winner": "Cincinnati Reds",
       "confidence_tier": "Normal Pick",
       "is_confident_pick": false,
