@@ -1795,7 +1795,7 @@
       "game_pk": 824791,
       "game_start_time": "2026-09-09T22:35:00Z",
       "schedule_abstract_state": "Final",
-      "schedule_detailed_state": "Game Over",
+      "schedule_detailed_state": "Final",
       "home_team": "Baltimore Orioles",
       "away_team": "Cleveland Guardians",
       "home_win_probability": 0.5015,
@@ -2166,19 +2166,19 @@
       "actual_away_score": 7,
       "actual_winner": null,
       "current_leader": "Philadelphia Phillies",
-      "game_status": "Bottom 8",
+      "game_status": "End 8",
       "is_final": false,
       "is_postponed": false,
-      "current_batter": "Luis Arraez",
+      "current_batter": "Jorge Barrosa",
       "balls": 0,
       "strikes": 2,
-      "outs": 2,
+      "outs": 3,
       "bases_occupied": {
-        "first": true,
-        "second": true,
+        "first": false,
+        "second": false,
         "third": false
       },
-      "runners_on_base": 2,
+      "runners_on_base": 0,
       "hitters": [
         {
           "player_name": "Yordan Alvarez",
@@ -2528,8 +2528,8 @@
       "is_final": false,
       "is_postponed": false,
       "current_batter": "Jared Young",
-      "balls": 0,
-      "strikes": 0,
+      "balls": 2,
+      "strikes": 1,
       "outs": 0,
       "bases_occupied": {
         "first": false,
@@ -2868,8 +2868,8 @@
     {
       "game_pk": 824713,
       "game_start_time": "2026-09-09T22:45:00Z",
-      "schedule_abstract_state": "Live",
-      "schedule_detailed_state": "In Progress",
+      "schedule_abstract_state": "Final",
+      "schedule_detailed_state": "Game Over",
       "home_team": "Boston Red Sox",
       "away_team": "Los Angeles Angels",
       "home_win_probability": 0.5672,
@@ -2880,12 +2880,12 @@
       "confidence_threshold": 0.58,
       "actual_home_score": 4,
       "actual_away_score": 6,
-      "actual_winner": null,
+      "actual_winner": "Los Angeles Angels",
       "current_leader": "Los Angeles Angels",
-      "game_status": "End 9",
-      "is_final": false,
+      "game_status": "Final",
+      "is_final": true,
       "is_postponed": false,
-      "current_batter": "Zach Neto",
+      "current_batter": "Roman Anthony",
       "balls": 2,
       "strikes": 2,
       "outs": 3,
@@ -2904,14 +2904,14 @@
           "hr_prob": 0.16382123073447905,
           "rbi_prob": 0.3291245210955664,
           "multi_hit_prob": 0.26084997141679317,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 1,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Trevor Story",
@@ -2921,14 +2921,14 @@
           "hr_prob": 0.15915038825805783,
           "rbi_prob": 0.34342857638535423,
           "multi_hit_prob": 0.27282484704066573,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 1,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Curtis Mead",
@@ -2945,7 +2945,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Jorge Soler",
@@ -2962,7 +2962,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Jo Adell",
@@ -2979,7 +2979,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Adley Rutschman",
@@ -2996,7 +2996,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Mois\u00e9s Ballesteros",
@@ -3013,7 +3013,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Zach Neto",
@@ -3023,14 +3023,14 @@
           "hr_prob": 0.13917832566700344,
           "rbi_prob": 0.30575990398193414,
           "multi_hit_prob": 0.2563427652179086,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
-          "hr_completed": false,
-          "rbi_completed": false,
-          "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "actual_hr": 1,
+          "actual_rbi": 3,
+          "actual_hits": 2,
+          "hr_completed": true,
+          "rbi_completed": true,
+          "multi_hit_completed": true,
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Jarren Duran",
@@ -3040,14 +3040,14 @@
           "hr_prob": 0.12754795693276536,
           "rbi_prob": 0.2950004889675626,
           "multi_hit_prob": 0.25387378888426776,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 2,
           "hr_completed": false,
           "rbi_completed": false,
-          "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "multi_hit_completed": true,
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Caleb Durbin",
@@ -3057,14 +3057,14 @@
           "hr_prob": 0.12718841909631737,
           "rbi_prob": 0.29836594721696,
           "multi_hit_prob": 0.24431997256868457,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 1,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Travis d'Arnaud",
@@ -3081,7 +3081,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Roman Anthony",
@@ -3091,14 +3091,14 @@
           "hr_prob": 0.12178433880703843,
           "rbi_prob": 0.2856942751569251,
           "multi_hit_prob": 0.29154247330911104,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
-          "hr_completed": false,
-          "rbi_completed": false,
+          "actual_hr": 1,
+          "actual_rbi": 2,
+          "actual_hits": 1,
+          "hr_completed": true,
+          "rbi_completed": true,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Nolan Schanuel",
@@ -3115,7 +3115,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Gustavo Campero",
@@ -3132,7 +3132,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Anthony Seigler",
@@ -3149,7 +3149,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Connor Wong",
@@ -3166,7 +3166,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Adam Frazier",
@@ -3183,7 +3183,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Nick Sogard",
@@ -3193,14 +3193,14 @@
           "hr_prob": 0.08662804372040712,
           "rbi_prob": 0.26593828972001426,
           "multi_hit_prob": 0.24542639725442775,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 1,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         }
       ],
       "odds_event_id": "c8513bd1ec6dd659d64e9c17052f4c9d",
@@ -3220,8 +3220,8 @@
       "simulated_bet_moneyline": -210,
       "simulated_bet_bookmaker": "FanDuel",
       "simulated_bet_placed_at": "2026-09-09T05:00:18.471066Z",
-      "simulated_bet_status": "pending",
-      "simulated_bet_profit_loss": null
+      "simulated_bet_status": "lost",
+      "simulated_bet_profit_loss": -100.0
     },
     {
       "game_pk": 823497,
@@ -3243,10 +3243,10 @@
       "game_status": "Top 9",
       "is_final": false,
       "is_postponed": false,
-      "current_batter": "Hunter Goodman",
-      "balls": 2,
-      "strikes": 2,
-      "outs": 0,
+      "current_batter": "Mickey Moniak",
+      "balls": 0,
+      "strikes": 1,
+      "outs": 1,
       "bases_occupied": {
         "first": false,
         "second": false,
@@ -3956,13 +3956,13 @@
       "actual_away_score": 1,
       "actual_winner": null,
       "current_leader": "Kansas City Royals",
-      "game_status": "Middle 4",
+      "game_status": "Bottom 4",
       "is_final": false,
       "is_postponed": false,
       "current_batter": "Michael Massey",
-      "balls": 1,
-      "strikes": 3,
-      "outs": 3,
+      "balls": 0,
+      "strikes": 0,
+      "outs": 0,
       "bases_occupied": {
         "first": false,
         "second": false,
@@ -4317,9 +4317,9 @@
       "game_status": "Top 7",
       "is_final": false,
       "is_postponed": false,
-      "current_batter": "Spencer Horwitz",
-      "balls": 0,
-      "strikes": 0,
+      "current_batter": "Rafael Flores Jr.",
+      "balls": 1,
+      "strikes": 1,
       "outs": 0,
       "bases_occupied": {
         "first": true,
@@ -4676,7 +4676,7 @@
       "is_final": false,
       "is_postponed": false,
       "current_batter": "Pete Crow-Armstrong",
-      "balls": 0,
+      "balls": 1,
       "strikes": 2,
       "outs": 0,
       "bases_occupied": {
