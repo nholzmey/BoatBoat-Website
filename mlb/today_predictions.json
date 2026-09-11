@@ -1078,8 +1078,8 @@
     {
       "game_pk": 823499,
       "game_start_time": "2026-09-10T23:05:00Z",
-      "schedule_abstract_state": "Live",
-      "schedule_detailed_state": "In Progress",
+      "schedule_abstract_state": "Final",
+      "schedule_detailed_state": "Game Over",
       "home_team": "New York Yankees",
       "away_team": "Colorado Rockies",
       "home_win_probability": 0.6556,
@@ -1090,12 +1090,12 @@
       "confidence_threshold": 0.58,
       "actual_home_score": 10,
       "actual_away_score": 3,
-      "actual_winner": null,
+      "actual_winner": "New York Yankees",
       "current_leader": "New York Yankees",
-      "game_status": "Middle 9",
-      "is_final": false,
+      "game_status": "Final",
+      "is_final": true,
       "is_postponed": false,
-      "current_batter": "Spencer Jones",
+      "current_batter": "Zac Veen",
       "balls": 0,
       "strikes": 3,
       "outs": 3,
@@ -1121,7 +1121,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Cody Bellinger",
@@ -1131,14 +1131,14 @@
           "hr_prob": 0.1744594692210739,
           "rbi_prob": 0.34825602469439493,
           "multi_hit_prob": 0.2902679333923735,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 1,
+          "actual_hits": 2,
           "hr_completed": false,
-          "rbi_completed": false,
-          "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "rbi_completed": true,
+          "multi_hit_completed": true,
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Paul Goldschmidt",
@@ -1155,7 +1155,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Heliot Ramos",
@@ -1165,14 +1165,14 @@
           "hr_prob": 0.1615482207244464,
           "rbi_prob": 0.3523103268690693,
           "multi_hit_prob": 0.27314178174186127,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 0,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Jazz Chisholm Jr.",
@@ -1189,7 +1189,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Ryan McMahon",
@@ -1199,14 +1199,14 @@
           "hr_prob": 0.1595138334416879,
           "rbi_prob": 0.3340022269267582,
           "multi_hit_prob": 0.23643797365249408,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 1,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Austin Wells",
@@ -1216,14 +1216,14 @@
           "hr_prob": 0.15895469855130204,
           "rbi_prob": 0.31576350358519734,
           "multi_hit_prob": 0.21076428077309592,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 0,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Hunter Goodman",
@@ -1233,14 +1233,14 @@
           "hr_prob": 0.1554255039343333,
           "rbi_prob": 0.3192949952691532,
           "multi_hit_prob": 0.22710976755828124,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 0,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Luis Garc\u00eda Jr.",
@@ -1250,14 +1250,14 @@
           "hr_prob": 0.14964552243298748,
           "rbi_prob": 0.36842951553352504,
           "multi_hit_prob": 0.2919738346399064,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
-          "hr_completed": false,
-          "rbi_completed": false,
+          "actual_hr": 1,
+          "actual_rbi": 2,
+          "actual_hits": 1,
+          "hr_completed": true,
+          "rbi_completed": true,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Mickey Moniak",
@@ -1274,7 +1274,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Cole Carrigg",
@@ -1284,14 +1284,14 @@
           "hr_prob": 0.12399013249225944,
           "rbi_prob": 0.2890653188382715,
           "multi_hit_prob": 0.27164691360533494,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 1,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "TJ Rumfield",
@@ -1301,14 +1301,14 @@
           "hr_prob": 0.11831647094863312,
           "rbi_prob": 0.3067171985732611,
           "multi_hit_prob": 0.27539044311757954,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 0,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Connor Norby",
@@ -1318,14 +1318,14 @@
           "hr_prob": 0.10568796449299911,
           "rbi_prob": 0.25392758054699577,
           "multi_hit_prob": 0.21016788558072044,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 0,
           "hr_completed": false,
           "rbi_completed": false,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Ezequiel Tovar",
@@ -1335,14 +1335,14 @@
           "hr_prob": 0.10074907173118443,
           "rbi_prob": 0.2570652989309006,
           "multi_hit_prob": 0.21684087484432277,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 0,
+          "actual_hits": 2,
           "hr_completed": false,
           "rbi_completed": false,
-          "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "multi_hit_completed": true,
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Jos\u00e9 Caballero",
@@ -1359,7 +1359,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         },
         {
           "player_name": "Jake McCarthy",
@@ -1369,14 +1369,14 @@
           "hr_prob": 0.09938622469690948,
           "rbi_prob": 0.26197643900857537,
           "multi_hit_prob": 0.2724482418690333,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
+          "actual_hr": 0,
+          "actual_rbi": 1,
+          "actual_hits": 2,
           "hr_completed": false,
-          "rbi_completed": false,
-          "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "rbi_completed": true,
+          "multi_hit_completed": true,
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Kyle Karros",
@@ -1386,14 +1386,14 @@
           "hr_prob": 0.09913489315286289,
           "rbi_prob": 0.2609183959452931,
           "multi_hit_prob": 0.22180500269434122,
-          "actual_hr": null,
-          "actual_rbi": null,
-          "actual_hits": null,
-          "hr_completed": false,
-          "rbi_completed": false,
+          "actual_hr": 1,
+          "actual_rbi": 1,
+          "actual_hits": 1,
+          "hr_completed": true,
+          "rbi_completed": true,
           "multi_hit_completed": false,
-          "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_results_completed": true,
+          "stat_result_status": "FINAL"
         },
         {
           "player_name": "Edouard Julien",
@@ -1410,7 +1410,7 @@
           "rbi_completed": false,
           "multi_hit_completed": false,
           "stat_results_completed": false,
-          "stat_result_status": "PENDING"
+          "stat_result_status": "PLAYER_NOT_FOUND"
         }
       ],
       "odds_event_id": "de5c4fe6a041ce8073e59e063fe7f31f",
@@ -1430,8 +1430,8 @@
       "simulated_bet_moneyline": -335,
       "simulated_bet_bookmaker": "FanDuel",
       "simulated_bet_placed_at": "2026-09-10T05:00:16.328040Z",
-      "simulated_bet_status": "pending",
-      "simulated_bet_profit_loss": null
+      "simulated_bet_status": "won",
+      "simulated_bet_profit_loss": 29.85
     },
     {
       "game_pk": 824550,
