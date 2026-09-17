@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MLB Predictions</title>
+  <title>MLB Predictions — Reward Model</title>
   <style>
     body {
         font-family: Arial, sans-serif;
@@ -40,9 +40,9 @@
     }
 
     .tab.active {
-        background: #2563eb;
+        background: #16a34a;
         color: white;
-        border-color: #2563eb;
+        border-color: #16a34a;
     }
 
     .action-btn {
@@ -52,9 +52,19 @@
     }
 
     .model-link {
-        background: #166534;
-        border-color: #22c55e;
+        background: #1d4ed8;
+        border-color: #60a5fa;
         color: white;
+    }
+
+    .model-note {
+        background: #052e1b;
+        border: 1px solid #22c55e;
+        border-radius: 10px;
+        padding: 12px 14px;
+        margin-bottom: 18px;
+        color: #dcfce7;
+        line-height: 1.5;
     }
 
     .game {
@@ -976,34 +986,45 @@
   <a class="nav-link" href="../index.html">← Back to Home</a>
 
   <div class="topbar">
-    <h1 id="page-title">MLB Predictions</h1>
+    <h1 id="page-title">MLB Predictions — Reward Model</h1>
     <div class="tabs">
+      <a class="action-btn model-link" href="./index.html">All-Years Model Page</a>
       <a class="action-btn model-link" href="./2021-plus.html">2021+ Model Page</a>
-      <button class="action-btn top-choices-btn" id="top-choices-btn">Top Choices</button>
+            <button class="action-btn top-choices-btn" id="top-choices-btn">Top Choices</button>
     </div>
   </div>
 
-  <div class="status" id="status-text">Loading predictions...</div>
+  <div class="model-note">
+    This page uses the separate chronological Reward Model. It learns season-by-season and
+    updates from completed current-season games without replacing the other winner models.
+  </div>
+
+  <div class="model-note">
+    <strong>Confidence system:</strong><br>
+    Strong Pick = selected-team probability ≥ 60%. Strong picks are highlighted red.
+  </div>
+
+  <div class="status" id="status-text">Loading Reward Model predictions...</div>
 
   <div id="top-choices-panel" class="top-choices-panel"></div>
 
   <div id="games-container"></div>
 
   <div class="chart-card">
-    <h2>Accuracy Over Time</h2>
-    <img id="accuracy-chart" src="./accuracy_chart.png" alt="Accuracy chart">
+    <h2>Reward Model Accuracy Over Time</h2>
+    <img id="accuracy-chart" src="./accuracy_chart_reward.png" alt="Reward Model accuracy chart">
   </div>
 
   <div class="chart-card">
-    <h2>Straight-Bet Profit/Loss</h2>
+    <h2>Reward Model Straight-Bet Profit/Loss</h2>
     <div class="betting-summary" id="betting-summary">No settled simulated bets yet.</div>
-    <img id="betting-chart" src="./betting_profit_chart.png" alt="Simulated straight-bet profit/loss chart" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'">
+    <img id="betting-chart" src="./betting_profit_chart_reward.png" alt="Reward Model simulated straight-bet profit/loss chart" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'">
   </div>
 
   <div class="chart-card">
-    <h2>Accuracy by Selected Team</h2>
-    <div class="muted">Accuracy for every finalized prediction, grouped by the team the model selected as the winner. Teams are ranked from highest accuracy to lowest.</div>
-    <img id="team-accuracy-chart" src="./team_prediction_accuracy.png" alt="Accuracy by Selected Team chart">
+    <h2>Reward Model Accuracy by Selected Team</h2>
+    <div class="muted">Accuracy for every finalized live Reward Model prediction, grouped by the team the model selected as the winner. Teams are ranked from highest accuracy to lowest.</div>
+    <img id="team-accuracy-chart" src="./team_prediction_accuracy_reward.png" alt="Reward Model Accuracy by Selected Team chart">
   </div>
 
   <div class="footer-space"></div>
@@ -1177,7 +1198,7 @@
       if (!summary || !chart) return;
 
       try {
-        const response = await fetch("./betting_by_day.csv?_=" + Date.now());
+        const response = await fetch("./betting_by_day_reward.csv?_=" + Date.now());
         if (!response.ok) throw new Error("No betting history yet");
         const text = (await response.text()).trim();
         const lines = text.split(/\r?\n/).filter(Boolean);
@@ -1193,7 +1214,7 @@
         const losses = Math.max(0, bets - wins);
 
         summary.textContent = `Overall: ${formatMoney(pnl)} • ROI: ${roi.toFixed(2)}% • Record: ${wins}-${losses} • Settled bets: ${bets}`;
-        chart.src = "./betting_profit_chart.png?_=" + Date.now();
+        chart.src = "./betting_profit_chart_reward.png?_=" + Date.now();
       } catch (err) {
         summary.textContent = "No settled simulated bets yet. The chart will appear after the first FanDuel-tracked game settles.";
         chart.style.display = "none";
@@ -1816,7 +1837,7 @@
 
 
     function renderGames(payload) {
-      document.getElementById("page-title").textContent = `MLB Predictions for ${payload.date}`;
+      document.getElementById("page-title").textContent = `MLB Predictions — Reward Model for ${payload.date}`;
       const container = document.getElementById("games-container");
       const games = payload.games || [];
 
@@ -1888,7 +1909,7 @@
 
             <div class="expanded-content" onclick="event.stopPropagation()">
               <div class="actual-result">
-                <div><strong>Predicted winner:</strong> ${escapeHtml(game.predicted_winner || "Unknown")}</div>
+                <div><strong>Reward Model Pick:</strong> ${escapeHtml(game.predicted_winner || "Unknown")}</div>
                 <div><strong>Confidence:</strong> <span class="${isStrong ? 'strong-text' : ''}">${escapeHtml(game.confidence_tier || "Normal Pick")}</span></div>
               </div>
 
@@ -1917,9 +1938,9 @@
 
     async function fetchPredictions() {
       try {
-        const response = await fetch("./today_predictions.json?_=" + Date.now());
+        const response = await fetch("./today_predictions_reward.json?_=" + Date.now());
         if (!response.ok) {
-          throw new Error("Could not load today_predictions.json");
+          throw new Error("Could not load today_predictions_reward.json");
         }
 
         const payload = await response.json();
@@ -1928,10 +1949,10 @@
         if (showingTopChoices) renderTopChoices(payload);
 
         const chart = document.getElementById("accuracy-chart");
-        chart.src = "./accuracy_chart.png?_=" + Date.now();
+        chart.src = "./accuracy_chart_reward.png?_=" + Date.now();
 
         const teamAccuracyChart = document.getElementById("team-accuracy-chart");
-        teamAccuracyChart.src = "./team_prediction_accuracy.png?_=" + Date.now();
+        teamAccuracyChart.src = "./team_prediction_accuracy_reward.png?_=" + Date.now();
 
         fetchBettingSummary();
 

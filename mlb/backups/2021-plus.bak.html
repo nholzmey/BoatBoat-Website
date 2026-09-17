@@ -861,6 +861,125 @@
         }
     }
 
+
+
+    /* FanDuel moneyline + simulated betting additions */
+    .moneyline-mini {
+        margin-top: 3px;
+        font-size: 0.76rem;
+        color: #cbd5e1;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    .moneyline-mini .bookmaker-mini {
+        color: #60a5fa;
+    }
+
+    .odds-panel {
+        margin-top: 10px;
+        margin-bottom: 12px;
+        padding: 12px 14px;
+        border-radius: 8px;
+        background: #020617;
+        border: 1px solid #334155;
+        line-height: 1.45;
+    }
+
+    .odds-title-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+    }
+
+    .odds-title {
+        font-weight: bold;
+        color: #f8fafc;
+    }
+
+    .odds-caption {
+        color: #9ca3af;
+        font-size: 0.78rem;
+    }
+
+    .odds-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .odds-team {
+        background: #111827;
+        border: 1px solid #374151;
+        border-radius: 8px;
+        padding: 9px 10px;
+        min-width: 0;
+    }
+
+    .odds-team-name {
+        font-weight: bold;
+        margin-bottom: 5px;
+        overflow-wrap: anywhere;
+    }
+
+    .odds-values {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 3px 8px;
+        font-size: 0.86rem;
+    }
+
+    .odds-label {
+        color: #9ca3af;
+    }
+
+    .odds-number {
+        font-weight: bold;
+        text-align: right;
+    }
+
+    .bet-line {
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 8px;
+        background: #111827;
+        border: 1px solid #374151;
+        font-size: 0.9rem;
+    }
+
+    .bet-won {
+        color: #22c55e;
+        border-color: rgba(34, 197, 94, 0.55);
+    }
+
+    .bet-lost {
+        color: #ef4444;
+        border-color: rgba(239, 68, 68, 0.55);
+    }
+
+    .bet-pending {
+        color: #facc15;
+    }
+
+    .betting-summary {
+        margin-bottom: 10px;
+        color: #cbd5e1;
+        font-weight: 600;
+    }
+
+    @media (max-width: 760px) {
+        .odds-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .moneyline-mini {
+            white-space: normal;
+        }
+    }
+
   </style>
 </head>
 <body>
@@ -893,6 +1012,18 @@
   <div class="chart-card">
     <h2>2021+ Model Accuracy Over Time</h2>
     <img id="accuracy-chart" src="./accuracy_chart_2021_plus.png" alt="2021+ model accuracy chart">
+  </div>
+
+  <div class="chart-card">
+    <h2>2021+ Model Straight-Bet Profit/Loss</h2>
+    <div class="betting-summary" id="betting-summary">No settled simulated bets yet.</div>
+    <img id="betting-chart" src="./betting_profit_chart_2021_plus.png" alt="2021+ model simulated straight-bet profit/loss chart" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'">
+  </div>
+
+  <div class="chart-card">
+    <h2>2021+ Model Accuracy by Selected Team</h2>
+    <div class="muted">Accuracy for every finalized 2021+ prediction, grouped by the team the model selected as the winner. Teams are ranked from highest accuracy to lowest.</div>
+    <img id="team-accuracy-chart" src="./team_prediction_accuracy_2021_plus.png" alt="2021+ Model Accuracy by Selected Team chart">
   </div>
 
   <div class="footer-space"></div>
@@ -974,6 +1105,121 @@
 
       return `<span class="${success ? "stat-hit" : "stat-miss"}">${value}</span>`;
   }
+
+
+
+    function formatMoneyline(value) {
+      if (value === null || value === undefined || value === "") return "N/A";
+      const n = Number(value);
+      if (!Number.isFinite(n)) return "N/A";
+      return n > 0 ? `+${Math.trunc(n)}` : `${Math.trunc(n)}`;
+    }
+
+    function formatMoney(value) {
+      if (value === null || value === undefined || value === "") return "—";
+      const n = Number(value);
+      if (!Number.isFinite(n)) return "—";
+      const sign = n > 0 ? "+" : n < 0 ? "-" : "";
+      return `${sign}$${Math.abs(n).toFixed(2)}`;
+    }
+
+    function currentMoneylineForTeam(game, side) {
+      const value = side === "home"
+        ? game.current_home_moneyline
+        : game.current_away_moneyline;
+      return formatMoneyline(value);
+    }
+
+    function renderMoneylineMini(game, side) {
+      const value = side === "home"
+        ? game.current_home_moneyline
+        : game.current_away_moneyline;
+      if (value === null || value === undefined || value === "") {
+        return '<div class="moneyline-mini"><span class="bookmaker-mini">FD ML</span> N/A</div>';
+      }
+      return `<div class="moneyline-mini"><span class="bookmaker-mini">FD ML</span> ${formatMoneyline(value)}</div>`;
+    }
+
+    function renderMoneylineAndBet(game) {
+      const bookmaker = escapeHtml(game.moneyline_bookmaker || "FanDuel");
+      const awayCurrent = formatMoneyline(game.current_away_moneyline);
+      const homeCurrent = formatMoneyline(game.current_home_moneyline);
+      const awayPregame = formatMoneyline(game.pregame_away_moneyline);
+      const homePregame = formatMoneyline(game.pregame_home_moneyline);
+
+      const betTeam = game.simulated_bet_team;
+      const betStatus = game.simulated_bet_status || "not_placed";
+      let betClass = "bet-pending";
+      if (betStatus === "won") betClass = "bet-won";
+      if (betStatus === "lost") betClass = "bet-lost";
+
+      let betText = "Waiting for a FanDuel line before locking the $100 simulated straight bet.";
+      if (betTeam) {
+        const stake = Number(game.simulated_bet_stake || 100).toFixed(2);
+        const line = formatMoneyline(game.simulated_bet_moneyline);
+        const statusLabel = betStatus.replaceAll("_", " ");
+        const pnl = game.simulated_bet_profit_loss === null || game.simulated_bet_profit_loss === undefined
+          ? ""
+          : ` • P/L: ${formatMoney(game.simulated_bet_profit_loss)}`;
+        betText = `$${stake} on ${escapeHtml(betTeam)} at ${line} • ${escapeHtml(statusLabel)}${pnl}`;
+      }
+
+      return `
+        <div class="odds-panel">
+          <div class="odds-title-row">
+            <div class="odds-title">${bookmaker} Moneyline</div>
+            <div class="odds-caption">Current line updates during pregame • Pregame freezes at first pitch</div>
+          </div>
+          <div class="odds-grid">
+            <div class="odds-team">
+              <div class="odds-team-name">${escapeHtml(game.away_team)}</div>
+              <div class="odds-values">
+                <span class="odds-label">Current</span><span class="odds-number">${awayCurrent}</span>
+                <span class="odds-label">Pregame</span><span class="odds-number">${awayPregame}</span>
+              </div>
+            </div>
+            <div class="odds-team">
+              <div class="odds-team-name">${escapeHtml(game.home_team)}</div>
+              <div class="odds-values">
+                <span class="odds-label">Current</span><span class="odds-number">${homeCurrent}</span>
+                <span class="odds-label">Pregame</span><span class="odds-number">${homePregame}</span>
+              </div>
+            </div>
+          </div>
+          <div class="bet-line ${betClass}"><strong>Simulated straight bet:</strong> ${betText}</div>
+        </div>
+      `;
+    }
+
+    async function fetchBettingSummary() {
+      const summary = document.getElementById("betting-summary");
+      const chart = document.getElementById("betting-chart");
+      if (!summary || !chart) return;
+
+      try {
+        const response = await fetch("./betting_by_day_2021_plus.csv?_=" + Date.now());
+        if (!response.ok) throw new Error("No betting history yet");
+        const text = (await response.text()).trim();
+        const lines = text.split(/\r?\n/).filter(Boolean);
+        if (lines.length < 2) throw new Error("No settled bets yet");
+
+        const headers = lines[0].split(",");
+        const values = lines[lines.length - 1].split(",");
+        const row = Object.fromEntries(headers.map((h, i) => [h, values[i]]));
+        const pnl = Number(row.cumulative_profit_loss || 0);
+        const roi = Number(row.cumulative_roi_pct || 0);
+        const bets = Number(row.cumulative_bets || 0);
+        const wins = Number(row.cumulative_wins || 0);
+        const losses = Math.max(0, bets - wins);
+
+        summary.textContent = `Overall: ${formatMoney(pnl)} • ROI: ${roi.toFixed(2)}% • Record: ${wins}-${losses} • Settled bets: ${bets}`;
+        chart.src = "./betting_profit_chart_2021_plus.png?_=" + Date.now();
+      } catch (err) {
+        summary.textContent = "No settled simulated bets yet. The chart will appear after the first FanDuel-tracked game settles.";
+        chart.style.display = "none";
+      }
+    }
+
 
     function escapeHtml(text) {
       if (text === null || text === undefined) return "";
@@ -1642,6 +1888,7 @@
                 <div>
                   <div class="team-name">${escapeHtml(game.away_team)}</div>
                   <div class="team-probability">${pct(game.away_win_probability)}%</div>
+                  ${renderMoneylineMini(game, "away")}
                 </div>
               </div>
 
@@ -1652,6 +1899,7 @@
                 <div>
                   <div class="team-name">${escapeHtml(game.home_team)}</div>
                   <div class="team-probability">${pct(game.home_win_probability)}%</div>
+                  ${renderMoneylineMini(game, "home")}
                 </div>
               </div>
             </div>
@@ -1665,6 +1913,8 @@
               </div>
 
               ${renderActualResult(game)}
+
+              ${renderMoneylineAndBet(game)}
 
               ${renderLiveGameState(game)}
 
@@ -1699,6 +1949,11 @@
 
         const chart = document.getElementById("accuracy-chart");
         chart.src = "./accuracy_chart_2021_plus.png?_=" + Date.now();
+
+        const teamAccuracyChart = document.getElementById("team-accuracy-chart");
+        teamAccuracyChart.src = "./team_prediction_accuracy_2021_plus.png?_=" + Date.now();
+
+        fetchBettingSummary();
 
         document.getElementById("status-text").textContent =
           "Last checked: " + new Date().toLocaleTimeString();
