@@ -970,7 +970,71 @@
         font-weight: 600;
     }
 
+    .qualification-panel {
+        margin-top: 12px;
+        margin-bottom: 12px;
+        padding: 12px 14px;
+        border-radius: 10px;
+        background: #020617;
+        border: 1px solid #334155;
+    }
+
+    .qualification-panel-title {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .qualification-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px 14px;
+    }
+
+    .qualification-metric {
+        padding: 9px 10px;
+        border-radius: 8px;
+        background: #111827;
+        border: 1px solid #334155;
+    }
+
+    .qualification-metric.pass { border-color: rgba(34,197,94,0.55); }
+    .qualification-metric.fail { border-color: rgba(239,68,68,0.60); }
+
+    .qualification-metric-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        font-size: 0.82rem;
+        margin-bottom: 6px;
+    }
+
+    .qualification-track {
+        height: 10px;
+        border-radius: 999px;
+        overflow: hidden;
+        background: #334155;
+        position: relative;
+    }
+
+    .qualification-fill { height: 100%; border-radius: 999px; }
+    .qualification-fill.pass { background: #22c55e; }
+    .qualification-fill.fail { background: #ef4444; }
+
+    .qualification-caption {
+        margin-top: 5px;
+        font-size: 0.77rem;
+        color: #cbd5e1;
+    }
+
+    .qualification-pass-text { color: #22c55e; font-weight: bold; }
+    .qualification-fail-text { color: #f87171; font-weight: bold; }
+
     @media (max-width: 760px) {
+        .qualification-grid { grid-template-columns: 1fr; }
         .odds-grid {
             grid-template-columns: 1fr;
         }
@@ -999,13 +1063,13 @@
 
   <div class="model-note">
     <strong>Savant Fusion v3:</strong> eight baseball experts now include full-history, recent-season, and dedicated 2021+ modern-era CatBoost/XGBoost models alongside elastic-net logistic regression and Extra Trees. A second-stage reliability/abstention classifier estimates how trustworthy each individual game prediction is using expert agreement, matchup context, data completeness, and prior team/starter reliability.
-    It forecasts every game, but only <strong>Qualified Picks</strong> count toward the 60% target and simulated betting. Qualification uses separate home/away confidence gates plus a reliability-score gate, expert-agreement limit, and advanced-data coverage requirement, and is enabled only when the untouched holdout still reaches at least 60%.
+    It <strong>always makes a pick for every game</strong>. The Qualified Pick gate is an additional reliability label, not an abstention from forecasting. Each game shows exactly how far it is from each validated gate. Simulated betting now tracks two parallel $100 strategies using the same locked pregame FanDuel line: <strong>$100 on every pick</strong> and <strong>$100 on Qualified Picks only</strong>.
   </div>
 
   <div class="chart-card" id="validation-card" style="margin-top:0;">
     <h2 style="margin-top:0;">Model Validation</h2>
     <div id="validation-summary" class="betting-summary">Loading holdout validation...</div>
-    <div class="muted">The ensemble, reliability classifier, reliability calibration, qualification policy, and final holdout use separate chronological seasons. If the untouched holdout misses 60%, official Qualified Picks and Savant Fusion bets remain disabled.</div>
+    <div class="muted">The ensemble, reliability classifier, reliability calibration, qualification policy, and final holdout use separate chronological seasons. The model always forecasts every game; the Qualified label identifies the subset that passed the independently validated 60%+ gate.</div>
   </div>
 
   <div class="status" id="status-text">Loading Savant Fusion v3 predictions...</div>
@@ -1020,14 +1084,36 @@
   </div>
 
   <div class="chart-card">
-    <h2>Savant Fusion Qualified-Pick Straight-Bet Profit/Loss</h2>
-    <div class="betting-summary" id="betting-summary">No settled simulated bets yet.</div>
-    <img id="betting-chart" src="./betting_profit_chart_advanced.png" alt="Savant Fusion qualified-pick simulated straight-bet profit/loss chart" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'">
+    <h2>$100 Strategy — Every Savant Pick</h2>
+    <div class="betting-summary" id="betting-summary-all">No settled all-pick simulated bets yet.</div>
+    <img id="betting-chart-all" src="./betting_profit_chart_advanced_all.png" alt="Savant Fusion all-pick simulated straight-bet profit/loss chart" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'">
+  </div>
+
+  <div class="chart-card">
+    <h2>$100 Strategy — Qualified Picks Only</h2>
+    <div class="betting-summary" id="betting-summary-qualified">No settled qualified simulated bets yet.</div>
+    <img id="betting-chart-qualified" src="./betting_profit_chart_advanced.png" alt="Savant Fusion qualified-pick simulated straight-bet profit/loss chart" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'">
+  </div>
+
+  <div class="chart-card">
+    <h2>Betting Strategy Comparison — Cumulative Profit/Loss</h2>
+    <div class="muted">Both lines use $100 per selected game and the same frozen pregame FanDuel moneyline. The Qualified line is simply the validated subset of the All-Picks ledger.</div>
+    <img id="betting-comparison-chart" src="./betting_profit_comparison_advanced.png" alt="Savant Fusion betting strategy cumulative profit comparison" onerror="this.style.display='none'">
+  </div>
+
+  <div class="chart-card">
+    <h2>Betting Strategy Comparison — ROI</h2>
+    <img id="betting-roi-chart" src="./betting_roi_comparison_advanced.png" alt="Savant Fusion betting strategy ROI comparison" onerror="this.style.display='none'">
+  </div>
+
+  <div class="chart-card">
+    <h2>Savant Fusion Accuracy by Selected Team — All Picks</h2>
+    <img id="team-accuracy-all-chart" src="./team_prediction_accuracy_advanced_all.png" alt="Savant Fusion Accuracy by Selected Team — All Picks chart">
   </div>
 
   <div class="chart-card">
     <h2>Savant Fusion Accuracy by Selected Team — Qualified Picks</h2>
-    <div class="muted">Accuracy only for finalized Qualified Picks, grouped by the team Savant Fusion selected. Unqualified forecasts are excluded from this chart.</div>
+    <div class="muted">Accuracy only for finalized Qualified Picks, grouped by the team Savant Fusion selected.</div>
     <img id="team-accuracy-chart" src="./team_prediction_accuracy_advanced.png" alt="Savant Fusion Accuracy by Selected Team — Qualified Picks chart">
   </div>
 
@@ -1169,6 +1255,10 @@
         betText = `$${stake} on ${escapeHtml(betTeam)} at ${line} • ${escapeHtml(statusLabel)}${pnl}`;
       }
 
+      const qualifiedStrategy = game.is_qualified_pick
+        ? '<span class="qualification-pass-text">Included in Qualified-Picks $100 strategy</span>'
+        : '<span class="stat-pending">Skipped by Qualified-Picks strategy; still included in All-Picks $100 strategy</span>';
+
       return `
         <div class="odds-panel">
           <div class="odds-title-row">
@@ -1191,23 +1281,22 @@
               </div>
             </div>
           </div>
-          <div class="bet-line ${betClass}"><strong>Simulated straight bet:</strong> ${betText}</div>
+          <div class="bet-line ${betClass}"><strong>All-Picks $100 simulated bet:</strong> ${betText}</div>
+          <div class="bet-line bet-pending"><strong>Qualified strategy:</strong> ${qualifiedStrategy}</div>
         </div>
       `;
     }
 
-    async function fetchBettingSummary() {
-      const summary = document.getElementById("betting-summary");
-      const chart = document.getElementById("betting-chart");
+    async function fetchOneBettingSummary(csvFile, summaryId, chartId, chartFile, emptyText) {
+      const summary = document.getElementById(summaryId);
+      const chart = document.getElementById(chartId);
       if (!summary || !chart) return;
-
       try {
-        const response = await fetch("./betting_by_day_advanced.csv?_=" + Date.now());
+        const response = await fetch(`${csvFile}?_=${Date.now()}`);
         if (!response.ok) throw new Error("No betting history yet");
         const text = (await response.text()).trim();
         const lines = text.split(/\r?\n/).filter(Boolean);
         if (lines.length < 2) throw new Error("No settled bets yet");
-
         const headers = lines[0].split(",");
         const values = lines[lines.length - 1].split(",");
         const row = Object.fromEntries(headers.map((h, i) => [h, values[i]]));
@@ -1215,14 +1304,31 @@
         const roi = Number(row.cumulative_roi_pct || 0);
         const bets = Number(row.cumulative_bets || 0);
         const wins = Number(row.cumulative_wins || 0);
-        const losses = Math.max(0, bets - wins);
-
+        const losses = Number(row.cumulative_losses ?? Math.max(0, bets - wins));
         summary.textContent = `Overall: ${formatMoney(pnl)} • ROI: ${roi.toFixed(2)}% • Record: ${wins}-${losses} • Settled bets: ${bets}`;
-        chart.src = "./betting_profit_chart_advanced.png?_=" + Date.now();
+        chart.src = `${chartFile}?_=${Date.now()}`;
+        chart.style.display = "block";
       } catch (err) {
-        summary.textContent = "No settled simulated bets yet. The chart will appear after the first FanDuel-tracked game settles.";
+        summary.textContent = emptyText;
         chart.style.display = "none";
       }
+    }
+
+    function fetchBettingSummaries() {
+      fetchOneBettingSummary(
+        "./betting_by_day_advanced_all.csv",
+        "betting-summary-all",
+        "betting-chart-all",
+        "./betting_profit_chart_advanced_all.png",
+        "No settled all-pick simulated bets yet. New unqualified bets begin tracking after this update; historical moneylines are not fabricated."
+      );
+      fetchOneBettingSummary(
+        "./betting_by_day_advanced.csv",
+        "betting-summary-qualified",
+        "betting-chart-qualified",
+        "./betting_profit_chart_advanced.png",
+        "No settled Qualified-Pick simulated bets yet."
+      );
     }
 
 
@@ -1614,6 +1720,13 @@
         </div>
       `;
 
+      const qualificationBlock = `
+        <div>
+          <span class="summary-label">Qualification</span>
+          <span class="summary-value ${game.is_qualified_pick ? 'qualification-pass-text' : 'stat-pending'}">${game.is_qualified_pick ? 'QUALIFIED' : `${Number(game.qualification_gates_passed || 0)}/4 gates`}</span>
+        </div>
+      `;
+
       const batterBlock = `
         <div>
           <span class="summary-label">Batter</span>
@@ -1625,6 +1738,7 @@
         return `
           <div class="compact-summary">
             ${pickBlock}
+            ${qualificationBlock}
             ${resultBlock}
           </div>
         `;
@@ -1634,14 +1748,16 @@
         return `
           <div class="compact-summary">
             ${pickBlock}
+            ${qualificationBlock}
             ${batterBlock}
           </div>
         `;
       }
 
       return `
-        <div class="compact-summary only-pick">
+        <div class="compact-summary">
           ${pickBlock}
+          ${qualificationBlock}
         </div>
       `;
     }
@@ -1840,6 +1956,66 @@
     }
 
 
+    function gateMetricMarkup(check) {
+      if (!check) return "";
+      const actual = Number(check.actual || 0);
+      const required = Number(check.required || 0);
+      const passed = !!check.passed;
+      const direction = check.direction || "min";
+      const shortfall = Number(check.shortfall || 0);
+      let fill;
+      if (direction === "min") {
+        fill = required > 0 ? Math.min(100, (actual / required) * 100) : 100;
+      } else {
+        fill = required > 0 ? Math.min(100, (actual / required) * 100) : 100;
+      }
+      const actualText = `${(actual * 100).toFixed(1)}%`;
+      const requirementText = direction === "min"
+        ? `need ≥ ${(required * 100).toFixed(1)}%`
+        : `need ≤ ${(required * 100).toFixed(1)}%`;
+      const gapText = passed
+        ? "PASS"
+        : direction === "min"
+          ? `short ${(shortfall * 100).toFixed(1)} pts`
+          : `over by ${(shortfall * 100).toFixed(1)} pts`;
+      return `
+        <div class="qualification-metric ${passed ? 'pass' : 'fail'}">
+          <div class="qualification-metric-head">
+            <strong>${escapeHtml(check.label || "Gate")}</strong>
+            <span class="${passed ? 'qualification-pass-text' : 'qualification-fail-text'}">${gapText}</span>
+          </div>
+          <div class="qualification-track">
+            <div class="qualification-fill ${passed ? 'pass' : 'fail'}" style="width:${Math.max(2, fill).toFixed(1)}%"></div>
+          </div>
+          <div class="qualification-caption">Actual ${actualText} • ${requirementText}</div>
+        </div>
+      `;
+    }
+
+    function renderQualificationPanel(game) {
+      const checks = game.qualification_checks || {};
+      const entries = [
+        checks.confidence,
+        checks.reliability,
+        checks.expert_disagreement,
+        checks.feature_completeness,
+      ].filter(Boolean);
+      if (!entries.length) return "";
+      const passed = Number(game.qualification_gates_passed || entries.filter(x => x.passed).length);
+      const status = game.is_qualified_pick
+        ? '<span class="qualification-pass-text">QUALIFIED PICK</span>'
+        : `<span class="qualification-fail-text">${passed}/4 gates passed</span>`;
+      return `
+        <div class="qualification-panel">
+          <div class="qualification-panel-title">
+            <span>Qualification Gap</span>
+            ${status}
+          </div>
+          <div class="qualification-grid">${entries.map(gateMetricMarkup).join("")}</div>
+        </div>
+      `;
+    }
+
     function renderGames(payload) {
       document.getElementById("page-title").textContent = `MLB Predictions — Savant Fusion v3 for ${payload.date}`;
       const container = document.getElementById("games-container");
@@ -1883,7 +2059,7 @@
         return `
           <div id="${cardId}" class="game" onclick="toggleGameCard(${index})">
             <div class="compact-game-header">
-              <span class="${game.is_qualified_pick ? 'prediction-correct' : 'stat-pending'}">${game.is_qualified_pick ? 'QUALIFIED PICK' : 'Unqualified forecast'}</span>
+              <span class="${game.is_qualified_pick ? 'prediction-correct' : 'stat-pending'}">${game.is_qualified_pick ? 'QUALIFIED PICK' : `${Number(game.qualification_gates_passed || 0)}/4 gates • PICK STILL ACTIVE`}</span>
               <span class="compact-expand-hint">Click to expand</span>
             </div>
 
@@ -1914,7 +2090,7 @@
             <div class="expanded-content" onclick="event.stopPropagation()">
               <div class="actual-result">
                 <div><strong>Savant Fusion v3 Pick:</strong> ${escapeHtml(game.predicted_winner || "Unknown")}</div>
-                <div><strong>Qualification:</strong> <span class="${game.is_qualified_pick ? 'prediction-correct' : 'stat-pending'}">${game.is_qualified_pick ? 'QUALIFIED PICK' : 'Unqualified forecast'}</span></div>
+                <div><strong>Qualification:</strong> <span class="${game.is_qualified_pick ? 'prediction-correct' : 'stat-pending'}">${game.is_qualified_pick ? 'QUALIFIED PICK' : 'STANDARD PICK — NOT QUALIFIED'}</span></div>
                 <div><strong>Reliability score:</strong> ${((Number(game.reliability_score || 0))*100).toFixed(1)}%</div>
                 <div><strong>Advanced feature coverage:</strong> ${((Number(game.advanced_feature_completeness || 0))*100).toFixed(0)}%</div>
                 <div><strong>Expert disagreement:</strong> ${((Number(game.expert_disagreement || 0))*100).toFixed(1)} pts</div>
@@ -1924,6 +2100,8 @@
                 <div><strong>Qualification detail:</strong> ${escapeHtml((game.qualification_reasons || []).join(", ") || "—")}</div>
                 <div><strong>FanDuel no-vig diagnostic:</strong> ${game.market_home_win_probability == null ? "N/A" : `${escapeHtml(game.home_team)} ${(Number(game.market_home_win_probability)*100).toFixed(1)}% • selected-team edge ${(Number(game.model_market_edge || 0)*100).toFixed(1)} pts`}</div>
               </div>
+
+              ${renderQualificationPanel(game)}
 
               ${renderActualResult(game)}
 
@@ -1963,7 +2141,7 @@
         if (policy.target_met) {
           el.innerHTML = `<span class="prediction-correct">60% TARGET MET</span> • Holdout ${data.holdout_season}: ${holdAcc.toFixed(2)}% all-game • Qualified: ${Number(policy.holdout_accuracy_pct || 0).toFixed(2)}% on ${Number(policy.holdout_games || 0)} games • Coverage: ${Number(policy.holdout_coverage_pct || 0).toFixed(1)}% • Home confidence ≥ ${(Number(policy.home_confidence_threshold || 0)*100).toFixed(0)}% • Away confidence ≥ ${(Number(policy.away_confidence_threshold || 0)*100).toFixed(0)}% • Reliability ≥ ${(Number(policy.reliability_threshold || 0)*100).toFixed(0)}% • Expert σ ≤ ${(Number(policy.max_expert_std || 0)*100).toFixed(1)} pts • Feature coverage ≥ ${(Number(policy.min_feature_completeness || 0)*100).toFixed(0)}% • ${escapeHtml(strategy)} • Reliability model: ${escapeHtml(data.reliability_model || "Unknown")}`;
         } else {
-          el.innerHTML = `<span class="prediction-wrong">60% QUALIFIED-PICK TARGET NOT MET</span> • Holdout ${data.holdout_season}: ${holdAcc.toFixed(2)}% all-game accuracy • Selected ensemble: ${escapeHtml(strategy)} • Reliability model: ${escapeHtml(data.reliability_model || "Unknown")} • Official qualified picks are disabled.`;
+          el.innerHTML = `<span class="prediction-wrong">60% QUALIFIED-PICK TARGET NOT MET</span> • Holdout ${data.holdout_season}: ${holdAcc.toFixed(2)}% all-game accuracy • Selected ensemble: ${escapeHtml(strategy)} • Reliability model: ${escapeHtml(data.reliability_model || "Unknown")} • The model still publishes every pick; the Qualified label is disabled.`;
         }
       } catch (err) {
         el.textContent = err.message;
@@ -1988,7 +2166,16 @@
         const teamAccuracyChart = document.getElementById("team-accuracy-chart");
         teamAccuracyChart.src = "./team_prediction_accuracy_advanced.png?_=" + Date.now();
 
-        fetchBettingSummary();
+        const teamAccuracyAllChart = document.getElementById("team-accuracy-all-chart");
+        teamAccuracyAllChart.src = "./team_prediction_accuracy_advanced_all.png?_=" + Date.now();
+
+        const bettingComparisonChart = document.getElementById("betting-comparison-chart");
+        bettingComparisonChart.src = "./betting_profit_comparison_advanced.png?_=" + Date.now();
+
+        const bettingRoiChart = document.getElementById("betting-roi-chart");
+        bettingRoiChart.src = "./betting_roi_comparison_advanced.png?_=" + Date.now();
+
+        fetchBettingSummaries();
 
         document.getElementById("status-text").textContent =
           "Last checked: " + new Date().toLocaleTimeString();
