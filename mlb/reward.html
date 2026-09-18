@@ -990,7 +990,9 @@
     <div class="tabs">
       <a class="action-btn model-link" href="./index.html">All-Years Model Page</a>
       <a class="action-btn model-link" href="./2021-plus.html">2021+ Model Page</a>
-            <a class="action-btn model-link" href="./comparison.html">Model Comparison Page</a>
+            <a class="action-btn model-link" href="./advanced.html">Savant Fusion Page</a>
+      <a class="action-btn model-link" href="./comparison.html">Model Comparison Page</a>
+      <a class="action-btn model-link postseason-nav" href="./postseason.html" style="display:none;">Postseason Mode</a>
       <button class="action-btn top-choices-btn" id="top-choices-btn">Top Choices</button>
     </div>
   </div>
@@ -1975,6 +1977,25 @@
 
     fetchPredictions();
     setInterval(fetchPredictions, 30000);
+  </script>
+
+  <script>
+    async function refreshPostseasonNav() {
+      try {
+        const response = await fetch("./postseason_state.json?_=" + Date.now());
+        if (!response.ok) return;
+        const state = await response.json();
+        document.querySelectorAll(".postseason-nav").forEach(link => {
+          link.style.display = state.active ? "inline-block" : "none";
+        });
+      } catch (_) {
+        document.querySelectorAll(".postseason-nav").forEach(link => {
+          link.style.display = "none";
+        });
+      }
+    }
+    refreshPostseasonNav();
+    setInterval(refreshPostseasonNav, 60000);
   </script>
 </body>
 </html>

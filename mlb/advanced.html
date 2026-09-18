@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MLB Predictions — Model Comparison</title>
+  <title>MLB Predictions — Savant Fusion</title>
   <style>
     body {
         font-family: Arial, sans-serif;
@@ -105,14 +105,14 @@
 
     .team-box.strong-pick {
         transform: scale(1.05);
-        border: 2px solid #ef4444 !important;
-        background: #450a0a !important;
-        box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.35);
+        border: 2px solid #22c55e !important;
+        background: #052e1b !important;
+        box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.35);
         font-weight: bold;
     }
 
     .strong-text {
-        color: #ef4444 !important;
+        color: #22c55e !important;
     }
 
     .team-box.loser {
@@ -980,128 +980,55 @@
         }
     }
 
-    .game.agreement-green {
-      border: 2px solid #22c55e;
-      background: linear-gradient(180deg, rgba(34,197,94,0.13), rgba(30,41,59,0.98));
-      box-shadow: 0 0 0 1px rgba(34,197,94,0.12), 0 8px 24px rgba(34,197,94,0.08);
-    }
-
-    .game.agreement-yellow {
-      border: 2px solid #facc15;
-      background: linear-gradient(180deg, rgba(250,204,21,0.11), rgba(30,41,59,0.98));
-      box-shadow: 0 0 0 1px rgba(250,204,21,0.10), 0 8px 24px rgba(250,204,21,0.06);
-    }
-
-    .agreement-badge {
-      display: inline-block;
-      padding: 4px 9px;
-      border-radius: 999px;
-      font-weight: 800;
-      font-size: 0.8rem;
-    }
-
-    .agreement-badge.green {
-      color: #bbf7d0;
-      background: rgba(34,197,94,0.17);
-      border: 1px solid rgba(34,197,94,0.55);
-    }
-
-    .agreement-badge.yellow {
-      color: #fef08a;
-      background: rgba(250,204,21,0.14);
-      border: 1px solid rgba(250,204,21,0.50);
-    }
-
-    .model-picks-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .model-pick-box {
-      background: #111827;
-      border: 1px solid #374151;
-      border-radius: 8px;
-      padding: 9px;
-    }
-
-    .model-pick-name {
-      color: #94a3b8;
-      font-size: 0.78rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .model-pick-value {
-      color: #f8fafc;
-      font-weight: 800;
-      margin-top: 4px;
-    }
-
-    @media (max-width: 760px) {
-      .model-picks-grid { grid-template-columns: 1fr; }
-    }
-
   </style>
 </head>
 <body>
   <a class="nav-link" href="../index.html">← Back to Home</a>
 
   <div class="topbar">
-    <h1 id="page-title">MLB Predictions — Model Comparison</h1>
+    <h1 id="page-title">MLB Predictions — Savant Fusion</h1>
     <div class="tabs">
       <a class="action-btn model-link" href="./index.html">All-Years Model Page</a>
       <a class="action-btn model-link" href="./2021-plus.html">2021+ Model Page</a>
       <a class="action-btn model-link" href="./reward.html">Reward Model Page</a>
-      <a class="action-btn model-link" href="./advanced.html">Savant Fusion Page</a>
+      <a class="action-btn model-link" href="./comparison.html">Model Comparison Page</a>
       <a class="action-btn model-link postseason-nav" href="./postseason.html" style="display:none;">Postseason Mode</a>
       <button class="action-btn top-choices-btn" id="top-choices-btn">Top Choices</button>
     </div>
   </div>
 
   <div class="model-note">
-    <strong>Consensus comparison:</strong> each game shows the picks from the All-Years, 2021+, and Reward models.
-    <strong style="color:#22c55e;">Green</strong> means all 3 models selected the same team.
-    <strong style="color:#facc15;">Yellow</strong> means 2 of the 3 models selected the consensus team.
-    The comparison strategy places one independent $100 simulated FanDuel bet on the consensus pick.
+    <strong>Savant Fusion:</strong> a stacked ensemble using CatBoost, XGBoost, elastic-net logistic regression, Extra Trees, and rolling Statcast features.
+    It forecasts every game, but only <strong>Qualified Picks</strong> count toward the 60% target and simulated betting. Qualification is enabled only when the latest untouched chronological holdout reached at least 60% accuracy.
   </div>
 
-  <div class="status" id="status-text">Loading model-comparison predictions...</div>
+  <div class="chart-card" id="validation-card" style="margin-top:0;">
+    <h2 style="margin-top:0;">Model Validation</h2>
+    <div id="validation-summary" class="betting-summary">Loading holdout validation...</div>
+    <div class="muted">The qualified-pick threshold is learned only from chronological out-of-sample predictions. If the 60% target is not met, official qualified picks and Savant Fusion bets remain disabled.</div>
+  </div>
+
+  <div class="status" id="status-text">Loading Savant Fusion predictions...</div>
 
   <div id="top-choices-panel" class="top-choices-panel"></div>
 
   <div id="games-container"></div>
 
   <div class="chart-card">
-    <h2>Model Comparison Accuracy Over Time</h2>
-    <div class="muted">Four lines: daily and cumulative accuracy for all consensus games, plus daily and cumulative accuracy for green 3/3-agreement games only.</div>
-    <img id="accuracy-chart" src="./accuracy_chart_comparison.png" alt="Model Comparison accuracy chart">
+    <h2>Savant Fusion Accuracy Over Time</h2>
+    <img id="accuracy-chart" src="./accuracy_chart_advanced.png" alt="Savant Fusion accuracy chart">
   </div>
 
   <div class="chart-card">
-    <h2>Consensus Betting — All Games</h2>
-    <div class="betting-summary" id="betting-summary-all">No settled comparison bets yet.</div>
-    <img id="betting-chart-all" src="./betting_profit_chart_comparison.png" alt="Comparison all-games betting chart" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'">
+    <h2>Savant Fusion Qualified-Pick Straight-Bet Profit/Loss</h2>
+    <div class="betting-summary" id="betting-summary">No settled simulated bets yet.</div>
+    <img id="betting-chart" src="./betting_profit_chart_advanced.png" alt="Savant Fusion qualified-pick simulated straight-bet profit/loss chart" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'">
   </div>
 
   <div class="chart-card">
-    <h2>Consensus Betting — Green Games Only</h2>
-    <div class="betting-summary" id="betting-summary-green">No settled green-game bets yet.</div>
-    <img id="betting-chart-green" src="./betting_profit_chart_comparison_green.png" alt="Comparison green-games betting chart" style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'">
-  </div>
-
-  <div class="chart-card">
-    <h2>Consensus Accuracy by Selected Team — All Games</h2>
-    <div class="muted">Accuracy and selection count for the majority consensus pick across every comparison game.</div>
-    <img id="team-accuracy-chart-all" src="./team_prediction_accuracy_comparison.png" alt="Comparison accuracy by selected team chart">
-  </div>
-
-  <div class="chart-card">
-    <h2>Consensus Accuracy by Selected Team — Green Games Only</h2>
-    <div class="muted">Accuracy and selection count only when all three models selected the same team.</div>
-    <img id="team-accuracy-chart-green" src="./team_prediction_accuracy_comparison_green.png" alt="Green comparison accuracy by selected team chart">
+    <h2>Savant Fusion Accuracy by Selected Team — Qualified Picks</h2>
+    <div class="muted">Accuracy only for finalized Qualified Picks, grouped by the team Savant Fusion selected. Unqualified forecasts are excluded from this chart.</div>
+    <img id="team-accuracy-chart" src="./team_prediction_accuracy_advanced.png" alt="Savant Fusion Accuracy by Selected Team — Qualified Picks chart">
   </div>
 
   <div class="footer-space"></div>
@@ -1269,13 +1196,13 @@
       `;
     }
 
-    async function fetchComparisonBettingSummary(csvPath, chartPath, summaryId, chartId, label) {
-      const summary = document.getElementById(summaryId);
-      const chart = document.getElementById(chartId);
+    async function fetchBettingSummary() {
+      const summary = document.getElementById("betting-summary");
+      const chart = document.getElementById("betting-chart");
       if (!summary || !chart) return;
 
       try {
-        const response = await fetch(csvPath + "?_=" + Date.now());
+        const response = await fetch("./betting_by_day_advanced.csv?_=" + Date.now());
         if (!response.ok) throw new Error("No betting history yet");
         const text = (await response.text()).trim();
         const lines = text.split(/\r?\n/).filter(Boolean);
@@ -1290,10 +1217,10 @@
         const wins = Number(row.cumulative_wins || 0);
         const losses = Math.max(0, bets - wins);
 
-        summary.textContent = `${label}: ${formatMoney(pnl)} • ROI: ${roi.toFixed(2)}% • Record: ${wins}-${losses} • Settled bets: ${bets}`;
-        chart.src = chartPath + "?_=" + Date.now();
+        summary.textContent = `Overall: ${formatMoney(pnl)} • ROI: ${roi.toFixed(2)}% • Record: ${wins}-${losses} • Settled bets: ${bets}`;
+        chart.src = "./betting_profit_chart_advanced.png?_=" + Date.now();
       } catch (err) {
-        summary.textContent = `No settled ${label.toLowerCase()} bets yet.`;
+        summary.textContent = "No settled simulated bets yet. The chart will appear after the first FanDuel-tracked game settles.";
         chart.style.display = "none";
       }
     }
@@ -1914,7 +1841,7 @@
 
 
     function renderGames(payload) {
-      document.getElementById("page-title").textContent = `MLB Predictions — Model Comparison for ${payload.date}`;
+      document.getElementById("page-title").textContent = `MLB Predictions — Savant Fusion for ${payload.date}`;
       const container = document.getElementById("games-container");
       const games = payload.games || [];
 
@@ -1942,7 +1869,7 @@
           ? renderEverythingTable(hitters)
           : renderFilteredTable(hitters, gameView);
 
-        const isStrong = false;
+        const isStrong = !!game.is_confident_pick;
 
         const awayWinnerClass = game.predicted_winner === game.away_team ? "winner" : "loser";
         const homeWinnerClass = game.predicted_winner === game.home_team ? "winner" : "loser";
@@ -1954,9 +1881,9 @@
         const homeActualClass = game.actual_winner === game.home_team ? " actual-winner" : "";
 
         return `
-          <div id="${cardId}" class="game agreement-${game.agreement_level === "green" ? "green" : "yellow"}" onclick="toggleGameCard(${index})">
+          <div id="${cardId}" class="game" onclick="toggleGameCard(${index})">
             <div class="compact-game-header">
-              <span class="agreement-badge ${game.agreement_level === "green" ? "green" : "yellow"}">${game.agreement_count === 3 ? "3/3 Agree" : "2/3 Agree"}</span>
+              <span class="${game.is_qualified_pick ? 'prediction-correct' : 'stat-pending'}">${game.is_qualified_pick ? 'QUALIFIED PICK' : 'Unqualified forecast'}</span>
               <span class="compact-expand-hint">Click to expand</span>
             </div>
 
@@ -1986,12 +1913,10 @@
 
             <div class="expanded-content" onclick="event.stopPropagation()">
               <div class="actual-result">
-                <div><strong>Consensus Pick:</strong> ${escapeHtml(game.predicted_winner || "Unknown")} <span class="agreement-badge ${game.agreement_level === "green" ? "green" : "yellow"}">${game.agreement_count === 3 ? "3/3" : "2/3"}</span></div>
-                <div class="model-picks-grid">
-                  <div class="model-pick-box"><div class="model-pick-name">All-Years</div><div class="model-pick-value">${escapeHtml(game.all_years_pick || "Unknown")} • ${pct(game.all_years_pick_probability)}%</div></div>
-                  <div class="model-pick-box"><div class="model-pick-name">2021+</div><div class="model-pick-value">${escapeHtml(game.recent_2021_plus_pick || "Unknown")} • ${pct(game.recent_2021_plus_pick_probability)}%</div></div>
-                  <div class="model-pick-box"><div class="model-pick-name">Reward</div><div class="model-pick-value">${escapeHtml(game.reward_pick || "Unknown")} • ${pct(game.reward_pick_probability)}%</div></div>
-                </div>
+                <div><strong>Savant Fusion Pick:</strong> ${escapeHtml(game.predicted_winner || "Unknown")}</div>
+                <div><strong>Qualification:</strong> <span class="${game.is_qualified_pick ? 'prediction-correct' : 'stat-pending'}">${game.is_qualified_pick ? 'QUALIFIED PICK' : 'Unqualified forecast'}</span></div>
+                <div><strong>Advanced feature coverage:</strong> ${((Number(game.advanced_feature_completeness || 0))*100).toFixed(0)}%</div>
+                <div><strong>Confidence:</strong> <span class="${isStrong ? 'strong-text' : ''}">${escapeHtml(game.confidence_tier || "Normal Pick")}</span></div>
               </div>
 
               ${renderActualResult(game)}
@@ -2017,11 +1942,31 @@
       }).join("");
     }
 
+    async function fetchValidationSummary() {
+      const el = document.getElementById("validation-summary");
+      if (!el) return;
+      try {
+        const response = await fetch("./advanced_model_metrics.json?_=" + Date.now());
+        if (!response.ok) throw new Error("Validation metrics are not available yet");
+        const data = await response.json();
+        const holdout = data.holdout || {};
+        const policy = data.qualified_pick_policy || {};
+        const holdAcc = Number(holdout.accuracy || 0) * 100;
+        if (policy.target_met) {
+          el.innerHTML = `<span class="prediction-correct">60% TARGET MET</span> • Holdout ${data.holdout_season}: ${holdAcc.toFixed(2)}% all-game accuracy • Qualified: ${Number(policy.accuracy_pct || 0).toFixed(2)}% on ${Number(policy.games || 0)} games • Coverage: ${Number(policy.coverage_pct || 0).toFixed(1)}% • Confidence gate: ${(Number(data.qualification_threshold || 0)*100).toFixed(0)}%`;
+        } else {
+          el.innerHTML = `<span class="prediction-wrong">60% QUALIFIED-PICK TARGET NOT MET</span> • Holdout ${data.holdout_season}: ${holdAcc.toFixed(2)}% all-game accuracy • Official qualified picks are disabled.`;
+        }
+      } catch (err) {
+        el.textContent = err.message;
+      }
+    }
+
     async function fetchPredictions() {
       try {
-        const response = await fetch("./today_predictions_comparison.json?_=" + Date.now());
+        const response = await fetch("./today_predictions_advanced.json?_=" + Date.now());
         if (!response.ok) {
-          throw new Error("Could not load today_predictions_comparison.json");
+          throw new Error("Could not load today_predictions_advanced.json");
         }
 
         const payload = await response.json();
@@ -2030,31 +1975,15 @@
         if (showingTopChoices) renderTopChoices(payload);
 
         const chart = document.getElementById("accuracy-chart");
-        chart.src = "./accuracy_chart_comparison.png?_=" + Date.now();
+        chart.src = "./accuracy_chart_advanced.png?_=" + Date.now();
 
-        const teamAll = document.getElementById("team-accuracy-chart-all");
-        teamAll.src = "./team_prediction_accuracy_comparison.png?_=" + Date.now();
+        const teamAccuracyChart = document.getElementById("team-accuracy-chart");
+        teamAccuracyChart.src = "./team_prediction_accuracy_advanced.png?_=" + Date.now();
 
-        const teamGreen = document.getElementById("team-accuracy-chart-green");
-        teamGreen.src = "./team_prediction_accuracy_comparison_green.png?_=" + Date.now();
-
-        fetchComparisonBettingSummary(
-          "./betting_by_day_comparison.csv",
-          "./betting_profit_chart_comparison.png",
-          "betting-summary-all",
-          "betting-chart-all",
-          "All consensus games"
-        );
-        fetchComparisonBettingSummary(
-          "./betting_by_day_comparison_green.csv",
-          "./betting_profit_chart_comparison_green.png",
-          "betting-summary-green",
-          "betting-chart-green",
-          "Green games"
-        );
+        fetchBettingSummary();
 
         document.getElementById("status-text").textContent =
-          "Comparison last checked: " + new Date().toLocaleTimeString();
+          "Last checked: " + new Date().toLocaleTimeString();
       } catch (err) {
         document.getElementById("status-text").textContent =
           "Update failed: " + err.message;
@@ -2069,8 +1998,10 @@
       });
     }
 
+    fetchValidationSummary();
     fetchPredictions();
     setInterval(fetchPredictions, 30000);
+    setInterval(fetchValidationSummary, 60000);
   </script>
 
   <script>
