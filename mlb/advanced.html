@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MLB Predictions — Savant Fusion v2</title>
+  <title>MLB Predictions — Savant Fusion v3</title>
   <style>
     body {
         font-family: Arial, sans-serif;
@@ -986,7 +986,7 @@
   <a class="nav-link" href="../index.html">← Back to Home</a>
 
   <div class="topbar">
-    <h1 id="page-title">MLB Predictions — Savant Fusion v2</h1>
+    <h1 id="page-title">MLB Predictions — Savant Fusion v3</h1>
     <div class="tabs">
       <a class="action-btn model-link" href="./index.html">All-Years Model Page</a>
       <a class="action-btn model-link" href="./2021-plus.html">2021+ Model Page</a>
@@ -998,17 +998,17 @@
   </div>
 
   <div class="model-note">
-    <strong>Savant Fusion v2:</strong> six baseball experts (full-history + recent-season CatBoost/XGBoost, elastic-net logistic regression, and Extra Trees) compete through a chronologically selected ensemble/calibration strategy. v2 adds multi-horizon Statcast form, bullpen workload, starter workload/velocity trend, and Elo.
-    It forecasts every game, but only <strong>Qualified Picks</strong> count toward the 60% target and simulated betting. Qualification requires validated confidence, low expert disagreement, and sufficient advanced-data coverage, and is enabled only when the untouched holdout still reaches at least 60%.
+    <strong>Savant Fusion v3:</strong> eight baseball experts now include full-history, recent-season, and dedicated 2021+ modern-era CatBoost/XGBoost models alongside elastic-net logistic regression and Extra Trees. A second-stage reliability/abstention classifier estimates how trustworthy each individual game prediction is using expert agreement, matchup context, data completeness, and prior team/starter reliability.
+    It forecasts every game, but only <strong>Qualified Picks</strong> count toward the 60% target and simulated betting. Qualification uses separate home/away confidence gates plus a reliability-score gate, expert-agreement limit, and advanced-data coverage requirement, and is enabled only when the untouched holdout still reaches at least 60%.
   </div>
 
   <div class="chart-card" id="validation-card" style="margin-top:0;">
     <h2 style="margin-top:0;">Model Validation</h2>
     <div id="validation-summary" class="betting-summary">Loading holdout validation...</div>
-    <div class="muted">The qualified-pick threshold is learned only from chronological out-of-sample predictions. If the 60% target is not met, official qualified picks and Savant Fusion bets remain disabled.</div>
+    <div class="muted">The ensemble, reliability classifier, reliability calibration, qualification policy, and final holdout use separate chronological seasons. If the untouched holdout misses 60%, official Qualified Picks and Savant Fusion bets remain disabled.</div>
   </div>
 
-  <div class="status" id="status-text">Loading Savant Fusion v2 predictions...</div>
+  <div class="status" id="status-text">Loading Savant Fusion v3 predictions...</div>
 
   <div id="top-choices-panel" class="top-choices-panel"></div>
 
@@ -1841,7 +1841,7 @@
 
 
     function renderGames(payload) {
-      document.getElementById("page-title").textContent = `MLB Predictions — Savant Fusion v2 for ${payload.date}`;
+      document.getElementById("page-title").textContent = `MLB Predictions — Savant Fusion v3 for ${payload.date}`;
       const container = document.getElementById("games-container");
       const games = payload.games || [];
 
@@ -1913,11 +1913,13 @@
 
             <div class="expanded-content" onclick="event.stopPropagation()">
               <div class="actual-result">
-                <div><strong>Savant Fusion v2 Pick:</strong> ${escapeHtml(game.predicted_winner || "Unknown")}</div>
+                <div><strong>Savant Fusion v3 Pick:</strong> ${escapeHtml(game.predicted_winner || "Unknown")}</div>
                 <div><strong>Qualification:</strong> <span class="${game.is_qualified_pick ? 'prediction-correct' : 'stat-pending'}">${game.is_qualified_pick ? 'QUALIFIED PICK' : 'Unqualified forecast'}</span></div>
+                <div><strong>Reliability score:</strong> ${((Number(game.reliability_score || 0))*100).toFixed(1)}%</div>
                 <div><strong>Advanced feature coverage:</strong> ${((Number(game.advanced_feature_completeness || 0))*100).toFixed(0)}%</div>
                 <div><strong>Expert disagreement:</strong> ${((Number(game.expert_disagreement || 0))*100).toFixed(1)} pts</div>
-                <div><strong>Ensemble:</strong> ${escapeHtml(game.selected_ensemble_strategy || "Unknown")} + ${escapeHtml(game.selected_calibration || "none")}</div>
+                <div><strong>Ensemble:</strong> ${escapeHtml(game.selected_ensemble_strategy || "Unknown")}</div>
+                <div><strong>Reliability model:</strong> ${escapeHtml(game.reliability_model || "Unknown")}</div>
                 <div><strong>Confidence:</strong> <span class="${isStrong ? 'strong-text' : ''}">${escapeHtml(game.confidence_tier || "Normal Pick")}</span></div>
                 <div><strong>Qualification detail:</strong> ${escapeHtml((game.qualification_reasons || []).join(", ") || "—")}</div>
                 <div><strong>FanDuel no-vig diagnostic:</strong> ${game.market_home_win_probability == null ? "N/A" : `${escapeHtml(game.home_team)} ${(Number(game.market_home_win_probability)*100).toFixed(1)}% • selected-team edge ${(Number(game.model_market_edge || 0)*100).toFixed(1)} pts`}</div>
@@ -1959,9 +1961,9 @@
         const strategy = data.selected_strategy || "Unknown";
         const calibration = data.selected_calibration || "none";
         if (policy.target_met) {
-          el.innerHTML = `<span class="prediction-correct">60% TARGET MET</span> • Holdout ${data.holdout_season}: ${holdAcc.toFixed(2)}% all-game • Qualified: ${Number(policy.holdout_accuracy_pct || 0).toFixed(2)}% on ${Number(policy.holdout_games || 0)} games • Coverage: ${Number(policy.holdout_coverage_pct || 0).toFixed(1)}% • Confidence ≥ ${(Number(policy.threshold || 0)*100).toFixed(0)}% • Expert σ ≤ ${(Number(policy.max_expert_std || 0)*100).toFixed(1)} pts • Feature coverage ≥ ${(Number(policy.min_feature_completeness || 0)*100).toFixed(0)}% • ${escapeHtml(strategy)} + ${escapeHtml(calibration)}`;
+          el.innerHTML = `<span class="prediction-correct">60% TARGET MET</span> • Holdout ${data.holdout_season}: ${holdAcc.toFixed(2)}% all-game • Qualified: ${Number(policy.holdout_accuracy_pct || 0).toFixed(2)}% on ${Number(policy.holdout_games || 0)} games • Coverage: ${Number(policy.holdout_coverage_pct || 0).toFixed(1)}% • Home confidence ≥ ${(Number(policy.home_confidence_threshold || 0)*100).toFixed(0)}% • Away confidence ≥ ${(Number(policy.away_confidence_threshold || 0)*100).toFixed(0)}% • Reliability ≥ ${(Number(policy.reliability_threshold || 0)*100).toFixed(0)}% • Expert σ ≤ ${(Number(policy.max_expert_std || 0)*100).toFixed(1)} pts • Feature coverage ≥ ${(Number(policy.min_feature_completeness || 0)*100).toFixed(0)}% • ${escapeHtml(strategy)} • Reliability model: ${escapeHtml(data.reliability_model || "Unknown")}`;
         } else {
-          el.innerHTML = `<span class="prediction-wrong">60% QUALIFIED-PICK TARGET NOT MET</span> • Holdout ${data.holdout_season}: ${holdAcc.toFixed(2)}% all-game accuracy • Selected ensemble: ${escapeHtml(strategy)} + ${escapeHtml(calibration)} • Official qualified picks are disabled.`;
+          el.innerHTML = `<span class="prediction-wrong">60% QUALIFIED-PICK TARGET NOT MET</span> • Holdout ${data.holdout_season}: ${holdAcc.toFixed(2)}% all-game accuracy • Selected ensemble: ${escapeHtml(strategy)} • Reliability model: ${escapeHtml(data.reliability_model || "Unknown")} • Official qualified picks are disabled.`;
         }
       } catch (err) {
         el.textContent = err.message;
