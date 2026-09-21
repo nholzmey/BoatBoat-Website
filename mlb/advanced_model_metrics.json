@@ -1,10 +1,10 @@
 {
   "model_name": "Savant Fusion v3",
   "version": 3,
-  "trained_at": "2026-09-20T04:23:44",
-  "training_games": 27360,
+  "trained_at": "2026-09-21T04:27:01",
+  "training_games": 27375,
   "training_start_date": "2015-04-07",
-  "training_end_date": "2026-09-17",
+  "training_end_date": "2026-09-19",
   "holdout_season": 2025,
   "holdout": {
     "games": 2430,
@@ -57,14 +57,14 @@
   "selected_strategy": "logistic_stack",
   "selected_calibration": "none",
   "blend_weights": {
-    "catboost_full": 0.07069353137361326,
-    "xgboost_full": 1.2329597809134579e-05,
-    "elastic_full": 0.3677646591836458,
-    "extra_trees_full": 0.47728214374643857,
-    "catboost_recent": 5.0342062734346235e-05,
-    "xgboost_recent": 0.00013080336749577844,
-    "catboost_modern": 0.08397348906763434,
-    "xgboost_modern": 9.270160062857611e-05
+    "catboost_full": 0.07066893554105534,
+    "xgboost_full": 1.2185208820007975e-05,
+    "elastic_full": 0.3677677126971981,
+    "extra_trees_full": 0.47729602158721485,
+    "catboost_recent": 4.9803409759557506e-05,
+    "xgboost_recent": 0.00012957107908072023,
+    "catboost_modern": 0.08398403896424242,
+    "xgboost_modern": 9.173151262900257e-05
   },
   "strategy_selection_season": 2021,
   "strategy_selection": [
@@ -89,7 +89,7 @@
       "games": 2429,
       "accuracy": 0.5808974886784685,
       "brier": 0.24079033189089935,
-      "log_loss": 0.6744501513430289,
+      "log_loss": 0.6744501513430288,
       "roc_auc": 0.6029088815959975
     },
     {
@@ -152,15 +152,15 @@
       "strategy": "optimized_blend",
       "games": 2429,
       "accuracy": 0.5821325648414986,
-      "brier": 0.24094768718563692,
-      "log_loss": 0.6748429680824114,
-      "roc_auc": 0.6041937763082874
+      "brier": 0.24094767946449341,
+      "log_loss": 0.6748429504738401,
+      "roc_auc": 0.6041896842869107
     },
     {
       "strategy": "logistic_stack",
       "games": 2429,
       "accuracy": 0.5850144092219021,
-      "brier": 0.241004112297339,
+      "brier": 0.2410041122973391,
       "log_loss": 0.6749343045103302,
       "roc_auc": 0.6024839933763814
     }
@@ -172,8 +172,8 @@
     {
       "model": "logistic",
       "games": 2430,
-      "log_loss": 0.6731836022045827,
-      "brier": 0.2400675304977362,
+      "log_loss": 0.673183602204577,
+      "brier": 0.2400675304977288,
       "top30_accuracy": 0.6515775034293553,
       "top30_games": 729,
       "roc_auc": 0.5521683651912319
