@@ -937,8 +937,8 @@
       "schedule_detailed_state": "Scheduled",
       "home_team": "Detroit Tigers",
       "away_team": "Washington Nationals",
-      "home_win_probability": 0.6241,
-      "away_win_probability": 0.3759,
+      "home_win_probability": 0.5601,
+      "away_win_probability": 0.4399,
       "predicted_winner": "Detroit Tigers",
       "confidence_tier": "Standard Pick \u2014 Below Qualified Gate",
       "is_confident_pick": false,
@@ -1280,15 +1280,15 @@
       "pregame_away_moneyline": 134,
       "pregame_moneyline_last_update": "2026-09-22T14:55:08Z",
       "pregame_moneyline_captured_at": "2026-09-22T14:55:30.256339Z",
-      "prediction_confidence": 0.6241,
-      "reliability_score": 0.5411,
+      "prediction_confidence": 0.5601,
+      "reliability_score": 0.5244,
       "is_qualified_pick": false,
       "home_confidence_threshold": 0.64,
       "away_confidence_threshold": 0.64,
       "reliability_threshold": 0.56,
       "max_expert_std": 0.05,
       "minimum_feature_completeness": 0.7,
-      "expert_disagreement": 0.0579,
+      "expert_disagreement": 0.0796,
       "advanced_feature_completeness": 1.0,
       "qualification_reasons": [
         "home confidence below 64%",
@@ -1298,27 +1298,27 @@
       "qualification_checks": {
         "confidence": {
           "label": "Prediction confidence",
-          "actual": 0.6241,
+          "actual": 0.5601,
           "required": 0.64,
           "direction": "min",
           "passed": false,
-          "shortfall": 0.0159
+          "shortfall": 0.0799
         },
         "reliability": {
           "label": "Reliability score",
-          "actual": 0.5411,
+          "actual": 0.5244,
           "required": 0.56,
           "direction": "min",
           "passed": false,
-          "shortfall": 0.0189
+          "shortfall": 0.0356
         },
         "expert_disagreement": {
           "label": "Expert disagreement",
-          "actual": 0.0579,
+          "actual": 0.0796,
           "required": 0.05,
           "direction": "max",
           "passed": false,
-          "shortfall": 0.0079
+          "shortfall": 0.0296
         },
         "feature_completeness": {
           "label": "Advanced-data completeness",
@@ -1333,21 +1333,21 @@
       "qualification_gates_total": 4,
       "qualification_status": "1/4 qualification gates passed",
       "expert_home_probabilities": {
-        "catboost_full": 0.6171,
-        "xgboost_full": 0.7013,
-        "elastic_full": 0.5956,
-        "extra_trees_full": 0.5943,
-        "catboost_recent": 0.65,
-        "xgboost_recent": 0.711,
-        "catboost_modern": 0.6685,
-        "xgboost_modern": 0.7533
+        "catboost_full": 0.5896,
+        "xgboost_full": 0.6561,
+        "elastic_full": 0.5233,
+        "extra_trees_full": 0.4999,
+        "catboost_recent": 0.5978,
+        "xgboost_recent": 0.673,
+        "catboost_modern": 0.6349,
+        "xgboost_modern": 0.7428
       },
       "selected_ensemble_strategy": "logistic_stack",
       "selected_calibration": "none",
       "reliability_model": "catboost",
       "market_home_win_probability": 0.589,
       "market_away_win_probability": 0.411,
-      "model_market_edge": 0.0351,
+      "model_market_edge": -0.0289,
       "market_used_for_qualification": false,
       "simulated_bet_stake": 100.0,
       "simulated_bet_team": "Detroit Tigers",
