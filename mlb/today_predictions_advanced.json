@@ -3932,8 +3932,8 @@
       "schedule_detailed_state": "Scheduled",
       "home_team": "Athletics",
       "away_team": "Houston Astros",
-      "home_win_probability": 0.4494,
-      "away_win_probability": 0.5506,
+      "home_win_probability": 0.458,
+      "away_win_probability": 0.542,
       "predicted_winner": "Houston Astros",
       "confidence_tier": "Standard Pick \u2014 Below Qualified Gate",
       "is_confident_pick": false,
@@ -4263,41 +4263,40 @@
           "stat_result_status": "PENDING"
         }
       ],
-      "prediction_confidence": 0.5506,
-      "reliability_score": 0.5332,
+      "prediction_confidence": 0.542,
+      "reliability_score": 0.5417,
       "is_qualified_pick": false,
       "home_confidence_threshold": 0.64,
       "away_confidence_threshold": 0.64,
       "reliability_threshold": 0.56,
       "max_expert_std": 0.05,
       "minimum_feature_completeness": 0.7,
-      "expert_disagreement": 0.0328,
-      "advanced_feature_completeness": 0.6786,
+      "expert_disagreement": 0.0429,
+      "advanced_feature_completeness": 1.0,
       "qualification_reasons": [
         "away confidence below 64%",
-        "reliability below 56%",
-        "advanced-data completeness too low"
+        "reliability below 56%"
       ],
       "qualification_checks": {
         "confidence": {
           "label": "Prediction confidence",
-          "actual": 0.5506,
+          "actual": 0.542,
           "required": 0.64,
           "direction": "min",
           "passed": false,
-          "shortfall": 0.0894
+          "shortfall": 0.098
         },
         "reliability": {
           "label": "Reliability score",
-          "actual": 0.5332,
+          "actual": 0.5417,
           "required": 0.56,
           "direction": "min",
           "passed": false,
-          "shortfall": 0.0268
+          "shortfall": 0.0183
         },
         "expert_disagreement": {
           "label": "Expert disagreement",
-          "actual": 0.0328,
+          "actual": 0.0429,
           "required": 0.05,
           "direction": "max",
           "passed": true,
@@ -4305,25 +4304,25 @@
         },
         "feature_completeness": {
           "label": "Advanced-data completeness",
-          "actual": 0.6786,
+          "actual": 1.0,
           "required": 0.7,
           "direction": "min",
-          "passed": false,
-          "shortfall": 0.0214
+          "passed": true,
+          "shortfall": 0.0
         }
       },
-      "qualification_gates_passed": 1,
+      "qualification_gates_passed": 2,
       "qualification_gates_total": 4,
-      "qualification_status": "1/4 qualification gates passed",
+      "qualification_status": "2/4 qualification gates passed",
       "expert_home_probabilities": {
-        "catboost_full": 0.4226,
-        "xgboost_full": 0.4869,
-        "elastic_full": 0.4321,
-        "extra_trees_full": 0.4545,
-        "catboost_recent": 0.4581,
-        "xgboost_recent": 0.4912,
-        "catboost_modern": 0.4025,
-        "xgboost_modern": 0.4844
+        "catboost_full": 0.4068,
+        "xgboost_full": 0.4933,
+        "elastic_full": 0.4274,
+        "extra_trees_full": 0.4681,
+        "catboost_recent": 0.4502,
+        "xgboost_recent": 0.5174,
+        "catboost_modern": 0.4353,
+        "xgboost_modern": 0.5234
       },
       "selected_ensemble_strategy": "logistic_stack",
       "selected_calibration": "none",
