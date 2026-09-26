@@ -4756,8 +4756,8 @@
       "schedule_detailed_state": "Scheduled",
       "home_team": "Athletics",
       "away_team": "Houston Astros",
-      "home_win_probability": 0.4765,
-      "away_win_probability": 0.5235,
+      "home_win_probability": 0.4685,
+      "away_win_probability": 0.5315,
       "predicted_winner": "Houston Astros",
       "confidence_tier": "Standard Pick \u2014 Below Qualified Gate",
       "is_confident_pick": false,
@@ -5099,74 +5099,74 @@
       "pregame_away_moneyline": 180,
       "pregame_moneyline_last_update": "2026-09-26T03:29:29Z",
       "pregame_moneyline_captured_at": "2026-09-26T03:29:38.255648Z",
-      "prediction_confidence": 0.5235,
-      "reliability_score": 0.5228,
+      "prediction_confidence": 0.5315,
+      "reliability_score": 0.5438,
       "is_qualified_pick": false,
       "home_confidence_threshold": 0.64,
       "away_confidence_threshold": 0.64,
       "reliability_threshold": 0.56,
       "max_expert_std": 0.05,
       "minimum_feature_completeness": 0.7,
-      "expert_disagreement": 0.032,
-      "advanced_feature_completeness": 0.6786,
+      "expert_disagreement": 0.0502,
+      "advanced_feature_completeness": 1.0,
       "qualification_reasons": [
         "away confidence below 64%",
         "reliability below 56%",
-        "advanced-data completeness too low"
+        "expert disagreement too high"
       ],
       "qualification_checks": {
         "confidence": {
           "label": "Prediction confidence",
-          "actual": 0.5235,
+          "actual": 0.5315,
           "required": 0.64,
           "direction": "min",
           "passed": false,
-          "shortfall": 0.1165
+          "shortfall": 0.1085
         },
         "reliability": {
           "label": "Reliability score",
-          "actual": 0.5228,
+          "actual": 0.5438,
           "required": 0.56,
           "direction": "min",
           "passed": false,
-          "shortfall": 0.0372
+          "shortfall": 0.0162
         },
         "expert_disagreement": {
           "label": "Expert disagreement",
-          "actual": 0.032,
+          "actual": 0.0502,
           "required": 0.05,
           "direction": "max",
-          "passed": true,
-          "shortfall": 0.0
+          "passed": false,
+          "shortfall": 0.0002
         },
         "feature_completeness": {
           "label": "Advanced-data completeness",
-          "actual": 0.6786,
+          "actual": 1.0,
           "required": 0.7,
           "direction": "min",
-          "passed": false,
-          "shortfall": 0.0214
+          "passed": true,
+          "shortfall": 0.0
         }
       },
       "qualification_gates_passed": 1,
       "qualification_gates_total": 4,
       "qualification_status": "1/4 qualification gates passed",
       "expert_home_probabilities": {
-        "catboost_full": 0.4309,
-        "xgboost_full": 0.5075,
-        "elastic_full": 0.4793,
-        "extra_trees_full": 0.4851,
-        "catboost_recent": 0.4289,
-        "xgboost_recent": 0.4697,
-        "catboost_modern": 0.4293,
-        "xgboost_modern": 0.4962
+        "catboost_full": 0.4568,
+        "xgboost_full": 0.5029,
+        "elastic_full": 0.4868,
+        "extra_trees_full": 0.4725,
+        "catboost_recent": 0.3895,
+        "xgboost_recent": 0.4837,
+        "catboost_modern": 0.3626,
+        "xgboost_modern": 0.4742
       },
       "selected_ensemble_strategy": "logistic_stack",
       "selected_calibration": "none",
       "reliability_model": "catboost",
       "market_home_win_probability": 0.6626,
       "market_away_win_probability": 0.3374,
-      "model_market_edge": 0.1861,
+      "model_market_edge": 0.1942,
       "market_used_for_qualification": false,
       "simulated_bet_stake": 100.0,
       "simulated_bet_team": "Houston Astros",
