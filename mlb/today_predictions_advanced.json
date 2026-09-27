@@ -1363,8 +1363,8 @@
       "schedule_detailed_state": "Scheduled",
       "home_team": "Boston Red Sox",
       "away_team": "Chicago Cubs",
-      "home_win_probability": 0.4784,
-      "away_win_probability": 0.5216,
+      "home_win_probability": 0.4594,
+      "away_win_probability": 0.5406,
       "predicted_winner": "Chicago Cubs",
       "confidence_tier": "Standard Pick \u2014 Below Qualified Gate",
       "is_confident_pick": false,
@@ -1706,40 +1706,40 @@
       "pregame_away_moneyline": -122,
       "pregame_moneyline_last_update": "2026-09-27T15:44:08Z",
       "pregame_moneyline_captured_at": "2026-09-27T15:44:34.242837Z",
-      "prediction_confidence": 0.5216,
-      "reliability_score": 0.5615,
+      "prediction_confidence": 0.5406,
+      "reliability_score": 0.5494,
       "is_qualified_pick": false,
       "home_confidence_threshold": 0.64,
       "away_confidence_threshold": 0.64,
       "reliability_threshold": 0.56,
       "max_expert_std": 0.05,
       "minimum_feature_completeness": 0.7,
-      "expert_disagreement": 0.02,
-      "advanced_feature_completeness": 0.6786,
+      "expert_disagreement": 0.0315,
+      "advanced_feature_completeness": 1.0,
       "qualification_reasons": [
         "away confidence below 64%",
-        "advanced-data completeness too low"
+        "reliability below 56%"
       ],
       "qualification_checks": {
         "confidence": {
           "label": "Prediction confidence",
-          "actual": 0.5216,
+          "actual": 0.5406,
           "required": 0.64,
           "direction": "min",
           "passed": false,
-          "shortfall": 0.1184
+          "shortfall": 0.0994
         },
         "reliability": {
           "label": "Reliability score",
-          "actual": 0.5615,
+          "actual": 0.5494,
           "required": 0.56,
           "direction": "min",
-          "passed": true,
-          "shortfall": 0.0
+          "passed": false,
+          "shortfall": 0.0106
         },
         "expert_disagreement": {
           "label": "Expert disagreement",
-          "actual": 0.02,
+          "actual": 0.0315,
           "required": 0.05,
           "direction": "max",
           "passed": true,
@@ -1747,32 +1747,32 @@
         },
         "feature_completeness": {
           "label": "Advanced-data completeness",
-          "actual": 0.6786,
+          "actual": 1.0,
           "required": 0.7,
           "direction": "min",
-          "passed": false,
-          "shortfall": 0.0214
+          "passed": true,
+          "shortfall": 0.0
         }
       },
       "qualification_gates_passed": 2,
       "qualification_gates_total": 4,
       "qualification_status": "2/4 qualification gates passed",
       "expert_home_probabilities": {
-        "catboost_full": 0.4506,
-        "xgboost_full": 0.4954,
-        "elastic_full": 0.4914,
-        "extra_trees_full": 0.4704,
-        "catboost_recent": 0.4506,
-        "xgboost_recent": 0.4543,
-        "catboost_modern": 0.4441,
-        "xgboost_modern": 0.4801
+        "catboost_full": 0.435,
+        "xgboost_full": 0.4735,
+        "elastic_full": 0.4448,
+        "extra_trees_full": 0.4697,
+        "catboost_recent": 0.4693,
+        "xgboost_recent": 0.48,
+        "catboost_modern": 0.3919,
+        "xgboost_modern": 0.4878
       },
       "selected_ensemble_strategy": "logistic_stack",
       "selected_calibration": "none",
       "reliability_model": "catboost",
       "market_home_win_probability": 0.4715,
       "market_away_win_probability": 0.5285,
-      "model_market_edge": -0.0069,
+      "model_market_edge": 0.0121,
       "market_used_for_qualification": false,
       "simulated_bet_stake": 100.0,
       "simulated_bet_team": "Chicago Cubs",
