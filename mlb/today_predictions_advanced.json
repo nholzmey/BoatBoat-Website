@@ -3882,8 +3882,8 @@
       "schedule_detailed_state": "Scheduled",
       "home_team": "San Diego Padres",
       "away_team": "Arizona Diamondbacks",
-      "home_win_probability": 0.5403,
-      "away_win_probability": 0.4597,
+      "home_win_probability": 0.5221,
+      "away_win_probability": 0.4779,
       "predicted_winner": "San Diego Padres",
       "confidence_tier": "Standard Pick \u2014 Below Qualified Gate",
       "is_confident_pick": false,
@@ -4213,41 +4213,39 @@
           "stat_result_status": "PENDING"
         }
       ],
-      "prediction_confidence": 0.5403,
-      "reliability_score": 0.5464,
+      "prediction_confidence": 0.5221,
+      "reliability_score": 0.5669,
       "is_qualified_pick": false,
       "home_confidence_threshold": 0.64,
       "away_confidence_threshold": 0.64,
       "reliability_threshold": 0.56,
       "max_expert_std": 0.05,
       "minimum_feature_completeness": 0.7,
-      "expert_disagreement": 0.029,
-      "advanced_feature_completeness": 0.6786,
+      "expert_disagreement": 0.0301,
+      "advanced_feature_completeness": 1.0,
       "qualification_reasons": [
-        "home confidence below 64%",
-        "reliability below 56%",
-        "advanced-data completeness too low"
+        "home confidence below 64%"
       ],
       "qualification_checks": {
         "confidence": {
           "label": "Prediction confidence",
-          "actual": 0.5403,
+          "actual": 0.5221,
           "required": 0.64,
           "direction": "min",
           "passed": false,
-          "shortfall": 0.0997
+          "shortfall": 0.1179
         },
         "reliability": {
           "label": "Reliability score",
-          "actual": 0.5464,
+          "actual": 0.5669,
           "required": 0.56,
           "direction": "min",
-          "passed": false,
-          "shortfall": 0.0136
+          "passed": true,
+          "shortfall": 0.0
         },
         "expert_disagreement": {
           "label": "Expert disagreement",
-          "actual": 0.029,
+          "actual": 0.0301,
           "required": 0.05,
           "direction": "max",
           "passed": true,
@@ -4255,25 +4253,25 @@
         },
         "feature_completeness": {
           "label": "Advanced-data completeness",
-          "actual": 0.6786,
+          "actual": 1.0,
           "required": 0.7,
           "direction": "min",
-          "passed": false,
-          "shortfall": 0.0214
+          "passed": true,
+          "shortfall": 0.0
         }
       },
-      "qualification_gates_passed": 1,
+      "qualification_gates_passed": 3,
       "qualification_gates_total": 4,
-      "qualification_status": "1/4 qualification gates passed",
+      "qualification_status": "3/4 qualification gates passed",
       "expert_home_probabilities": {
-        "catboost_full": 0.5345,
-        "xgboost_full": 0.4932,
-        "elastic_full": 0.4825,
-        "extra_trees_full": 0.5452,
-        "catboost_recent": 0.5255,
-        "xgboost_recent": 0.5321,
-        "catboost_modern": 0.5754,
-        "xgboost_modern": 0.5277
+        "catboost_full": 0.5292,
+        "xgboost_full": 0.5166,
+        "elastic_full": 0.454,
+        "extra_trees_full": 0.5324,
+        "catboost_recent": 0.5229,
+        "xgboost_recent": 0.5456,
+        "catboost_modern": 0.5383,
+        "xgboost_modern": 0.5492
       },
       "selected_ensemble_strategy": "logistic_stack",
       "selected_calibration": "none",
