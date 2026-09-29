@@ -1,12 +1,1642 @@
 {
-  "active": false,
+  "active": true,
   "season": 2026,
-  "generated_at": "2026-09-28T23:59:32",
-  "reason": "Postseason mode activates on 2026-09-29.",
-  "series": [],
-  "championship_probabilities": [],
-  "series_prediction_history": {},
-  "overall_projection_history": [],
-  "matchup_probability_cache": {},
-  "postseason_start_date": "2026-09-29"
+  "generated_at": "2026-09-29T00:00:42",
+  "postseason_start_date": "2026-09-29",
+  "format": {
+    "wild_card": "Best of 3",
+    "division_series": "Best of 5",
+    "league_championship": "Best of 7",
+    "world_series": "Best of 7"
+  },
+  "seeds": {
+    "AL": [
+      {
+        "team": "Tampa Bay Rays",
+        "wins": 98,
+        "losses": 64,
+        "win_pct": 0.605,
+        "division": "American League East",
+        "division_rank": 1,
+        "league_rank": 1,
+        "wild_card_rank": 99,
+        "league": "AL",
+        "seed": 1
+      },
+      {
+        "team": "Cleveland Guardians",
+        "wins": 85,
+        "losses": 77,
+        "win_pct": 0.525,
+        "division": "American League Central",
+        "division_rank": 1,
+        "league_rank": 4,
+        "wild_card_rank": 99,
+        "league": "AL",
+        "seed": 2
+      },
+      {
+        "team": "Houston Astros",
+        "wins": 81,
+        "losses": 81,
+        "win_pct": 0.5,
+        "division": "American League West",
+        "division_rank": 1,
+        "league_rank": 6,
+        "wild_card_rank": 99,
+        "league": "AL",
+        "seed": 3
+      },
+      {
+        "team": "New York Yankees",
+        "wins": 93,
+        "losses": 68,
+        "win_pct": 0.578,
+        "division": "American League East",
+        "division_rank": 2,
+        "league_rank": 2,
+        "wild_card_rank": 1,
+        "league": "AL",
+        "seed": 4
+      },
+      {
+        "team": "Boston Red Sox",
+        "wins": 87,
+        "losses": 75,
+        "win_pct": 0.537,
+        "division": "American League East",
+        "division_rank": 3,
+        "league_rank": 3,
+        "wild_card_rank": 2,
+        "league": "AL",
+        "seed": 5
+      },
+      {
+        "team": "Chicago White Sox",
+        "wins": 84,
+        "losses": 78,
+        "win_pct": 0.519,
+        "division": "American League Central",
+        "division_rank": 2,
+        "league_rank": 5,
+        "wild_card_rank": 3,
+        "league": "AL",
+        "seed": 6
+      }
+    ],
+    "NL": [
+      {
+        "team": "Milwaukee Brewers",
+        "wins": 103,
+        "losses": 59,
+        "win_pct": 0.636,
+        "division": "National League Central",
+        "division_rank": 1,
+        "league_rank": 1,
+        "wild_card_rank": 99,
+        "league": "NL",
+        "seed": 1
+      },
+      {
+        "team": "Los Angeles Dodgers",
+        "wins": 100,
+        "losses": 62,
+        "win_pct": 0.617,
+        "division": "National League West",
+        "division_rank": 1,
+        "league_rank": 2,
+        "wild_card_rank": 99,
+        "league": "NL",
+        "seed": 2
+      },
+      {
+        "team": "Atlanta Braves",
+        "wins": 94,
+        "losses": 68,
+        "win_pct": 0.58,
+        "division": "National League East",
+        "division_rank": 1,
+        "league_rank": 3,
+        "wild_card_rank": 99,
+        "league": "NL",
+        "seed": 3
+      },
+      {
+        "team": "San Diego Padres",
+        "wins": 91,
+        "losses": 71,
+        "win_pct": 0.562,
+        "division": "National League West",
+        "division_rank": 2,
+        "league_rank": 4,
+        "wild_card_rank": 1,
+        "league": "NL",
+        "seed": 4
+      },
+      {
+        "team": "Chicago Cubs",
+        "wins": 89,
+        "losses": 73,
+        "win_pct": 0.549,
+        "division": "National League Central",
+        "division_rank": 2,
+        "league_rank": 5,
+        "wild_card_rank": 2,
+        "league": "NL",
+        "seed": 5
+      },
+      {
+        "team": "Philadelphia Phillies",
+        "wins": 88,
+        "losses": 74,
+        "win_pct": 0.543,
+        "division": "National League East",
+        "division_rank": 2,
+        "league_rank": 6,
+        "wild_card_rank": 3,
+        "league": "NL",
+        "seed": 6
+      }
+    ]
+  },
+  "series": [
+    {
+      "series_id": "F:New York Yankees|Boston Red Sox",
+      "game_type": "F",
+      "round": "Wild Card Series",
+      "round_short": "WC",
+      "best_of": 3,
+      "wins_needed": 2,
+      "league": "AL",
+      "team_a": "New York Yankees",
+      "team_b": "Boston Red Sox",
+      "wins_a": 0,
+      "wins_b": 0,
+      "winner": null,
+      "games": [
+        {
+          "game_pk": 849851,
+          "game_date": "2026-09-30T00:00:00Z",
+          "game_number": 1,
+          "home_team": "New York Yankees",
+          "away_team": "Boston Red Sox",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "F",
+          "series_description": "AL Wild Card Series"
+        },
+        {
+          "game_pk": 849848,
+          "game_date": "2026-10-01T00:00:00Z",
+          "game_number": 2,
+          "home_team": "New York Yankees",
+          "away_team": "Boston Red Sox",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "F",
+          "series_description": "AL Wild Card Series"
+        },
+        {
+          "game_pk": 849847,
+          "game_date": "2026-10-02T00:00:00Z",
+          "game_number": 3,
+          "home_team": "New York Yankees",
+          "away_team": "Boston Red Sox",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "F",
+          "series_description": "AL Wild Card Series"
+        }
+      ],
+      "team_a_seed": 4,
+      "team_b_seed": 5,
+      "team_a_record": {
+        "wins": 86,
+        "losses": 64,
+        "games": 150,
+        "win_pct": 0.5733333333333334,
+        "league": "AL",
+        "division": "East"
+      },
+      "team_b_record": {
+        "wins": 80,
+        "losses": 69,
+        "games": 149,
+        "win_pct": 0.5369127516778524,
+        "league": "AL",
+        "division": "East"
+      },
+      "per_game_team_a_probability": 0.536819,
+      "team_a_series_probability": 0.555129,
+      "team_b_series_probability": 0.444871,
+      "predicted_series_winner": "New York Yankees",
+      "predicted_series_winner_probability": 0.555129,
+      "status": "upcoming",
+      "prediction_history": [
+        {
+          "after_game": 0,
+          "label": "Before Game 1",
+          "predicted_winner": "New York Yankees",
+          "probability": 0.555129,
+          "series_score": "0-0"
+        }
+      ]
+    },
+    {
+      "series_id": "F:Houston Astros|Chicago White Sox",
+      "game_type": "F",
+      "round": "Wild Card Series",
+      "round_short": "WC",
+      "best_of": 3,
+      "wins_needed": 2,
+      "league": "AL",
+      "team_a": "Houston Astros",
+      "team_b": "Chicago White Sox",
+      "wins_a": 0,
+      "wins_b": 0,
+      "winner": null,
+      "games": [
+        {
+          "game_pk": 849849,
+          "game_date": "2026-09-29T21:00:00Z",
+          "game_number": 1,
+          "home_team": "Houston Astros",
+          "away_team": "Chicago White Sox",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "F",
+          "series_description": "AL Wild Card Series"
+        },
+        {
+          "game_pk": 849846,
+          "game_date": "2026-09-30T21:00:00Z",
+          "game_number": 2,
+          "home_team": "Houston Astros",
+          "away_team": "Chicago White Sox",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "F",
+          "series_description": "AL Wild Card Series"
+        },
+        {
+          "game_pk": 849850,
+          "game_date": "2026-10-01T21:00:00Z",
+          "game_number": 3,
+          "home_team": "Houston Astros",
+          "away_team": "Chicago White Sox",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "F",
+          "series_description": "AL Wild Card Series"
+        }
+      ],
+      "team_a_seed": 3,
+      "team_b_seed": 6,
+      "team_a_record": {
+        "wins": 74,
+        "losses": 76,
+        "games": 150,
+        "win_pct": 0.49333333333333335,
+        "league": "AL",
+        "division": "West"
+      },
+      "team_b_record": {
+        "wins": 76,
+        "losses": 74,
+        "games": 150,
+        "win_pct": 0.5066666666666667,
+        "league": "AL",
+        "division": "Central"
+      },
+      "per_game_team_a_probability": 0.486669,
+      "team_a_series_probability": 0.480008,
+      "team_b_series_probability": 0.519992,
+      "predicted_series_winner": "Chicago White Sox",
+      "predicted_series_winner_probability": 0.519992,
+      "status": "upcoming",
+      "prediction_history": [
+        {
+          "after_game": 0,
+          "label": "Before Game 1",
+          "predicted_winner": "Chicago White Sox",
+          "probability": 0.519992,
+          "series_score": "0-0"
+        }
+      ]
+    },
+    {
+      "series_id": "F:Atlanta Braves|Philadelphia Phillies",
+      "game_type": "F",
+      "round": "Wild Card Series",
+      "round_short": "WC",
+      "best_of": 3,
+      "wins_needed": 2,
+      "league": "NL",
+      "team_a": "Atlanta Braves",
+      "team_b": "Philadelphia Phillies",
+      "wins_a": 0,
+      "wins_b": 0,
+      "winner": null,
+      "games": [
+        {
+          "game_pk": 849845,
+          "game_date": "2026-09-29T18:00:00Z",
+          "game_number": 1,
+          "home_team": "Atlanta Braves",
+          "away_team": "Philadelphia Phillies",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "F",
+          "series_description": "NL Wild Card Series"
+        },
+        {
+          "game_pk": 849841,
+          "game_date": "2026-09-30T18:00:00Z",
+          "game_number": 2,
+          "home_team": "Atlanta Braves",
+          "away_team": "Philadelphia Phillies",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "F",
+          "series_description": "NL Wild Card Series"
+        },
+        {
+          "game_pk": 849844,
+          "game_date": "2026-10-01T18:00:00Z",
+          "game_number": 3,
+          "home_team": "Atlanta Braves",
+          "away_team": "Philadelphia Phillies",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "F",
+          "series_description": "NL Wild Card Series"
+        }
+      ],
+      "team_a_seed": 3,
+      "team_b_seed": 6,
+      "team_a_record": {
+        "wins": 89,
+        "losses": 62,
+        "games": 151,
+        "win_pct": 0.5894039735099338,
+        "league": "NL",
+        "division": "East"
+      },
+      "team_b_record": {
+        "wins": 80,
+        "losses": 70,
+        "games": 150,
+        "win_pct": 0.5333333333333333,
+        "league": "NL",
+        "division": "East"
+      },
+      "per_game_team_a_probability": 0.556747,
+      "team_a_series_probability": 0.584755,
+      "team_b_series_probability": 0.415245,
+      "predicted_series_winner": "Atlanta Braves",
+      "predicted_series_winner_probability": 0.584755,
+      "status": "upcoming",
+      "prediction_history": [
+        {
+          "after_game": 0,
+          "label": "Before Game 1",
+          "predicted_winner": "Atlanta Braves",
+          "probability": 0.584755,
+          "series_score": "0-0"
+        }
+      ]
+    },
+    {
+      "series_id": "F:San Diego Padres|Chicago Cubs",
+      "game_type": "F",
+      "round": "Wild Card Series",
+      "round_short": "WC",
+      "best_of": 3,
+      "wins_needed": 2,
+      "league": "NL",
+      "team_a": "San Diego Padres",
+      "team_b": "Chicago Cubs",
+      "wins_a": 0,
+      "wins_b": 0,
+      "winner": null,
+      "games": [
+        {
+          "game_pk": 849843,
+          "game_date": "2026-09-30T02:00:00Z",
+          "game_number": 1,
+          "home_team": "San Diego Padres",
+          "away_team": "Chicago Cubs",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "F",
+          "series_description": "NL Wild Card Series"
+        },
+        {
+          "game_pk": 849842,
+          "game_date": "2026-10-01T02:00:00Z",
+          "game_number": 2,
+          "home_team": "San Diego Padres",
+          "away_team": "Chicago Cubs",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "F",
+          "series_description": "NL Wild Card Series"
+        },
+        {
+          "game_pk": 849840,
+          "game_date": "2026-10-02T02:00:00Z",
+          "game_number": 3,
+          "home_team": "San Diego Padres",
+          "away_team": "Chicago Cubs",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "F",
+          "series_description": "NL Wild Card Series"
+        }
+      ],
+      "team_a_seed": 4,
+      "team_b_seed": 5,
+      "team_a_record": {
+        "wins": 86,
+        "losses": 65,
+        "games": 151,
+        "win_pct": 0.5695364238410596,
+        "league": "NL",
+        "division": "West"
+      },
+      "team_b_record": {
+        "wins": 84,
+        "losses": 67,
+        "games": 151,
+        "win_pct": 0.5562913907284768,
+        "league": "NL",
+        "division": "Central"
+      },
+      "per_game_team_a_probability": 0.513456,
+      "team_a_series_probability": 0.520179,
+      "team_b_series_probability": 0.479821,
+      "predicted_series_winner": "San Diego Padres",
+      "predicted_series_winner_probability": 0.520179,
+      "status": "upcoming",
+      "prediction_history": [
+        {
+          "after_game": 0,
+          "label": "Before Game 1",
+          "predicted_winner": "San Diego Padres",
+          "probability": 0.520179,
+          "series_score": "0-0"
+        }
+      ]
+    },
+    {
+      "series_id": "D:Cleveland Guardians|HOU/CWS",
+      "game_type": "D",
+      "round": "Division Series",
+      "round_short": "DS",
+      "best_of": 5,
+      "wins_needed": 3,
+      "league": "AL",
+      "team_a": "Cleveland Guardians",
+      "team_b": "HOU/CWS",
+      "wins_a": 0,
+      "wins_b": 0,
+      "winner": null,
+      "games": [
+        {
+          "game_pk": 849829,
+          "game_date": "2026-10-03T07:33:00Z",
+          "game_number": 1,
+          "home_team": "Cleveland Guardians",
+          "away_team": "HOU/CWS",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "AL Division Series"
+        },
+        {
+          "game_pk": 849834,
+          "game_date": "2026-10-05T07:33:00Z",
+          "game_number": 2,
+          "home_team": "Cleveland Guardians",
+          "away_team": "HOU/CWS",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "AL Division Series"
+        },
+        {
+          "game_pk": 849833,
+          "game_date": "2026-10-07T07:33:00Z",
+          "game_number": 3,
+          "home_team": "HOU/CWS",
+          "away_team": "Cleveland Guardians",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "AL Division Series"
+        },
+        {
+          "game_pk": 849832,
+          "game_date": "2026-10-08T07:33:00Z",
+          "game_number": 4,
+          "home_team": "HOU/CWS",
+          "away_team": "Cleveland Guardians",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "AL Division Series"
+        },
+        {
+          "game_pk": 849831,
+          "game_date": "2026-10-10T07:33:00Z",
+          "game_number": 5,
+          "home_team": "Cleveland Guardians",
+          "away_team": "HOU/CWS",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "AL Division Series"
+        }
+      ],
+      "team_a_seed": 2,
+      "team_b_seed": null,
+      "team_a_record": {
+        "wins": 80,
+        "losses": 71,
+        "games": 151,
+        "win_pct": 0.5298013245033113,
+        "league": "AL",
+        "division": "Central"
+      },
+      "team_b_record": {},
+      "per_game_team_a_probability": 0.529801,
+      "team_a_series_probability": 0.555745,
+      "team_b_series_probability": 0.444255,
+      "predicted_series_winner": "Cleveland Guardians",
+      "predicted_series_winner_probability": 0.555745,
+      "status": "upcoming",
+      "prediction_history": [
+        {
+          "after_game": 0,
+          "label": "Before Game 1",
+          "predicted_winner": "Cleveland Guardians",
+          "probability": 0.555745,
+          "series_score": "0-0"
+        }
+      ]
+    },
+    {
+      "series_id": "D:Milwaukee Brewers|SD/CHC",
+      "game_type": "D",
+      "round": "Division Series",
+      "round_short": "DS",
+      "best_of": 5,
+      "wins_needed": 3,
+      "league": "NL",
+      "team_a": "Milwaukee Brewers",
+      "team_b": "SD/CHC",
+      "wins_a": 0,
+      "wins_b": 0,
+      "winner": null,
+      "games": [
+        {
+          "game_pk": 849830,
+          "game_date": "2026-10-03T08:33:00Z",
+          "game_number": 1,
+          "home_team": "Milwaukee Brewers",
+          "away_team": "SD/CHC",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "NL Division Series"
+        },
+        {
+          "game_pk": 849825,
+          "game_date": "2026-10-04T08:33:00Z",
+          "game_number": 2,
+          "home_team": "Milwaukee Brewers",
+          "away_team": "SD/CHC",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "NL Division Series"
+        },
+        {
+          "game_pk": 849826,
+          "game_date": "2026-10-06T07:33:00Z",
+          "game_number": 3,
+          "home_team": "SD/CHC",
+          "away_team": "Milwaukee Brewers",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "NL Division Series"
+        },
+        {
+          "game_pk": 849827,
+          "game_date": "2026-10-07T07:33:00Z",
+          "game_number": 4,
+          "home_team": "SD/CHC",
+          "away_team": "Milwaukee Brewers",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "NL Division Series"
+        },
+        {
+          "game_pk": 849824,
+          "game_date": "2026-10-09T08:33:00Z",
+          "game_number": 5,
+          "home_team": "Milwaukee Brewers",
+          "away_team": "SD/CHC",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "NL Division Series"
+        }
+      ],
+      "team_a_seed": 1,
+      "team_b_seed": null,
+      "team_a_record": {
+        "wins": 96,
+        "losses": 54,
+        "games": 150,
+        "win_pct": 0.64,
+        "league": "NL",
+        "division": "Central"
+      },
+      "team_b_record": {},
+      "per_game_team_a_probability": 0.64,
+      "team_a_series_probability": 0.749103,
+      "team_b_series_probability": 0.250897,
+      "predicted_series_winner": "Milwaukee Brewers",
+      "predicted_series_winner_probability": 0.749103,
+      "status": "upcoming",
+      "prediction_history": [
+        {
+          "after_game": 0,
+          "label": "Before Game 1",
+          "predicted_winner": "Milwaukee Brewers",
+          "probability": 0.749103,
+          "series_score": "0-0"
+        }
+      ]
+    },
+    {
+      "series_id": "D:Los Angeles Dodgers|ATL/PHI",
+      "game_type": "D",
+      "round": "Division Series",
+      "round_short": "DS",
+      "best_of": 5,
+      "wins_needed": 3,
+      "league": null,
+      "team_a": "Los Angeles Dodgers",
+      "team_b": "ATL/PHI",
+      "wins_a": 0,
+      "wins_b": 0,
+      "winner": null,
+      "games": [
+        {
+          "game_pk": 849828,
+          "game_date": "2026-10-03T10:33:00Z",
+          "game_number": 1,
+          "home_team": "Los Angeles Dodgers",
+          "away_team": "ATL/PHI",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "NL Division Series"
+        },
+        {
+          "game_pk": 849823,
+          "game_date": "2026-10-04T10:33:00Z",
+          "game_number": 2,
+          "home_team": "Los Angeles Dodgers",
+          "away_team": "ATL/PHI",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "NL Division Series"
+        },
+        {
+          "game_pk": 849819,
+          "game_date": "2026-10-06T07:33:00Z",
+          "game_number": 3,
+          "home_team": "ATL/PHI",
+          "away_team": "Los Angeles Dodgers",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "NL Division Series"
+        },
+        {
+          "game_pk": 849822,
+          "game_date": "2026-10-07T07:33:00Z",
+          "game_number": 4,
+          "home_team": "ATL/PHI",
+          "away_team": "Los Angeles Dodgers",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "NL Division Series"
+        },
+        {
+          "game_pk": 849821,
+          "game_date": "2026-10-09T10:33:00Z",
+          "game_number": 5,
+          "home_team": "Los Angeles Dodgers",
+          "away_team": "ATL/PHI",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "NL Division Series"
+        }
+      ],
+      "team_a_seed": 2,
+      "team_b_seed": null,
+      "team_a_record": {
+        "wins": 90,
+        "losses": 60,
+        "games": 150,
+        "win_pct": 0.6,
+        "league": "NL",
+        "division": "West"
+      },
+      "team_b_record": {},
+      "per_game_team_a_probability": 0.6,
+      "team_a_series_probability": 0.68256,
+      "team_b_series_probability": 0.31744,
+      "predicted_series_winner": "Los Angeles Dodgers",
+      "predicted_series_winner_probability": 0.68256,
+      "status": "upcoming",
+      "prediction_history": [
+        {
+          "after_game": 0,
+          "label": "Before Game 1",
+          "predicted_winner": "Los Angeles Dodgers",
+          "probability": 0.68256,
+          "series_score": "0-0"
+        }
+      ]
+    },
+    {
+      "series_id": "D:Tampa Bay Rays|NYY/BOS",
+      "game_type": "D",
+      "round": "Division Series",
+      "round_short": "DS",
+      "best_of": 5,
+      "wins_needed": 3,
+      "league": null,
+      "team_a": "Tampa Bay Rays",
+      "team_b": "NYY/BOS",
+      "wins_a": 0,
+      "wins_b": 0,
+      "winner": null,
+      "games": [
+        {
+          "game_pk": 849835,
+          "game_date": "2026-10-03T07:33:00Z",
+          "game_number": 1,
+          "home_team": "Tampa Bay Rays",
+          "away_team": "NYY/BOS",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "AL Division Series"
+        },
+        {
+          "game_pk": 849839,
+          "game_date": "2026-10-05T07:33:00Z",
+          "game_number": 2,
+          "home_team": "Tampa Bay Rays",
+          "away_team": "NYY/BOS",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "AL Division Series"
+        },
+        {
+          "game_pk": 849838,
+          "game_date": "2026-10-07T07:33:00Z",
+          "game_number": 3,
+          "home_team": "NYY/BOS",
+          "away_team": "Tampa Bay Rays",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "AL Division Series"
+        },
+        {
+          "game_pk": 849837,
+          "game_date": "2026-10-08T07:33:00Z",
+          "game_number": 4,
+          "home_team": "NYY/BOS",
+          "away_team": "Tampa Bay Rays",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "AL Division Series"
+        },
+        {
+          "game_pk": 849836,
+          "game_date": "2026-10-10T07:33:00Z",
+          "game_number": 5,
+          "home_team": "Tampa Bay Rays",
+          "away_team": "NYY/BOS",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "D",
+          "series_description": "AL Division Series"
+        }
+      ],
+      "team_a_seed": 1,
+      "team_b_seed": null,
+      "team_a_record": {
+        "wins": 89,
+        "losses": 60,
+        "games": 149,
+        "win_pct": 0.5973154362416108,
+        "league": "AL",
+        "division": "East"
+      },
+      "team_b_record": {},
+      "per_game_team_a_probability": 0.597315,
+      "team_a_series_probability": 0.677911,
+      "team_b_series_probability": 0.322089,
+      "predicted_series_winner": "Tampa Bay Rays",
+      "predicted_series_winner_probability": 0.677911,
+      "status": "upcoming",
+      "prediction_history": [
+        {
+          "after_game": 0,
+          "label": "Before Game 1",
+          "predicted_winner": "Tampa Bay Rays",
+          "probability": 0.677911,
+          "series_score": "0-0"
+        }
+      ]
+    },
+    {
+      "series_id": "L:AL Higher Seed|AL Lower Seed",
+      "game_type": "L",
+      "round": "League Championship Series",
+      "round_short": "LCS",
+      "best_of": 7,
+      "wins_needed": 4,
+      "league": null,
+      "team_a": "AL Higher Seed",
+      "team_b": "AL Lower Seed",
+      "wins_a": 0,
+      "wins_b": 0,
+      "winner": null,
+      "games": [
+        {
+          "game_pk": 849820,
+          "game_date": "2026-10-12T07:33:00Z",
+          "game_number": 1,
+          "home_team": "AL Higher Seed",
+          "away_team": "AL Lower Seed",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "AL Championship Series"
+        },
+        {
+          "game_pk": 849813,
+          "game_date": "2026-10-13T07:33:00Z",
+          "game_number": 2,
+          "home_team": "AL Higher Seed",
+          "away_team": "AL Lower Seed",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "AL Championship Series"
+        },
+        {
+          "game_pk": 849818,
+          "game_date": "2026-10-15T07:33:00Z",
+          "game_number": 3,
+          "home_team": "AL Lower Seed",
+          "away_team": "AL Higher Seed",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "AL Championship Series"
+        },
+        {
+          "game_pk": 849817,
+          "game_date": "2026-10-16T07:33:00Z",
+          "game_number": 4,
+          "home_team": "AL Lower Seed",
+          "away_team": "AL Higher Seed",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "AL Championship Series"
+        },
+        {
+          "game_pk": 849816,
+          "game_date": "2026-10-17T07:33:00Z",
+          "game_number": 5,
+          "home_team": "AL Lower Seed",
+          "away_team": "AL Higher Seed",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "AL Championship Series"
+        },
+        {
+          "game_pk": 849815,
+          "game_date": "2026-10-19T07:33:00Z",
+          "game_number": 6,
+          "home_team": "AL Higher Seed",
+          "away_team": "AL Lower Seed",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "AL Championship Series"
+        },
+        {
+          "game_pk": 849814,
+          "game_date": "2026-10-20T07:33:00Z",
+          "game_number": 7,
+          "home_team": "AL Higher Seed",
+          "away_team": "AL Lower Seed",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "AL Championship Series"
+        }
+      ],
+      "team_a_seed": null,
+      "team_b_seed": null,
+      "team_a_record": {},
+      "team_b_record": {},
+      "per_game_team_a_probability": 0.5,
+      "team_a_series_probability": 0.5,
+      "team_b_series_probability": 0.5,
+      "predicted_series_winner": "AL Higher Seed",
+      "predicted_series_winner_probability": 0.5,
+      "status": "upcoming",
+      "prediction_history": [
+        {
+          "after_game": 0,
+          "label": "Before Game 1",
+          "predicted_winner": "AL Higher Seed",
+          "probability": 0.5,
+          "series_score": "0-0"
+        }
+      ]
+    },
+    {
+      "series_id": "L:NL Higher Seed|NL Lower Seed",
+      "game_type": "L",
+      "round": "League Championship Series",
+      "round_short": "LCS",
+      "best_of": 7,
+      "wins_needed": 4,
+      "league": null,
+      "team_a": "NL Higher Seed",
+      "team_b": "NL Lower Seed",
+      "wins_a": 0,
+      "wins_b": 0,
+      "winner": null,
+      "games": [
+        {
+          "game_pk": 849809,
+          "game_date": "2026-10-11T07:33:00Z",
+          "game_number": 1,
+          "home_team": "NL Higher Seed",
+          "away_team": "NL Lower Seed",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "NL Championship Series"
+        },
+        {
+          "game_pk": 849812,
+          "game_date": "2026-10-12T07:33:00Z",
+          "game_number": 2,
+          "home_team": "NL Higher Seed",
+          "away_team": "NL Lower Seed",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "NL Championship Series"
+        },
+        {
+          "game_pk": 849811,
+          "game_date": "2026-10-14T07:33:00Z",
+          "game_number": 3,
+          "home_team": "NL Lower Seed",
+          "away_team": "NL Higher Seed",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "NL Championship Series"
+        },
+        {
+          "game_pk": 849810,
+          "game_date": "2026-10-15T07:33:00Z",
+          "game_number": 4,
+          "home_team": "NL Lower Seed",
+          "away_team": "NL Higher Seed",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "NL Championship Series"
+        },
+        {
+          "game_pk": 849808,
+          "game_date": "2026-10-16T07:33:00Z",
+          "game_number": 5,
+          "home_team": "NL Lower Seed",
+          "away_team": "NL Higher Seed",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "NL Championship Series"
+        },
+        {
+          "game_pk": 849806,
+          "game_date": "2026-10-18T07:33:00Z",
+          "game_number": 6,
+          "home_team": "NL Higher Seed",
+          "away_team": "NL Lower Seed",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "NL Championship Series"
+        },
+        {
+          "game_pk": 849807,
+          "game_date": "2026-10-19T07:33:00Z",
+          "game_number": 7,
+          "home_team": "NL Higher Seed",
+          "away_team": "NL Lower Seed",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "NL Championship Series"
+        }
+      ],
+      "team_a_seed": null,
+      "team_b_seed": null,
+      "team_a_record": {},
+      "team_b_record": {},
+      "per_game_team_a_probability": 0.5,
+      "team_a_series_probability": 0.5,
+      "team_b_series_probability": 0.5,
+      "predicted_series_winner": "NL Higher Seed",
+      "predicted_series_winner_probability": 0.5,
+      "status": "upcoming",
+      "prediction_history": [
+        {
+          "after_game": 0,
+          "label": "Before Game 1",
+          "predicted_winner": "NL Higher Seed",
+          "probability": 0.5,
+          "series_score": "0-0"
+        }
+      ]
+    },
+    {
+      "series_id": "W:Higher Seed League Champion|Lower Seed League Champion",
+      "game_type": "W",
+      "round": "World Series",
+      "round_short": "WS",
+      "best_of": 7,
+      "wins_needed": 4,
+      "league": "MLB",
+      "team_a": "Higher Seed League Champion",
+      "team_b": "Lower Seed League Champion",
+      "wins_a": 0,
+      "wins_b": 0,
+      "winner": null,
+      "games": [
+        {
+          "game_pk": 849805,
+          "game_date": "2026-10-23T07:33:00Z",
+          "game_number": 1,
+          "home_team": "Higher Seed League Champion",
+          "away_team": "Lower Seed League Champion",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "W",
+          "series_description": "World Series"
+        },
+        {
+          "game_pk": 849802,
+          "game_date": "2026-10-24T07:33:00Z",
+          "game_number": 2,
+          "home_team": "Higher Seed League Champion",
+          "away_team": "Lower Seed League Champion",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "W",
+          "series_description": "World Series"
+        },
+        {
+          "game_pk": 849804,
+          "game_date": "2026-10-26T07:33:00Z",
+          "game_number": 3,
+          "home_team": "Lower Seed League Champion",
+          "away_team": "Higher Seed League Champion",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "W",
+          "series_description": "World Series"
+        },
+        {
+          "game_pk": 849803,
+          "game_date": "2026-10-27T07:33:00Z",
+          "game_number": 4,
+          "home_team": "Lower Seed League Champion",
+          "away_team": "Higher Seed League Champion",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "W",
+          "series_description": "World Series"
+        },
+        {
+          "game_pk": 849799,
+          "game_date": "2026-10-28T07:33:00Z",
+          "game_number": 5,
+          "home_team": "Lower Seed League Champion",
+          "away_team": "Higher Seed League Champion",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "W",
+          "series_description": "World Series"
+        },
+        {
+          "game_pk": 849801,
+          "game_date": "2026-10-30T07:33:00Z",
+          "game_number": 6,
+          "home_team": "Higher Seed League Champion",
+          "away_team": "Lower Seed League Champion",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "W",
+          "series_description": "World Series"
+        },
+        {
+          "game_pk": 849800,
+          "game_date": "2026-10-31T07:33:00Z",
+          "game_number": 7,
+          "home_team": "Higher Seed League Champion",
+          "away_team": "Lower Seed League Champion",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "W",
+          "series_description": "World Series"
+        }
+      ],
+      "team_a_seed": null,
+      "team_b_seed": null,
+      "team_a_record": {},
+      "team_b_record": {},
+      "per_game_team_a_probability": 0.5,
+      "team_a_series_probability": 0.5,
+      "team_b_series_probability": 0.5,
+      "predicted_series_winner": "Higher Seed League Champion",
+      "predicted_series_winner_probability": 0.5,
+      "status": "upcoming",
+      "prediction_history": [
+        {
+          "after_game": 0,
+          "label": "Before Game 1",
+          "predicted_winner": "Higher Seed League Champion",
+          "probability": 0.5,
+          "series_score": "0-0"
+        }
+      ]
+    }
+  ],
+  "championship_probabilities": [
+    {
+      "team": "Milwaukee Brewers",
+      "probability": 0.269875,
+      "league": "NL",
+      "seed": 1
+    },
+    {
+      "team": "Tampa Bay Rays",
+      "probability": 0.186096,
+      "league": "AL",
+      "seed": 1
+    },
+    {
+      "team": "Los Angeles Dodgers",
+      "probability": 0.155673,
+      "league": "NL",
+      "seed": 2
+    },
+    {
+      "team": "Cleveland Guardians",
+      "probability": 0.072935,
+      "league": "AL",
+      "seed": 2
+    },
+    {
+      "team": "Atlanta Braves",
+      "probability": 0.070644,
+      "league": "NL",
+      "seed": 3
+    },
+    {
+      "team": "New York Yankees",
+      "probability": 0.067065,
+      "league": "AL",
+      "seed": 4
+    },
+    {
+      "team": "San Diego Padres",
+      "probability": 0.045638,
+      "league": "NL",
+      "seed": 4
+    },
+    {
+      "team": "Chicago Cubs",
+      "probability": 0.034895,
+      "league": "NL",
+      "seed": 5
+    },
+    {
+      "team": "Boston Red Sox",
+      "probability": 0.032896,
+      "league": "AL",
+      "seed": 5
+    },
+    {
+      "team": "Chicago White Sox",
+      "probability": 0.023841,
+      "league": "AL",
+      "seed": 6
+    },
+    {
+      "team": "Philadelphia Phillies",
+      "probability": 0.022781,
+      "league": "NL",
+      "seed": 6
+    },
+    {
+      "team": "Houston Astros",
+      "probability": 0.017661,
+      "league": "AL",
+      "seed": 3
+    }
+  ],
+  "world_series_favorite": {
+    "team": "Milwaukee Brewers",
+    "probability": 0.269875,
+    "league": "NL",
+    "seed": 1
+  },
+  "world_series_champion": null,
+  "series_prediction_history": {
+    "F:New York Yankees|Boston Red Sox": [
+      {
+        "after_game": 0,
+        "label": "Before Game 1",
+        "predicted_winner": "New York Yankees",
+        "probability": 0.555129,
+        "series_score": "0-0"
+      }
+    ],
+    "F:Houston Astros|Chicago White Sox": [
+      {
+        "after_game": 0,
+        "label": "Before Game 1",
+        "predicted_winner": "Chicago White Sox",
+        "probability": 0.519992,
+        "series_score": "0-0"
+      }
+    ],
+    "F:Atlanta Braves|Philadelphia Phillies": [
+      {
+        "after_game": 0,
+        "label": "Before Game 1",
+        "predicted_winner": "Atlanta Braves",
+        "probability": 0.584755,
+        "series_score": "0-0"
+      }
+    ],
+    "F:San Diego Padres|Chicago Cubs": [
+      {
+        "after_game": 0,
+        "label": "Before Game 1",
+        "predicted_winner": "San Diego Padres",
+        "probability": 0.520179,
+        "series_score": "0-0"
+      }
+    ],
+    "D:Cleveland Guardians|HOU/CWS": [
+      {
+        "after_game": 0,
+        "label": "Before Game 1",
+        "predicted_winner": "Cleveland Guardians",
+        "probability": 0.555745,
+        "series_score": "0-0"
+      }
+    ],
+    "D:Milwaukee Brewers|SD/CHC": [
+      {
+        "after_game": 0,
+        "label": "Before Game 1",
+        "predicted_winner": "Milwaukee Brewers",
+        "probability": 0.749103,
+        "series_score": "0-0"
+      }
+    ],
+    "D:Los Angeles Dodgers|ATL/PHI": [
+      {
+        "after_game": 0,
+        "label": "Before Game 1",
+        "predicted_winner": "Los Angeles Dodgers",
+        "probability": 0.68256,
+        "series_score": "0-0"
+      }
+    ],
+    "D:Tampa Bay Rays|NYY/BOS": [
+      {
+        "after_game": 0,
+        "label": "Before Game 1",
+        "predicted_winner": "Tampa Bay Rays",
+        "probability": 0.677911,
+        "series_score": "0-0"
+      }
+    ],
+    "L:AL Higher Seed|AL Lower Seed": [
+      {
+        "after_game": 0,
+        "label": "Before Game 1",
+        "predicted_winner": "AL Higher Seed",
+        "probability": 0.5,
+        "series_score": "0-0"
+      }
+    ],
+    "L:NL Higher Seed|NL Lower Seed": [
+      {
+        "after_game": 0,
+        "label": "Before Game 1",
+        "predicted_winner": "NL Higher Seed",
+        "probability": 0.5,
+        "series_score": "0-0"
+      }
+    ],
+    "W:Higher Seed League Champion|Lower Seed League Champion": [
+      {
+        "after_game": 0,
+        "label": "Before Game 1",
+        "predicted_winner": "Higher Seed League Champion",
+        "probability": 0.5,
+        "series_score": "0-0"
+      }
+    ]
+  },
+  "overall_projection_history": [
+    {
+      "after_game_pk": null,
+      "label": "Start of postseason",
+      "favorite": "Milwaukee Brewers",
+      "probability": 0.269875,
+      "timestamp": "2026-09-29T00:00:42"
+    }
+  ],
+  "matchup_probability_cache": {
+    "Boston Red Sox||New York Yankees": 0.463181,
+    "Chicago White Sox||Houston Astros": 0.513331,
+    "Atlanta Braves||Philadelphia Phillies": 0.556747,
+    "Chicago Cubs||San Diego Padres": 0.486544,
+    "Cleveland Guardians||HOU/CWS": 0.529801,
+    "Milwaukee Brewers||SD/CHC": 0.64,
+    "ATL/PHI||Los Angeles Dodgers": 0.4,
+    "NYY/BOS||Tampa Bay Rays": 0.402685,
+    "AL Higher Seed||AL Lower Seed": 0.5,
+    "NL Higher Seed||NL Lower Seed": 0.5,
+    "Higher Seed League Champion||Lower Seed League Champion": 0.5,
+    "New York Yankees||Tampa Bay Rays": 0.475313,
+    "Boston Red Sox||Tampa Bay Rays": 0.438717,
+    "Cleveland Guardians||Houston Astros": 0.536439,
+    "Chicago White Sox||Cleveland Guardians": 0.476847,
+    "Cleveland Guardians||Tampa Bay Rays": 0.431693,
+    "Houston Astros||Tampa Bay Rays": 0.396287,
+    "Chicago White Sox||Tampa Bay Rays": 0.409115,
+    "Cleveland Guardians||New York Yankees": 0.456084,
+    "Houston Astros||New York Yankees": 0.420156,
+    "Chicago White Sox||New York Yankees": 0.433203,
+    "Boston Red Sox||Cleveland Guardians": 0.507143,
+    "Boston Red Sox||Houston Astros": 0.543537,
+    "Boston Red Sox||Chicago White Sox": 0.530276,
+    "Milwaukee Brewers||San Diego Padres": 0.573319,
+    "Chicago Cubs||Milwaukee Brewers": 0.413567,
+    "Atlanta Braves||Los Angeles Dodgers": 0.489011,
+    "Los Angeles Dodgers||Philadelphia Phillies": 0.567568,
+    "Los Angeles Dodgers||Milwaukee Brewers": 0.457627,
+    "Atlanta Braves||Milwaukee Brewers": 0.446737,
+    "Milwaukee Brewers||Philadelphia Phillies": 0.608696,
+    "Los Angeles Dodgers||San Diego Padres": 0.531335,
+    "Atlanta Braves||San Diego Padres": 0.520374,
+    "Philadelphia Phillies||San Diego Padres": 0.463458,
+    "Chicago Cubs||Los Angeles Dodgers": 0.455285,
+    "Atlanta Braves||Chicago Cubs": 0.533793,
+    "Chicago Cubs||Philadelphia Phillies": 0.523132,
+    "Milwaukee Brewers||Tampa Bay Rays": 0.545145,
+    "Los Angeles Dodgers||Tampa Bay Rays": 0.502793,
+    "Atlanta Braves||Tampa Bay Rays": 0.491803,
+    "Philadelphia Phillies||Tampa Bay Rays": 0.435177,
+    "San Diego Padres||Tampa Bay Rays": 0.471448,
+    "Chicago Cubs||Tampa Bay Rays": 0.458057,
+    "Cleveland Guardians||Milwaukee Brewers": 0.387931,
+    "Cleveland Guardians||Los Angeles Dodgers": 0.428954,
+    "Atlanta Braves||Cleveland Guardians": 0.560245,
+    "Cleveland Guardians||Philadelphia Phillies": 0.496454,
+    "Cleveland Guardians||San Diego Padres": 0.459933,
+    "Chicago Cubs||Cleveland Guardians": 0.526669,
+    "Houston Astros||Milwaukee Brewers": 0.353879,
+    "Houston Astros||Los Angeles Dodgers": 0.393617,
+    "Atlanta Braves||Houston Astros": 0.595842,
+    "Houston Astros||Philadelphia Phillies": 0.460036,
+    "Houston Astros||San Diego Padres": 0.423938,
+    "Chicago Cubs||Houston Astros": 0.562864,
+    "Chicago White Sox||Milwaukee Brewers": 0.366167,
+    "Chicago White Sox||Los Angeles Dodgers": 0.406417,
+    "Atlanta Braves||Chicago White Sox": 0.582935,
+    "Chicago White Sox||Philadelphia Phillies": 0.47331,
+    "Chicago White Sox||San Diego Padres": 0.437013,
+    "Chicago Cubs||Chicago White Sox": 0.549699,
+    "Milwaukee Brewers||New York Yankees": 0.569522,
+    "Los Angeles Dodgers||New York Yankees": 0.527473,
+    "Atlanta Braves||New York Yankees": 0.516503,
+    "New York Yankees||Philadelphia Phillies": 0.540395,
+    "New York Yankees||San Diego Padres": 0.503876,
+    "Chicago Cubs||New York Yankees": 0.482672,
+    "Boston Red Sox||Milwaukee Brewers": 0.394737,
+    "Boston Red Sox||Los Angeles Dodgers": 0.435967,
+    "Atlanta Braves||Boston Red Sox": 0.553193,
+    "Boston Red Sox||Philadelphia Phillies": 0.503597,
+    "Boston Red Sox||San Diego Padres": 0.467038,
+    "Boston Red Sox||Chicago Cubs": 0.480459
+  },
+  "model_note": "Series probabilities combine the current three-model comparison signal when available with regular-season Log5 team strength, then update from the actual postseason series score. Overall championship probabilities are propagated through MLB's fixed postseason bracket."
 }
