@@ -1,7 +1,7 @@
 {
   "active": true,
   "season": 2026,
-  "generated_at": "2026-09-29T15:44:29",
+  "generated_at": "2026-09-29T15:46:01",
   "postseason_start_date": "2026-09-29",
   "format": {
     "wild_card": "Best of 3",
@@ -352,7 +352,7 @@
       "league": "NL",
       "team_a": "Atlanta Braves",
       "team_b": "Philadelphia Phillies",
-      "wins_a": 0,
+      "wins_a": 1,
       "wins_b": 0,
       "winner": null,
       "games": [
@@ -364,9 +364,9 @@
           "away_team": "Philadelphia Phillies",
           "home_score": 5,
           "away_score": 3,
-          "status": "In Progress",
-          "is_final": false,
-          "winner": null,
+          "status": "Game Over",
+          "is_final": true,
+          "winner": "Atlanta Braves",
           "game_type": "F",
           "series_description": "NL Wild Card Series"
         },
@@ -418,11 +418,11 @@
         "division": "East"
       },
       "per_game_team_a_probability": 0.556747,
-      "team_a_series_probability": 0.584755,
-      "team_b_series_probability": 0.415245,
+      "team_a_series_probability": 0.803527,
+      "team_b_series_probability": 0.196473,
       "predicted_series_winner": "Atlanta Braves",
-      "predicted_series_winner_probability": 0.584755,
-      "status": "upcoming",
+      "predicted_series_winner_probability": 0.803527,
+      "status": "active",
       "prediction_history": [
         {
           "after_game": 0,
@@ -430,6 +430,14 @@
           "predicted_winner": "Atlanta Braves",
           "probability": 0.584755,
           "series_score": "0-0"
+        },
+        {
+          "after_game": 1,
+          "label": "After Game 1",
+          "game_pk": 849845,
+          "predicted_winner": "Atlanta Braves",
+          "probability": 0.803527,
+          "series_score": "1-0"
         }
       ]
     },
@@ -1375,80 +1383,80 @@
   "championship_probabilities": [
     {
       "team": "Milwaukee Brewers",
-      "probability": 0.269876,
+      "probability": 0.266118,
       "league": "NL",
       "seed": 1
     },
     {
       "team": "Tampa Bay Rays",
-      "probability": 0.186097,
+      "probability": 0.185097,
       "league": "AL",
       "seed": 1
     },
     {
       "team": "Los Angeles Dodgers",
-      "probability": 0.155672,
+      "probability": 0.149359,
       "league": "NL",
-      "seed": 2
-    },
-    {
-      "team": "Cleveland Guardians",
-      "probability": 0.072935,
-      "league": "AL",
       "seed": 2
     },
     {
       "team": "Atlanta Braves",
-      "probability": 0.070643,
+      "probability": 0.097073,
       "league": "NL",
       "seed": 3
     },
     {
+      "team": "Cleveland Guardians",
+      "probability": 0.072356,
+      "league": "AL",
+      "seed": 2
+    },
+    {
       "team": "New York Yankees",
-      "probability": 0.067064,
+      "probability": 0.066647,
       "league": "AL",
       "seed": 4
     },
     {
       "team": "San Diego Padres",
-      "probability": 0.045638,
+      "probability": 0.044686,
       "league": "NL",
       "seed": 4
     },
     {
       "team": "Chicago Cubs",
-      "probability": 0.034895,
+      "probability": 0.034117,
       "league": "NL",
       "seed": 5
     },
     {
       "team": "Boston Red Sox",
-      "probability": 0.032896,
+      "probability": 0.032645,
       "league": "AL",
       "seed": 5
     },
     {
       "team": "Chicago White Sox",
-      "probability": 0.023841,
+      "probability": 0.023629,
       "league": "AL",
-      "seed": 6
-    },
-    {
-      "team": "Philadelphia Phillies",
-      "probability": 0.022781,
-      "league": "NL",
       "seed": 6
     },
     {
       "team": "Houston Astros",
-      "probability": 0.017661,
+      "probability": 0.017493,
       "league": "AL",
       "seed": 3
+    },
+    {
+      "team": "Philadelphia Phillies",
+      "probability": 0.010779,
+      "league": "NL",
+      "seed": 6
     }
   ],
   "world_series_favorite": {
     "team": "Milwaukee Brewers",
-    "probability": 0.269876,
+    "probability": 0.266118,
     "league": "NL",
     "seed": 1
   },
@@ -1479,6 +1487,14 @@
         "predicted_winner": "Atlanta Braves",
         "probability": 0.584755,
         "series_score": "0-0"
+      },
+      {
+        "after_game": 1,
+        "label": "After Game 1",
+        "game_pk": 849845,
+        "predicted_winner": "Atlanta Braves",
+        "probability": 0.803527,
+        "series_score": "1-0"
       }
     ],
     "F:San Diego Padres|Chicago Cubs": [
@@ -1561,6 +1577,13 @@
       "favorite": "Milwaukee Brewers",
       "probability": 0.269875,
       "timestamp": "2026-09-29T00:00:42"
+    },
+    {
+      "after_game_pk": 849845,
+      "label": "After Philadelphia Phillies @ Atlanta Braves",
+      "favorite": "Milwaukee Brewers",
+      "probability": 0.266118,
+      "timestamp": "2026-09-29T15:46:01"
     }
   ],
   "matchup_probability_cache": {
