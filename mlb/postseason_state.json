@@ -1,7 +1,7 @@
 {
   "active": true,
   "season": 2026,
-  "generated_at": "2026-09-29T22:18:45",
+  "generated_at": "2026-09-29T22:19:35",
   "postseason_start_date": "2026-09-29",
   "format": {
     "wild_card": "Best of 3",
@@ -170,7 +170,7 @@
       "league": "AL",
       "team_a": "New York Yankees",
       "team_b": "Boston Red Sox",
-      "wins_a": 0,
+      "wins_a": 1,
       "wins_b": 0,
       "winner": null,
       "games": [
@@ -182,9 +182,9 @@
           "away_team": "Boston Red Sox",
           "home_score": 9,
           "away_score": 0,
-          "status": "In Progress",
-          "is_final": false,
-          "winner": null,
+          "status": "Game Over",
+          "is_final": true,
+          "winner": "New York Yankees",
           "game_type": "F",
           "series_description": "AL Wild Card Series"
         },
@@ -236,11 +236,11 @@
         "division": "East"
       },
       "per_game_team_a_probability": 0.536819,
-      "team_a_series_probability": 0.555129,
-      "team_b_series_probability": 0.444871,
+      "team_a_series_probability": 0.785463,
+      "team_b_series_probability": 0.214537,
       "predicted_series_winner": "New York Yankees",
-      "predicted_series_winner_probability": 0.555129,
-      "status": "upcoming",
+      "predicted_series_winner_probability": 0.785463,
+      "status": "active",
       "prediction_history": [
         {
           "after_game": 0,
@@ -248,6 +248,14 @@
           "predicted_winner": "New York Yankees",
           "probability": 0.555129,
           "series_score": "0-0"
+        },
+        {
+          "after_game": 1,
+          "label": "After Game 1",
+          "game_pk": 849851,
+          "predicted_winner": "New York Yankees",
+          "probability": 0.785463,
+          "series_score": "1-0"
         }
       ]
     },
@@ -1391,80 +1399,80 @@
   "championship_probabilities": [
     {
       "team": "Milwaukee Brewers",
-      "probability": 0.266013,
+      "probability": 0.264616,
       "league": "NL",
       "seed": 1
     },
     {
       "team": "Tampa Bay Rays",
-      "probability": 0.18445,
+      "probability": 0.17947,
       "league": "AL",
       "seed": 1
     },
     {
       "team": "Los Angeles Dodgers",
-      "probability": 0.149273,
+      "probability": 0.148281,
       "league": "NL",
       "seed": 2
     },
     {
       "team": "Atlanta Braves",
-      "probability": 0.097011,
+      "probability": 0.09633,
       "league": "NL",
       "seed": 3
     },
     {
-      "team": "Cleveland Guardians",
-      "probability": 0.071573,
-      "league": "AL",
-      "seed": 2
-    },
-    {
       "team": "New York Yankees",
-      "probability": 0.066378,
+      "probability": 0.093919,
       "league": "AL",
       "seed": 4
     },
     {
+      "team": "Cleveland Guardians",
+      "probability": 0.070414,
+      "league": "AL",
+      "seed": 2
+    },
+    {
       "team": "San Diego Padres",
-      "probability": 0.044653,
+      "probability": 0.044306,
       "league": "NL",
       "seed": 4
     },
     {
       "team": "Chicago White Sox",
-      "probability": 0.034678,
+      "probability": 0.034055,
       "league": "AL",
       "seed": 6
     },
     {
       "team": "Chicago Cubs",
-      "probability": 0.034089,
+      "probability": 0.033807,
       "league": "NL",
       "seed": 5
     },
     {
       "team": "Boston Red Sox",
-      "probability": 0.032483,
+      "probability": 0.015665,
       "league": "AL",
       "seed": 5
     },
     {
       "team": "Philadelphia Phillies",
-      "probability": 0.010768,
+      "probability": 0.010669,
       "league": "NL",
       "seed": 6
     },
     {
       "team": "Houston Astros",
-      "probability": 0.008631,
+      "probability": 0.008467,
       "league": "AL",
       "seed": 3
     }
   ],
   "world_series_favorite": {
     "team": "Milwaukee Brewers",
-    "probability": 0.266013,
+    "probability": 0.264616,
     "league": "NL",
     "seed": 1
   },
@@ -1477,6 +1485,14 @@
         "predicted_winner": "New York Yankees",
         "probability": 0.555129,
         "series_score": "0-0"
+      },
+      {
+        "after_game": 1,
+        "label": "After Game 1",
+        "game_pk": 849851,
+        "predicted_winner": "New York Yankees",
+        "probability": 0.785463,
+        "series_score": "1-0"
       }
     ],
     "F:Houston Astros|Chicago White Sox": [
@@ -1607,6 +1623,13 @@
       "favorite": "Milwaukee Brewers",
       "probability": 0.266013,
       "timestamp": "2026-09-29T19:24:38"
+    },
+    {
+      "after_game_pk": 849851,
+      "label": "After Boston Red Sox @ New York Yankees",
+      "favorite": "Milwaukee Brewers",
+      "probability": 0.264616,
+      "timestamp": "2026-09-29T22:19:35"
     }
   ],
   "matchup_probability_cache": {
