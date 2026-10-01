@@ -1,7 +1,7 @@
 {
   "active": true,
   "season": 2026,
-  "generated_at": "2026-10-01T00:01:40",
+  "generated_at": "2026-10-01T00:02:30",
   "postseason_start_date": "2026-09-29",
   "format": {
     "wild_card": "Best of 3",
@@ -390,7 +390,7 @@
         },
         {
           "game_pk": 849844,
-          "game_date": "2026-10-01T18:00:00Z",
+          "game_date": "2026-10-02T00:00:00Z",
           "game_number": 3,
           "home_team": "Atlanta Braves",
           "away_team": "Philadelphia Phillies",
@@ -463,9 +463,9 @@
       "league": "NL",
       "team_a": "San Diego Padres",
       "team_b": "Chicago Cubs",
-      "wins_a": 1,
+      "wins_a": 2,
       "wins_b": 0,
-      "winner": null,
+      "winner": "San Diego Padres",
       "games": [
         {
           "game_pk": 849843,
@@ -489,23 +489,9 @@
           "away_team": "Chicago Cubs",
           "home_score": 4,
           "away_score": 1,
-          "status": "In Progress",
-          "is_final": false,
-          "winner": null,
-          "game_type": "F",
-          "series_description": "NL Wild Card Series"
-        },
-        {
-          "game_pk": 849840,
-          "game_date": "2026-10-02T02:00:00Z",
-          "game_number": 3,
-          "home_team": "San Diego Padres",
-          "away_team": "Chicago Cubs",
-          "home_score": null,
-          "away_score": null,
-          "status": "Scheduled",
-          "is_final": false,
-          "winner": null,
+          "status": "Game Over",
+          "is_final": true,
+          "winner": "San Diego Padres",
           "game_type": "F",
           "series_description": "NL Wild Card Series"
         }
@@ -529,11 +515,11 @@
         "division": "Central"
       },
       "per_game_team_a_probability": 0.513456,
-      "team_a_series_probability": 0.763275,
-      "team_b_series_probability": 0.236725,
+      "team_a_series_probability": 1.0,
+      "team_b_series_probability": 0.0,
       "predicted_series_winner": "San Diego Padres",
-      "predicted_series_winner_probability": 0.763275,
-      "status": "active",
+      "predicted_series_winner_probability": 1.0,
+      "status": "completed",
       "prediction_history": [
         {
           "after_game": 0,
@@ -549,6 +535,14 @@
           "predicted_winner": "San Diego Padres",
           "probability": 0.763275,
           "series_score": "1-0"
+        },
+        {
+          "after_game": 2,
+          "label": "After Game 2",
+          "game_pk": 849842,
+          "predicted_winner": "San Diego Padres",
+          "probability": 1.0,
+          "series_score": "2-0"
         }
       ]
     },
@@ -1417,61 +1411,61 @@
   "championship_probabilities": [
     {
       "team": "Milwaukee Brewers",
-      "probability": 0.265077,
+      "probability": 0.262792,
       "league": "NL",
       "seed": 1
     },
     {
       "team": "Tampa Bay Rays",
-      "probability": 0.175143,
+      "probability": 0.174994,
       "league": "AL",
       "seed": 1
     },
     {
       "team": "Los Angeles Dodgers",
-      "probability": 0.153825,
+      "probability": 0.153353,
       "league": "NL",
       "seed": 2
     },
     {
       "team": "New York Yankees",
-      "probability": 0.119814,
+      "probability": 0.119692,
       "league": "AL",
       "seed": 4
     },
     {
-      "team": "Cleveland Guardians",
-      "probability": 0.069117,
-      "league": "AL",
-      "seed": 2
-    },
-    {
       "team": "San Diego Padres",
-      "probability": 0.066047,
+      "probability": 0.086531,
       "league": "NL",
       "seed": 4
     },
     {
+      "team": "Cleveland Guardians",
+      "probability": 0.069023,
+      "league": "AL",
+      "seed": 2
+    },
+    {
       "team": "Atlanta Braves",
-      "probability": 0.066046,
+      "probability": 0.065828,
       "league": "NL",
       "seed": 3
     },
     {
       "team": "Chicago White Sox",
-      "probability": 0.044237,
+      "probability": 0.044168,
       "league": "AL",
       "seed": 6
     },
     {
       "team": "Philadelphia Phillies",
-      "probability": 0.02373,
+      "probability": 0.023619,
       "league": "NL",
       "seed": 6
     },
     {
       "team": "Chicago Cubs",
-      "probability": 0.016963,
+      "probability": 0.0,
       "league": "NL",
       "seed": 5
     },
@@ -1490,7 +1484,7 @@
   ],
   "world_series_favorite": {
     "team": "Milwaukee Brewers",
-    "probability": 0.265077,
+    "probability": 0.262792,
     "league": "NL",
     "seed": 1
   },
@@ -1586,6 +1580,14 @@
         "predicted_winner": "San Diego Padres",
         "probability": 0.763275,
         "series_score": "1-0"
+      },
+      {
+        "after_game": 2,
+        "label": "After Game 2",
+        "game_pk": 849842,
+        "predicted_winner": "San Diego Padres",
+        "probability": 1.0,
+        "series_score": "2-0"
       }
     ],
     "D:Cleveland Guardians|HOU/CWS": [
@@ -1726,6 +1728,13 @@
       "favorite": "Milwaukee Brewers",
       "probability": 0.265077,
       "timestamp": "2026-09-30T22:16:46"
+    },
+    {
+      "after_game_pk": 849842,
+      "label": "After Chicago Cubs @ San Diego Padres",
+      "favorite": "Milwaukee Brewers",
+      "probability": 0.262792,
+      "timestamp": "2026-10-01T00:02:30"
     }
   ],
   "matchup_probability_cache": {
