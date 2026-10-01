@@ -1,7 +1,7 @@
 {
   "active": true,
   "season": 2026,
-  "generated_at": "2026-10-01T00:03:40",
+  "generated_at": "2026-10-01T00:04:29",
   "postseason_start_date": "2026-09-29",
   "format": {
     "wild_card": "Best of 3",
@@ -785,7 +785,7 @@
       ]
     },
     {
-      "series_id": "D:Milwaukee Brewers|SD/CHC",
+      "series_id": "D:Milwaukee Brewers|San Diego Padres",
       "game_type": "D",
       "round": "Division Series",
       "round_short": "DS",
@@ -793,17 +793,17 @@
       "wins_needed": 3,
       "league": "NL",
       "team_a": "Milwaukee Brewers",
-      "team_b": "SD/CHC",
+      "team_b": "San Diego Padres",
       "wins_a": 0,
       "wins_b": 0,
       "winner": null,
       "games": [
         {
           "game_pk": 849830,
-          "game_date": "2026-10-03T08:33:00Z",
+          "game_date": "2026-10-04T00:30:00Z",
           "game_number": 1,
           "home_team": "Milwaukee Brewers",
-          "away_team": "SD/CHC",
+          "away_team": "San Diego Padres",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -817,7 +817,7 @@
           "game_date": "2026-10-04T20:00:00Z",
           "game_number": 2,
           "home_team": "Milwaukee Brewers",
-          "away_team": "SD/CHC",
+          "away_team": "San Diego Padres",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -830,7 +830,7 @@
           "game_pk": 849826,
           "game_date": "2026-10-06T07:33:00Z",
           "game_number": 3,
-          "home_team": "SD/CHC",
+          "home_team": "San Diego Padres",
           "away_team": "Milwaukee Brewers",
           "home_score": null,
           "away_score": null,
@@ -844,7 +844,7 @@
           "game_pk": 849827,
           "game_date": "2026-10-07T07:33:00Z",
           "game_number": 4,
-          "home_team": "SD/CHC",
+          "home_team": "San Diego Padres",
           "away_team": "Milwaukee Brewers",
           "home_score": null,
           "away_score": null,
@@ -859,7 +859,7 @@
           "game_date": "2026-10-09T08:33:00Z",
           "game_number": 5,
           "home_team": "Milwaukee Brewers",
-          "away_team": "SD/CHC",
+          "away_team": "San Diego Padres",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -870,7 +870,7 @@
         }
       ],
       "team_a_seed": 1,
-      "team_b_seed": null,
+      "team_b_seed": 4,
       "team_a_record": {
         "wins": 96,
         "losses": 54,
@@ -879,19 +879,26 @@
         "league": "NL",
         "division": "Central"
       },
-      "team_b_record": {},
-      "per_game_team_a_probability": 0.64,
-      "team_a_series_probability": 0.749103,
-      "team_b_series_probability": 0.250897,
+      "team_b_record": {
+        "wins": 86,
+        "losses": 65,
+        "games": 151,
+        "win_pct": 0.5695364238410596,
+        "league": "NL",
+        "division": "West"
+      },
+      "per_game_team_a_probability": 0.573319,
+      "team_a_series_probability": 0.635515,
+      "team_b_series_probability": 0.364485,
       "predicted_series_winner": "Milwaukee Brewers",
-      "predicted_series_winner_probability": 0.749103,
+      "predicted_series_winner_probability": 0.635515,
       "status": "upcoming",
       "prediction_history": [
         {
           "after_game": 0,
           "label": "Before Game 1",
           "predicted_winner": "Milwaukee Brewers",
-          "probability": 0.749103,
+          "probability": 0.635515,
           "series_score": "0-0"
         }
       ]
@@ -912,7 +919,7 @@
       "games": [
         {
           "game_pk": 849828,
-          "game_date": "2026-10-03T10:33:00Z",
+          "game_date": "2026-10-03T20:00:00Z",
           "game_number": 1,
           "home_team": "Los Angeles Dodgers",
           "away_team": "ATL/PHI",
@@ -1668,6 +1675,15 @@
         "label": "Before Game 1",
         "predicted_winner": "Tampa Bay Rays",
         "probability": 0.546213,
+        "series_score": "0-0"
+      }
+    ],
+    "D:Milwaukee Brewers|San Diego Padres": [
+      {
+        "after_game": 0,
+        "label": "Before Game 1",
+        "predicted_winner": "Milwaukee Brewers",
+        "probability": 0.635515,
         "series_score": "0-0"
       }
     ]
