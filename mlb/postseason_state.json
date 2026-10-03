@@ -1,7 +1,7 @@
 {
   "active": true,
   "season": 2026,
-  "generated_at": "2026-10-03T17:53:42",
+  "generated_at": "2026-10-03T17:54:32",
   "postseason_start_date": "2026-09-29",
   "format": {
     "wild_card": "Best of 3",
@@ -810,7 +810,7 @@
       "league": "NL",
       "team_a": "Los Angeles Dodgers",
       "team_b": "Atlanta Braves",
-      "wins_a": 0,
+      "wins_a": 1,
       "wins_b": 0,
       "winner": null,
       "games": [
@@ -822,9 +822,9 @@
           "away_team": "Atlanta Braves",
           "home_score": 5,
           "away_score": 3,
-          "status": "In Progress",
-          "is_final": false,
-          "winner": null,
+          "status": "Game Over",
+          "is_final": true,
+          "winner": "Los Angeles Dodgers",
           "game_type": "D",
           "series_description": "NL Division Series"
         },
@@ -904,11 +904,11 @@
         "division": "East"
       },
       "per_game_team_a_probability": 0.510989,
-      "team_a_series_probability": 0.520598,
-      "team_b_series_probability": 0.479402,
+      "team_a_series_probability": 0.7038,
+      "team_b_series_probability": 0.2962,
       "predicted_series_winner": "Los Angeles Dodgers",
-      "predicted_series_winner_probability": 0.520598,
-      "status": "upcoming",
+      "predicted_series_winner_probability": 0.7038,
+      "status": "active",
       "prediction_history": [
         {
           "after_game": 0,
@@ -916,6 +916,14 @@
           "predicted_winner": "Los Angeles Dodgers",
           "probability": 0.520598,
           "series_score": "0-0"
+        },
+        {
+          "after_game": 1,
+          "label": "After Game 1",
+          "game_pk": 849828,
+          "predicted_winner": "Los Angeles Dodgers",
+          "probability": 0.7038,
+          "series_score": "1-0"
         }
       ]
     },
@@ -1441,49 +1449,49 @@
   "championship_probabilities": [
     {
       "team": "Milwaukee Brewers",
-      "probability": 0.255975,
+      "probability": 0.254174,
       "league": "NL",
-      "seed": 1
-    },
-    {
-      "team": "Tampa Bay Rays",
-      "probability": 0.175448,
-      "league": "AL",
       "seed": 1
     },
     {
       "team": "Los Angeles Dodgers",
-      "probability": 0.141258,
+      "probability": 0.190967,
       "league": "NL",
       "seed": 2
     },
     {
+      "team": "Tampa Bay Rays",
+      "probability": 0.174778,
+      "league": "AL",
+      "seed": 1
+    },
+    {
       "team": "New York Yankees",
-      "probability": 0.120019,
+      "probability": 0.119506,
       "league": "AL",
       "seed": 4
     },
     {
-      "team": "Atlanta Braves",
-      "probability": 0.118637,
-      "league": "NL",
-      "seed": 3
-    },
-    {
       "team": "San Diego Padres",
-      "probability": 0.083205,
+      "probability": 0.082387,
       "league": "NL",
       "seed": 4
     },
     {
+      "team": "Atlanta Braves",
+      "probability": 0.0733,
+      "league": "NL",
+      "seed": 3
+    },
+    {
       "team": "Chicago White Sox",
-      "probability": 0.061946,
+      "probability": 0.061598,
       "league": "AL",
       "seed": 6
     },
     {
       "team": "Cleveland Guardians",
-      "probability": 0.043513,
+      "probability": 0.043289,
       "league": "AL",
       "seed": 2
     },
@@ -1514,7 +1522,7 @@
   ],
   "world_series_favorite": {
     "team": "Milwaukee Brewers",
-    "probability": 0.255975,
+    "probability": 0.254174,
     "league": "NL",
     "seed": 1
   },
@@ -1733,6 +1741,14 @@
         "predicted_winner": "Los Angeles Dodgers",
         "probability": 0.520598,
         "series_score": "0-0"
+      },
+      {
+        "after_game": 1,
+        "label": "After Game 1",
+        "game_pk": 849828,
+        "predicted_winner": "Los Angeles Dodgers",
+        "probability": 0.7038,
+        "series_score": "1-0"
       }
     ]
   },
@@ -1813,6 +1829,13 @@
       "favorite": "Milwaukee Brewers",
       "probability": 0.255975,
       "timestamp": "2026-10-03T15:00:45"
+    },
+    {
+      "after_game_pk": 849828,
+      "label": "After Atlanta Braves @ Los Angeles Dodgers",
+      "favorite": "Milwaukee Brewers",
+      "probability": 0.254174,
+      "timestamp": "2026-10-03T17:54:32"
     }
   ],
   "matchup_probability_cache": {
