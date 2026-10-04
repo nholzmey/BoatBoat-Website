@@ -1,7 +1,7 @@
 {
   "active": true,
   "season": 2026,
-  "generated_at": "2026-10-04T18:25:45",
+  "generated_at": "2026-10-04T18:26:35",
   "postseason_start_date": "2026-09-29",
   "format": {
     "wild_card": "Best of 3",
@@ -945,7 +945,7 @@
       "league": "NL",
       "team_a": "Milwaukee Brewers",
       "team_b": "San Diego Padres",
-      "wins_a": 1,
+      "wins_a": 2,
       "wins_b": 0,
       "winner": null,
       "games": [
@@ -971,9 +971,9 @@
           "away_team": "San Diego Padres",
           "home_score": 4,
           "away_score": 3,
-          "status": "In Progress",
-          "is_final": false,
-          "winner": null,
+          "status": "Game Over",
+          "is_final": true,
+          "winner": "Milwaukee Brewers",
           "game_type": "D",
           "series_description": "NL Division Series"
         },
@@ -1039,10 +1039,10 @@
         "division": "West"
       },
       "per_game_team_a_probability": 0.573319,
-      "team_a_series_probability": 0.788713,
-      "team_b_series_probability": 0.211287,
+      "team_a_series_probability": 0.92232,
+      "team_b_series_probability": 0.07768,
       "predicted_series_winner": "Milwaukee Brewers",
-      "predicted_series_winner_probability": 0.788713,
+      "predicted_series_winner_probability": 0.92232,
       "status": "active",
       "prediction_history": [
         {
@@ -1059,6 +1059,14 @@
           "predicted_winner": "Milwaukee Brewers",
           "probability": 0.788713,
           "series_score": "1-0"
+        },
+        {
+          "after_game": 2,
+          "label": "After Game 2",
+          "game_pk": 849825,
+          "predicted_winner": "Milwaukee Brewers",
+          "probability": 0.92232,
+          "series_score": "2-0"
         }
       ]
     },
@@ -1465,51 +1473,51 @@
   "championship_probabilities": [
     {
       "team": "Milwaukee Brewers",
-      "probability": 0.312087,
+      "probability": 0.364954,
       "league": "NL",
       "seed": 1
     },
     {
       "team": "Tampa Bay Rays",
-      "probability": 0.225076,
+      "probability": 0.219443,
       "league": "AL",
       "seed": 1
     },
     {
       "team": "Los Angeles Dodgers",
-      "probability": 0.178571,
+      "probability": 0.169915,
       "league": "NL",
       "seed": 2
     },
     {
       "team": "New York Yankees",
-      "probability": 0.070549,
+      "probability": 0.068591,
       "league": "AL",
       "seed": 4
     },
     {
       "team": "Atlanta Braves",
-      "probability": 0.068314,
+      "probability": 0.064831,
       "league": "NL",
       "seed": 3
     },
     {
       "team": "Chicago White Sox",
-      "probability": 0.057634,
+      "probability": 0.055588,
       "league": "AL",
       "seed": 6
     },
     {
-      "team": "San Diego Padres",
-      "probability": 0.047057,
-      "league": "NL",
-      "seed": 4
-    },
-    {
       "team": "Cleveland Guardians",
-      "probability": 0.040712,
+      "probability": 0.039377,
       "league": "AL",
       "seed": 2
+    },
+    {
+      "team": "San Diego Padres",
+      "probability": 0.017301,
+      "league": "NL",
+      "seed": 4
     },
     {
       "team": "Philadelphia Phillies",
@@ -1538,7 +1546,7 @@
   ],
   "world_series_favorite": {
     "team": "Milwaukee Brewers",
-    "probability": 0.312087,
+    "probability": 0.364954,
     "league": "NL",
     "seed": 1
   },
@@ -1764,6 +1772,14 @@
         "predicted_winner": "Milwaukee Brewers",
         "probability": 0.788713,
         "series_score": "1-0"
+      },
+      {
+        "after_game": 2,
+        "label": "After Game 2",
+        "game_pk": 849825,
+        "predicted_winner": "Milwaukee Brewers",
+        "probability": 0.92232,
+        "series_score": "2-0"
       }
     ],
     "D:Los Angeles Dodgers|Atlanta Braves": [
@@ -1882,6 +1898,13 @@
       "favorite": "Milwaukee Brewers",
       "probability": 0.312087,
       "timestamp": "2026-10-03T23:09:42"
+    },
+    {
+      "after_game_pk": 849825,
+      "label": "After San Diego Padres @ Milwaukee Brewers",
+      "favorite": "Milwaukee Brewers",
+      "probability": 0.364954,
+      "timestamp": "2026-10-04T18:26:35"
     }
   ],
   "matchup_probability_cache": {
