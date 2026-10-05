@@ -1,7 +1,7 @@
 {
   "active": true,
   "season": 2026,
-  "generated_at": "2026-10-04T22:23:37",
+  "generated_at": "2026-10-04T22:24:47",
   "postseason_start_date": "2026-09-29",
   "format": {
     "wild_card": "Best of 3",
@@ -819,7 +819,7 @@
       "team_a": "Los Angeles Dodgers",
       "team_b": "Atlanta Braves",
       "wins_a": 1,
-      "wins_b": 0,
+      "wins_b": 1,
       "winner": null,
       "games": [
         {
@@ -844,9 +844,9 @@
           "away_team": "Atlanta Braves",
           "home_score": 2,
           "away_score": 3,
-          "status": "In Progress",
-          "is_final": false,
-          "winner": null,
+          "status": "Game Over",
+          "is_final": true,
+          "winner": "Atlanta Braves",
           "game_type": "D",
           "series_description": "NL Division Series"
         },
@@ -912,10 +912,10 @@
         "division": "East"
       },
       "per_game_team_a_probability": 0.510989,
-      "team_a_series_probability": 0.7038,
-      "team_b_series_probability": 0.2962,
+      "team_a_series_probability": 0.516481,
+      "team_b_series_probability": 0.483519,
       "predicted_series_winner": "Los Angeles Dodgers",
-      "predicted_series_winner_probability": 0.7038,
+      "predicted_series_winner_probability": 0.516481,
       "status": "active",
       "prediction_history": [
         {
@@ -932,6 +932,14 @@
           "predicted_winner": "Los Angeles Dodgers",
           "probability": 0.7038,
           "series_score": "1-0"
+        },
+        {
+          "after_game": 2,
+          "label": "After Game 2",
+          "game_pk": 849823,
+          "predicted_winner": "Los Angeles Dodgers",
+          "probability": 0.516481,
+          "series_score": "1-1"
         }
       ]
     },
@@ -1473,49 +1481,49 @@
   "championship_probabilities": [
     {
       "team": "Milwaukee Brewers",
-      "probability": 0.364954,
+      "probability": 0.367599,
       "league": "NL",
       "seed": 1
     },
     {
       "team": "Tampa Bay Rays",
-      "probability": 0.219443,
+      "probability": 0.22015,
       "league": "AL",
       "seed": 1
     },
     {
       "team": "Los Angeles Dodgers",
-      "probability": 0.169915,
+      "probability": 0.124692,
       "league": "NL",
       "seed": 2
     },
     {
-      "team": "New York Yankees",
-      "probability": 0.068591,
-      "league": "AL",
-      "seed": 4
-    },
-    {
       "team": "Atlanta Braves",
-      "probability": 0.064831,
+      "probability": 0.105831,
       "league": "NL",
       "seed": 3
     },
     {
+      "team": "New York Yankees",
+      "probability": 0.068841,
+      "league": "AL",
+      "seed": 4
+    },
+    {
       "team": "Chicago White Sox",
-      "probability": 0.055588,
+      "probability": 0.05586,
       "league": "AL",
       "seed": 6
     },
     {
       "team": "Cleveland Guardians",
-      "probability": 0.039377,
+      "probability": 0.039552,
       "league": "AL",
       "seed": 2
     },
     {
       "team": "San Diego Padres",
-      "probability": 0.017301,
+      "probability": 0.017476,
       "league": "NL",
       "seed": 4
     },
@@ -1546,7 +1554,7 @@
   ],
   "world_series_favorite": {
     "team": "Milwaukee Brewers",
-    "probability": 0.364954,
+    "probability": 0.367599,
     "league": "NL",
     "seed": 1
   },
@@ -1797,6 +1805,14 @@
         "predicted_winner": "Los Angeles Dodgers",
         "probability": 0.7038,
         "series_score": "1-0"
+      },
+      {
+        "after_game": 2,
+        "label": "After Game 2",
+        "game_pk": 849823,
+        "predicted_winner": "Los Angeles Dodgers",
+        "probability": 0.516481,
+        "series_score": "1-1"
       }
     ]
   },
@@ -1905,6 +1921,13 @@
       "favorite": "Milwaukee Brewers",
       "probability": 0.364954,
       "timestamp": "2026-10-04T18:26:35"
+    },
+    {
+      "after_game_pk": 849823,
+      "label": "After Atlanta Braves @ Los Angeles Dodgers",
+      "favorite": "Milwaukee Brewers",
+      "probability": 0.367599,
+      "timestamp": "2026-10-04T22:24:47"
     }
   ],
   "matchup_probability_cache": {
