@@ -1,7 +1,7 @@
 {
   "model_name": "Savant Fusion v3",
   "version": 3,
-  "trained_at": "2026-10-04T04:26:56",
+  "trained_at": "2026-10-05T04:27:31",
   "training_games": 27409,
   "training_start_date": "2015-04-07",
   "training_end_date": "2026-09-24",
@@ -9,7 +9,7 @@
   "holdout": {
     "games": 2430,
     "accuracy": 0.5452674897119342,
-    "brier": 0.2442506667742013,
+    "brier": 0.24425066677420124,
     "log_loss": 0.6813774588863516,
     "roc_auc": 0.5696150358022913
   },
@@ -57,14 +57,14 @@
   "selected_strategy": "logistic_stack",
   "selected_calibration": "none",
   "blend_weights": {
-    "catboost_full": 0.07065129401249448,
-    "xgboost_full": 1.1977881931344392e-05,
-    "elastic_full": 0.36776179232700223,
-    "extra_trees_full": 0.4772984126730237,
-    "catboost_recent": 4.907071231265811e-05,
-    "xgboost_recent": 0.00012796280721515032,
-    "catboost_modern": 0.08400887532495681,
-    "xgboost_modern": 9.061426106366024e-05
+    "catboost_full": 0.07075666737133728,
+    "xgboost_full": 1.2588313397291439e-05,
+    "elastic_full": 0.36772073145645306,
+    "extra_trees_full": 0.47724145240027643,
+    "catboost_recent": 5.129124719377593e-05,
+    "xgboost_recent": 0.00013288292818065153,
+    "catboost_modern": 0.08399015053542887,
+    "xgboost_modern": 9.423574773254802e-05
   },
   "strategy_selection_season": 2021,
   "strategy_selection": [
@@ -152,9 +152,9 @@
       "strategy": "optimized_blend",
       "games": 2429,
       "accuracy": 0.5821325648414986,
-      "brier": 0.24094770288055092,
-      "log_loss": 0.6748430026047171,
-      "roc_auc": 0.6041883202797851
+      "brier": 0.2409478032552183,
+      "log_loss": 0.6748432256698975,
+      "roc_auc": 0.6041910482940362
     },
     {
       "strategy": "logistic_stack",
@@ -172,8 +172,8 @@
     {
       "model": "logistic",
       "games": 2430,
-      "log_loss": 0.6731836022044698,
-      "brier": 0.24006753049760726,
+      "log_loss": 0.6731836022045113,
+      "brier": 0.2400675304976545,
       "top30_accuracy": 0.6515775034293553,
       "top30_games": 729,
       "roc_auc": 0.5521683651912319
