@@ -1,7 +1,7 @@
 {
   "active": true,
   "season": 2026,
-  "generated_at": "2026-10-05T22:13:40",
+  "generated_at": "2026-10-05T22:14:34",
   "postseason_start_date": "2026-09-29",
   "format": {
     "wild_card": "Best of 3",
@@ -699,7 +699,7 @@
       "league": "AL",
       "team_a": "Tampa Bay Rays",
       "team_b": "New York Yankees",
-      "wins_a": 1,
+      "wins_a": 2,
       "wins_b": 0,
       "winner": null,
       "games": [
@@ -725,9 +725,9 @@
           "away_team": "New York Yankees",
           "home_score": 5,
           "away_score": 2,
-          "status": "In Progress",
-          "is_final": false,
-          "winner": null,
+          "status": "Game Over",
+          "is_final": true,
+          "winner": "Tampa Bay Rays",
           "game_type": "D",
           "series_description": "AL Division Series"
         },
@@ -793,10 +793,10 @@
         "division": "East"
       },
       "per_game_team_a_probability": 0.524687,
-      "team_a_series_probability": 0.723587,
-      "team_b_series_probability": 0.276413,
+      "team_a_series_probability": 0.892616,
+      "team_b_series_probability": 0.107384,
       "predicted_series_winner": "Tampa Bay Rays",
-      "predicted_series_winner_probability": 0.723587,
+      "predicted_series_winner_probability": 0.892616,
       "status": "active",
       "prediction_history": [
         {
@@ -813,6 +813,14 @@
           "predicted_winner": "Tampa Bay Rays",
           "probability": 0.723587,
           "series_score": "1-0"
+        },
+        {
+          "after_game": 2,
+          "label": "After Game 2",
+          "game_pk": 849839,
+          "predicted_winner": "Tampa Bay Rays",
+          "probability": 0.892616,
+          "series_score": "2-0"
         }
       ]
     },
@@ -1489,49 +1497,49 @@
   "championship_probabilities": [
     {
       "team": "Milwaukee Brewers",
-      "probability": 0.368406,
+      "probability": 0.364559,
       "league": "NL",
       "seed": 1
     },
     {
       "team": "Tampa Bay Rays",
-      "probability": 0.223196,
+      "probability": 0.275335,
       "league": "AL",
       "seed": 1
     },
     {
       "team": "Los Angeles Dodgers",
-      "probability": 0.12507,
+      "probability": 0.123479,
       "league": "NL",
       "seed": 2
     },
     {
       "team": "Atlanta Braves",
-      "probability": 0.106179,
+      "probability": 0.104764,
       "league": "NL",
       "seed": 3
     },
     {
       "team": "Chicago White Sox",
-      "probability": 0.073408,
+      "probability": 0.071522,
       "league": "AL",
       "seed": 6
     },
     {
       "team": "New York Yankees",
-      "probability": 0.069925,
+      "probability": 0.027165,
       "league": "AL",
       "seed": 4
     },
     {
       "team": "San Diego Padres",
-      "probability": 0.017542,
+      "probability": 0.017288,
       "league": "NL",
       "seed": 4
     },
     {
       "team": "Cleveland Guardians",
-      "probability": 0.016273,
+      "probability": 0.015889,
       "league": "AL",
       "seed": 2
     },
@@ -1562,7 +1570,7 @@
   ],
   "world_series_favorite": {
     "team": "Milwaukee Brewers",
-    "probability": 0.368406,
+    "probability": 0.364559,
     "league": "NL",
     "seed": 1
   },
@@ -1779,6 +1787,14 @@
         "predicted_winner": "Tampa Bay Rays",
         "probability": 0.723587,
         "series_score": "1-0"
+      },
+      {
+        "after_game": 2,
+        "label": "After Game 2",
+        "game_pk": 849839,
+        "predicted_winner": "Tampa Bay Rays",
+        "probability": 0.892616,
+        "series_score": "2-0"
       }
     ],
     "D:Milwaukee Brewers|San Diego Padres": [
@@ -1951,6 +1967,13 @@
       "favorite": "Milwaukee Brewers",
       "probability": 0.368406,
       "timestamp": "2026-10-05T19:14:26"
+    },
+    {
+      "after_game_pk": 849839,
+      "label": "After New York Yankees @ Tampa Bay Rays",
+      "favorite": "Milwaukee Brewers",
+      "probability": 0.364559,
+      "timestamp": "2026-10-05T22:14:34"
     }
   ],
   "matchup_probability_cache": {
