@@ -1,7 +1,7 @@
 {
   "active": true,
   "season": 2026,
-  "generated_at": "2026-10-07T00:03:34",
+  "generated_at": "2026-10-07T00:04:45",
   "postseason_start_date": "2026-09-29",
   "format": {
     "wild_card": "Best of 3",
@@ -978,7 +978,7 @@
       "team_a": "Milwaukee Brewers",
       "team_b": "San Diego Padres",
       "wins_a": 2,
-      "wins_b": 0,
+      "wins_b": 1,
       "winner": null,
       "games": [
         {
@@ -1017,9 +1017,9 @@
           "away_team": "Milwaukee Brewers",
           "home_score": 4,
           "away_score": 3,
-          "status": "In Progress",
-          "is_final": false,
-          "winner": null,
+          "status": "Game Over",
+          "is_final": true,
+          "winner": "San Diego Padres",
           "game_type": "D",
           "series_description": "NL Division Series"
         },
@@ -1071,10 +1071,10 @@
         "division": "West"
       },
       "per_game_team_a_probability": 0.573319,
-      "team_a_series_probability": 0.92232,
-      "team_b_series_probability": 0.07768,
+      "team_a_series_probability": 0.817943,
+      "team_b_series_probability": 0.182057,
       "predicted_series_winner": "Milwaukee Brewers",
-      "predicted_series_winner_probability": 0.92232,
+      "predicted_series_winner_probability": 0.817943,
       "status": "active",
       "prediction_history": [
         {
@@ -1099,6 +1099,14 @@
           "predicted_winner": "Milwaukee Brewers",
           "probability": 0.92232,
           "series_score": "2-0"
+        },
+        {
+          "after_game": 3,
+          "label": "After Game 3",
+          "game_pk": 849826,
+          "predicted_winner": "Milwaukee Brewers",
+          "probability": 0.817943,
+          "series_score": "2-1"
         }
       ]
     },
@@ -1505,49 +1513,49 @@
   "championship_probabilities": [
     {
       "team": "Milwaukee Brewers",
-      "probability": 0.361136,
+      "probability": 0.320268,
       "league": "NL",
       "seed": 1
     },
     {
       "team": "Tampa Bay Rays",
-      "probability": 0.274181,
+      "probability": 0.279657,
       "league": "AL",
       "seed": 1
     },
     {
       "team": "Los Angeles Dodgers",
-      "probability": 0.181907,
+      "probability": 0.189146,
       "league": "NL",
       "seed": 2
     },
     {
       "team": "Chicago White Sox",
-      "probability": 0.071068,
+      "probability": 0.073104,
       "league": "AL",
       "seed": 6
     },
     {
       "team": "Atlanta Braves",
-      "probability": 0.051812,
+      "probability": 0.053987,
       "league": "NL",
       "seed": 3
     },
     {
-      "team": "New York Yankees",
-      "probability": 0.027037,
-      "league": "AL",
-      "seed": 4
-    },
-    {
       "team": "San Diego Padres",
-      "probability": 0.017062,
+      "probability": 0.039987,
       "league": "NL",
       "seed": 4
     },
     {
+      "team": "New York Yankees",
+      "probability": 0.027637,
+      "league": "AL",
+      "seed": 4
+    },
+    {
       "team": "Cleveland Guardians",
-      "probability": 0.015797,
+      "probability": 0.016214,
       "league": "AL",
       "seed": 2
     },
@@ -1578,7 +1586,7 @@
   ],
   "world_series_favorite": {
     "team": "Milwaukee Brewers",
-    "probability": 0.361136,
+    "probability": 0.320268,
     "league": "NL",
     "seed": 1
   },
@@ -1828,6 +1836,14 @@
         "predicted_winner": "Milwaukee Brewers",
         "probability": 0.92232,
         "series_score": "2-0"
+      },
+      {
+        "after_game": 3,
+        "label": "After Game 3",
+        "game_pk": 849826,
+        "predicted_winner": "Milwaukee Brewers",
+        "probability": 0.817943,
+        "series_score": "2-1"
       }
     ],
     "D:Los Angeles Dodgers|Atlanta Braves": [
@@ -1997,6 +2013,13 @@
       "favorite": "Milwaukee Brewers",
       "probability": 0.361136,
       "timestamp": "2026-10-06T20:10:07"
+    },
+    {
+      "after_game_pk": 849826,
+      "label": "After Milwaukee Brewers @ San Diego Padres",
+      "favorite": "Milwaukee Brewers",
+      "probability": 0.320268,
+      "timestamp": "2026-10-07T00:04:45"
     }
   ],
   "matchup_probability_cache": {
