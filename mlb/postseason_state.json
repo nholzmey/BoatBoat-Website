@@ -1,7 +1,7 @@
 {
   "active": true,
   "season": 2026,
-  "generated_at": "2026-10-07T20:09:10",
+  "generated_at": "2026-10-07T20:10:00",
   "postseason_start_date": "2026-09-29",
   "format": {
     "wild_card": "Best of 3",
@@ -896,7 +896,7 @@
           "away_team": "Los Angeles Dodgers",
           "home_score": 1,
           "away_score": 4,
-          "status": "Game Over",
+          "status": "Final",
           "is_final": true,
           "winner": "Los Angeles Dodgers",
           "game_type": "D",
@@ -1041,7 +1041,7 @@
         },
         {
           "game_pk": 849824,
-          "game_date": "2026-10-09T20:30:00Z",
+          "game_date": "2026-10-10T00:00:00Z",
           "game_number": 5,
           "home_team": "Milwaukee Brewers",
           "away_team": "San Diego Padres",
@@ -1246,15 +1246,15 @@
       ]
     },
     {
-      "series_id": "L:MIL/LAD|NL Lower Seed",
+      "series_id": "L:LAD/SD|MIL/LAD",
       "game_type": "L",
       "round": "League Championship Series",
       "round_short": "LCS",
       "best_of": 7,
       "wins_needed": 4,
       "league": null,
-      "team_a": "MIL/LAD",
-      "team_b": "NL Lower Seed",
+      "team_a": "LAD/SD",
+      "team_b": "MIL/LAD",
       "wins_a": 0,
       "wins_b": 0,
       "winner": null,
@@ -1264,7 +1264,7 @@
           "game_date": "2026-10-11T07:33:00Z",
           "game_number": 1,
           "home_team": "MIL/LAD",
-          "away_team": "NL Lower Seed",
+          "away_team": "LAD/SD",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -1278,7 +1278,7 @@
           "game_date": "2026-10-12T07:33:00Z",
           "game_number": 2,
           "home_team": "MIL/LAD",
-          "away_team": "NL Lower Seed",
+          "away_team": "LAD/SD",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -1291,7 +1291,7 @@
           "game_pk": 849811,
           "game_date": "2026-10-14T07:33:00Z",
           "game_number": 3,
-          "home_team": "NL Lower Seed",
+          "home_team": "LAD/SD",
           "away_team": "MIL/LAD",
           "home_score": null,
           "away_score": null,
@@ -1305,7 +1305,7 @@
           "game_pk": 849810,
           "game_date": "2026-10-15T07:33:00Z",
           "game_number": 4,
-          "home_team": "NL Lower Seed",
+          "home_team": "LAD/SD",
           "away_team": "MIL/LAD",
           "home_score": null,
           "away_score": null,
@@ -1319,7 +1319,7 @@
           "game_pk": 849808,
           "game_date": "2026-10-16T07:33:00Z",
           "game_number": 5,
-          "home_team": "NL Lower Seed",
+          "home_team": "LAD/SD",
           "away_team": "MIL/LAD",
           "home_score": null,
           "away_score": null,
@@ -1334,7 +1334,7 @@
           "game_date": "2026-10-18T07:33:00Z",
           "game_number": 6,
           "home_team": "MIL/LAD",
-          "away_team": "NL Lower Seed",
+          "away_team": "LAD/SD",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -1348,7 +1348,7 @@
           "game_date": "2026-10-19T07:33:00Z",
           "game_number": 7,
           "home_team": "MIL/LAD",
-          "away_team": "NL Lower Seed",
+          "away_team": "LAD/SD",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -1365,14 +1365,14 @@
       "per_game_team_a_probability": 0.5,
       "team_a_series_probability": 0.5,
       "team_b_series_probability": 0.5,
-      "predicted_series_winner": "MIL/LAD",
+      "predicted_series_winner": "LAD/SD",
       "predicted_series_winner_probability": 0.5,
       "status": "upcoming",
       "prediction_history": [
         {
           "after_game": 0,
           "label": "Before Game 1",
-          "predicted_winner": "MIL/LAD",
+          "predicted_winner": "LAD/SD",
           "probability": 0.5,
           "series_score": "0-0"
         }
@@ -1905,6 +1905,15 @@
         "probability": 0.5,
         "series_score": "0-0"
       }
+    ],
+    "L:LAD/SD|MIL/LAD": [
+      {
+        "after_game": 0,
+        "label": "Before Game 1",
+        "predicted_winner": "LAD/SD",
+        "probability": 0.5,
+        "series_score": "0-0"
+      }
     ]
   },
   "overall_projection_history": [
@@ -2137,7 +2146,8 @@
     "Boston Red Sox||Philadelphia Phillies": 0.503597,
     "Boston Red Sox||San Diego Padres": 0.467038,
     "Boston Red Sox||Chicago Cubs": 0.480459,
-    "MIL/LAD||NL Lower Seed": 0.5
+    "MIL/LAD||NL Lower Seed": 0.5,
+    "LAD/SD||MIL/LAD": 0.5
   },
   "model_note": "Series probabilities combine the current three-model comparison signal when available with regular-season Log5 team strength, then update from the actual postseason series score. Overall championship probabilities are propagated through MLB's fixed postseason bracket."
 }
