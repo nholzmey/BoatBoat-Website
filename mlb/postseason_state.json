@@ -1,7 +1,7 @@
 {
   "active": true,
   "season": 2026,
-  "generated_at": "2026-10-07T20:07:23",
+  "generated_at": "2026-10-07T20:08:16",
   "postseason_start_date": "2026-09-29",
   "format": {
     "wild_card": "Best of 3",
@@ -1246,14 +1246,14 @@
       ]
     },
     {
-      "series_id": "L:NL Higher Seed|NL Lower Seed",
+      "series_id": "L:MIL/LAD|NL Lower Seed",
       "game_type": "L",
       "round": "League Championship Series",
       "round_short": "LCS",
       "best_of": 7,
       "wins_needed": 4,
       "league": null,
-      "team_a": "NL Higher Seed",
+      "team_a": "MIL/LAD",
       "team_b": "NL Lower Seed",
       "wins_a": 0,
       "wins_b": 0,
@@ -1263,7 +1263,7 @@
           "game_pk": 849809,
           "game_date": "2026-10-11T07:33:00Z",
           "game_number": 1,
-          "home_team": "NL Higher Seed",
+          "home_team": "MIL/LAD",
           "away_team": "NL Lower Seed",
           "home_score": null,
           "away_score": null,
@@ -1277,7 +1277,7 @@
           "game_pk": 849812,
           "game_date": "2026-10-12T07:33:00Z",
           "game_number": 2,
-          "home_team": "NL Higher Seed",
+          "home_team": "MIL/LAD",
           "away_team": "NL Lower Seed",
           "home_score": null,
           "away_score": null,
@@ -1292,7 +1292,7 @@
           "game_date": "2026-10-14T07:33:00Z",
           "game_number": 3,
           "home_team": "NL Lower Seed",
-          "away_team": "NL Higher Seed",
+          "away_team": "MIL/LAD",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -1306,7 +1306,7 @@
           "game_date": "2026-10-15T07:33:00Z",
           "game_number": 4,
           "home_team": "NL Lower Seed",
-          "away_team": "NL Higher Seed",
+          "away_team": "MIL/LAD",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -1320,7 +1320,7 @@
           "game_date": "2026-10-16T07:33:00Z",
           "game_number": 5,
           "home_team": "NL Lower Seed",
-          "away_team": "NL Higher Seed",
+          "away_team": "MIL/LAD",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -1333,7 +1333,7 @@
           "game_pk": 849806,
           "game_date": "2026-10-18T07:33:00Z",
           "game_number": 6,
-          "home_team": "NL Higher Seed",
+          "home_team": "MIL/LAD",
           "away_team": "NL Lower Seed",
           "home_score": null,
           "away_score": null,
@@ -1347,7 +1347,7 @@
           "game_pk": 849807,
           "game_date": "2026-10-19T07:33:00Z",
           "game_number": 7,
-          "home_team": "NL Higher Seed",
+          "home_team": "MIL/LAD",
           "away_team": "NL Lower Seed",
           "home_score": null,
           "away_score": null,
@@ -1365,14 +1365,14 @@
       "per_game_team_a_probability": 0.5,
       "team_a_series_probability": 0.5,
       "team_b_series_probability": 0.5,
-      "predicted_series_winner": "NL Higher Seed",
+      "predicted_series_winner": "MIL/LAD",
       "predicted_series_winner_probability": 0.5,
       "status": "upcoming",
       "prediction_history": [
         {
           "after_game": 0,
           "label": "Before Game 1",
-          "predicted_winner": "NL Higher Seed",
+          "predicted_winner": "MIL/LAD",
           "probability": 0.5,
           "series_score": "0-0"
         }
@@ -1896,6 +1896,15 @@
         "probability": 1.0,
         "series_score": "3-1"
       }
+    ],
+    "L:MIL/LAD|NL Lower Seed": [
+      {
+        "after_game": 0,
+        "label": "Before Game 1",
+        "predicted_winner": "MIL/LAD",
+        "probability": 0.5,
+        "series_score": "0-0"
+      }
     ]
   },
   "overall_projection_history": [
@@ -2127,7 +2136,8 @@
     "Atlanta Braves||Boston Red Sox": 0.553193,
     "Boston Red Sox||Philadelphia Phillies": 0.503597,
     "Boston Red Sox||San Diego Padres": 0.467038,
-    "Boston Red Sox||Chicago Cubs": 0.480459
+    "Boston Red Sox||Chicago Cubs": 0.480459,
+    "MIL/LAD||NL Lower Seed": 0.5
   },
   "model_note": "Series probabilities combine the current three-model comparison signal when available with regular-season Log5 team strength, then update from the actual postseason series score. Overall championship probabilities are propagated through MLB's fixed postseason bracket."
 }
