@@ -1,7 +1,7 @@
 {
   "active": true,
   "season": 2026,
-  "generated_at": "2026-10-08T00:10:34",
+  "generated_at": "2026-10-08T00:11:45",
   "postseason_start_date": "2026-09-29",
   "format": {
     "wild_card": "Best of 3",
@@ -959,9 +959,9 @@
       "league": "NL",
       "team_a": "Milwaukee Brewers",
       "team_b": "San Diego Padres",
-      "wins_a": 2,
+      "wins_a": 3,
       "wins_b": 1,
-      "winner": null,
+      "winner": "Milwaukee Brewers",
       "games": [
         {
           "game_pk": 849830,
@@ -1013,23 +1013,9 @@
           "away_team": "Milwaukee Brewers",
           "home_score": 1,
           "away_score": 3,
-          "status": "In Progress",
-          "is_final": false,
-          "winner": null,
-          "game_type": "D",
-          "series_description": "NL Division Series"
-        },
-        {
-          "game_pk": 849824,
-          "game_date": "2026-10-10T00:00:00Z",
-          "game_number": 5,
-          "home_team": "Milwaukee Brewers",
-          "away_team": "San Diego Padres",
-          "home_score": null,
-          "away_score": null,
-          "status": "Scheduled",
-          "is_final": false,
-          "winner": null,
+          "status": "Game Over",
+          "is_final": true,
+          "winner": "Milwaukee Brewers",
           "game_type": "D",
           "series_description": "NL Division Series"
         }
@@ -1053,11 +1039,11 @@
         "division": "West"
       },
       "per_game_team_a_probability": 0.573319,
-      "team_a_series_probability": 0.817943,
-      "team_b_series_probability": 0.182057,
+      "team_a_series_probability": 1.0,
+      "team_b_series_probability": 0.0,
       "predicted_series_winner": "Milwaukee Brewers",
-      "predicted_series_winner_probability": 0.817943,
-      "status": "active",
+      "predicted_series_winner_probability": 1.0,
+      "status": "completed",
       "prediction_history": [
         {
           "after_game": 0,
@@ -1089,6 +1075,161 @@
           "predicted_winner": "Milwaukee Brewers",
           "probability": 0.817943,
           "series_score": "2-1"
+        },
+        {
+          "after_game": 4,
+          "label": "After Game 4",
+          "game_pk": 849827,
+          "predicted_winner": "Milwaukee Brewers",
+          "probability": 1.0,
+          "series_score": "3-1"
+        }
+      ]
+    },
+    {
+      "series_id": "L:Milwaukee Brewers|Los Angeles Dodgers",
+      "game_type": "L",
+      "round": "League Championship Series",
+      "round_short": "LCS",
+      "best_of": 7,
+      "wins_needed": 4,
+      "league": "NL",
+      "team_a": "Milwaukee Brewers",
+      "team_b": "Los Angeles Dodgers",
+      "wins_a": 0,
+      "wins_b": 0,
+      "winner": null,
+      "games": [
+        {
+          "game_pk": 849809,
+          "game_date": "2026-10-11T07:33:00Z",
+          "game_number": 1,
+          "home_team": "Milwaukee Brewers",
+          "away_team": "Los Angeles Dodgers",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "NL Championship Series"
+        },
+        {
+          "game_pk": 849812,
+          "game_date": "2026-10-12T07:33:00Z",
+          "game_number": 2,
+          "home_team": "Milwaukee Brewers",
+          "away_team": "Los Angeles Dodgers",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "NL Championship Series"
+        },
+        {
+          "game_pk": 849811,
+          "game_date": "2026-10-14T07:33:00Z",
+          "game_number": 3,
+          "home_team": "Los Angeles Dodgers",
+          "away_team": "Milwaukee Brewers",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "NL Championship Series"
+        },
+        {
+          "game_pk": 849810,
+          "game_date": "2026-10-15T07:33:00Z",
+          "game_number": 4,
+          "home_team": "Los Angeles Dodgers",
+          "away_team": "Milwaukee Brewers",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "NL Championship Series"
+        },
+        {
+          "game_pk": 849808,
+          "game_date": "2026-10-16T07:33:00Z",
+          "game_number": 5,
+          "home_team": "Los Angeles Dodgers",
+          "away_team": "Milwaukee Brewers",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "NL Championship Series"
+        },
+        {
+          "game_pk": 849806,
+          "game_date": "2026-10-18T07:33:00Z",
+          "game_number": 6,
+          "home_team": "Milwaukee Brewers",
+          "away_team": "Los Angeles Dodgers",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "NL Championship Series"
+        },
+        {
+          "game_pk": 849807,
+          "game_date": "2026-10-19T07:33:00Z",
+          "game_number": 7,
+          "home_team": "Milwaukee Brewers",
+          "away_team": "Los Angeles Dodgers",
+          "home_score": null,
+          "away_score": null,
+          "status": "Scheduled",
+          "is_final": false,
+          "winner": null,
+          "game_type": "L",
+          "series_description": "NL Championship Series"
+        }
+      ],
+      "team_a_seed": 1,
+      "team_b_seed": 2,
+      "team_a_record": {
+        "wins": 96,
+        "losses": 54,
+        "games": 150,
+        "win_pct": 0.64,
+        "league": "NL",
+        "division": "Central"
+      },
+      "team_b_record": {
+        "wins": 90,
+        "losses": 60,
+        "games": 150,
+        "win_pct": 0.6,
+        "league": "NL",
+        "division": "West"
+      },
+      "per_game_team_a_probability": 0.542373,
+      "team_a_series_probability": 0.592028,
+      "team_b_series_probability": 0.407972,
+      "predicted_series_winner": "Milwaukee Brewers",
+      "predicted_series_winner_probability": 0.592028,
+      "status": "upcoming",
+      "prediction_history": [
+        {
+          "after_game": 0,
+          "label": "Before Game 1",
+          "predicted_winner": "Milwaukee Brewers",
+          "probability": 0.592028,
+          "series_score": "0-0"
         }
       ]
     },
@@ -1233,139 +1374,6 @@
       ]
     },
     {
-      "series_id": "L:LAD/SD|MIL/LAD",
-      "game_type": "L",
-      "round": "League Championship Series",
-      "round_short": "LCS",
-      "best_of": 7,
-      "wins_needed": 4,
-      "league": null,
-      "team_a": "LAD/SD",
-      "team_b": "MIL/LAD",
-      "wins_a": 0,
-      "wins_b": 0,
-      "winner": null,
-      "games": [
-        {
-          "game_pk": 849809,
-          "game_date": "2026-10-11T07:33:00Z",
-          "game_number": 1,
-          "home_team": "MIL/LAD",
-          "away_team": "LAD/SD",
-          "home_score": null,
-          "away_score": null,
-          "status": "Scheduled",
-          "is_final": false,
-          "winner": null,
-          "game_type": "L",
-          "series_description": "NL Championship Series"
-        },
-        {
-          "game_pk": 849812,
-          "game_date": "2026-10-12T07:33:00Z",
-          "game_number": 2,
-          "home_team": "MIL/LAD",
-          "away_team": "LAD/SD",
-          "home_score": null,
-          "away_score": null,
-          "status": "Scheduled",
-          "is_final": false,
-          "winner": null,
-          "game_type": "L",
-          "series_description": "NL Championship Series"
-        },
-        {
-          "game_pk": 849811,
-          "game_date": "2026-10-14T07:33:00Z",
-          "game_number": 3,
-          "home_team": "LAD/SD",
-          "away_team": "MIL/LAD",
-          "home_score": null,
-          "away_score": null,
-          "status": "Scheduled",
-          "is_final": false,
-          "winner": null,
-          "game_type": "L",
-          "series_description": "NL Championship Series"
-        },
-        {
-          "game_pk": 849810,
-          "game_date": "2026-10-15T07:33:00Z",
-          "game_number": 4,
-          "home_team": "LAD/SD",
-          "away_team": "MIL/LAD",
-          "home_score": null,
-          "away_score": null,
-          "status": "Scheduled",
-          "is_final": false,
-          "winner": null,
-          "game_type": "L",
-          "series_description": "NL Championship Series"
-        },
-        {
-          "game_pk": 849808,
-          "game_date": "2026-10-16T07:33:00Z",
-          "game_number": 5,
-          "home_team": "LAD/SD",
-          "away_team": "MIL/LAD",
-          "home_score": null,
-          "away_score": null,
-          "status": "Scheduled",
-          "is_final": false,
-          "winner": null,
-          "game_type": "L",
-          "series_description": "NL Championship Series"
-        },
-        {
-          "game_pk": 849806,
-          "game_date": "2026-10-18T07:33:00Z",
-          "game_number": 6,
-          "home_team": "MIL/LAD",
-          "away_team": "LAD/SD",
-          "home_score": null,
-          "away_score": null,
-          "status": "Scheduled",
-          "is_final": false,
-          "winner": null,
-          "game_type": "L",
-          "series_description": "NL Championship Series"
-        },
-        {
-          "game_pk": 849807,
-          "game_date": "2026-10-19T07:33:00Z",
-          "game_number": 7,
-          "home_team": "MIL/LAD",
-          "away_team": "LAD/SD",
-          "home_score": null,
-          "away_score": null,
-          "status": "Scheduled",
-          "is_final": false,
-          "winner": null,
-          "game_type": "L",
-          "series_description": "NL Championship Series"
-        }
-      ],
-      "team_a_seed": null,
-      "team_b_seed": null,
-      "team_a_record": {},
-      "team_b_record": {},
-      "per_game_team_a_probability": 0.5,
-      "team_a_series_probability": 0.5,
-      "team_b_series_probability": 0.5,
-      "predicted_series_winner": "LAD/SD",
-      "predicted_series_winner_probability": 0.5,
-      "status": "upcoming",
-      "prediction_history": [
-        {
-          "after_game": 0,
-          "label": "Before Game 1",
-          "predicted_winner": "LAD/SD",
-          "probability": 0.5,
-          "series_score": "0-0"
-        }
-      ]
-    },
-    {
       "series_id": "W:Higher Seed League Champion|Lower Seed League Champion",
       "game_type": "W",
       "round": "World Series",
@@ -1502,37 +1510,31 @@
   "championship_probabilities": [
     {
       "team": "Milwaukee Brewers",
-      "probability": 0.314794,
+      "probability": 0.38486,
       "league": "NL",
       "seed": 1
     },
     {
       "team": "Tampa Bay Rays",
-      "probability": 0.309193,
+      "probability": 0.29881,
       "league": "AL",
       "seed": 1
     },
     {
       "team": "Los Angeles Dodgers",
-      "probability": 0.246143,
+      "probability": 0.22971,
       "league": "NL",
       "seed": 2
     },
     {
       "team": "Chicago White Sox",
-      "probability": 0.060524,
+      "probability": 0.057628,
       "league": "AL",
       "seed": 6
     },
     {
-      "team": "San Diego Padres",
-      "probability": 0.039016,
-      "league": "NL",
-      "seed": 4
-    },
-    {
       "team": "Cleveland Guardians",
-      "probability": 0.030331,
+      "probability": 0.028992,
       "league": "AL",
       "seed": 2
     },
@@ -1547,6 +1549,12 @@
       "probability": 0.0,
       "league": "NL",
       "seed": 6
+    },
+    {
+      "team": "San Diego Padres",
+      "probability": 0.0,
+      "league": "NL",
+      "seed": 4
     },
     {
       "team": "Chicago Cubs",
@@ -1575,7 +1583,7 @@
   ],
   "world_series_favorite": {
     "team": "Milwaukee Brewers",
-    "probability": 0.314794,
+    "probability": 0.38486,
     "league": "NL",
     "seed": 1
   },
@@ -1849,6 +1857,14 @@
         "predicted_winner": "Milwaukee Brewers",
         "probability": 0.817943,
         "series_score": "2-1"
+      },
+      {
+        "after_game": 4,
+        "label": "After Game 4",
+        "game_pk": 849827,
+        "predicted_winner": "Milwaukee Brewers",
+        "probability": 1.0,
+        "series_score": "3-1"
       }
     ],
     "D:Los Angeles Dodgers|Atlanta Braves": [
@@ -1916,6 +1932,15 @@
         "label": "Before Game 1",
         "predicted_winner": "Tampa Bay Rays",
         "probability": 0.704995,
+        "series_score": "0-0"
+      }
+    ],
+    "L:Milwaukee Brewers|Los Angeles Dodgers": [
+      {
+        "after_game": 0,
+        "label": "Before Game 1",
+        "predicted_winner": "Milwaukee Brewers",
+        "probability": 0.592028,
         "series_score": "0-0"
       }
     ]
@@ -2081,6 +2106,13 @@
       "favorite": "Milwaukee Brewers",
       "probability": 0.314794,
       "timestamp": "2026-10-07T22:15:41"
+    },
+    {
+      "after_game_pk": 849827,
+      "label": "After Milwaukee Brewers @ San Diego Padres",
+      "favorite": "Milwaukee Brewers",
+      "probability": 0.38486,
+      "timestamp": "2026-10-08T00:11:45"
     }
   ],
   "matchup_probability_cache": {
