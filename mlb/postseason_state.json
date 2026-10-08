@@ -1,7 +1,7 @@
 {
   "active": true,
   "season": 2026,
-  "generated_at": "2026-10-07T22:14:31",
+  "generated_at": "2026-10-07T22:15:41",
   "postseason_start_date": "2026-09-29",
   "format": {
     "wild_card": "Best of 3",
@@ -612,7 +612,7 @@
         },
         {
           "game_pk": 849832,
-          "game_date": "2026-10-08T21:00:00Z",
+          "game_date": "2026-10-09T00:00:00Z",
           "game_number": 4,
           "home_team": "Chicago White Sox",
           "away_team": "Cleveland Guardians",
@@ -626,7 +626,7 @@
         },
         {
           "game_pk": 849831,
-          "game_date": "2026-10-10T21:00:00Z",
+          "game_date": "2026-10-11T00:00:00Z",
           "game_number": 5,
           "home_team": "Cleveland Guardians",
           "away_team": "Chicago White Sox",
@@ -707,9 +707,9 @@
       "league": "AL",
       "team_a": "Tampa Bay Rays",
       "team_b": "New York Yankees",
-      "wins_a": 2,
+      "wins_a": 3,
       "wins_b": 0,
-      "winner": null,
+      "winner": "Tampa Bay Rays",
       "games": [
         {
           "game_pk": 849835,
@@ -747,37 +747,9 @@
           "away_team": "Tampa Bay Rays",
           "home_score": 3,
           "away_score": 4,
-          "status": "In Progress",
-          "is_final": false,
-          "winner": null,
-          "game_type": "D",
-          "series_description": "AL Division Series"
-        },
-        {
-          "game_pk": 849837,
-          "game_date": "2026-10-09T00:00:00Z",
-          "game_number": 4,
-          "home_team": "New York Yankees",
-          "away_team": "Tampa Bay Rays",
-          "home_score": null,
-          "away_score": null,
-          "status": "Scheduled",
-          "is_final": false,
-          "winner": null,
-          "game_type": "D",
-          "series_description": "AL Division Series"
-        },
-        {
-          "game_pk": 849836,
-          "game_date": "2026-10-11T00:00:00Z",
-          "game_number": 5,
-          "home_team": "Tampa Bay Rays",
-          "away_team": "New York Yankees",
-          "home_score": null,
-          "away_score": null,
-          "status": "Scheduled",
-          "is_final": false,
-          "winner": null,
+          "status": "Game Over",
+          "is_final": true,
+          "winner": "Tampa Bay Rays",
           "game_type": "D",
           "series_description": "AL Division Series"
         }
@@ -801,11 +773,11 @@
         "division": "East"
       },
       "per_game_team_a_probability": 0.524687,
-      "team_a_series_probability": 0.892616,
-      "team_b_series_probability": 0.107384,
+      "team_a_series_probability": 1.0,
+      "team_b_series_probability": 0.0,
       "predicted_series_winner": "Tampa Bay Rays",
-      "predicted_series_winner_probability": 0.892616,
-      "status": "active",
+      "predicted_series_winner_probability": 1.0,
+      "status": "completed",
       "prediction_history": [
         {
           "after_game": 0,
@@ -829,6 +801,14 @@
           "predicted_winner": "Tampa Bay Rays",
           "probability": 0.892616,
           "series_score": "2-0"
+        },
+        {
+          "after_game": 3,
+          "label": "After Game 3",
+          "game_pk": 849838,
+          "predicted_winner": "Tampa Bay Rays",
+          "probability": 1.0,
+          "series_score": "3-0"
         }
       ]
     },
@@ -1113,15 +1093,15 @@
       ]
     },
     {
-      "series_id": "L:AL Higher Seed|AL Lower Seed",
+      "series_id": "L:Tampa Bay Rays|CLE/CWS",
       "game_type": "L",
       "round": "League Championship Series",
       "round_short": "LCS",
       "best_of": 7,
       "wins_needed": 4,
       "league": null,
-      "team_a": "AL Higher Seed",
-      "team_b": "AL Lower Seed",
+      "team_a": "Tampa Bay Rays",
+      "team_b": "CLE/CWS",
       "wins_a": 0,
       "wins_b": 0,
       "winner": null,
@@ -1130,8 +1110,8 @@
           "game_pk": 849820,
           "game_date": "2026-10-12T07:33:00Z",
           "game_number": 1,
-          "home_team": "AL Higher Seed",
-          "away_team": "AL Lower Seed",
+          "home_team": "Tampa Bay Rays",
+          "away_team": "CLE/CWS",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -1144,8 +1124,8 @@
           "game_pk": 849813,
           "game_date": "2026-10-13T07:33:00Z",
           "game_number": 2,
-          "home_team": "AL Higher Seed",
-          "away_team": "AL Lower Seed",
+          "home_team": "Tampa Bay Rays",
+          "away_team": "CLE/CWS",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -1158,8 +1138,8 @@
           "game_pk": 849818,
           "game_date": "2026-10-15T07:33:00Z",
           "game_number": 3,
-          "home_team": "AL Lower Seed",
-          "away_team": "AL Higher Seed",
+          "home_team": "CLE/CWS",
+          "away_team": "Tampa Bay Rays",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -1172,8 +1152,8 @@
           "game_pk": 849817,
           "game_date": "2026-10-16T07:33:00Z",
           "game_number": 4,
-          "home_team": "AL Lower Seed",
-          "away_team": "AL Higher Seed",
+          "home_team": "CLE/CWS",
+          "away_team": "Tampa Bay Rays",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -1186,8 +1166,8 @@
           "game_pk": 849816,
           "game_date": "2026-10-17T07:33:00Z",
           "game_number": 5,
-          "home_team": "AL Lower Seed",
-          "away_team": "AL Higher Seed",
+          "home_team": "CLE/CWS",
+          "away_team": "Tampa Bay Rays",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -1200,8 +1180,8 @@
           "game_pk": 849815,
           "game_date": "2026-10-19T07:33:00Z",
           "game_number": 6,
-          "home_team": "AL Higher Seed",
-          "away_team": "AL Lower Seed",
+          "home_team": "Tampa Bay Rays",
+          "away_team": "CLE/CWS",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -1214,8 +1194,8 @@
           "game_pk": 849814,
           "game_date": "2026-10-20T07:33:00Z",
           "game_number": 7,
-          "home_team": "AL Higher Seed",
-          "away_team": "AL Lower Seed",
+          "home_team": "Tampa Bay Rays",
+          "away_team": "CLE/CWS",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -1225,22 +1205,29 @@
           "series_description": "AL Championship Series"
         }
       ],
-      "team_a_seed": null,
+      "team_a_seed": 1,
       "team_b_seed": null,
-      "team_a_record": {},
+      "team_a_record": {
+        "wins": 89,
+        "losses": 60,
+        "games": 149,
+        "win_pct": 0.5973154362416108,
+        "league": "AL",
+        "division": "East"
+      },
       "team_b_record": {},
-      "per_game_team_a_probability": 0.5,
-      "team_a_series_probability": 0.5,
-      "team_b_series_probability": 0.5,
-      "predicted_series_winner": "AL Higher Seed",
-      "predicted_series_winner_probability": 0.5,
+      "per_game_team_a_probability": 0.597315,
+      "team_a_series_probability": 0.704995,
+      "team_b_series_probability": 0.295005,
+      "predicted_series_winner": "Tampa Bay Rays",
+      "predicted_series_winner_probability": 0.704995,
       "status": "upcoming",
       "prediction_history": [
         {
           "after_game": 0,
           "label": "Before Game 1",
-          "predicted_winner": "AL Higher Seed",
-          "probability": 0.5,
+          "predicted_winner": "Tampa Bay Rays",
+          "probability": 0.704995,
           "series_score": "0-0"
         }
       ]
@@ -1515,45 +1502,39 @@
   "championship_probabilities": [
     {
       "team": "Milwaukee Brewers",
-      "probability": 0.316894,
+      "probability": 0.314794,
       "league": "NL",
       "seed": 1
     },
     {
       "team": "Tampa Bay Rays",
-      "probability": 0.275991,
+      "probability": 0.309193,
       "league": "AL",
       "seed": 1
     },
     {
       "team": "Los Angeles Dodgers",
-      "probability": 0.24815,
+      "probability": 0.246143,
       "league": "NL",
       "seed": 2
     },
     {
       "team": "Chicago White Sox",
-      "probability": 0.061555,
+      "probability": 0.060524,
       "league": "AL",
       "seed": 6
     },
     {
       "team": "San Diego Padres",
-      "probability": 0.039379,
+      "probability": 0.039016,
       "league": "NL",
       "seed": 4
     },
     {
       "team": "Cleveland Guardians",
-      "probability": 0.030804,
+      "probability": 0.030331,
       "league": "AL",
       "seed": 2
-    },
-    {
-      "team": "New York Yankees",
-      "probability": 0.027227,
-      "league": "AL",
-      "seed": 4
     },
     {
       "team": "Atlanta Braves",
@@ -1580,6 +1561,12 @@
       "seed": 3
     },
     {
+      "team": "New York Yankees",
+      "probability": 0.0,
+      "league": "AL",
+      "seed": 4
+    },
+    {
       "team": "Boston Red Sox",
       "probability": 0.0,
       "league": "AL",
@@ -1588,7 +1575,7 @@
   ],
   "world_series_favorite": {
     "team": "Milwaukee Brewers",
-    "probability": 0.316894,
+    "probability": 0.314794,
     "league": "NL",
     "seed": 1
   },
@@ -1821,6 +1808,14 @@
         "predicted_winner": "Tampa Bay Rays",
         "probability": 0.892616,
         "series_score": "2-0"
+      },
+      {
+        "after_game": 3,
+        "label": "After Game 3",
+        "game_pk": 849838,
+        "predicted_winner": "Tampa Bay Rays",
+        "probability": 1.0,
+        "series_score": "3-0"
       }
     ],
     "D:Milwaukee Brewers|San Diego Padres": [
@@ -1912,6 +1907,15 @@
         "label": "Before Game 1",
         "predicted_winner": "LAD/SD",
         "probability": 0.5,
+        "series_score": "0-0"
+      }
+    ],
+    "L:Tampa Bay Rays|CLE/CWS": [
+      {
+        "after_game": 0,
+        "label": "Before Game 1",
+        "predicted_winner": "Tampa Bay Rays",
+        "probability": 0.704995,
         "series_score": "0-0"
       }
     ]
@@ -2070,6 +2074,13 @@
       "favorite": "Milwaukee Brewers",
       "probability": 0.316894,
       "timestamp": "2026-10-07T20:05:07"
+    },
+    {
+      "after_game_pk": 849838,
+      "label": "After Tampa Bay Rays @ New York Yankees",
+      "favorite": "Milwaukee Brewers",
+      "probability": 0.314794,
+      "timestamp": "2026-10-07T22:15:41"
     }
   ],
   "matchup_probability_cache": {
@@ -2147,7 +2158,8 @@
     "Boston Red Sox||San Diego Padres": 0.467038,
     "Boston Red Sox||Chicago Cubs": 0.480459,
     "MIL/LAD||NL Lower Seed": 0.5,
-    "LAD/SD||MIL/LAD": 0.5
+    "LAD/SD||MIL/LAD": 0.5,
+    "CLE/CWS||Tampa Bay Rays": 0.402685
   },
   "model_note": "Series probabilities combine the current three-model comparison signal when available with regular-season Log5 team strength, then update from the actual postseason series score. Overall championship probabilities are propagated through MLB's fixed postseason bracket."
 }
