@@ -1,7 +1,7 @@
 {
   "active": true,
   "season": 2026,
-  "generated_at": "2026-10-08T22:48:37",
+  "generated_at": "2026-10-08T22:49:47",
   "postseason_start_date": "2026-09-29",
   "format": {
     "wild_card": "Best of 3",
@@ -564,7 +564,7 @@
       "league": "AL",
       "team_a": "Cleveland Guardians",
       "team_b": "Chicago White Sox",
-      "wins_a": 1,
+      "wins_a": 2,
       "wins_b": 2,
       "winner": null,
       "games": [
@@ -618,9 +618,9 @@
           "away_team": "Cleveland Guardians",
           "home_score": 5,
           "away_score": 9,
-          "status": "In Progress",
-          "is_final": false,
-          "winner": null,
+          "status": "Game Over",
+          "is_final": true,
+          "winner": "Cleveland Guardians",
           "game_type": "D",
           "series_description": "AL Division Series"
         },
@@ -658,10 +658,10 @@
         "division": "Central"
       },
       "per_game_team_a_probability": 0.523153,
-      "team_a_series_probability": 0.273689,
-      "team_b_series_probability": 0.726311,
-      "predicted_series_winner": "Chicago White Sox",
-      "predicted_series_winner_probability": 0.726311,
+      "team_a_series_probability": 0.523153,
+      "team_b_series_probability": 0.476847,
+      "predicted_series_winner": "Cleveland Guardians",
+      "predicted_series_winner_probability": 0.523153,
       "status": "active",
       "prediction_history": [
         {
@@ -694,6 +694,14 @@
           "predicted_winner": "Chicago White Sox",
           "probability": 0.726311,
           "series_score": "1-2"
+        },
+        {
+          "after_game": 4,
+          "label": "After Game 4",
+          "game_pk": 849832,
+          "predicted_winner": "Cleveland Guardians",
+          "probability": 0.523153,
+          "series_score": "2-2"
         }
       ]
     },
@@ -1510,33 +1518,33 @@
   "championship_probabilities": [
     {
       "team": "Milwaukee Brewers",
-      "probability": 0.38486,
+      "probability": 0.38398,
       "league": "NL",
       "seed": 1
     },
     {
       "team": "Tampa Bay Rays",
-      "probability": 0.29881,
+      "probability": 0.293799,
       "league": "AL",
       "seed": 1
     },
     {
       "team": "Los Angeles Dodgers",
-      "probability": 0.22971,
+      "probability": 0.22897,
       "league": "NL",
       "seed": 2
     },
     {
-      "team": "Chicago White Sox",
-      "probability": 0.057628,
-      "league": "AL",
-      "seed": 6
-    },
-    {
       "team": "Cleveland Guardians",
-      "probability": 0.028992,
+      "probability": 0.055417,
       "league": "AL",
       "seed": 2
+    },
+    {
+      "team": "Chicago White Sox",
+      "probability": 0.037835,
+      "league": "AL",
+      "seed": 6
     },
     {
       "team": "Atlanta Braves",
@@ -1583,7 +1591,7 @@
   ],
   "world_series_favorite": {
     "team": "Milwaukee Brewers",
-    "probability": 0.38486,
+    "probability": 0.38398,
     "league": "NL",
     "seed": 1
   },
@@ -1791,6 +1799,14 @@
         "predicted_winner": "Chicago White Sox",
         "probability": 0.726311,
         "series_score": "1-2"
+      },
+      {
+        "after_game": 4,
+        "label": "After Game 4",
+        "game_pk": 849832,
+        "predicted_winner": "Cleveland Guardians",
+        "probability": 0.523153,
+        "series_score": "2-2"
       }
     ],
     "D:Tampa Bay Rays|New York Yankees": [
@@ -2122,6 +2138,13 @@
       "favorite": "Milwaukee Brewers",
       "probability": 0.38486,
       "timestamp": "2026-10-08T00:11:45"
+    },
+    {
+      "after_game_pk": 849832,
+      "label": "After Cleveland Guardians @ Chicago White Sox",
+      "favorite": "Milwaukee Brewers",
+      "probability": 0.38398,
+      "timestamp": "2026-10-08T22:49:47"
     }
   ],
   "matchup_probability_cache": {
