@@ -1,7 +1,7 @@
 {
   "active": true,
   "season": 2026,
-  "generated_at": "2026-10-11T22:13:46",
+  "generated_at": "2026-10-11T22:14:37",
   "postseason_start_date": "2026-09-29",
   "format": {
     "wild_card": "Best of 3",
@@ -1259,7 +1259,7 @@
       "league": "NL",
       "team_a": "Milwaukee Brewers",
       "team_b": "Los Angeles Dodgers",
-      "wins_a": 0,
+      "wins_a": 1,
       "wins_b": 0,
       "winner": null,
       "games": [
@@ -1271,9 +1271,9 @@
           "away_team": "Los Angeles Dodgers",
           "home_score": 2,
           "away_score": 1,
-          "status": "In Progress",
-          "is_final": false,
-          "winner": null,
+          "status": "Game Over",
+          "is_final": true,
+          "winner": "Milwaukee Brewers",
           "game_type": "L",
           "series_description": "NL Championship Series"
         },
@@ -1381,11 +1381,11 @@
         "division": "West"
       },
       "per_game_team_a_probability": 0.542373,
-      "team_a_series_probability": 0.592028,
-      "team_b_series_probability": 0.407972,
+      "team_a_series_probability": 0.731977,
+      "team_b_series_probability": 0.268023,
       "predicted_series_winner": "Milwaukee Brewers",
-      "predicted_series_winner_probability": 0.592028,
-      "status": "upcoming",
+      "predicted_series_winner_probability": 0.731977,
+      "status": "active",
       "prediction_history": [
         {
           "after_game": 0,
@@ -1393,6 +1393,14 @@
           "predicted_winner": "Milwaukee Brewers",
           "probability": 0.592028,
           "series_score": "0-0"
+        },
+        {
+          "after_game": 1,
+          "label": "After Game 1",
+          "game_pk": 849809,
+          "predicted_winner": "Milwaukee Brewers",
+          "probability": 0.731977,
+          "series_score": "1-0"
         }
       ]
     },
@@ -1533,25 +1541,25 @@
   "championship_probabilities": [
     {
       "team": "Milwaukee Brewers",
-      "probability": 0.382297,
+      "probability": 0.472668,
       "league": "NL",
       "seed": 1
     },
     {
       "team": "Tampa Bay Rays",
-      "probability": 0.284219,
+      "probability": 0.275907,
       "league": "AL",
       "seed": 1
     },
     {
       "team": "Los Angeles Dodgers",
-      "probability": 0.227554,
+      "probability": 0.149495,
       "league": "NL",
       "seed": 2
     },
     {
       "team": "Cleveland Guardians",
-      "probability": 0.10593,
+      "probability": 0.10193,
       "league": "AL",
       "seed": 2
     },
@@ -1606,7 +1614,7 @@
   ],
   "world_series_favorite": {
     "team": "Milwaukee Brewers",
-    "probability": 0.382297,
+    "probability": 0.472668,
     "league": "NL",
     "seed": 1
   },
@@ -1981,6 +1989,14 @@
         "predicted_winner": "Milwaukee Brewers",
         "probability": 0.592028,
         "series_score": "0-0"
+      },
+      {
+        "after_game": 1,
+        "label": "After Game 1",
+        "game_pk": 849809,
+        "predicted_winner": "Milwaukee Brewers",
+        "probability": 0.731977,
+        "series_score": "1-0"
       }
     ],
     "W:AL Champion|NL Champion": [
@@ -2184,6 +2200,13 @@
       "favorite": "Milwaukee Brewers",
       "probability": 0.382297,
       "timestamp": "2026-10-10T21:46:44"
+    },
+    {
+      "after_game_pk": 849809,
+      "label": "After Los Angeles Dodgers @ Milwaukee Brewers",
+      "favorite": "Milwaukee Brewers",
+      "probability": 0.472668,
+      "timestamp": "2026-10-11T22:14:37"
     }
   ],
   "matchup_probability_cache": {
