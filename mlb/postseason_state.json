@@ -1,7 +1,7 @@
 {
   "active": true,
   "season": 2026,
-  "generated_at": "2026-10-12T22:06:48",
+  "generated_at": "2026-10-12T22:07:39",
   "postseason_start_date": "2026-09-29",
   "format": {
     "wild_card": "Best of 3",
@@ -1113,7 +1113,7 @@
       "team_a": "Tampa Bay Rays",
       "team_b": "Cleveland Guardians",
       "wins_a": 0,
-      "wins_b": 0,
+      "wins_b": 1,
       "winner": null,
       "games": [
         {
@@ -1124,9 +1124,9 @@
           "away_team": "Cleveland Guardians",
           "home_score": 3,
           "away_score": 7,
-          "status": "In Progress",
-          "is_final": false,
-          "winner": null,
+          "status": "Game Over",
+          "is_final": true,
+          "winner": "Cleveland Guardians",
           "game_type": "L",
           "series_description": "AL Championship Series"
         },
@@ -1234,11 +1234,11 @@
         "division": "Central"
       },
       "per_game_team_a_probability": 0.568307,
-      "team_a_series_probability": 0.646664,
-      "team_b_series_probability": 0.353336,
-      "predicted_series_winner": "Tampa Bay Rays",
-      "predicted_series_winner_probability": 0.646664,
-      "status": "upcoming",
+      "team_a_series_probability": 0.478827,
+      "team_b_series_probability": 0.521173,
+      "predicted_series_winner": "Cleveland Guardians",
+      "predicted_series_winner_probability": 0.521173,
+      "status": "active",
       "prediction_history": [
         {
           "after_game": 0,
@@ -1246,6 +1246,14 @@
           "predicted_winner": "Tampa Bay Rays",
           "probability": 0.646664,
           "series_score": "0-0"
+        },
+        {
+          "after_game": 1,
+          "label": "After Game 1",
+          "game_pk": 849820,
+          "predicted_winner": "Cleveland Guardians",
+          "probability": 0.521173,
+          "series_score": "0-1"
         }
       ]
     },
@@ -1549,25 +1557,25 @@
   "championship_probabilities": [
     {
       "team": "Milwaukee Brewers",
-      "probability": 0.555979,
+      "probability": 0.575523,
       "league": "NL",
       "seed": 1
     },
     {
       "team": "Tampa Bay Rays",
-      "probability": 0.268245,
+      "probability": 0.198624,
       "league": "AL",
       "seed": 1
     },
     {
       "team": "Cleveland Guardians",
-      "probability": 0.098242,
+      "probability": 0.144908,
       "league": "AL",
       "seed": 2
     },
     {
       "team": "Los Angeles Dodgers",
-      "probability": 0.077534,
+      "probability": 0.080945,
       "league": "NL",
       "seed": 2
     },
@@ -1622,7 +1630,7 @@
   ],
   "world_series_favorite": {
     "team": "Milwaukee Brewers",
-    "probability": 0.555979,
+    "probability": 0.575523,
     "league": "NL",
     "seed": 1
   },
@@ -2031,6 +2039,14 @@
         "predicted_winner": "Tampa Bay Rays",
         "probability": 0.646664,
         "series_score": "0-0"
+      },
+      {
+        "after_game": 1,
+        "label": "After Game 1",
+        "game_pk": 849820,
+        "predicted_winner": "Cleveland Guardians",
+        "probability": 0.521173,
+        "series_score": "0-1"
       }
     ]
   },
@@ -2230,6 +2246,13 @@
       "favorite": "Milwaukee Brewers",
       "probability": 0.555979,
       "timestamp": "2026-10-12T19:29:03"
+    },
+    {
+      "after_game_pk": 849820,
+      "label": "After Cleveland Guardians @ Tampa Bay Rays",
+      "favorite": "Milwaukee Brewers",
+      "probability": 0.575523,
+      "timestamp": "2026-10-12T22:07:39"
     }
   ],
   "matchup_probability_cache": {
