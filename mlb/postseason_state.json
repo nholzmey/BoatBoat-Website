@@ -1,7 +1,7 @@
 {
   "active": true,
   "season": 2026,
-  "generated_at": "2026-10-16T10:14:36",
+  "generated_at": "2026-10-16T10:15:47",
   "postseason_start_date": "2026-09-29",
   "format": {
     "wild_card": "Best of 3",
@@ -1411,7 +1411,7 @@
       ]
     },
     {
-      "series_id": "W:Milwaukee Brewers|AL Champion",
+      "series_id": "W:Milwaukee Brewers|TB/CLE",
       "game_type": "W",
       "round": "World Series",
       "round_short": "WS",
@@ -1419,7 +1419,7 @@
       "wins_needed": 4,
       "league": "MLB",
       "team_a": "Milwaukee Brewers",
-      "team_b": "AL Champion",
+      "team_b": "TB/CLE",
       "wins_a": 0,
       "wins_b": 0,
       "winner": null,
@@ -1429,7 +1429,7 @@
           "game_date": "2026-10-23T08:33:00Z",
           "game_number": 1,
           "home_team": "Milwaukee Brewers",
-          "away_team": "AL Champion",
+          "away_team": "TB/CLE",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -1443,7 +1443,7 @@
           "game_date": "2026-10-24T08:33:00Z",
           "game_number": 2,
           "home_team": "Milwaukee Brewers",
-          "away_team": "AL Champion",
+          "away_team": "TB/CLE",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -1456,7 +1456,7 @@
           "game_pk": 849804,
           "game_date": "2026-10-26T07:33:00Z",
           "game_number": 3,
-          "home_team": "AL Champion",
+          "home_team": "TB/CLE",
           "away_team": "Milwaukee Brewers",
           "home_score": null,
           "away_score": null,
@@ -1470,7 +1470,7 @@
           "game_pk": 849803,
           "game_date": "2026-10-27T07:33:00Z",
           "game_number": 4,
-          "home_team": "AL Champion",
+          "home_team": "TB/CLE",
           "away_team": "Milwaukee Brewers",
           "home_score": null,
           "away_score": null,
@@ -1484,7 +1484,7 @@
           "game_pk": 849799,
           "game_date": "2026-10-28T07:33:00Z",
           "game_number": 5,
-          "home_team": "AL Champion",
+          "home_team": "TB/CLE",
           "away_team": "Milwaukee Brewers",
           "home_score": null,
           "away_score": null,
@@ -1499,7 +1499,7 @@
           "game_date": "2026-10-30T08:33:00Z",
           "game_number": 6,
           "home_team": "Milwaukee Brewers",
-          "away_team": "AL Champion",
+          "away_team": "TB/CLE",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -1513,7 +1513,7 @@
           "game_date": "2026-10-31T08:33:00Z",
           "game_number": 7,
           "home_team": "Milwaukee Brewers",
-          "away_team": "AL Champion",
+          "away_team": "TB/CLE",
           "home_score": null,
           "away_score": null,
           "status": "Scheduled",
@@ -2086,6 +2086,15 @@
         "probability": 0.783348,
         "series_score": "0-0"
       }
+    ],
+    "W:Milwaukee Brewers|TB/CLE": [
+      {
+        "after_game": 0,
+        "label": "Before Game 1",
+        "predicted_winner": "Milwaukee Brewers",
+        "probability": 0.783348,
+        "series_score": "0-0"
+      }
     ]
   },
   "overall_projection_history": [
@@ -2399,7 +2408,8 @@
     "LAD/SD||MIL/LAD": 0.5,
     "CLE/CWS||Tampa Bay Rays": 0.402685,
     "AL Champion||NL Champion": 0.5,
-    "AL Champion||Milwaukee Brewers": 0.36
+    "AL Champion||Milwaukee Brewers": 0.36,
+    "Milwaukee Brewers||TB/CLE": 0.64
   },
   "model_note": "Series probabilities combine the current three-model comparison signal when available with regular-season Log5 team strength, then update from the actual postseason series score. Overall championship probabilities are propagated through MLB's fixed postseason bracket."
 }
