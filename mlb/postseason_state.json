@@ -1,7 +1,7 @@
 {
   "active": true,
   "season": 2026,
-  "generated_at": "2026-10-19T22:02:26",
+  "generated_at": "2026-10-19T22:04:11",
   "postseason_start_date": "2026-09-29",
   "format": {
     "wild_card": "Best of 3",
@@ -1112,9 +1112,9 @@
       "league": "AL",
       "team_a": "Tampa Bay Rays",
       "team_b": "Cleveland Guardians",
-      "wins_a": 3,
+      "wins_a": 4,
       "wins_b": 2,
-      "winner": null,
+      "winner": "Tampa Bay Rays",
       "games": [
         {
           "game_pk": 849820,
@@ -1194,23 +1194,9 @@
           "away_team": "Cleveland Guardians",
           "home_score": 7,
           "away_score": 3,
-          "status": "In Progress",
-          "is_final": false,
-          "winner": null,
-          "game_type": "L",
-          "series_description": "AL Championship Series"
-        },
-        {
-          "game_pk": 849814,
-          "game_date": "2026-10-21T00:08:00Z",
-          "game_number": 7,
-          "home_team": "Tampa Bay Rays",
-          "away_team": "Cleveland Guardians",
-          "home_score": null,
-          "away_score": null,
-          "status": "Scheduled",
-          "is_final": false,
-          "winner": null,
+          "status": "Game Over",
+          "is_final": true,
+          "winner": "Tampa Bay Rays",
           "game_type": "L",
           "series_description": "AL Championship Series"
         }
@@ -1234,11 +1220,11 @@
         "division": "Central"
       },
       "per_game_team_a_probability": 0.568307,
-      "team_a_series_probability": 0.813641,
-      "team_b_series_probability": 0.186359,
+      "team_a_series_probability": 1.0,
+      "team_b_series_probability": 0.0,
       "predicted_series_winner": "Tampa Bay Rays",
-      "predicted_series_winner_probability": 0.813641,
-      "status": "active",
+      "predicted_series_winner_probability": 1.0,
+      "status": "completed",
       "prediction_history": [
         {
           "after_game": 0,
@@ -1286,6 +1272,14 @@
           "predicted_winner": "Tampa Bay Rays",
           "probability": 0.813641,
           "series_score": "3-2"
+        },
+        {
+          "after_game": 6,
+          "label": "After Game 6",
+          "game_pk": 849815,
+          "predicted_winner": "Tampa Bay Rays",
+          "probability": 1.0,
+          "series_score": "4-2"
         }
       ]
     },
@@ -1570,21 +1564,15 @@
   "championship_probabilities": [
     {
       "team": "Milwaukee Brewers",
-      "probability": 0.623158,
+      "probability": 0.597954,
       "league": "NL",
       "seed": 1
     },
     {
       "team": "Tampa Bay Rays",
-      "probability": 0.327122,
+      "probability": 0.402046,
       "league": "AL",
       "seed": 1
-    },
-    {
-      "team": "Cleveland Guardians",
-      "probability": 0.04972,
-      "league": "AL",
-      "seed": 2
     },
     {
       "team": "Los Angeles Dodgers",
@@ -1617,6 +1605,12 @@
       "seed": 5
     },
     {
+      "team": "Cleveland Guardians",
+      "probability": 0.0,
+      "league": "AL",
+      "seed": 2
+    },
+    {
       "team": "Houston Astros",
       "probability": 0.0,
       "league": "AL",
@@ -1643,7 +1637,7 @@
   ],
   "world_series_favorite": {
     "team": "Milwaukee Brewers",
-    "probability": 0.623158,
+    "probability": 0.597954,
     "league": "NL",
     "seed": 1
   },
@@ -2108,6 +2102,14 @@
         "predicted_winner": "Tampa Bay Rays",
         "probability": 0.813641,
         "series_score": "3-2"
+      },
+      {
+        "after_game": 6,
+        "label": "After Game 6",
+        "game_pk": 849815,
+        "predicted_winner": "Tampa Bay Rays",
+        "probability": 1.0,
+        "series_score": "4-2"
       }
     ],
     "W:Milwaukee Brewers|AL Champion": [
@@ -2388,6 +2390,13 @@
       "favorite": "Milwaukee Brewers",
       "probability": 0.623158,
       "timestamp": "2026-10-18T18:59:48"
+    },
+    {
+      "after_game_pk": 849815,
+      "label": "After Cleveland Guardians @ Tampa Bay Rays",
+      "favorite": "Milwaukee Brewers",
+      "probability": 0.597954,
+      "timestamp": "2026-10-19T22:04:11"
     }
   ],
   "matchup_probability_cache": {
