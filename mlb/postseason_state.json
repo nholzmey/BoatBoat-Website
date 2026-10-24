@@ -1,7 +1,7 @@
 {
   "active": true,
   "season": 2026,
-  "generated_at": "2026-10-23T22:28:49",
+  "generated_at": "2026-10-23T22:29:41",
   "postseason_start_date": "2026-09-29",
   "format": {
     "wild_card": "Best of 3",
@@ -1430,7 +1430,7 @@
       "league": "MLB",
       "team_a": "Milwaukee Brewers",
       "team_b": "Tampa Bay Rays",
-      "wins_a": 0,
+      "wins_a": 1,
       "wins_b": 0,
       "winner": null,
       "games": [
@@ -1442,9 +1442,9 @@
           "away_team": "Tampa Bay Rays",
           "home_score": 3,
           "away_score": 2,
-          "status": "In Progress",
-          "is_final": false,
-          "winner": null,
+          "status": "Game Over",
+          "is_final": true,
+          "winner": "Milwaukee Brewers",
           "game_type": "W",
           "series_description": "World Series"
         },
@@ -1552,11 +1552,11 @@
         "division": "East"
       },
       "per_game_team_a_probability": 0.545145,
-      "team_a_series_probability": 0.597954,
-      "team_b_series_probability": 0.402046,
+      "team_a_series_probability": 0.736648,
+      "team_b_series_probability": 0.263352,
       "predicted_series_winner": "Milwaukee Brewers",
-      "predicted_series_winner_probability": 0.597954,
-      "status": "upcoming",
+      "predicted_series_winner_probability": 0.736648,
+      "status": "active",
       "prediction_history": [
         {
           "after_game": 0,
@@ -1564,6 +1564,14 @@
           "predicted_winner": "Milwaukee Brewers",
           "probability": 0.597954,
           "series_score": "0-0"
+        },
+        {
+          "after_game": 1,
+          "label": "After Game 1",
+          "game_pk": 849805,
+          "predicted_winner": "Milwaukee Brewers",
+          "probability": 0.736648,
+          "series_score": "1-0"
         }
       ]
     }
@@ -1571,13 +1579,13 @@
   "championship_probabilities": [
     {
       "team": "Milwaukee Brewers",
-      "probability": 0.597954,
+      "probability": 0.736648,
       "league": "NL",
       "seed": 1
     },
     {
       "team": "Tampa Bay Rays",
-      "probability": 0.402046,
+      "probability": 0.263352,
       "league": "AL",
       "seed": 1
     },
@@ -1644,7 +1652,7 @@
   ],
   "world_series_favorite": {
     "team": "Milwaukee Brewers",
-    "probability": 0.597954,
+    "probability": 0.736648,
     "league": "NL",
     "seed": 1
   },
@@ -2144,6 +2152,14 @@
         "predicted_winner": "Milwaukee Brewers",
         "probability": 0.597954,
         "series_score": "0-0"
+      },
+      {
+        "after_game": 1,
+        "label": "After Game 1",
+        "game_pk": 849805,
+        "predicted_winner": "Milwaukee Brewers",
+        "probability": 0.736648,
+        "series_score": "1-0"
       }
     ]
   },
@@ -2413,6 +2429,13 @@
       "favorite": "Milwaukee Brewers",
       "probability": 0.597954,
       "timestamp": "2026-10-19T22:04:11"
+    },
+    {
+      "after_game_pk": 849805,
+      "label": "After Tampa Bay Rays @ Milwaukee Brewers",
+      "favorite": "Milwaukee Brewers",
+      "probability": 0.736648,
+      "timestamp": "2026-10-23T22:29:41"
     }
   ],
   "matchup_probability_cache": {
