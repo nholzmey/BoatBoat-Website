@@ -1,7 +1,7 @@
 {
   "model_name": "Savant Fusion v3",
   "version": 3,
-  "trained_at": "2026-10-24T04:29:41",
+  "trained_at": "2026-10-25T04:28:53",
   "training_games": 27409,
   "training_start_date": "2015-04-07",
   "training_end_date": "2026-09-24",
@@ -10,7 +10,7 @@
     "games": 2430,
     "accuracy": 0.5452674897119342,
     "brier": 0.2442506667742013,
-    "log_loss": 0.6813774588863517,
+    "log_loss": 0.6813774588863516,
     "roc_auc": 0.5696150358022913
   },
   "qualified_pick_policy": {
@@ -57,14 +57,14 @@
   "selected_strategy": "logistic_stack",
   "selected_calibration": "none",
   "blend_weights": {
-    "catboost_full": 0.07067531311982926,
-    "xgboost_full": 1.2177529871392667e-05,
-    "elastic_full": 0.3677579174476295,
-    "extra_trees_full": 0.477291274188523,
-    "catboost_recent": 4.9744849904275955e-05,
-    "xgboost_recent": 0.0001295040287193372,
-    "catboost_modern": 0.08399235298202043,
-    "xgboost_modern": 9.171585350277953e-05
+    "catboost_full": 0.07074114043732253,
+    "xgboost_full": 1.2625869974368646e-05,
+    "elastic_full": 0.367749517297356,
+    "extra_trees_full": 0.47725470265093284,
+    "catboost_recent": 5.143673535843873e-05,
+    "xgboost_recent": 0.00013335115518180206,
+    "catboost_modern": 0.08396272926539432,
+    "xgboost_modern": 9.44965884797875e-05
   },
   "strategy_selection_season": 2021,
   "strategy_selection": [
@@ -152,16 +152,16 @@
       "strategy": "optimized_blend",
       "games": 2429,
       "accuracy": 0.5821325648414986,
-      "brier": 0.2409477055867582,
-      "log_loss": 0.674843008271728,
-      "roc_auc": 0.6041903662904735
+      "brier": 0.2409477253092844,
+      "log_loss": 0.6748430531496707,
+      "roc_auc": 0.6041937763082874
     },
     {
       "strategy": "logistic_stack",
       "games": 2429,
       "accuracy": 0.5850144092219021,
-      "brier": 0.24100411229733903,
-      "log_loss": 0.6749343045103302,
+      "brier": 0.241004112297339,
+      "log_loss": 0.6749343045103301,
       "roc_auc": 0.6024839933763814
     }
   ],
@@ -172,8 +172,8 @@
     {
       "model": "logistic",
       "games": 2430,
-      "log_loss": 0.6731836022045672,
-      "brier": 0.24006753049772028,
+      "log_loss": 0.6731836022043812,
+      "brier": 0.24006753049750634,
       "top30_accuracy": 0.6515775034293553,
       "top30_games": 729,
       "roc_auc": 0.5521683651912319
