@@ -1,7 +1,7 @@
 {
   "model_name": "Savant Fusion v3",
   "version": 3,
-  "trained_at": "2026-11-11T04:25:08",
+  "trained_at": "2026-11-12T04:26:03",
   "training_games": 27409,
   "training_start_date": "2015-04-07",
   "training_end_date": "2026-09-24",
@@ -57,14 +57,14 @@
   "selected_strategy": "logistic_stack",
   "selected_calibration": "none",
   "blend_weights": {
-    "catboost_full": 0.0706710659650023,
-    "xgboost_full": 1.2118275172754708e-05,
-    "elastic_full": 0.36771268373209587,
-    "extra_trees_full": 0.4772446070326805,
-    "catboost_recent": 4.951837255005084e-05,
-    "xgboost_recent": 0.00012893845557743062,
-    "catboost_modern": 0.0840897197274683,
-    "xgboost_modern": 9.134843945283756e-05
+    "catboost_full": 0.0706966559466292,
+    "xgboost_full": 1.2387887372493541e-05,
+    "elastic_full": 0.3677646421025218,
+    "extra_trees_full": 0.4772725744771771,
+    "catboost_recent": 5.055485543443143e-05,
+    "xgboost_recent": 0.00013133737643922434,
+    "catboost_modern": 0.08397882867714723,
+    "xgboost_modern": 9.301867727865087e-05
   },
   "strategy_selection_season": 2021,
   "strategy_selection": [
@@ -152,9 +152,9 @@
       "strategy": "optimized_blend",
       "games": 2429,
       "accuracy": 0.5821325648414986,
-      "brier": 0.2409478669726633,
-      "log_loss": 0.6748433691874995,
-      "roc_auc": 0.6041890022833479
+      "brier": 0.2409476944129415,
+      "log_loss": 0.674842984984091,
+      "roc_auc": 0.6041930943047247
     },
     {
       "strategy": "logistic_stack",
@@ -172,8 +172,8 @@
     {
       "model": "logistic",
       "games": 2430,
-      "log_loss": 0.6731836022046436,
-      "brier": 0.2400675304978062,
+      "log_loss": 0.6731836022055894,
+      "brier": 0.24006753049887775,
       "top30_accuracy": 0.6515775034293553,
       "top30_games": 729,
       "roc_auc": 0.5521683651912319
